@@ -1,6 +1,6 @@
-# Prerequisites — DIY for All Devices (Test Automation)
+# Prerequisites — SVT Automation (Test Automation)
 
-This document lists everything you need to install and configure before you can build and run the **diy-for-all-devices** test automation suite and its dependency **combined_core_framework**.
+This document lists everything you need to install and configure before you can build and run the **air-svt-automation** test automation suite and its dependency **svt-core-framework**.
 
 ---
 
@@ -323,7 +323,7 @@ The project pulls dependencies from **JFrog Artifactory** at `artifactory.softwa
 ### Step 1 — Copy `settings.xml` to Maven home
 
 ```bash
-# For diy-for-all-devices
+# For air-svt-automation
 cp settings.xml ~/.m2/settings.xml
 ```
 
@@ -370,15 +370,15 @@ mvn clean install -Djfrog.username=YOUR_USERNAME -Djfrog.password=YOUR_PASSWORD
 
 ## 15. Build & Install the Core Framework
 
-The `diy-for-all-devices` project depends on `core-framework` (v1.0.0). You must build and install it **first**.
+The `air-svt-automation` project depends on `svt-core-framework` (v1.0.0). You must build and install it **first**.
 
 ```bash
 # 1. Build the core-framework and install to local Maven repo
-cd combined_core_framework
+cd svt-core-framework
 mvn clean install -DskipTests
 
 # 2. Build the test project
-cd ../diy-for-all-devices
+cd ../air-svt-automation
 mvn clean compile -DskipTests
 ```
 
@@ -388,7 +388,7 @@ If the core-framework is already published to JFrog Artifactory, step 1 can be s
 
 ## 16. Configuration Files to Update
 
-Before running tests, review and update these property files in `diy-for-all-devices/src/test/resources/Properties/`:
+Before running tests, review and update these property files in `air-svt-automation/src/test/resources/Properties/`:
 
 | File | What to Configure |
 |------|-------------------|
@@ -478,8 +478,8 @@ Use this checklist to verify your environment is ready:
 - [ ] **Mosquitto CLI** installed *(if running MQTT tests)*
 - [ ] **Tesseract OCR** installed *(if running OCR-based tests)*
 - [ ] Maven `settings.xml` configured with JFrog Artifactory credentials
-- [ ] `combined_core_framework` built and installed (`mvn clean install -DskipTests`)
-- [ ] `diy-for-all-devices` compiles successfully (`mvn clean compile`)
+- [ ] `svt-core-framework` built and installed (`mvn clean install -DskipTests`)
+- [ ] `air-svt-automation` compiles successfully (`mvn clean compile`)
 - [ ] Property files in `src/test/resources/Properties/` updated for your environment
 - [ ] `Requirement_file.txt` configured with desired test groups set to `YES`
 - [ ] Mobile device connected and detected (`adb devices` / Xcode Devices)
@@ -495,7 +495,7 @@ Use this checklist to verify your environment is ready:
 Once all prerequisites are met:
 
 ```bash
-cd diy-for-all-devices
+cd air-svt-automation
 
 # Run via Maven (uses exec-maven-plugin → SuiteExecutor)
 mvn clean test
@@ -515,7 +515,7 @@ The `SuiteExecutor` reads `Requirement_file.txt`, picks up groups marked `YES`, 
 | Java (JDK) | 25 |
 | Maven | 3.9+ |
 | Maven Compiler Plugin | 3.14.0 |
-| Selenium | 4.27.0 (diy) / 4.28.0 (core) |
+| Selenium | 4.27.0 (svt) / 4.28.0 (core) |
 | Appium Java Client | 9.4.0 |
 | Appium Server | 2.x |
 | Cucumber | 7.20.1 |
@@ -532,7 +532,7 @@ The `SuiteExecutor` reads `Requirement_file.txt`, picks up groups marked `YES`, 
 | Tess4J / Tesseract | 5.13.0 / 4.x+ native |
 | OpenCV | 4.10.0 |
 | MySQL Connector | 9.1.0 |
-| Guava | 33.4.0-jre (diy) / 33.5.0-jre (core) |
+| Guava | 33.4.0-jre (svt) / 33.5.0-jre (core) |
 | OkHttp | 4.12.0 |
 | Azure IoT Device Client | 2.0.0 |
 | JSch (SSH) | 0.1.55 |
