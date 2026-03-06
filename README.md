@@ -6,14 +6,10 @@ End-to-end **System Verification Test (SVT)** automation framework for Resideo s
 
 ## Supported Products
 
-| Product Family | Examples |
-|----------------|----------|
-| Gleneagles | Trade, DIY |
-| Denali | Trade, Retail |
-| Fuji X2S | Trade, Retail |
-| Jasper | NA Trade, NA Retail, EMEA |
-| Thor | Trade |
-| Flycatcher | Trade |
+| Product Family | Variant | Type |
+|----------------|---------|------|
+| Gleneagles | Trade | DIY, System |
+| Denali | Trade, Retail | DIY, System |
 
 ## Tech Stack
 
