@@ -289,7 +289,7 @@ tools/**
 
 
 # UI Test Automation Logs
-# Execution_Folder/
+Execution_Folder/
 test-output/
 /target/
 /.metadata/
@@ -316,5 +316,5 @@ target/
 bin/
 test-output/
 tokens/
-# Execution_Folder/
+Execution_Folder/
 *.DS_Store
