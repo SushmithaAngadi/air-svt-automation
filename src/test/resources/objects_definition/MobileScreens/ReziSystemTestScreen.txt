@@ -1,0 +1,85 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+DiagnosticsHeatButton	XPATH	//android.view.View[contains(@content-desc,'Heat
+Tab')]					XPATH	//*[contains(@name,'Heat
+Tab')]				
+DiagnosticsCoolButton	XPATH	//android.view.View[contains(@content-desc,'Cool
+Tab')]					XPATH	//*[contains(@name,'Cool
+Tab')]				
+DiagnosticsIAQButton	XPATH	//android.view.View[contains(@content-desc,'IAQ
+Tab')]					XPATH	//*[contains(@name,'IAQ
+Tab')]				
+DiagnosticsEMButton	XPATH	//android.view.View[contains(@content-desc,'Em
+Tab')]					XPATH	//*[contains(@name,'Em
+Tab')]				
+DiagnosticFanButton	XPATH	//android.view.View[contains(@content-desc,'Fan
+Tab')]					XPATH	//*[contains(@name,'Fan
+Tab')]				
+FindStagesInDiagnostic	XPATH	//android.widget.Switch/parent::android.view.View										
+GetNoOfCompressorHeatStageinSystemTest	XPATH	//*[contains(@content-desc,'Compressor Heat')]										
+IsBackHeatOptionInSystemTest	XPATH	//*[contains(@content-desc,'Backup Heat')]										
+CompressorHeatStage1Switch	XPATH	//*[contains(@content-desc,'Compressor Heat
+Stage 1')]					XPATH	//*[contains(@name,'Compressor Heat
+Stage 1')]				
+CompressorHeatStage2Switch	XPATH	//*[contains(@content-desc,'Compressor Heat
+Stage 2')]					XPATH	//*[contains(@name,'Compressor Heat
+Stage 2')]				
+BackUpHeatStage1Switch	XPATH	//*[contains(@content-desc,'Backup Heat
+Stage 1')]					XPATH	//*[contains(@name,'Backup Heat
+Stage 1')]				
+CompressorCoolStage1Switch	XPATH	//*[contains(@content-desc,'Compressor Cool
+Stage 1')]					XPATH	//*[contains(@name,'Compressor Cool
+Stage 1')]				
+CompressorCoolStage2Switch	XPATH	//*[contains(@content-desc,'Compressor Cool
+Stage 2')]					XPATH	//*[contains(@name,'Compressor Cool
+Stage 2')]				
+EmergencyHeatStage1Switch	XPATH	//*[contains(@content-desc,'Emergency Heat
+Stage 1')]					XPATH	//*[contains(@name,'Emergency Heat
+Stage 1')]				
+FanSwitch	ACCESSIBILITY ID	Fan					ACCESSIBILITY ID	Fan				
+VentilationSwitch	ACCESSIBILITY ID	Ventilation					ACCESSIBILITY ID	Ventilation				
+CompressorHeatStage1SwitchOnOff	XPATH	//*[contains(@content-desc,'Compressor Heat
+Stage 1')]/android.widget.Switch					XPATH	//*[contains(@name,'Compressor Heat
+Stage 1')]/following-sibling::XCUIElementTypeSwitch				
+CompressorHeatStage2SwitchOnOff	XPATH	//*[contains(@content-desc,'Compressor Heat
+Stage 2')]/android.widget.Switch					XPATH	//*[contains(@name,'Compressor Heat
+Stage 2')]/following-sibling::XCUIElementTypeSwitch				
+BackUpHeatStage1SwitchOnOff	XPATH	//*[contains(@content-desc,'Backup Heat
+Stage 1')]/android.widget.Switch					XPATH	//*[contains(@name,'Backup Heat
+Stage 1')]/following-sibling::XCUIElementTypeSwitch				
+CompressorCoolStage1SwitchOnOff	XPATH	//*[contains(@content-desc,'Compressor Cool
+Stage 1')]/android.widget.Switch					XPATH	//*[contains(@name,'Compressor Cool
+Stage 1')]/following-sibling::XCUIElementTypeSwitch				
+CompressorCoolStage2SwitchOnOff	XPATH	//*[contains(@content-desc,'Compressor Cool
+Stage 2')]/android.widget.Switch					XPATH	//*[contains(@name,'Compressor Cool
+Stage 2')]/following-sibling::XCUIElementTypeSwitch				
+EmergencyHeatStage1SwitchOnOff	XPATH	//*[contains(@content-desc,'Emergency Heat
+Stage 1')]/android.widget.Switch					XPATH	//*[contains(@name,'Emergency Heat
+Stage 1')]/following-sibling::XCUIElementTypeSwitch				
+FanSwitchOnOff	XPATH	//*[contains(@content-desc,'Fan')]/android.widget.Switch					XPATH	//*[contains(@name,'Fan')]/following-sibling::XCUIElementTypeSwitch				
+VentilationSwitchOnOff	XPATH	//*[contains(@content-desc,'Ventilation')]/android.widget.Switch					XPATH	//*[contains(@name,'Ventilation')]/following-sibling::XCUIElementTypeSwitch				
+HeatStage1Switch	ACCESSIBILITY ID	Heat
+Stage 1					ACCESSIBILITY ID	Heat
+Stage 1				
+HeatStage2Switch	ACCESSIBILITY ID	Heat
+Stage 2					ACCESSIBILITY ID	Heat
+Stage 2				
+CoolStage1Switch	ACCESSIBILITY ID	Cool
+Stage 1					ACCESSIBILITY ID	Cool
+Stage 1				
+CoolStage2Switch	ACCESSIBILITY ID	Cool
+Stage 2					ACCESSIBILITY ID	Cool
+Stage 2				
+HeatStage1SwitchOnOff	XPATH	//*[contains(@content-desc,'Heat
+Stage 1')]/android.widget.Switch					XPATH	//*[contains(@name,'Heat
+Stage 1')]/following-sibling::XCUIElementTypeSwitch				
+HeatStage2SwitchOnOff	XPATH	//*[contains(@content-desc,'Heat
+Stage 2')]/android.widget.Switch					XPATH	//*[contains(@name,'Heat
+Stage 2')]/following-sibling::XCUIElementTypeSwitch				
+CoolStage1SwitchOnOff	XPATH	//*[contains(@content-desc,'Cool
+Stage 1')]/android.widget.Switch					XPATH	//*[contains(@name,'Cool
+Stage 1')]/following-sibling::XCUIElementTypeSwitch				
+CoolStage2SwitchOnOff	XPATH	//*[contains(@content-desc,'Cool
+Stage 2')]/android.widget.Switch					XPATH	//*[contains(@name,'Cool
+Stage 2')]/following-sibling::XCUIElementTypeSwitch				
+TemperatureFromAPPSystemTest	XPATH	(//*[contains(@content-desc,'Temperature')]/following-sibling::android.view.View/following-sibling::android.view.View)[1]					XPATH	//*[contains(@name,'Temperature')]/following-sibling::XCUIElementTypeStaticText/following-sibling::XCUIElementTypeStaticText				
+DoneButton	ACCESSIBILITY ID	Done					ACCESSIBILITY ID	Done				

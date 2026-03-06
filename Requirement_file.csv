@@ -1,0 +1,7 @@
+Include Group,Group Name,Combine,Platform-Type-OS-Version,Name,Location,Environment,Test Data
+No,Login,,IOS-Simulator-IOS-9.1,iPad 2,Local,Stage,"AcquisitionType=Automatic, Tags='LYRIC_STAT,SERVER_JASPER_DOGFOODING"
+No,Login,,,Samsung Galaxy S6,Local,Stage,"AcquisitionType=Automatic, Tags='LYRIC_STAT,SERVER_JASPER_DOGFOODING"
+no,FLY_NA_Humidity_Window_Protection,,Android-Device-Android-6.0.1,Nexus 5,Local,CHILInt(Azure),"AcquisitionType=Specific, TestData='USERID=flyqa10@grr.la,PASSWORD=Password1,LOCATION1_NAME=Home,LOCATION1_DEVICE1_NAME=Lyric8FB262'"
+NO,FLY_NA_FanMode,,IOS-Device-IOS-11.2.1,7822364255cc4627d603d3b8ebf81f4214da92ca,Local,CHILInt(Azure),"AcquisitionType=Specific, TestData='USERID=flyqa10@grr.la,PASSWORD=Password1,LOCATION1_NAME=Home,LOCATION1_DEVICE1_NAME=Lyric8FB262'"
+NO,FC_Thermostat_With_Cool_Only_System,,IOS-Device-IOS-11.2.1,7822364255cc4627d603d3b8ebf81f4214da92ca,Local,CHILInt(Azure),"AcquisitionType=Specific, TestData='USERID=flyqa10@grr.la,PASSWORD=Password1,LOCATION1_NAME=Home,LOCATION1_DEVICE1_NAME=Lyric8FB262'"
+YES,FlycatcherDiy_RealDevice_HappyPath,,Android-Device-Android-6.0,G65T6P9T75MZPVBM,Local,CHILInt(Azure),"AcquisitionType=Specific, TestData='USERID=hktestqa@grr.la,PASSWORD=Resideo123,LOCATION1_NAME=Sun,LOCATION1_DEVICE1_NAME=Sun,NETWORK=Bella2.4,NETWORK_PASSWORD=Amma@143$24'"

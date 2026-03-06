@@ -1,0 +1,118 @@
+{
+	"macID": "B82CA0649F4F",
+	"currentSchedulePeriod": {
+		"period": "Sleep",
+		"day": "Thursday"
+	},
+	"heatAndCoolDemand": {
+		"mode": "EmergencyHeat",
+		"currentStage": 0,
+		"demand": 0,
+		"stagesOn": [
+			false,
+			false,
+			false,
+			false,
+			false,
+			false
+		]
+	},
+	"vacationHold": {
+		"enabled": false
+	},
+	"thermostat": {
+		"allowedModes": [
+			"Heat",
+			"Off",
+			"Cool",
+			"Auto"
+		],
+		"operationStatus": {
+			"mode": "EquipmentOff",
+			"fanRequest": false,
+			"circulationFanRequest": false
+		},
+		"outdoorTemperature": 21.6,
+		"indoorHumidityStatus": "Measured",
+		"units": "Fahrenheit",
+		"maxHeatSetpoint": 90,
+		"indoorHumidity": 57,
+		"minHeatSetpoint": 50,
+		"changeableValues": {
+			"mode": "Off",
+			"heatCoolMode": "Heat",
+			"autoChangeoverActive": false,
+			"thermostatSetpointStatus": "NoHold",
+			"heatSetpoint": 62,
+			"coolSetpoint": 82,
+			"nextPeriodTime": "06:00:00"
+		},
+		"deadband": 0,
+		"hasDualSetpointStatus": false,
+		"indoorTemperature": 75,
+		"maxCoolSetpoint": 90,
+		"minCoolSetpoint": 50
+	},
+	"scheduleStatus": "Resume",
+	"deviceSettings": {},
+	"deviceRegistrationDate": "2019-12-25T07:58:03.2566667",
+	"deviceType": "FlyCatcher",
+	"settings": {
+		"specialMode": {
+			"autoChangeoverActive": false
+		},
+		"fan": {
+			"allowedModes": [
+				"On",
+				"Auto",
+				"Circulate"
+			],
+			"changeableValues": {
+				"mode": "Auto"
+			}
+		},
+		"devicePairingEnabled": false,
+		"temperatureMode": {
+			"air": true
+		},
+		"hardwareSettings": {
+			"brightness": 0,
+			"maxBrightness": 0
+		}
+	},
+	"dataSyncStatus": "Completed",
+	"groups": [
+		{
+			"rooms": [
+				0
+			],
+			"name": "default",
+			"id": 0
+		}
+	],
+	"scheduleCapabilities": {
+		"availableScheduleTypes": [
+			"None",
+			"Geofenced",
+			"TimedNorthAmerica"
+		],
+		"schedulableFan": true
+	},
+	"allowedTimeIncrements": 15,
+	"deviceID": "LCC-B82CA0649F4F",
+	"priorityType": "PickARoom",
+	"userDefinedDeviceName": "Master Bedroom",
+	"isAlive": true,
+	"scheduleType": {
+		"scheduleType": "Timed",
+		"scheduleSubType": "NA"
+	},
+	"service": {
+		"mode": "Up"
+	},
+	"name": "Master Bedroom",
+	"isUpgrading": false,
+	"deviceClass": "Thermostat",
+	"displayedOutdoorHumidity": 86,
+	"isProvisioned": true
+}

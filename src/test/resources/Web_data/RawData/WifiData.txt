@@ -1,0 +1,10 @@
+Router-Name	Model-Name	User-Name	Password	Popup-Authentication	login-Type
+ASUS	A1750	admin	Password@1	Yes	username and password
+Netgear	asw	admon	oasddj	no	username
+Netgear1	asw1	admon1	oasddj1	no1	password1
+Netgear2	asw2	admon2	oasddj2	no2	password2
+Netgear3	asw3	admon3	oasddj3	no3	password3
+Netgear4	asw4	admon4	oasddj4	no4	password4
+Netgear5	asw5	admon5	oasddj5	no5	password5
+Netgear6	asw6	admon6	oasddj6	no6	password6
+Netgear7	asw7	admon7	oasddj7	no7	password7

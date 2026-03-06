@@ -1,0 +1,278 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+LoginToResideoProNonProd	ACCESSIBILITY ID	Login to Resideo Pro					ACCESSIBILITY ID	Login to Resideo Pro				
+LoginToResideoProProdcution	ACCESSIBILITY ID	Resideo Pro Account					ACCESSIBILITY ID	Resideo Pro Account				
+SetupProductButton	ACCESSIBILITY ID	Set Up Product					ACCESSIBILITY ID	Set Up Product				
+IswelcomeToResideoPro	XPATH	//*[contains(@content-desc,'Welcome to Resideo Pro')]					XPATH	//*[contains(@name,'Welcome to Resideo Pro')]				
+isLoginEmailPasswordScreen	XPATH	//*[contains(@text,'SIGN IN WITH YOUR RESIDEO ID')]					XPATH	//XCUIElementTypeButton[@name='SIGN IN']				
+SIgnEmailTextBox	XPATH	//*[contains(@resource-id,'email')]					XPATH	//XCUIElementTypeTextField				
+SignPasswordTextBox	XPATH	//*[contains(@resource-id,'password')]					XPATH	//XCUIElementTypeSecureTextField				
+SignInButton	XPATH	//android.widget.Button[contains(@text,'SIGN IN')]					XPATH	//XCUIElementTypeButton[@name='SIGN IN']				
+HomeButton	XPATH	//android.view.View[contains(@content-desc,'Home')]					XPATH	//*[contains(@name,'Home')]				
+CustomersButton	XPATH	//android.view.View[contains(@content-desc,'Customers')]					XPATH	//*[contains(@name,'Customers')]				
+SupportButton	XPATH	//android.view.View[contains(@content-desc,'Support')]					XPATH	//*[contains(@name,'Support')]				
+SetupSettingsButton	XPATH	//android.view.View[contains(@content-desc,'Settings')]					XPATH	//*[contains(@name,'Settings')]				
+T5T6Thermostat	XPATH	//*[contains(@content-desc,'T5/T6 Thermostat')]					ACCESSIBILITY ID	//*[contains(@name,'T5/T6 Thermostat')]				
+T9T10Thermostat	XPATH	//*[contains(@content-desc,'T9/T10 or T10+ Pro WiFi thermostat')]					ACCESSIBILITY ID	//*[contains(@name,'T9/T10 or T10+ Pro WiFi thermostat')]				
+LocationAccessPopUp	XPATH	//*[contains(@text,'Allow Resideo Pro to access this device�s location')]					XPATH	//XCUIElementTypeStaticText[contains(@name,'to use your location')]				
+AllowWhileUsingTheAppButton	XPATH	//*[contains(@text,'While using the app')]					ACCESSIBILITY ID	Allow While Using App				
+AllowOnlyThisTimeButton	XPATH	//*[contains(@text,'Only this time')]					ACCESSIBILITY ID	Allow Once				
+DenyLocationAccessButton	XPATH	//*[contains(@text,'Deny')]					ACCESSIBILITY ID	Don�t Allow				
+StartSetupScreen	ACCESSIBILITY ID	Start Setup					ACCESSIBILITY ID	Start Setup				
+NextButton	ACCESSIBILITY ID	Next					ACCESSIBILITY ID	Next				
+useAppScreen	ACCESSIBILITY ID	Use App					ACCESSIBILITY ID	Use App				
+BackButton	ACCESSIBILITY ID	Back					ACCESSIBILITY ID	Back				
+CancelButton	ACCESSIBILITY ID	Cancel					ACCESSIBILITY ID	Cancel				
+NetworkNameScreen	ACCESSIBILITY ID	Network Name					ACCESSIBILITY ID	Network Name				
+LongPressScreen	ACCESSIBILITY ID	Long Press					ACCESSIBILITY ID	Long Press				
+BlueToothScreen	ACCESSIBILITY ID	Bluetooth					ACCESSIBILITY ID	Bluetooth				
+YesButton	ACCESSIBILITY ID	Yes					ACCESSIBILITY ID	Yes				
+NoButton	ACCESSIBILITY ID	No					ACCESSIBILITY ID	No				
+SearchingForBluetoothDeviceSpining	XPATH	//*[contains(@content-desc,'Searching for bluetooth devices')]					XPATH	//XCUIElementTypeStaticText[contains(@name,'Searching for bluetooth devices')]				
+ConnectToThermostatWithWiFiScreen	ACCESSIBILITY ID	Connect to Thermostat					ACCESSIBILITY ID	Connect to Thermostat				
+OpenWIFISettingsButton	ACCESSIBILITY ID	Open Wi-Fi Settings					ACCESSIBILITY ID	Open iOS Settings				
+ErrorOccuredDuringBLEDeviceConnecting	ACCESSIBILITY ID	Error					ACCESSIBILITY ID	Error				
+ConnectingToThermostatSpinning	XPATH	//android.view.View[contains(@content-desc,'Connecting')]					ACCESSIBILITY ID	Connecting				
+SecurityCodeScreen	ACCESSIBILITY ID	Security Code					ACCESSIBILITY ID	Security Code				
+SecurityCode4DigitPin	XPATH	//android.widget.EditText					XPATH	//XCUIElementTypeTextField				
+OkButton	ACCESSIBILITY ID	OK					ACCESSIBILITY ID	OK				
+PinEnteredandConnectedWIthThermostat	ACCESSIBILITY ID	Connected					ACCESSIBILITY ID	Connected				
+ConfigurationButton	XPATH	//android.widget.ImageView[contains(@content-desc,'Configuration')]					XPATH	//*[contains(@name,'Configuration')]				
+IsConnectedScreenForISUBegin	ACCESSIBILITY ID	Connected to					ACCESSIBILITY ID	Connected to				
+OutDoorSensorScreen	ACCESSIBILITY ID	Outdoor Air Sensor					ACCESSIBILITY ID	Outdoor Air Sensor				
+OutDoorSensorNo	ACCESSIBILITY ID	No					ACCESSIBILITY ID	No				
+OutDoorSensorWired	ACCESSIBILITY ID	Wired					ACCESSIBILITY ID	Wired				
+OutDoorSensorInternet	ACCESSIBILITY ID	Internet					ACCESSIBILITY ID	Internet				
+HeatingSystemScreen	ACCESSIBILITY ID	Heating system					ACCESSIBILITY ID	Heating system				
+ConventionalForcedAir	ACCESSIBILITY ID	Conventional forced air					ACCESSIBILITY ID	Conventional forced air				
+HeatPump	ACCESSIBILITY ID	Heat pump					ACCESSIBILITY ID	Heat pump				
+Boiler	ACCESSIBILITY ID	Boiler					ACCESSIBILITY ID	Boiler				
+NoneCoolOnly	ACCESSIBILITY ID	None (Cool only)					ACCESSIBILITY ID	None (Cool only)				
+FuelSourceScreen	ACCESSIBILITY ID	Fuel source					ACCESSIBILITY ID	Fuel source				
+ConventionalGasHighEfficiency	ACCESSIBILITY ID	Gas - high efficiency					ACCESSIBILITY ID	Gas - high efficiency				
+ConventionalGasStandardEfficiency	ACCESSIBILITY ID	Gas - standard					ACCESSIBILITY ID	Gas - standard				
+ConventionalOil	ACCESSIBILITY ID	Oil					ACCESSIBILITY ID	Oil				
+ConventionalHotWaterFanCoil	ACCESSIBILITY ID	Hot water - fan coil					ACCESSIBILITY ID	Hot water - Fan coil				
+ConventionalElectric	ACCESSIBILITY ID	Electric					ACCESSIBILITY ID	Electric				
+CoolingStageScreen	ACCESSIBILITY ID	Cooling Stages					ACCESSIBILITY ID	Cooling Stages				
+HeatingStageScreen	ACCESSIBILITY ID	Heat Stages					ACCESSIBILITY ID	Heat Stages				
+CoolCyclesPerHourStage1Screen	ACCESSIBILITY ID	Cool Cycles Per Hour - Stage 1					ACCESSIBILITY ID	Cool Cycles Per Hour - Stage 1				
+CoolCyclesPerHourStage2Screen	ACCESSIBILITY ID	Cool Cycles Per Hour - Stage 2					ACCESSIBILITY ID	Cool Cycles Per Hour - Stage 2				
+HeatCyclePerHourStage1Screen	ACCESSIBILITY ID	Heat cycles/hour - stage 1					ACCESSIBILITY ID	Heat cycles/hour - stage 1				
+HeatCyclePerHourStage2Screen	XPATH	//*[contains(@content-desc,'Heat Cycles Per Hour')]					XPATH	//*[contains(@name,'Heat Cycles Per Hour')]				
+HeatPumpAirToAir	ACCESSIBILITY ID	Air to air					ACCESSIBILITY ID	Air to air				
+HeatPumpGeothermal	ACCESSIBILITY ID	Geothermal					ACCESSIBILITY ID	Geothermal				
+BoilerHotWater	ACCESSIBILITY ID	Hot water					ACCESSIBILITY ID	Hot water				
+BoilerSteam	ACCESSIBILITY ID	Steam					ACCESSIBILITY ID	Steam				
+ReversingValveScreen	ACCESSIBILITY ID	Reversing valve					ACCESSIBILITY ID	Reversing valve				
+ReversingValveOBOnHeat	ACCESSIBILITY ID	B (O/B on heat)					ACCESSIBILITY ID	B (O/B on heat)				
+ReversingValveOBOnCool	ACCESSIBILITY ID	O (O/B on cool)					ACCESSIBILITY ID	O (O/B on cool)				
+CompressorStageScreen	ACCESSIBILITY ID	Compressor stages					ACCESSIBILITY ID	Compressor stages				
+Stage1	ACCESSIBILITY ID	1					ACCESSIBILITY ID	1				
+StageNone	ACCESSIBILITY ID	None					ACCESSIBILITY ID	None				
+Stage2	ACCESSIBILITY ID	2					ACCESSIBILITY ID	2				
+CyclePerHourStageDecreaseButton	XPATH	//*[@content-desc='Previous']/preceding-sibling::android.widget.ImageView[2]					XPATH	//XCUIElementTypeButton[@name='Previous']/preceding-sibling::XCUIElementTypeImage[2]				
+CyclePerHourStageIncreaseButton	XPATH	//*[@content-desc='Previous']/preceding-sibling::android.widget.ImageView[1]					XPATH	//XCUIElementTypeButton[@name='Previous']/preceding-sibling::XCUIElementTypeImage[1]				
+GetCyclePerHourValue	XPATH	//*[@content-desc='Previous']/preceding-sibling::android.widget.ImageView[2]/following-sibling::android.view.View					XPATH	//XCUIElementTypeButton[@name='Previous']/preceding-sibling::XCUIElementTypeStaticText[1]				
+AuxETerminalControlScreen	ACCESSIBILITY ID	Aux/E Terminal Control					ACCESSIBILITY ID	Aux/E Terminal Control				
+AuxETerminalControlDriveBothAuxE	ACCESSIBILITY ID	Drive both Aux & E Together					ACCESSIBILITY ID	Drive both Aux & E Together				
+AuxETerminalControlDriveAuxEIndependent	ACCESSIBILITY ID	Aux & E are Independent					ACCESSIBILITY ID	Aux & E are Independent				
+BackUpHeatScreen	ACCESSIBILITY ID	Backup heat					ACCESSIBILITY ID	Backup heat				
+BackUpHeatElectric	ACCESSIBILITY ID	Electric					ACCESSIBILITY ID	Electric				
+BackUpHeatGasStandard	ACCESSIBILITY ID	Gas - standard					ACCESSIBILITY ID	Gas - standard				
+EmergencyHeatScreen	ACCESSIBILITY ID	Emergency Heat					ACCESSIBILITY ID	Emergency Heat				
+EmergencyHeatElectric	ACCESSIBILITY ID	Electric Forced Air					ACCESSIBILITY ID	Electric Forced Air				
+EmergencyHeatGasOilForcedAir	XPATH	//android.widget.RadioButton[contains(@content-desc,'Standard Efficiency Gas Forced Air') or contains(@content-desc,'Standard Efficiency Gas')]					XPATH	//XCUIElementTypeSwitch[contains(@content-desc,'Standard Efficiency Gas Forced Air') or contains(@content-desc,'Standard Efficiency Gas')]				
+ExternalFossilFuelKitScreen	ACCESSIBILITY ID	External fossil fuel kit					ACCESSIBILITY ID	External fossil fuel kit				
+ExternalFossilFuelKitThermostat	ACCESSIBILITY ID	Thermostat					ACCESSIBILITY ID	Thermostat				
+ExternalFossilFuelKitBtton	XPATH	//android.widget.RadioButton[@content-desc='External fossil fuel kit']					XPATH	//XCUIElementTypeSwitch[@name='External fossil fuel kit']				
+StagingControlScreen	ACCESSIBILITY ID	Staging Control					ACCESSIBILITY ID	Staging Control				
+StagingControlHighCoolStageScreen	ACCESSIBILITY ID	Staging Control					ACCESSIBILITY ID	Staging Control				
+DecreaseDownButton	XPATH	//*[@content-desc='Previous']/preceding-sibling::android.widget.ImageView[2]					XPATH	//XCUIElementTypeButton[@name='Previous']/preceding-sibling::XCUIElementTypeImage[2]				
+IncreaseUpButton	XPATH	//*[@content-desc='Previous']/preceding-sibling::android.widget.ImageView[1]					XPATH	//XCUIElementTypeButton[@name='Previous']/preceding-sibling::XCUIElementTypeImage[1]				
+InbetweenTextUpandDown	XPATH	//*[@content-desc='Previous']/preceding-sibling::android.widget.ImageView[2]/following-sibling::android.view.View					XPATH	//XCUIElementTypeButton[@name='Previous']/preceding-sibling::XCUIElementTypeStaticText[1]				
+BackupHeatDroopScreen	ACCESSIBILITY ID	Backup Heat Droop					ACCESSIBILITY ID	Backup Heat Droop				
+CompressorLockoutScreen	ACCESSIBILITY ID	Compressor Lockout					ACCESSIBILITY ID	Compressor Lockout				
+isBackupHatLockOutScreen	ACCESSIBILITY ID	Backup Heat Lockout					ACCESSIBILITY ID	Backup Heat Lockout				
+OutdoorHeatLockoutScreen	ACCESSIBILITY ID	Outdoor Heat Lockout					ACCESSIBILITY ID	Outdoor Heat Lockout				
+CompressorCyclePerHourStage1Screen	ACCESSIBILITY ID	Compressor cycles/hour - stage 1					ACCESSIBILITY ID	Compressor cycles/hour - stage 1				
+listButton	XPATH	//*[@content-desc='Previous']/preceding-sibling::android.widget.Button					XPATH	//*[@name='Previous']/preceding-sibling::XCUIElementTypeButton				
+BackupHeatCyclesPerHourScreen	ACCESSIBILITY ID	Backup heat cycles/hour					ACCESSIBILITY ID	Backup heat cycles/hour				
+BackupHeatUpStageTimerScreen	ACCESSIBILITY ID	Backup heat upstage Timer					ACCESSIBILITY ID	Backup heat upstage Timer				
+FanOperationinHeatScreen	ACCESSIBILITY ID	Fan operation in heat					ACCESSIBILITY ID	Fan operation in heat				
+FanOperationinHeatEquipmentControlsFan	ACCESSIBILITY ID	Equipment controls fan					ACCESSIBILITY ID	Equipment controls fan				
+FanOperationinHeatThermostatControlsFan	ACCESSIBILITY ID	Thermostat controls fan					ACCESSIBILITY ID	Thermostat controls fan				
+CompressorCyclePerHourStage2Screen	ACCESSIBILITY ID	Compressor cycles/hour - stage 2					ACCESSIBILITY ID	Compressor cycles/hour - stage 2				
+BackUpHeatStagesScreen	ACCESSIBILITY ID	Backup heat stages					ACCESSIBILITY ID	Backup heat stages				
+BackUpHeatStages1	ACCESSIBILITY ID	1					ACCESSIBILITY ID	1				
+BackUpHeatStages2	ACCESSIBILITY ID	2					ACCESSIBILITY ID	2				
+BackUpHeatStagesNone	ACCESSIBILITY ID	None					ACCESSIBILITY ID	None				
+EmergencyHeatCyclesPerHourScreen	ACCESSIBILITY ID	Emergency Heat Cycles Per Hour					ACCESSIBILITY ID	Emergency Heat Cycles Per Hour				
+IndoorSensorScreen	ACCESSIBILITY ID	Indoor Sensor					ACCESSIBILITY ID	Indoor Sensor				
+IndoorSensorNone	ACCESSIBILITY ID	None					ACCESSIBILITY ID	None				
+IndoorSensorInDoor	ACCESSIBILITY ID	Indoor					ACCESSIBILITY ID	Indoor				
+IndoorSensorTypeScreen	ACCESSIBILITY ID	Indoor Sensor Type					ACCESSIBILITY ID	Indoor Sensor Type				
+IndoorSensor10K	ACCESSIBILITY ID	10k					ACCESSIBILITY ID	10k				
+IndoorSensor20K	ACCESSIBILITY ID	20k					ACCESSIBILITY ID	20k				
+TemperatureSensorSelectionScreen	ACCESSIBILITY ID	Temperature Sensor Selection					ACCESSIBILITY ID	Temperature Sensor Selection				
+TemperatureSensorAverage	ACCESSIBILITY ID	Average					ACCESSIBILITY ID	Average				
+TemperatureSensorThermostatOnly	ACCESSIBILITY ID	Thermostat only					ACCESSIBILITY ID	Thermostat only				
+TemperatureSensorWiredOnly	ACCESSIBILITY ID	Wired only					ACCESSIBILITY ID	Wired only				
+VentilationTypeScreen	ACCESSIBILITY ID	Ventilation type					ACCESSIBILITY ID	Ventilation type				
+VentilationTypeNone	ACCESSIBILITY ID	None					ACCESSIBILITY ID	None				
+VentilationTypeERVHRV	ACCESSIBILITY ID	ERV/HRV					ACCESSIBILITY ID	ERV/HRV				
+VentilationTypePassiveFanOnly	ACCESSIBILITY ID	Passive (fan only)					ACCESSIBILITY ID	Passive (fan only)				
+VentailationTypeFreshAirDamper	ACCESSIBILITY ID	Fresh air damper					ACCESSIBILITY ID	Fresh air damper				
+VentilationControlMethodScreen	ACCESSIBILITY ID	Ventilation Control Method					ACCESSIBILITY ID	Ventilation Control Method				
+VentilationControlMethodASHRAE2010	ACCESSIBILITY ID	ASHRAE 2010					ACCESSIBILITY ID	ASHRAE 2010				
+VentilationControlMethodASHRAE2013	ACCESSIBILITY ID	ASHRAE 2013					ACCESSIBILITY ID	ASHRAE 2013				
+VentilationControlMethodPercentOnTime	ACCESSIBILITY ID	Percent On Time					ACCESSIBILITY ID	Percent On Time				
+NumberOfBedroomScreen	ACCESSIBILITY ID	Number of Bedrooms					ACCESSIBILITY ID	Number of Bedrooms				
+SizeOfHouseScreen	ACCESSIBILITY ID	Size of House					ACCESSIBILITY ID	Size of House				
+VentilationRateScreen	ACCESSIBILITY ID	Ventilation Rate					ACCESSIBILITY ID	Ventilation Rate				
+VentilationPriorityScreen	ACCESSIBILITY ID	Ventilation Priority					ACCESSIBILITY ID	Ventilation Priority				
+VentilationPriorityLockouts	ACCESSIBILITY ID	Lockouts					ACCESSIBILITY ID	Lockouts				
+VentilationPriorityASHRAE	ACCESSIBILITY ID	ASHRAE					ACCESSIBILITY ID	ASHRAE				
+VentilationLowTemperatureLockoutScreen	ACCESSIBILITY ID	Ventilation: Low-Temperature Lockout					ACCESSIBILITY ID	Ventilation: Low-Temperature Lockout				
+VentilationHighTemperatureLockoutScreen	ACCESSIBILITY ID	Ventilation: High-Temperature Lockout					ACCESSIBILITY ID	Ventilation: High-Temperature Lockout				
+VentilationHighDewPointLockoutScreen	ACCESSIBILITY ID	Ventilation: High-Dew Point Lockout					ACCESSIBILITY ID	Ventilation: High-Dew Point Lockout				
+VentilationPercentOnTimeScreen	ACCESSIBILITY ID	Ventilation Percent on time					ACCESSIBILITY ID	Ventilation Percent on time				
+VentilationFanControlScreen	ACCESSIBILITY ID	Ventilation fan control					ACCESSIBILITY ID	Ventilation fan control				
+VentilationFanControlThermostatControlsFan	ACCESSIBILITY ID	Thermostat controls fan					ACCESSIBILITY ID	Thermostat controls fan				
+VentilationFanControlEquipmentControlsFan	ACCESSIBILITY ID	Equipment controls fan					ACCESSIBILITY ID	Equipment controls fan				
+ISUConfigurationSummaryScreen	ACCESSIBILITY ID	Configuration summary					ACCESSIBILITY ID	Configuration summary				
+PreviousButton	ACCESSIBILITY ID	Previous					ACCESSIBILITY ID	Previous				
+FinishButton	ACCESSIBILITY ID	Finish					ACCESSIBILITY ID	Finish				
+IsSuccessScreen	ACCESSIBILITY ID	Success!					ACCESSIBILITY ID	Success!				
+DisconnectButton	ACCESSIBILITY ID	Disconnect					ACCESSIBILITY ID	Disconnect				
+AdvanceSettings	XPATH	//android.widget.ImageView[contains(@content-desc,'Advanced Settings')]					XPATH	//*[contains(@name,'Advanced Settings')]				
+Diagnostics	XPATH	//android.widget.ImageView[contains(@content-desc,'Diagnostics')]					XPATH	//*[contains(@name,'Diagnostics')]				
+CustomerInfo	XPATH	//android.widget.ImageView[contains(@content-desc,'Customer Info')]					XPATH	//*[contains(@name,'Customer Info')]				
+IsCustomerListUpdated	XPATH	//android.view.View[contains(@content-desc,'Recent Customers')]/following-sibling::android.view.View//android.widget.ImageView					ACCESSIBILITY ID	NOT APPLICABLE				
+CustomerSearchButton	XPATH	NA					XPATH	//XCUIElementTypeStaticText[@name='Customers']/following-sibling::XCUIElementTypeTextField				
+CustomerselectInList	XPATH	NA					XPATH	//*[contains(@name,'raajashekaranpl@gmail.com')]				
+AddCustomerButton	ACCESSIBILITY ID	Add Customer					ACCESSIBILITY ID	Add Customer				
+EmailTextBox	XPATH	//android.widget.EditText[contains(@text,'Email')]					XPATH	//*[contains(@name,'Email')]				
+FirstNameTextBox	XPATH	//android.widget.EditText[contains(@text,'First Name')]					XPATH	//*[contains(@name,'First Name')]				
+LastNameTextBox	XPATH	//android.widget.EditText[contains(@text,'Last Name')]					XPATH	//*[contains(@name,'Last Name')]				
+PhoneNumberTextBox	XPATH	//android.widget.EditText[contains(@text,'Phone Number')]					XPATH	//*[contains(@name,'Phone Number')]				
+LocationNameTextBox	XPATH	//android.widget.EditText[contains(@text,'Location Name')]					XPATH	//*[contains(@name,'Location Name')]				
+CountryListBox	XPATH	//android.widget.Button[contains(@content-desc,'Country')]					XPATH	//*[contains(@name,'Country')]				
+AddressTextBox	XPATH	//android.widget.EditText[contains(@text,'Address')]					XPATH	//*[contains(@name,'Address')]				
+CityTextBox	XPATH	//android.widget.EditText[contains(@text,'City')]					XPATH	//*[contains(@name,'City')]				
+StateProvinceTextBox	XPATH	//android.widget.EditText[contains(@text,'State/Province')]					XPATH	//*[contains(@name,'State/Province')]				
+ZipCode	XPATH	//android.widget.EditText[contains(@text,'Zipcode/Postal Code')]					XPATH	//*[contains(@name,'Zipcode/Postal')]				
+NewLocationScreen	ACCESSIBILITY ID	New Location					ACCESSIBILITY ID	New Location				
+NewCustomerScreen	ACCESSIBILITY ID	New Customer					ACCESSIBILITY ID	New Customer				
+PrimaryLocationScreen	ACCESSIBILITY ID	Primary Location					ACCESSIBILITY ID	Primary Location				
+UnitedStateCountry	ACCESSIBILITY ID	United States					ACCESSIBILITY ID	United States				
+CanadaCountry	ACCESSIBILITY ID	Canada					ACCESSIBILITY ID	Canada				
+MexicoCountry	ACCESSIBILITY ID	Mexico					ACCESSIBILITY ID	Mexico				
+VerifyInfoScreen	ACCESSIBILITY ID	Verify Info					ACCESSIBILITY ID	Verify Info				
+IsBluetoothPopUp	ACCESSIBILITY ID	Not Applicable					XPATH	//XCUIElementTypeStaticText[contains(@name,'Would Like to Use Bluetooth')]				
+BluetoothPopupAllow	ACCESSIBILITY ID	Not Applicable					ACCESSIBILITY ID	OK				
+BluetoothPopupDontAllow	ACCESSIBILITY ID	Not Applicable					ACCESSIBILITY ID	Don�t Allow				
+IsLocalNetworkConnectPopup	ACCESSIBILITY ID	Not Applicable					XPATH	//XCUIElementTypeStaticText[contains(@name,'find and connect to devices on your local network')]				
+LocalNetworkConnectAllow	ACCESSIBILITY ID	Not Applicable					ACCESSIBILITY ID	OK				
+LocalNetworkConnectDontAllow	ACCESSIBILITY ID	Not Applicable					ACCESSIBILITY ID	Don�t Allow				
+FindStagesInDiagnostic	XPATH	//android.widget.Switch/parent::android.view.View					ACCESSIBILITY ID	NOT APPLICABLE				
+GetNoOfCompressorHeatStageinSystemTest	XPATH	//*[contains(@content-desc,'Compressor Heat')]					ACCESSIBILITY ID	NOT APPLICABLE				
+IsBackHeatOptionInSystemTest	XPATH	//*[contains(@content-desc,'Backup Heat')]					ACCESSIBILITY ID	NOT APPLICABLE				
+IsSchedulingOptionsScreen	ACCESSIBILITY ID	Scheduling Options					ACCESSIBILITY ID	Scheduling Options				
+SchedulingOptionsNoschedule	ACCESSIBILITY ID	No schedule					ACCESSIBILITY ID	No schedule				
+SchedulingOptionsAlldayssame	ACCESSIBILITY ID	All days same					ACCESSIBILITY ID	All days same				
+SchedulingOptionsMondayToFridayAndSatToSun	ACCESSIBILITY ID	[Mon-Fri | Sat-Sun]					ACCESSIBILITY ID	[Mon-Fri | Sat-Sun]				
+SchedulingOptionsMonToFriAndSatAndSUn	ACCESSIBILITY ID	[Mon-Fri | Sat | Sun]					ACCESSIBILITY ID	[Mon-Fri | Sat | Sun]				
+SchedulingOptionsIndividualsDays	ACCESSIBILITY ID	Individual days					ACCESSIBILITY ID	Individual days				
+DisconnectfromThermostatPopup	ACCESSIBILITY ID	Disconnect from Thermostat?					ACCESSIBILITY ID	Disconnect from Thermostat?				
+DisconnectAndInviteButton	ACCESSIBILITY ID	Disconnect & Invite					ACCESSIBILITY ID	Disconnect & Invite				
+DisconnectFromStatCancelButton	ACCESSIBILITY ID	Cancel					ACCESSIBILITY ID	Cancel				
+NoInternetConnectioncreen	ACCESSIBILITY ID	No Internet Connection					ACCESSIBILITY ID	No Internet Connection				
+InviteLaterInNoInternetConnection	ACCESSIBILITY ID	Invite Later					ACCESSIBILITY ID	Invite Later				
+CheckCOnnectionButtonInNoInternetConnection	ACCESSIBILITY ID	Check Connection					ACCESSIBILITY ID	Check Connection				
+isTemperatureScaleScreen	ACCESSIBILITY ID	Temperature scale					ACCESSIBILITY ID	Temperature scale				
+TemperatureScaleFahrenheit	ACCESSIBILITY ID	Fahrenheit (F)					ACCESSIBILITY ID	Fahrenheit (F)				
+TemperatureScaleCelsius	ACCESSIBILITY ID	Celsius (C)					ACCESSIBILITY ID	Celsius (C)				
+isSystemChangeOverScreen	ACCESSIBILITY ID	System Changeover					ACCESSIBILITY ID	System Changeover				
+SystemChangeOverAutomatic	ACCESSIBILITY ID	Automatic					ACCESSIBILITY ID	Automatic				
+SystemChangeOverManual	ACCESSIBILITY ID	Manual					ACCESSIBILITY ID	Manual				
+isFinishWithHighCoolStageScreen	ACCESSIBILITY ID	Finish with High Cool Stage					ACCESSIBILITY ID	Finish with High Cool Stage				
+FinishWithHighCoolStageYes	ACCESSIBILITY ID	No					ACCESSIBILITY ID	No				
+FinishWithHighCoolStageNo	ACCESSIBILITY ID	Yes					ACCESSIBILITY ID	Yes				
+isFinishWithHighHeatStageScreen	ACCESSIBILITY ID	Finish with High Heat Stage					ACCESSIBILITY ID	Finish with High Heat Stage				
+FinishWithHighHeatStageYes	ACCESSIBILITY ID	No					ACCESSIBILITY ID	No				
+FinishWithHighHeatStageNo	ACCESSIBILITY ID	Yes					ACCESSIBILITY ID	Yes				
+isCompressorOffMinimumTimeScreen	ACCESSIBILITY ID	Compressor Minimum Off Time					ACCESSIBILITY ID	Compressor Minimum Off Time				
+isExtendedFanRunTimeInCoolScreen	ACCESSIBILITY ID	Extended Fan Run Time in Cool					ACCESSIBILITY ID	Extended Fan Run Time in Cool				
+ExtendedFanRunTimeInCoolOff	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off				
+ExtendedFanRunTimeInCool90Seconds	ACCESSIBILITY ID	90 seconds					ACCESSIBILITY ID	90 seconds				
+ExtendedFanRunTimeInCool4Minutes	ACCESSIBILITY ID	4 minutes					ACCESSIBILITY ID	4 minutes				
+ExtendedFanRunTimeInCool7Minutes	ACCESSIBILITY ID	7 minutes					ACCESSIBILITY ID	7 minutes				
+ExtendedFanRunTimeInCool10Minutes	ACCESSIBILITY ID	10 minutes					ACCESSIBILITY ID	10 minutes				
+isExtendedFanRunTimeInHeatScreen	ACCESSIBILITY ID	Extended Fan Run Time in Heat					ACCESSIBILITY ID	Extended Fan Run Time in Heat				
+ExtendedFanRunTimeInHeatOff	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off				
+ExtendedFanRunTimeInHeat90Seconds	ACCESSIBILITY ID	90 seconds					ACCESSIBILITY ID	90 seconds				
+ExtendedFanRunTimeInHeat4Minutes	ACCESSIBILITY ID	4 minutes					ACCESSIBILITY ID	4 minutes				
+ExtendedFanRunTimeInHeat7Minutes	ACCESSIBILITY ID	7 minutes					ACCESSIBILITY ID	7 minutes				
+ExtendedFanRunTimeInHeat10Minutes	ACCESSIBILITY ID	10 minutes					ACCESSIBILITY ID	10 minutes				
+isAdaptiveIntelligentRecoveryScreen	ACCESSIBILITY ID	Adaptive Intelligent Recovery					ACCESSIBILITY ID	Adaptive Intelligent Recovery				
+AdaptiveIntelligentRecoveryYes	ACCESSIBILITY ID	Yes					ACCESSIBILITY ID	Yes				
+AdaptiveIntelligentRecoveryNo	ACCESSIBILITY ID	No					ACCESSIBILITY ID	No				
+isMaximumCoolSetPointScreen	ACCESSIBILITY ID	Maximum Cool SetPoint					ACCESSIBILITY ID	Maximum Cool SetPoint				
+isMinimumCoolSetPointScreen	ACCESSIBILITY ID	Minimum Cool SetPoint					ACCESSIBILITY ID	Minimum Cool SetPoint				
+isMaximumHeatSetPointScreen	ACCESSIBILITY ID	Maximum Heat SetPoint					ACCESSIBILITY ID	Maximum Heat SetPoint				
+isMinimumHeatSetPointScreen	ACCESSIBILITY ID	Minimum Heat SetPoint					ACCESSIBILITY ID	Minimum Heat SetPoint				
+isNumberOfAirFiltersScreen	ACCESSIBILITY ID	Number of Air Filters					ACCESSIBILITY ID	Number of Air Filters				
+AirFilter1	ACCESSIBILITY ID	1					ACCESSIBILITY ID	1				
+AirFilter2	ACCESSIBILITY ID	2					ACCESSIBILITY ID	2				
+AirFilter0	ACCESSIBILITY ID	0					ACCESSIBILITY ID	0				
+isHumdifierPadReplacementReminderScreen	ACCESSIBILITY ID	Humidifier Pad Replacement Reminder					ACCESSIBILITY ID	Humidifier Pad Replacement Reminder				
+HumdifierPadReplacementReminderOff	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off				
+HumdifierPadReplacementReminder6CalenderMonths	ACCESSIBILITY ID	6 Calendar Months					ACCESSIBILITY ID	6 Calendar Months				
+HumdifierPadReplacementReminder12calendarMonths	ACCESSIBILITY ID	12 Calendar Months					ACCESSIBILITY ID	12 Calendar Months				
+isDehumidifierFilterReplacementReminder	ACCESSIBILITY ID	Dehumidifier Filter Replacement Reminder					ACCESSIBILITY ID	Dehumidifier Filter Replacement Reminder				
+isAutoChangeoverDifferentialScreen	ACCESSIBILITY ID	Auto Changeover Differential					ACCESSIBILITY ID	Auto Changeover Differential				
+GetFirstUpAndDownValueInOtherWay	XPATH	//*[@content-desc='Previous']/preceding-sibling::android.widget.ImageView[2]/following-sibling::android.view.View[1]					XPATH	//XCUIElementTypeButton[@name='Previous']/preceding-sibling::XCUIElementTypeStaticText[2]				
+isVentilationCoreReminderScreen	ACCESSIBILITY ID	Ventilation Core Reminder					ACCESSIBILITY ID	Ventilation Core Reminder				
+isVentilationFilterReminderScreen	ACCESSIBILITY ID	Ventilator Filter Reminder					ACCESSIBILITY ID	Ventilator Filter Reminder				
+isNumberOfUVDevicesScreen	ACCESSIBILITY ID	Number of UV Devices					ACCESSIBILITY ID	Number of UV Devices				
+UVDevice0	ACCESSIBILITY ID	0					ACCESSIBILITY ID	0				
+UVDevice1	ACCESSIBILITY ID	1					ACCESSIBILITY ID	1				
+UVDevice2	ACCESSIBILITY ID	2					ACCESSIBILITY ID	2				
+isInavtiveBacklightLevelScreen	ACCESSIBILITY ID	Inactive Backlight Level					ACCESSIBILITY ID	Inactive Backlight Level				
+isClockFormatScreen	ACCESSIBILITY ID	Clock Format					ACCESSIBILITY ID	Clock Format				
+12HourFormat	ACCESSIBILITY ID	12 Hour					ACCESSIBILITY ID	12 Hour				
+24HourFormat	ACCESSIBILITY ID	24 Hour					ACCESSIBILITY ID	24 Hour				
+isDayLightSavingTimescreen	ACCESSIBILITY ID	Daylight Saving Time					ACCESSIBILITY ID	Daylight Saving Time				
+DayLightSavingOff	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off				
+DayLightSavingOn	ACCESSIBILITY ID	On					ACCESSIBILITY ID	On				
+isTemperatureDisplayOffsetScreen	ACCESSIBILITY ID	Temperature Display Offset					ACCESSIBILITY ID	Temperature Display Offset				
+isIndoorTemperatureDisplayOffsetScreen	ACCESSIBILITY ID	Indoor Temperature Display Offset					ACCESSIBILITY ID	Indoor Temperature Display Offset				
+ISUDropDownButton	XPATH	//android.view.View[@content-desc]/following-sibling::android.widget.Button[1]					XPATH	//XCUIElementTypeStaticText[@name]/following-sibling::XCUIElementTypeButton[1]				
+isAirFilterReplacementReminder	ACCESSIBILITY ID	Air Filter Replacement Reminder					ACCESSIBILITY ID	Air Filter Replacement Reminder				
+AirFilterReplacementReminderOff	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off				
+isUVBulbReplacementReminder	ACCESSIBILITY ID	UV Bulb Replacement Reminder					ACCESSIBILITY ID	UV Bulb Replacement Reminder				
+UVBulbReplacementReminderOff	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off				
+UVBulbReplacementReminder6CalenderMonths	ACCESSIBILITY ID	6 Calendar Months					ACCESSIBILITY ID	6 Calendar Months				
+UVBulbReplacementReminder12calendarMonths	ACCESSIBILITY ID	12 Calendar Months					ACCESSIBILITY ID	12 Calendar Months				
+UVBulbReplacementReminder24CalendarMonths	ACCESSIBILITY ID	24 Calendar Months					ACCESSIBILITY ID	24 Calendar Months				
+isConnectedToThermostatVisible	XPATH	//android.view.View[contains(@content-desc,'Connected to')]					XPATH	//*[contains(@name,'Connected to')]				
+IsInviteCustomerPopUp	XPATH	//*[contains(@content-desc,'Invite Customer')]					XPATH	//*[@name='Invite Customer?']				
+InviteCustomerSkip	XPATH	//*[contains(@content-desc,'Skip')]					ACCESSIBILITY ID	Skip				
+InviteCustomerLater	XPATH	//*[contains(@content-desc,'Invite Later')]					XPATH	//*[contains(@name,'Invite Later')]				
+InviteCustomerNow	XPATH	//*[contains(@content-desc,'Invite Now')]					ACCESSIBILITY ID	Invite Now				
+CalenderOFF	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off				
+3CalendarMonths	ACCESSIBILITY ID	3 Calendar Months					ACCESSIBILITY ID	3 Calendar Months				
+6CalendarMonths	ACCESSIBILITY ID	6 Calendar Months					ACCESSIBILITY ID	6 Calendar Months				
+9CalendarMonths	ACCESSIBILITY ID	9 Calendar Months					ACCESSIBILITY ID	9 Calendar Months				
+12CalendarMonths	ACCESSIBILITY ID	12 Calendar Months					ACCESSIBILITY ID	12 Calendar Months				
+InviteCustomerPopup12	ACCESSIBILITY ID	Invite Customer?					ACCESSIBILITY ID	Invite Customer?				
+InviteCustomerSkip12	ACCESSIBILITY ID	Skip					ACCESSIBILITY ID	Skip				
+InviteCustomerInviteLater12	XPATH	//*[contains(@content-desc,'Invite Later')]					XPATH	//*[contains(@name,'Invite Later')]				
+InviteCustomerInviteNow12	ACCESSIBILITY ID	Invite Now					ACCESSIBILITY ID	Invite Now				
+isRecentCustomers	ACCESSIBILITY ID	Recent Customers					ACCESSIBILITY ID	Recent Customers				
+isConfigureOnDeviceScreen	ACCESSIBILITY ID	Configure on Device Screen					ACCESSIBILITY ID	Configure on Device Screen				
+isFindQrScanScreen	ACCESSIBILITY ID	Find QR Code					ACCESSIBILITY ID	Find QR Code				
+isScanQRCodeScreen	ACCESSIBILITY ID	Scan QR Code					ACCESSIBILITY ID	Scan QR Code				
+EnterMacManuallyButton	ACCESSIBILITY ID	Enter MAC Manually					ACCESSIBILITY ID	Enter MAC Manually				
+EnterMacManuallyTB	XPATH	//android.widget.EditText					XPATH	//XCUIElementTypeTextField				
+isEnterMacAddress	ACCESSIBILITY ID	Enter MAC Address					ACCESSIBILITY ID	Enter MAC Address				

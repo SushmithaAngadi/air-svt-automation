@@ -1,0 +1,399 @@
+{
+    "Denali": {
+        "SystemMode": {
+            "Topic": "/Tstat/Data/SystemMode/CurrentMode",
+            "Payload": {
+                "EmHeat": "0",
+                "Heat": "1",
+                "Off": "2",
+                "Cool": "3",
+                "Auto": "4",
+                "AutoHeat": "5",
+                "AutoCool": "6"
+            }
+        },
+        "SpStatus": {
+            "Topic": "/Tstat/Data/SpStatus",
+            "Payload": {
+                "Heat": "HeatSp",
+                "Cool": "CoolSp",
+                "Status": {
+                    "Off": "0",
+                    "Base": "1",
+                    "Schedule": "2",
+                    "HoldUntil": "3",
+                    "Temporary": "4",
+                    "Permanent": "5",
+                    "Vacation": "6",
+                    "Away": "7",
+                    "Home": "8",
+                    "SchedInvalidTime": "9",
+                    "DehumAway": "10"
+                }
+            }
+        },
+        "FanSwitchPosition": {
+            "Topic": "/Tstat/Data/Fan/SwitchPosition",
+            "Payload": {
+                "On": "0",
+                "Auto": "1",
+                "Circ": "2",
+                "Sched": "3",
+                "2_On": "4",
+                "3_On": "5"
+            }
+        },
+        "Relays": {
+            "Topic": "/Rpbroker/Relays_",
+            "Payload": {
+                "W_OB": 0,
+                "E": 1,
+                "Y": 2,
+                "W2_AUX": 3,
+                "Y2": 4,
+                "G": 5,
+                "L": 6,
+                "U1": 7
+            }
+        },
+        "IndoorTemp": {
+            "Topic": "/Tstat/Data/IndoorTemp",
+            "Payload": {}
+        },
+        "IsuIsSessionOpen": {
+            "Topic": "/Tstat/Data/ISUs/IsSessionOpen",
+            "Payload": {
+                "true": true,
+                "false": false
+            }
+        },
+        "IsuItem": {
+            "Topic": "/Tstat/Data/ISUs/Item",
+            "Payload": {
+                "ISU_TSTAT_CONFIGURED": {
+                    "Item": 0,
+                    "ItemValue": {}
+                },
+                "ISU_LANGUAGE": {
+                    "Item": 1,
+                    "ItemValue": {
+                        "ISU_1000_LANGUAGE__ENGLISH": 0,
+                        "ISU_1000_LANGUAGE__FRANCAIS": 2,
+                        "ISU_1000_LANGUAGE__ESPANOL": 4
+                    }
+                },
+                "ISU_INSTALLATION_TYPE": {
+                    "Item": 2,
+                    "ItemValue": {}
+                },
+                "ISU_DEVICE_NAME": {
+                    "Item": 3,
+                    "ItemValue": {}
+                },
+                "ISU_HOME_SCREEN_NAME": {
+                    "Item": 4,
+                    "ItemValue": {}
+                },
+                "ISU_SCHED_OPTIONS": {
+                    "Item": 5,
+                    "ItemValue": {}
+                },
+                "ISU_TEMP_FORMAT": {
+                    "Item": 6,
+                    "ItemValue": {}
+                },
+                "ISU_FLOOR_SENSOR": {
+                    "Item": 7,
+                    "ItemValue": {}
+                },
+                "ISU_OUTDOOR_TEMPERATURE": {
+                    "Item": 8,
+                    "ItemValue": {}
+                },
+                "ISU_HEAT_SYSTEM_TYPE_1": {
+                    "Item": 9,
+                    "ItemValue": {
+                        "ISU_2000_HEAT_SYSTEM_TYPE_1__CONVENTIONAL": 1,
+                        "ISU_2000_HEAT_SYSTEM_TYPE_1__HEAT_PUMP": 2,
+                        "ISU_2000_HEAT_SYSTEM_TYPE_1__RADIANT_HEAT": 3,
+                        "ISU_2000_HEAT_SYSTEM_TYPE_1__ODEER": 4,
+                        "ISU_2000_HEAT_SYSTEM_TYPE_1__NONE": 5,
+                        "ISU_2000_HEAT_SYSTEM_TYPE_1__HEAT_ONLY_EMEA": 6,
+                        "ISU_2000_HEAT_SYSTEM_TYPE_1__HEAT_AND_COOL_EMEA": 7,
+                        "ISU_2000_HEAT_SYSTEM_TYPE_1__FAN_COIL": 8
+                    }
+                },
+                "ISU_HEAT_EQUIP_TYPE_1": {
+                    "Item": 10,
+                    "ItemValue": {
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__STANDARD_EFFICIENCY_GAS_FORCED_AIR": 1,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__HIGH_EFFICIENCY_GAS_FORCED_AIR": 2,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__OIL_FORCED_AIR": 3,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__ELECTRIC_FORCED_AIR": 4,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__HOT_WATER_FAN_COIL": 5,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__GRAVITY": 6,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__AIR_TO_AIR_HP": 7,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__GEOTHERMAL": 8,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__HOT_WATER_RADIANT_HEAT": 9,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__STEAM": 12,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__OTHER": 13,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__2_PIPE_FAN_COIL": 14,
+                        "ISU_2010_HEAT_EQUIP_TYPE_1__4_PIPE_FAN_COIL": 15
+                    }
+                },
+                "ISU_REV_VALVE_POLARITY": {
+                    "Item": 18,
+                    "ItemValue": {
+                        "ISU_2060_REV_VALVE_POLARITY__O": 0,
+                        "ISU_2060_REV_VALVE_POLARITY__B": 1
+                    }
+                },
+                "ISU_COOL_STAGES": {
+                    "Item": 19,
+                    "ItemValue": {
+                        "ISU_2070_COOL_STAGES_0": 0,
+                        "ISU_2070_COOL_STAGES_1": 1,
+                        "ISU_2070_COOL_STAGES_2": 2,
+                        "ISU_2070_COOL_STAGES_3": 3,
+                        "ISU_2070_COOL_STAGES_4": 4
+                    }
+                },
+                "ISU_HEAT_STAGES": {
+                    "Item": 20,
+                    "ItemValue": {
+                        "ISU_2071_HEAT_STAGES_0": 0,
+                        "ISU_2071_HEAT_STAGES_1": 1,
+                        "ISU_2071_HEAT_STAGES_2": 2,
+                        "ISU_2071_HEAT_STAGES_3": 3
+                    }
+                },
+                "ISU_FAN_OPERATION_IN_HEAT": {
+                    "Item": 27,
+                    "ItemValue": {
+                        "ISU_2110_FAN_OPERATION_IN_HEAT__NO_FAN": 0,
+                        "ISU_2110_FAN_OPERATION_IN_HEAT__EQUIP_CONTROLS_FAN": 1,
+                        "ISU_2110_FAN_OPERATION_IN_HEAT__TSTAT_CONTROLS_FAN": 2
+                    }
+                },
+                "ISU_BACKUP_HEAT_TYPE": {
+                    "Item": 28,
+                    "ItemValue": {
+                        "ISU_2120_BACKUP_HEAT_TYPE_NONE": 0,
+                        "ISU_2120_BACKUP_HEAT_TYPE_STD_EFICIENCY_GAS": 21,
+                        "ISU_2120_BACKUP_HEAT_TYPE_HIGH_EFICIENCY_GAS": 22,
+                        "ISU_2120_BACKUP_HEAT_TYPE_OIL_FORCED_AIR": 23,
+                        "ISU_2120_BACKUP_HEAT_TYPE_ELECTRIC_FORCED_AIR": 24,
+                        "ISU_2120_BACKUP_HEAT_TYPE_HOT_WATER_FAN_COIL": 25,
+                        "ISU_2120_BACKUP_HEAT_TYPE_HOT_WATER_RADIANT": 26,
+                        "ISU_2120_BACKUP_HEAT_TYPE_OTHER": 27
+                    }
+                },
+                "ISU_BACKUP_HEAT_STAGES": {
+                    "Item": 29,
+                    "ItemValue": {
+                        "ISU_2130_BACKUP_HEAT_STAGES_0": 0,
+                        "ISU_2130_BACKUP_HEAT_STAGES_1": 1,
+                        "ISU_2130_BACKUP_HEAT_STAGES_2": 2
+                    }
+                },
+                "ISU_BACKUP_HEAT_OPERATION": {
+                    "Item": 31,
+                    "ItemValue": {
+                        "ISU_2150_BACKUP_HEAT_OPERATION__NOT_ALLOWED": 0,
+                        "ISU_2150_BACKUP_HEAT_OPERATION__ALLOWED": 1
+                    }
+                },
+                "ISU_BACKUP_HEAT_FAN_OPERATION": {
+                    "Item": 32,
+                    "ItemValue": {
+                        "ISU_2160_BACKUP_HEAT_FAN_OPERATION__NO_FAN": 0,
+                        "ISU_2160_BACKUP_HEAT_FAN_OPERATION__EQUIP_CONTROLS_FAN": 1,
+                        "ISU_2160_BACKUP_HEAT_FAN_OPERATION__TSTAT_CONTROLS_FAN": 2
+                    }
+                },
+                "ISU_AUX_EM_TERMINAL_CONTROL": {
+                    "Item": 35,
+                    "ItemValue": {
+                        "ISU_2175_AUX_EM_TERMINAL_CONTROL__AUX_AND_E_TOGEDEER": 0,
+                        "ISU_2175_AUX_EM_TERMINAL_CONTROL__AUX_AND_E_INDEPENDENT": 1
+                    }
+                },
+                "ISU_AUX_BACKUP_HEAT_TYPE": {
+                    "Item": 36,
+                    "ItemValue": {
+                        "ISU_2180_AUX_BACKUP_HEAT_TYPE__NONE": 0,
+                        "ISU_2180_AUX_BACKUP_HEAT_TYPE__ELECTRIC_FORCED_AIR": 31,
+                        "ISU_2180_AUX_BACKUP_HEAT_TYPE__STD_EFICIENCY_GAS_FORCED_AIR": 32,
+                        "ISU_2180_AUX_BACKUP_HEAT_TYPE__HIGH_EFICIENCY_GAS": 33,
+                        "ISU_2180_AUX_BACKUP_HEAT_TYPE__OIL_FORCED_AIR": 34,
+                        "ISU_2180_AUX_BACKUP_HEAT_TYPE__HOT_WATER_FAN_COIL": 35,
+                        "ISU_2180_AUX_BACKUP_HEAT_TYPE__HOT_WATER_RADIANT": 36,
+                        "ISU_2180_AUX_BACKUP_HEAT_TYPE__OTHER": 37
+                    }
+                },
+                "ISU_EXTERNAL_FOSSIL_FUEL_KIT": {
+                    "Item": 38,
+                    "ItemValue": {
+                        "ISU_2190_EXTERNAL_FOSSIL_FUEL_KIT__TSTAT_CONTROLS_BACKUP": 0,
+                        "ISU_2190_EXTERNAL_FOSSIL_FUEL_KIT__EXTERNAL_FOSSIBLE_FUEL_KIT_CONTROLS_BACKUP": 1
+                    }
+                },
+                "ISU_AUTO_CHANGEOVER": {
+                    "Item": 49,
+                    "ItemValue": {
+                        "ISU_3000_AUTO_CHANGEOVER__MANUAL": 0,
+                        "ISU_3000_AUTO_CHANGEOVER__AUTOMATIC": 1
+                    }
+                },
+                "ISU_MIN_CMPR_OFF": {
+                    "Item": 96,
+                    "ItemValue": {
+                        "ISU_3240_MIN_CMPR_OFF__OFF": 0,
+                        "ISU_3240_MIN_CMPR_OFF__1MIN": 1,
+                        "ISU_3240_MIN_CMPR_OFF__2MIN": 2,
+                        "ISU_3240_MIN_CMPR_OFF__3MIN": 3,
+                        "ISU_3240_MIN_CMPR_OFF__4MIN": 4,
+                        "ISU_3240_MIN_CMPR_OFF__5MIN": 5
+                    }
+                },
+                "ISU_AIR_ENABLE": {
+                    "Item": 118,
+                    "ItemValue": {
+                        "ISU_4090_AIR_ENABLE__NO": 0,
+                        "ISU_4090_AIR_ENABLE__YES": 1
+                    }
+                },
+                "ISU_MIN_COOL_SP": {
+                    "Item": 120,
+                    "ItemValue": {}
+                },
+                "ISU_MAX_COOL_SP": {
+                    "Item": 121,
+                    "ItemValue": {}
+                },
+                "ISU_MIN_HEAT_SP": {
+                    "Item": 122,
+                    "ItemValue": {}
+                },
+                "ISU_MAX_HEAT_SP": {
+                    "Item": 123,
+                    "ItemValue": {}
+                }
+            }
+        },
+        "IsuItemValue": {
+            "Topic": "/Tstat/Data/ISUs/Info",
+            "Payload": {}
+        },
+        "DefaultReset": {
+            "Topic": "/Tstat/Reset/DefaultReset",
+            "Payload": {
+                "true": true,
+                "false": false
+            }
+        },
+        "FactoryReset": {
+            "Topic": "/Tstat/Reset/FactoryReset",
+            "Payload": {
+                "true": true,
+                "false": false
+            }
+        },
+        "Alert": {
+            "Topic": "/Tstat/Data/Alerts/Active",
+            "Payload": {
+                "State": {
+                    "Inactive": "0",
+                    "Snooze": "1",
+                    "Dismiss": "2",
+                    "Active": "3"
+                },
+                "Override": {
+                    "true": true,
+                    "false": false
+                },
+                "ALERT_REMINDER_TIMER_FILTER_1": {
+                    "Id": 16,
+                    "AlertCode": 181
+                },
+                "ALERT_REMINDER_TIMER_FILTER_2": {
+                    "Id": 17,
+                    "AlertCode": 182
+                },
+                "ALERT_HP_FAILURE": {
+                    "Id": 0,
+                    "AlertCode": 164
+                },
+                "ALERT_THERMOSTAT_MEMORY_ERROR": {
+                    "Id": 4,
+                    "AlertCode": 170
+                },
+                "ALERT_THERMOSTAT_INTERNAL_SENSOR_FAILURE": {
+                    "Id": 7,
+                    "AlertCode": 173
+                },
+                "ALERT_HIGH_CO2": {
+                    "Id": 120,
+                    "AlertCode": 632
+                },
+                "ALERT_VOC_HIGH": {
+                    "Id": 122,
+                    "AlertCode": 95
+                },
+                "ALERT_INDOOR_TEMP_LOWER_THRESHOLD": {
+                    "Id": 112,
+                    "AlertCode": 622
+                },
+                "ALERT_INDOOR_TEMP_UPPER_THRESHOLD": {
+                    "Id": 113,
+                    "AlertCode": 621
+                },
+                "ALERT_INDOOR_HUM_LOWER_THRESHOLD": {
+                    "Id": 114,
+                    "AlertCode": 627
+                },
+                "ALERT_INDOOR_HUM_UPPER_THRESHOLD": {
+                    "Id": 115,
+                    "AlertCode": 626
+                }
+            }
+        },
+		"BleBroadcast": {
+			"Topic": "/BLEManager/Enable",
+			"Payload": {
+				"true": true,
+				"false": false
+			}
+		},
+		"ThermostatRoomName": {
+			"Topic": "/Tstat/Data/Rooms/ThermostatRoom",
+			"Payload": {}
+		},
+		"BleAdvertisement": {
+			"Topic": "/BLEManager/Advertisement",
+			"Payload": {
+				"true": true,
+				"false": false
+			}
+		},
+		"DeviceModelNumber": {
+			"Topic": "/Tstat/DeviceInformation/ModelNumber",
+			"Payload": {}
+		},
+		"DeviceMacId": {
+			"Topic": "/Tstat/DeviceInformation/MacId",
+			"Payload": {}
+		},
+		"AuthCode": {
+			"Topic": "/BLEManager/AuthCode",
+			"Payload": {}
+		},
+		"BleConnectable": {
+			"Topic": "/BLEManager/Enable/Connectable",
+			"Payload": {
+				"true": true,
+				"false": false
+			}
+		}
+    }
+}

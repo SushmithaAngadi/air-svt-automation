@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<robot>
+            
+    
+    <suite id="DIY_Automation" name="Comfort System Automation">
+                
+        <test name="Gleneagles DIY SkipNxtBinding SkipEIMBinding skip ISU Configure WIFI - #1">
+                            
+            
+            <kw name="Given  : user launches and logs in to the &quot;Resideo Pro&quot; app" type="kw">
+                                        
+                
+                <msg html="yes" level="INFO" timestamp="20260306 12:47:36.178">&lt;b&gt;[PASS]&lt;/b&gt; &lt;b&gt;Executing Pre Condition&lt;/b&gt;</msg>
+                                        
+                
+                <msg html="yes" level="INFO" timestamp="20260306 12:47:36.179">&lt;b&gt;[PASS]&lt;/b&gt; &lt;b&gt;Executing Keyword Steps&lt;/b&gt;</msg>
+                                        
+                
+                <msg html="yes" level="INFO" timestamp="20260306 12:47:48.173">&lt;b&gt;[FAIL - False Positive]&lt;/b&gt; Instantiate Driver : Error occured. Error message - Could not start a new session. Response code 500. Message: Error executing adbExec. Original error: 'Command '/Users/sushmithaangadi/Library/Android/sdk/platform-tools/adb -P 5037 -s 51281VDAQ0001W install /Users/sushmithaangadi/air-svt-automation/src/test/resources/MobileAPP/resideoPro.apk' exited with code 1'; Command output: adb: failed to install /Users/sushmithaangadi/air-svt-automation/src/test/resources/MobileAPP/resideoPro.apk: Failure [INSTALL_FAILED_MISSING_SPLIT: Missing split for com.resideo.rezi_pro]
+ 
+Host info: host: 'IE6CC5H26YWR3W', ip: 'fd79:a83a:d775:6793:60:c226:6108:ee1f%en0'
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '25.0.2'
+Driver info: com.resideo.commons.mobile.CustomAndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:androidInstallTimeout: 90000, appium:app: /Users/sushmithaangadi/air-..., appium:appActivity: com.resideo.rezi_pro.MainAc..., appium:appPackage: com.resideo.wick, appium:appWaitActivity: com.resideo.rezi_pro.MainAc..., appium:appWaitPackage: com.resideo.wick, appium:autoLaunch: false, appium:automationName: uiautomator2, appium:commandTimeout: 30000, appium:deviceName: 09281FDD4S00K2, appium:fullReset: false, appium:idleTimeout: 10000, appium:name: Gleneagles DIY SkipNxtBindi..., appium:newCommandTimeout: 300000, appium:noReset: true, appium:optionalIntentArguments: --ez LyricUIAutomation true, appium:shouldTerminateApp: true, browserName: , platformName: ANDROID}]}]
+Capabilities {appium:androidInstallTimeout: 90000, appium:app: /Users/sushmithaangadi/air-..., appium:appActivity: com.resideo.rezi_pro.MainAc..., appium:appPackage: com.resideo.wick, appium:appWaitActivity: com.resideo.rezi_pro.MainAc..., appium:appWaitPackage: com.resideo.wick, appium:autoLaunch: false, appium:automationName: uiautomator2, appium:commandTimeout: 30000, appium:deviceName: 09281FDD4S00K2, appium:fullReset: false, appium:idleTimeout: 10000, appium:name: Gleneagles DIY SkipNxtBindi..., appium:newCommandTimeout: 300000, appium:noReset: true, appium:optionalIntentArguments: --ez LyricUIAutomation true, appium:shouldTerminateApp: true, browserName: , platformName: ANDROID}</msg>
+                                        
+                
+                <msg html="yes" level="INFO" timestamp="20260306 12:47:48.179">&lt;b&gt;[FAIL - False Positive]&lt;/b&gt; Not able to launch the resideo pro app</msg>
+                                        
+                
+                <msg html="yes" level="INFO" timestamp="20260306 12:47:48.181">&lt;b&gt;[PASS]&lt;/b&gt; &lt;b&gt;Executed Post Condition&lt;/b&gt;</msg>
+                                        
+                
+                <status critical="yes" endtime="20260306 12:47:48.182" starttime="20260306 12:47:36.178" status="FAIL"/>
+                                    
+            
+            </kw>
+                            
+            
+            <doc>Instantiate Driver : Error occured. Error message - Could not start a new session. Response code 500. Message: Error executing adbExec. Original error: 'Command '/Users/sushmithaangadi/Library/Android/sdk/platform-tools/adb -P 5037 -s 51281VDAQ0001W install /Users/sushmithaangadi/air-svt-automation/src/test/resources/MobileAPP/resideoPro.apk' exited with code 1'; Command output: adb: failed to install /Users/sushmithaangadi/air-svt-automation/src/test/resources/MobileAPP/resideoPro.apk: Failure [INSTALL_FAILED_MISSING_SPLIT: Missing split for com.resideo.rezi_pro]
+ 
+Host info: host: 'IE6CC5H26YWR3W', ip: 'fd79:a83a:d775:6793:60:c226:6108:ee1f%en0'
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '25.0.2'
+Driver info: com.resideo.commons.mobile.CustomAndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:androidInstallTimeout: 90000, appium:app: /Users/sushmithaangadi/air-..., appium:appActivity: com.resideo.rezi_pro.MainAc..., appium:appPackage: com.resideo.wick, appium:appWaitActivity: com.resideo.rezi_pro.MainAc..., appium:appWaitPackage: com.resideo.wick, appium:autoLaunch: false, appium:automationName: uiautomator2, appium:commandTimeout: 30000, appium:deviceName: 09281FDD4S00K2, appium:fullReset: false, appium:idleTimeout: 10000, appium:name: Gleneagles DIY SkipNxtBindi..., appium:newCommandTimeout: 300000, appium:noReset: true, appium:optionalIntentArguments: --ez LyricUIAutomation true, appium:shouldTerminateApp: true, browserName: , platformName: ANDROID}]}]
+Capabilities {appium:androidInstallTimeout: 90000, appium:app: /Users/sushmithaangadi/air-..., appium:appActivity: com.resideo.rezi_pro.MainAc..., appium:appPackage: com.resideo.wick, appium:appWaitActivity: com.resideo.rezi_pro.MainAc..., appium:appWaitPackage: com.resideo.wick, appium:autoLaunch: false, appium:automationName: uiautomator2, appium:commandTimeout: 30000, appium:deviceName: 09281FDD4S00K2, appium:fullReset: false, appium:idleTimeout: 10000, appium:name: Gleneagles DIY SkipNxtBindi..., appium:newCommandTimeout: 300000, appium:noReset: true, appium:optionalIntentArguments: --ez LyricUIAutomation true, appium:shouldTerminateApp: true, browserName: , platformName: ANDROID}</doc>
+                            
+            
+            <tags>
+                                        
+                
+                <tag>:: Not Executed ::</tag>
+                                    
+            
+            </tags>
+                            
+            
+            <status critical="yes" endtime="20260306 12:47:48.188" starttime="20260306 12:47:36.158" status="FAIL"/>
+                            
+            
+            <kw name="Parameter Information" type="for">
+                                        
+                
+                <status critical="yes" endtime="20260306 12:47:48.188" starttime="20260306 12:47:36.158" status="PASS"/>
+                                        
+                
+                <msg html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th colspan='3'&gt;Following are the Parameters Passed to the Test Case&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th colspan='2'&gt;Framework version : &lt;/th&gt;&lt;td colspan='2'&gt;null - null&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th colspan='2'&gt;Acquition Type : &lt;/th&gt;&lt;td colspan='2'&gt;Specific&lt;/td&gt;&lt;/tr&gt;</msg>
+                                    
+            
+            </kw>
+                            
+            
+            <tags>
+                                        
+                
+                <tag>:: Not Executed ::</tag>
+                                    
+            
+            </tags>
+                            
+            
+            <status critical="yes" endtime="20260306 12:47:48.189" starttime="20260306 12:47:36.158" status="FAIL"/>
+                            
+            
+            <kw name="Parameter Information" type="for">
+                                        
+                
+                <status critical="yes" endtime="20260306 12:47:48.189" starttime="20260306 12:47:36.158" status="PASS"/>
+                                        
+                
+                <msg html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th colspan='3'&gt;Following are the Parameters Passed to the Test Case&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th colspan='2'&gt;Framework version : &lt;/th&gt;&lt;td colspan='2'&gt;null - null&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th colspan='2'&gt;Acquition Type : &lt;/th&gt;&lt;td colspan='2'&gt;Specific&lt;/td&gt;&lt;/tr&gt;</msg>
+                                    
+            
+            </kw>
+                        
+        
+        </test>
+            
+        <status critical="yes" endtime="20260306 12:47:48.233" starttime="20260306 12:47:48.223" status="FAIL"/>
+    </suite>
+        
+
+</robot>

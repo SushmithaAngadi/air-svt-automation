@@ -1,0 +1,23 @@
+{
+	"fields": {
+		"summary": "DENALI RETAIL DIY AUTOMATION EXECUTION 01-15-2026 16:27",
+		"issuetype": {
+			"name": "Test Execution"
+		},
+		"description": "DENALI RETAIL DIY AUTOMATION EXECUTION",
+		"project": {
+			"key": "HTA"
+		},
+		"assignee": {
+			"accountId": "63fe1c71314f5088138130d4"
+		},
+		"labels": [
+			"SIT_Denali",
+			"SIT",
+			"SIT_Denali_Automation"
+		]
+	},
+	"xrayFields": {
+		"testPlanKey": ""
+	}
+}

@@ -1,0 +1,37 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+ThermostatTemperature	id	dashboard_device_secondary_text	id	dashboard_device_secondary_text	id	dashboard_device_secondary_text						
+UpStepper	id	stat_temp_stepper_up	id	stat_temp_stepper_up	id	stat_temp_stepper_up	id	temp stepper up				
+AddNewDeviceMenu							name	Add New Device	name	Add New Device	name	Add New Device
+ThermostatName	id	dashboard_device_name	id	dashboard_device_name	id	dashboard_device_name	name	title	name	title	name	title
+SecurityTitleInDashboardScreen	XPATH	//android.widget.TextView[@text='Security']	XPATH	//android.widget.TextView[@text='Security']	XPATH	//android.widget.TextView[@text='Security']	NAME	subTitle_Security	NAME	subTitle_Security	NAME	subTitle_Security
+DeviceCurrentTempValue	id	current_temp_value	id	current_temp_value	id	current_temp_value	XPATH	//XCUIElementTypeStaticText[@name='Dialer']	XPATH	//XCUIElementTypeStaticText[@name='Dialer']	XPATH	//XCUIElementTypeStaticText[@name='Dialer']
+DoneButtonInWeatherForecast	ID	btn_positive_got_it	ID	btn_positive_got_it	ID	btn_positive_got_it	NAME	Done	NAME	Done	NAME	Done
+LocationName	id	toolbar_spinner_item_actionbar_title					NAME	Location Name	NAME	Location Name	NAME	Location Name
+UserExpectedTemperature	id	current_temp_value	id	current_temp_value	id	current_temp_value	id	Dialer				
+SplashScreen	id	splash_screen_layout	id	splash_screen_layout	id	splash_screen_layout						
+DeviceView	id	device_view	id	device_view	id	device_view						
+GlobalDrawerButton	XPATH	//android.widget.ImageButton[@content-desc='Main Menu']	XPATH	//android.widget.ImageButton[@content-desc='Main Menu']	XPATH	//android.widget.ImageButton[@content-desc='Main Menu']	NAME	menu	NAME	menu	NAME	menu
+DashboardIconStatus	id	dashboard_device_secondary_text	id	dashboard_device_secondary_text	id	dashboard_device_secondary_text	XPATH	//*[contains(@name, 'subTitle')]	XPATH	//*[contains(@name, 'subTitle')]	XPATH	//*[contains(@name, 'subTitle')]
+LocationDropDownList	id	toolbar_spinner_item_dropdown_title					NAME	Navigation_Drop_Down_Title_subTitle	NAME	Navigation_Drop_Down_Title_subTitle	NAME	Navigation_Drop_Down_Title_cell
+ProgressBar	xpath	//android.widget.ProgressBar	xpath	//android.widget.ProgressBar	xpath	//android.widget.ProgressBar						
+WeatherIcon	id	action_weather	id	action_weather	id	action_weather	name	icon showers small	name	icon showers small	name	icon showers small
+AddNewDeviceIcon	ID	dashboard_add_device	ID	dashboard_add_device	ID	dashboard_add_device	NAME	Add New Device	NAME	Add New Device	NAME	Add New Device
+ZwaveSwitchSelectedState							name	Selected_State	name	Selected_State	name	Selected_State
+HoneywellUnexpectedQuitPopup	XPATH	//*[@text='Honeywell Unexpectedly Quit']	XPATH	//*[@text='Honeywell Unexpectedly Quit']	XPATH	//*[@text='Honeywell Unexpectedly Quit']	XPATH	//XCUIElementTypeStaticText[@value='Honeywell Unexpectedly Quit']	XPATH	//XCUIElementTypeStaticText[@value='Honeywell Unexpectedly Quit']	XPATH	//XCUIElementTypeStaticText[@value='Honeywell Unexpectedly Quit']
+LocationDropDownButton	id	toolbar_location_spinner					NAME	Location Name	NAME	Location Name	NAME	Location Name
+DashboardIconText	id	dashboard_device_name	id	dashboard_device_name	id	dashboard_device_name	XPATH	//XCUIElementTypeButton[@name='title']	XPATH	//XCUIElementTypeButton[@name='title']	XPATH	//XCUIElementTypeButton[@name='title']
+CloseButtonInHoneywellRatingPopup	ID	btn_close	ID	btn_close	ID	btn_close	NAME	Not Now	NAME	Not Now	NAME	Not Now
+BackButton	XPATH	//android.widget.ImageButton[@content-desc='Navigate Up']	XPATH	//android.widget.ImageButton[@content-desc='Navigate Up']	XPATH	//android.widget.ImageButton[@content-desc='Navigate Up']	name	Back	name	Back	name	Back
+GotItButtonInWeatherForecast	XPATH	//*[@text='Got It']	XPATH	//*[@text='Got It']	XPATH	//*[@text='Got It']	NAME	Got It	NAME	Got It	NAME	Got It
+DeviceOffline	xpath	//*[@text='SYSTEM IS OFFLINE']	xpath	//*[@text='SYSTEM IS OFFLINE']	xpath	//*[@text='SYSTEM IS OFFLINE']						
+DownStepper	id	stat_temp_stepper_down	id	stat_temp_stepper_down	id	stat_temp_stepper_down	id	temp stepper down				
+StatTempStepperUp	id	stat_temp_stepper_up	id	stat_temp_stepper_up	id	stat_temp_stepper_up						
+AlwaysSendButton1	XPATH	//*[@text='ALWAYS SEND']	XPATH	//*[@text='ALWAYS SEND']	XPATH	//*[@text='ALWAYS SEND']	XPATH	//XCUIElementTypeStaticText[@value='ALWAYS SEND']	XPATH	//XCUIElementTypeStaticText[@value='ALWAYS SEND']	XPATH	//XCUIElementTypeStaticText[@value='ALWAYS SEND']
+AlwaysSendButton2	XPATH	//*[@text='Always Send']	XPATH	//*[@text='Always Send']	XPATH	//*[@text='Always Send']	XPATH	//XCUIElementTypeStaticText[@value='Always Send']	XPATH	//XCUIElementTypeStaticText[@value='Always Send']	XPATH	//XCUIElementTypeStaticText[@value='Always Send']
+AddNewDeviceIconBelowExistingDevice	ID	dashboard_add_device	ID	dashboard_add_device	ID	dashboard_add_device	NAME	Add New Device	NAME	Add New Device	NAME	Add New Device
+StatTempStepperDown	id	stat_temp_stepper_down	id	stat_temp_stepper_down	id	stat_temp_stepper_down						
+SettingsIconInSecurityScreen							NAME	appSettingsIcon	NAME	appSettingsIcon	NAME	appSettingsIcon
+TemperatureInOffModeForIOS	id	current_temp_value					id	--				
+GlobalDrawerIconList	id	list_item_lyric_icon_text	id	list_item_lyric_icon_text	id	list_item_lyric_icon_text						
+AddNewDeviceNewIcon							XPATH	(//XCUIElementTypeButton[@name='Add New Device'])[2]	XPATH	(//XCUIElementTypeButton[@name='Add New Device'])[2]	XPATH	(//XCUIElementTypeButton[@name='Add New Device'])[2]
+IgnoreButtonInHoneywellUpdatePopup							NAME	Ignore	NAME	Ignore	NAME	Ignore

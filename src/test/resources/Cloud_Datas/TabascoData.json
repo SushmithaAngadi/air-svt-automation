@@ -1,0 +1,27 @@
+{
+	"Tabasco_QA":{
+	"client_id":"cec14060-71da-41a2-b96f-b12788aa4c07",
+	"client_secret":"8WF7J~mlpa_WtySf9n3-.34fhmw3N~8p7M",
+	"scope":"https://lyricdev.onmicrosoft.com/tabascoapi/.default",
+	"grant_type":"client_credentials",
+	"Client Authentication":"Client credentials in Body",
+	"request_URL":"https://login.microsoftonline.com/4722b4c2-6388-4c69-9cfb-f950ea762665/oauth2/v2.0/token"
+	},
+	"Tabasco_Stage":{
+	"client_id":"75117c44-8e37-4f84-b38c-c96d939bbcab",
+	"client_secret":"iL~ou8J47i2Vx.Fk-B..Lep3ooa9ZrdT35",
+	"scope":"https://lyricqastage.onmicrosoft.com/tabascoapi/.default",
+	"grant_type":"client_credentials",
+	"Client Authentication":"Client credentials in Body",
+	"request_URL":"https://login.microsoftonline.com/87df9e29-606d-43bf-9edb-5cc6e613ecbf/oauth2/v2.0/token"
+	},
+	"Tabasco_Prod":{
+	"client_id":"cbc6e2d3-5ece-45dc-8103-424752624488",
+	"client_secret":"XD_7Q~azOFZWBe~EBRBeQaENLK2Rd9DRQjzWJ",
+	"scope":"https://lyricprod.onmicrosoft.com/tabascoapi/.default",
+	"grant_type":"client_credentials",
+	"Client Authentication":"Client credentials in Body",
+	"request_URL":"https://login.microsoftonline.com/39dae6b5-c8a3-44b3-9fd6-0da71b99bf59/oauth2/v2.0/token"
+	}
+
+}

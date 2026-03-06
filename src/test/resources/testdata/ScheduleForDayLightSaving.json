@@ -1,0 +1,437 @@
+{
+	"Schedule_type": "TIME",
+	"Monday": {
+		"Wake": {
+			"Enabled": "True",
+			"StartHour": "00",
+			"StartMin": "00",
+			"HeatSP": "65",
+			"CoolSP": "75",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Away": {
+			"Enabled": "True",
+			"StartHour": "1",
+			"StartMin": "0",
+			"HeatSP": "69",
+			"CoolSP": "79",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Home": {
+			"Enabled": "True",
+			"StartHour": "2",
+			"StartMin": "0",
+			"HeatSP": "73",
+			"CoolSP": "83",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Sleep": {
+			"Enabled": "True",
+			"StartHour": "14",
+			"StartMin": "0",
+			"HeatSP": "77",
+			"CoolSP": "87",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA5": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA6": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		}
+	},
+	"Tuesday": {
+		"Wake": {
+			"Enabled": "True",
+			"StartHour": "00",
+			"StartMin": "00",
+			"HeatSP": "65",
+			"CoolSP": "75",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Away": {
+			"Enabled": "True",
+			"StartHour": "1",
+			"StartMin": "0",
+			"HeatSP": "69",
+			"CoolSP": "79",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Home": {
+			"Enabled": "True",
+			"StartHour": "2",
+			"StartMin": "0",
+			"HeatSP": "73",
+			"CoolSP": "83",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Sleep": {
+			"Enabled": "True",
+			"StartHour": "14",
+			"StartMin": "0",
+			"HeatSP": "77",
+			"CoolSP": "87",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA5": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA6": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		}
+	},
+	"Wednesday": {
+		"Wake": {
+			"Enabled": "True",
+			"StartHour": "00",
+			"StartMin": "00",
+			"HeatSP": "65",
+			"CoolSP": "75",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Away": {
+			"Enabled": "True",
+			"StartHour": "1",
+			"StartMin": "0",
+			"HeatSP": "69",
+			"CoolSP": "79",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Home": {
+			"Enabled": "True",
+			"StartHour": "2",
+			"StartMin": "0",
+			"HeatSP": "73",
+			"CoolSP": "83",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Sleep": {
+			"Enabled": "True",
+			"StartHour": "14",
+			"StartMin": "0",
+			"HeatSP": "77",
+			"CoolSP": "87",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA5": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA6": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		}
+	},
+	"Thursday": {
+		"Wake": {
+			"Enabled": "True",
+			"StartHour": "00",
+			"StartMin": "00",
+			"HeatSP": "65",
+			"CoolSP": "75",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Away": {
+			"Enabled": "True",
+			"StartHour": "1",
+			"StartMin": "0",
+			"HeatSP": "69",
+			"CoolSP": "79",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Home": {
+			"Enabled": "True",
+			"StartHour": "2",
+			"StartMin": "0",
+			"HeatSP": "73",
+			"CoolSP": "83",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Sleep": {
+			"Enabled": "True",
+			"StartHour": "14",
+			"StartMin": "0",
+			"HeatSP": "77",
+			"CoolSP": "87",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA5": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA6": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		}
+	},
+	"Friday": {
+		"Wake": {
+			"Enabled": "True",
+			"StartHour": "00",
+			"StartMin": "00",
+			"HeatSP": "65",
+			"CoolSP": "75",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Away": {
+			"Enabled": "True",
+			"StartHour": "1",
+			"StartMin": "0",
+			"HeatSP": "69",
+			"CoolSP": "79",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Home": {
+			"Enabled": "True",
+			"StartHour": "2",
+			"StartMin": "0",
+			"HeatSP": "73",
+			"CoolSP": "83",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Sleep": {
+			"Enabled": "True",
+			"StartHour": "14",
+			"StartMin": "0",
+			"HeatSP": "77",
+			"CoolSP": "87",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA5": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA6": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		}
+	},
+	"Saturday": {
+		"Wake": {
+			"Enabled": "True",
+			"StartHour": "00",
+			"StartMin": "00",
+			"HeatSP": "65",
+			"CoolSP": "75",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Away": {
+			"Enabled": "True",
+			"StartHour": "1",
+			"StartMin": "0",
+			"HeatSP": "69",
+			"CoolSP": "79",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Home": {
+			"Enabled": "True",
+			"StartHour": "2",
+			"StartMin": "0",
+			"HeatSP": "73",
+			"CoolSP": "83",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Sleep": {
+			"Enabled": "True",
+			"StartHour": "14",
+			"StartMin": "0",
+			"HeatSP": "77",
+			"CoolSP": "87",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA5": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA6": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		}
+	},
+	"Sunday": {
+		"Wake": {
+			"Enabled": "True",
+			"StartHour": "00",
+			"StartMin": "00",
+			"HeatSP": "65",
+			"CoolSP": "75",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Away": {
+			"Enabled": "True",
+			"StartHour": "1",
+			"StartMin": "0",
+			"HeatSP": "69",
+			"CoolSP": "79",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Home": {
+			"Enabled": "True",
+			"StartHour": "2",
+			"StartMin": "0",
+			"HeatSP": "73",
+			"CoolSP": "83",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"Sleep": {
+			"Enabled": "True",
+			"StartHour": "14",
+			"StartMin": "0",
+			"HeatSP": "77",
+			"CoolSP": "87",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA5": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		},
+		"NA6": {
+			"Enabled": "False",
+			"StartHour": "0",
+			"StartMin": "0",
+			"HeatSP": "82",
+			"CoolSP": "78",
+			"Fan": "AUTO",
+			"Priority": "PICK_A_ROOM",
+			"PickedRooms": "1"
+		}
+	}
+}

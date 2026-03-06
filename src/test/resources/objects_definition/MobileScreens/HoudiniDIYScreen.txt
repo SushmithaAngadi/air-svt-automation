@@ -1,0 +1,57 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+ALPerACheckBX	XPATH	//android.widget.CheckBox[@text='A-L/A']					XPATH	//*[@name='A-L/A']/following-sibling::XCUIElementTypeImage				
+RCheckBX	XPATH	//android.widget.CheckBox[@text='R']					XPATH	//*[@name='R']/following-sibling::XCUIElementTypeImage				
+CCheckBX	XPATH	//android.widget.CheckBox[@text='C']					XPATH	//*[@name='Rc']/following-sibling::XCUIElementTypeImage				
+RcCheckBX	XPATH	//android.widget.CheckBox[@text='Rc']					XPATH	//*[@name='Rc']/following-sibling::XCUIElementTypeImage				
+ECheckBX	XPATH	//android.widget.CheckBox[@text='E']					XPATH	//*[@name='E']/following-sibling::XCUIElementTypeImage				
+WCheckBX	XPATH	//android.widget.CheckBox[@text='W']					XPATH	//*[@name='W']/following-sibling::XCUIElementTypeImage				
+GCheckBX	XPATH	//android.widget.CheckBox[@text='G']					XPATH	//*[@name='G']/following-sibling::XCUIElementTypeImage				
+w2CheckBX	XPATH	//android.widget.CheckBox[@text='W2']					XPATH	//*[@name='W2']/following-sibling::XCUIElementTypeImage				
+KCheckBX	XPATH	//android.widget.CheckBox[@text='K']					XPATH	//*[@name='K']/following-sibling::XCUIElementTypeImage				
+Y1CheckBX	XPATH	//android.widget.CheckBox[@text='Y1']					XPATH	//*[@name='Y1']/following-sibling::XCUIElementTypeImage				
+OperBCheckBX	XPATH	//android.widget.CheckBox[@text='O/B']					XPATH	//*[@name='O/B']/following-sibling::XCUIElementTypeImage				
+Y2CheckBX	XPATH	//android.widget.CheckBox[@text='Y2']					XPATH	//*[@name='Y2']/following-sibling::XCUIElementTypeImage				
+ValidateWiringBtn	XPATH	//*[@text='Validate Wiring']					ACCESSIBILITY ID	Validate Wiring				
+ManualWiringBtn	XPATH	//*[@text='Manually enter wiring']					XPATH	//XCUIElementTypeButton[@name='Manually Enter Wiring']				
+NextBtn	ID	horizontal_button_next					XPATH	//XCUIElementTypeButton[@value='Next']				
+TemperatrureScaleScreen	XPATH	//*[@text='Temperature scale']					Name	Temperature Scale				
+FahrenheitButton		"//android.widget.Button[contains(@text,'Fahrenheit')]"					Name	Fahrenheit				
+CelsiusButton		"//android.widget.Button[contains(@text,'Celsius')]"					Name	Celsius				
+OutdoorAirSensorScreen		//*[@text='Outdoor Air Sensor']					Name	Outdoor Air Sensor				
+NoButton		"//android.widget.Button[contains(@text,'No')]"					Name	None				
+WiredButton		"//android.widget.Button[contains(@text,'Wired')]"					Name	Wired				
+InternetButton		"//android.widget.Button[contains(@text,'Internet')]"					Name	Internet				
+HeatingSystemScreen		//*[@text='Heating system']					Name	Heating System				
+ConventionalForcedAirButton		"//android.widget.Button[contains(@text,'Conventional forced air')]"					Name	Conventional Forced Air				
+HeatpumpButton		"//android.widget.Button[contains(@text,'Heat pump')]"					Name	Heat Pump				
+BoilerButton		"//android.widget.Button[contains(@text,'Boiler')]"					Name	Boiler				
+OtherButton		"//android.widget.Button[contains(@text,'Other')]"					Name	Other				
+CoolOnlyButton		"//android.widget.Button[contains(@text,'None (Cool only)')]"					Name	None (Cool Only)				
+FuelSourceScreen		//*[@text='Fuel source']					Name	Fuel Source				
+GasHighEfficiencyButton		"//android.widget.Button[contains(@text,'Gas - High Efficiency')]"					Name	Gas - High Efficiency				
+GasStandardEfficiencyButton		"//android.widget.Button[contains(@text,'Gas - Standard Efficiency')]"					Name	Gas - Standard Efficiency				
+OilButton		"//android.widget.Button[contains(@text,'Oil')]"					Name	Oil				
+ElectricButton		"//android.widget.Button[contains(@text,'Electric')]"					Name	Electric				
+HotWaterFanCoilButton		"//android.widget.Button[contains(@text,'Hot water - Fan Coil')]"					Name	Hot Water - Fan Coil				
+AirToAirButton		"//android.widget.Button[contains(@text,'Air to Air')]"					Name	Air to Air				
+GeothermalHeatpumpButton		"//android.widget.Button[contains(@text,'Geothermal Heat Pump')]"					Name	Geothermal Heat Pump				
+OBonCoolButton		"//android.widget.Button[contains(@text,'O (O/B on cool)')]"					Name	O (O/B on Cool)				
+OBonHeatButton		"//android.widget.Button[contains(@text,'B (O/B on heat)')]"					Name	B (O/B on Heat)				
+CoolingStageScreen		//*[@text='Cooling Stages']						Cooling Stages				
+Stage1Button		"//android.widget.Button[contains(@text,'1')]"						1				
+Stage2Button		"//android.widget.Button[contains(@text,'2')]"						2				
+StageNoneButton		"//android.widget.Button[contains(@text,'None')]"						None				
+HeatingStagesScreen		"//*[contains(@text,'Heating Stages') or contains(@text,'Heat Stages')]"						"//*[contains(@name,'Heat Stages') or contains(@name,'Heating Stages')]"				
+FanOperationInHeatScreen		//*[@text='Fan operation in heat']						Fan Operation in Heat				
+EquipmentControlsFanButton		"//android.widget.Button[contains(@text,'Equipment controls fan')]"						Equipment Controls Fan				
+ThermostatControlsFanButton		"//android.widget.Button[contains(@text,'Thermostat controls fan')]"						Thermostat Controls Fan				
+SystemChangeOverScreen		//*[@text='System Changeover']						System Changeover				
+ManualButton		"//android.widget.Button[contains(@text,'Manual')]"						Manual				
+AutomaticButton		"//android.widget.Button[contains(@text,'Automatic')]"						Automatic				
+FinishWithHighCoolStageScreen		//*[@text='Finish with High Cool Stage']						Finish with high cool stage?				
+StageNoButton		"//android.widget.Button[contains(@text,'No')]"						No				
+StageYesButton		"//android.widget.Button[contains(@text,'Yes')]"						Yes				
+								Finish with high heat stage?				
+								Cool Differential - Stage 2				
+								Comfort				
+								Other				

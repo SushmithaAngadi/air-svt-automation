@@ -1,0 +1,22 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+SkipButton	ACCESSIBILITY ID	Skip					ACCESSIBILITY ID	Skip				
+LogOutButton	ACCESSIBILITY ID	Logout					ACCESSIBILITY ID	Logout				
+L5LeakProtectionValve	XPATH	"//*[contains(@content-desc,'L5 Leak Protection')]"					XPATH	"//*[contains(@content-desc,'L5 Leak Protection')]"				
+T5T6_SmartThermostat	XPATH	"//*[contains(@content-desc,'T5/T6 Smart')]"					XPATH	"//*[contains(@content-desc,'T5/T6 Smart')]"				
+L2WifiSmartSensorSwitch	XPATH	"//*[contains(@content-desc,'L2 WiFi Water Sensor')]"					XPATH	"//*[contains(@content-desc,'L2 WiFi Water Sensor')]"				
+L1WifiSmartensorSwitch	XPATH	"//*[contains(@content-desc,'L1 WiFi Water Leak')]"					XPATH	"//*[contains(@content-desc,'L1 WiFi Water Leak')]"				
+T9T10SmartThermostat	XPATH	"//*[contains(@content-desc,'T9/T10 Thermostat')]"					XPATH	"//*[contains(@content-desc,'T9/T10 Thermostat')]"				
+VX1HDVideoDoorBell	XPATH	"//*[contains(@content-desc,'VX1 HD Video')]"					XPATH	"//*[contains(@content-desc,'VX1 HD Video')]"				
+isLoginEmailPasswordScreen	XPATH	"//*[contains(@text,'SIGN IN WITH YOUR RESIDEO ID')]"					XPATH	//XCUIElementTypeButton[@name='SIGN IN']				
+SIgnEmailTextBox	XPATH	"//*[contains(@resource-id,'email')]"					XPATH	//XCUIElementTypeTextField				
+SignPasswordTextBox	XPATH	"//*[contains(@resource-id,'password')]"					XPATH	//XCUIElementTypeSecureTextField				
+SignInButton	XPATH	"//android.widget.Button[contains(@text,'SIGN IN')]"					XPATH	//XCUIElementTypeButton[@name='SIGN IN']				
+BackButton	ACCESSIBILITY ID	Back					ACCESSIBILITY ID	Back				
+CancelButton	ACCESSIBILITY ID	Cancel					ACCESSIBILITY ID	Cancel				
+SignInTOFristAlertNonProd	ACCESSIBILITY ID	Sign in					ACCESSIBILITY ID	Sign in				
+SignInTOFristAlertProdcution	ACCESSIBILITY ID	Sign in					ACCESSIBILITY ID	Sign in				
+MaintenanceScreenPresent	XPATH	"//*[contains(@content-desc,'Planned Maintenance')]"					XPATH	"//*[contains(@content-desc,'Planned Maintenance')]"				
+OkBtn	XPATH	"//*[contains(@content-desc,'OK')]"					XPATH	"//*[contains(@content-desc,'OK')]"				
+SettingBtn	XPATH	//*[contains(@content-desc,'Settings')]					XPATH	//*[contains(@content-desc,'Settings')]				
+LoginEnvTab	XPATH	//*[contains(@resource-id,'login_environment')]					XPATH	//*[contains(@resource-id,'login_environment')]				
+ResideoProloginButton	XPATH	//*[contains(@content-desc,'Resideo Pro Account')]					XPATH	//*[contains(@content-desc,'Resideo Pro Account')]				

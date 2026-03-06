@@ -1,0 +1,614 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value		
+AddDevice	ACCESSIBILITY ID	Add Device					ACCESSIBILITY ID	Add Device						
+T5T6Thermostat	XPATH	//*[contains(@content-desc,'T5/T6 Smart Thermostat')]					XPATH	//*[contains(@content-desc,'T5/T6 Smart Thermostat')]						
+T9T10T10PlusThermostat	XPATH	//*[contains(@content-desc,'T9/T10/T10+ Pro Wi-Fi Thermostat')]					XPATH	//*[contains(@content-desc,'T9/T10/T10+ Pro Wi-Fi Thermostat')]						
+FujiThermostat	XPATH	//*[contains(@content-desc,'Fuji (In Progress)') or contains(@content-desc,'X2S Smart')]					XPATH	//*[contains(@name,'Fuji (In Progress)') or contains(@name,'X2S Smart')]						
+NextButton	XPATH	//*[contains(@content-desc,'Next') or contains(@content-desc,'next')]					XPATH	//*[contains(@name,'Next')]						
+ExitButton	XPATH	//*[@content-desc='Exit']					XPATH	//*[@name='Exit']						
+ExitSetup	ACCESSIBILITY ID	Exit					ACCESSIBILITY ID	Exit						
+BackButton	XPATH	//*[@content-desc='Back']					XPATH	//*[@name='Back']						
+YesButton	XPATH	//*[@content-desc='Yes']					XPATH	//*[@name='Yes']						
+NoButton	XPATH	//*[@content-desc='No']					XPATH	//*[@name='No']						
+AddLocationButton	XPATH	//*[@content-desc='Add Location']					XPATH	//*[@name='Add Location']						
+LocationElements	XPATH	//android.view.View[@content-desc='Choose an existing location or add a new one.']/following-sibling::android.view.View/android.view.View/android.view.View					XPATH	//*[@content-desc='Back']						
+DeviceNameInput	XPATH	//*[contains(@resource-id,'device_name_textfield_input_textfield') or contains(@content-desc,'Device Name*') or contains(@content-desc,'Device Name')]/following-sibling::android.widget.EditText					XPATH	//*[contains(@resource-id,'device_name_textfield_input_textfield') or contains(@content-desc,'Device Name*') or contains(@content-desc,'Device Name')]/following-sibling::android.widget.EditText						
+DeviceNameTaken	XPATH	//android.view.View[@content-desc=Device name already taken. Please select a different name.]					XPATH	//*[@name=Device name already taken. Please select a different name.]						
+StepsToAddDeviceScreen	XPATH	//*[contains(@content-desc,'Add your device to the First Alert app in')]					XPATH	//*[contains(@name,'Add your device to the First Alert app in')]						
+ConfigureDeviceScreen	XPATH	//*[contains(@content-desc,'Use the thermostat') and contains(@content-desc,'screen to configure the device and connect to Wi-Fi.')]					XPATH	//*[contains(@name,'Use the thermostat') and contains(@name,'screen to configure the device and connect to Wi-Fi.')]						
+LocationSelectScreen	XPATH	//*[contains(@content-desc,'Choose an existing location or add a new one.')]					XPATH	//*[contains(@name,'Choose an existing location or add a new one.')]						
+DeviceNameScreen	XPATH	//*[@content-desc='Name Device' or contains(@content-desc,'Device Name*')]					XPATH	//*[@name='Name Device' or contains(@content-desc,'Device Name*')]						
+ThermostatOnWallScreen	XPATH	//*[@content-desc='Is the thermostat on the wall?']					XPATH	//*[@name='Is the thermostat on the wall?']						
+CheckDisplayForBleFUJIScreen	XPATH	//*[contains(@content-desc,'Make sure Thermostat is displaying USE APP with a blinking bluetooth icon')]					XPATH	//*[contains(@name,'Make sure Thermostat is displaying USE APP with a blinking bluetooth icon')]						
+ConnectAppStepsFUJIScreen	XPATH	//*[contains(@content-desc,'Menu') and contains(@content-desc,'APP') and contains(@content-desc,'Select')]					XPATH	//*[contains(@name,'Menu') and contains(@name,'APP') and contains(@name,'Select')]						
+OneMoreStepScreen	XPATH	//*[@content-desc='One more step!']					XPATH	//*[@name='One more step!']						
+TwoMoreStepScreen	XPATH	//*[@content-desc='Two More Steps!']					XPATH	//*[@name='Two More Steps!']						
+TemperatureDisplayScreen	XPATH	//*[@content-desc='Is it displaying a temperature?' or @content-desc='Is the thermostat displaying the Temperature?']					XPATH	//*[@name='Is it displaying a temperature?' or @name='Is the thermostat displaying the Temperature?']						
+PrepareDeviceJasperScreen	XPATH	//*[contains(@content-desc,'Press the center on your thermostat for 5 seconds until you see LYRIC or TSTAT')]					XPATH	//*[contains(@name,'Press the center on your thermostat for 5 seconds until you see LYRIC or TSTAT')]						
+ConfirmNetworkNameScreen	XPATH	//*[@content-desc='Is the thermostat displaying a network name like the example below?']					XPATH	//*[@name='Is the thermostat displaying a network name like the example below?']						
+ConfirmBluetoothScreen	XPATH	//*[@content-desc='Is the device displaying bLE at the top?']					XPATH	//*[@name='Is the device displaying bLE at the top?']						
+BluetoothScanScreen	XPATH	//*[@content-desc='Select the device that you want to connect.']					XPATH	//*[@name='Select the device that you want to connect.']						
+BluetoothScanScreen1	XPATH	//*[@content-desc='Found Devices']					XPATH	//*[@name='Found Devices']						
+BluetoothScanning	XPATH	//*[@content-desc='Searching...' or @content-desc='This may take a few moments.']					XPATH	//*[@name='Searching...' or @name='This may take a few moments.']						
+NoThermostatFoundBlePopUp	XPATH	//*[@content-desc='No Thermostat Found']					XPATH	//*[@name='No Thermostat Found']						
+TryAgainButton	XPATH	//*[@content-desc='Try Again']					XPATH	//*[@name='Try Again']						
+PrepareThermostatT9T10T10PlusScreen	XPATH	//*[@content-desc='Is your thermostat displaying the Connect App screen?']					XPATH	//*[@name='Is your thermostat displaying the Connect App screen?']						
+QRCodeT9T10T10PlusScreen	XPATH	//*[@content-desc='Do you see a QR code on your thermostat screen?']					XPATH	//*[@name='Do you see a QR code on your thermostat screen?']						
+PhoneSameNetworkT9T10Screen	XPATH	//*[@content-desc='Make sure your phone is on the same network as your thermostat']					XPATH	//*[@name='Make sure your phone is on the same network as your thermostat']						
+IsThermostatReadyT9T10Screen	XPATH	//*[contains(@content-desc,'Your thermostat should be displaying the Connect App screen.')]					XPATH	//*[contains(@name,'Your thermostat should be displaying the Connect App screen.')]						
+LookingForThermostatPopup	XPATH	//*[@content-desc='Looking For Thermostat']					XPATH	//*[@name='Looking For Thermostat']						
+ExitSetupPopup	XPATH	//*[@content-desc='Exit Setup?' or @content-desc='Your device will not be configured if you choose to exit.']					XPATH	//*[@name='Exit Setup?' or @content-desc='Your device will not be configured if you choose to exit.']						
+ContinueButton	XPATH	//*[@content-desc='Continue']					XPATH	//*[@name='Continue']						
+ConnectingToThermostatSpinning	XPATH	//*[contains(@content-desc,'Connecting')]					ACCESSIBILITY ID	Connecting						
+ErrorOccuredDuringBLEDeviceConnecting	ACCESSIBILITY ID	Error					ACCESSIBILITY ID	Error						
+ConnectionFailedDuringBLEDeviceConnecting	XPATH	//*[@content-desc='Connection Failed']					XPATH	//*[@name='Connection Failed']						
+SecurityCodeScreen	ACCESSIBILITY ID	Security Code					ACCESSIBILITY ID	Security Code						
+SecurityCode4DigitPin	XPATH	//android.widget.EditText/following-sibling::*					XPATH	//XCUIElementTypeTextField						
+OkButton	ACCESSIBILITY ID	OK					ACCESSIBILITY ID	OK						
+PinEnteredandConnectedWIthThermostat	ACCESSIBILITY ID	Connected					ACCESSIBILITY ID	Connected						
+NeedToKeepCurrentConfigurationPopUp	XPATH	//*[@content-desc='Do you want to keep your current configuration?']					XPATH	//*[@name='Do you want to keep your current configuration?']						
+isTemperatureScaleScreen	XPATH	//*[@content-desc='Temperature' or @content-desc='Temperature Scale']					ACCESSIBILITY ID	Temperature						
+TemperatureScaleFahrenheit	ACCESSIBILITY ID	Fahrenheit (F)					ACCESSIBILITY ID	Fahrenheit (F)						
+TemperatureScaleCelsius	ACCESSIBILITY ID	Celsius (C)					ACCESSIBILITY ID	Celsius (C)						
+OutDoorSensorScreen	ACCESSIBILITY ID	Outdoor Air					ACCESSIBILITY ID	Outdoor Air						
+OutDoorSensorNo	ACCESSIBILITY ID	Don't Show					ACCESSIBILITY ID	Don't Show						
+OutDoorSensorWired	ACCESSIBILITY ID	Wired					ACCESSIBILITY ID	Wired						
+OutDoorSensorInternet	ACCESSIBILITY ID	Internet					ACCESSIBILITY ID	Internet						
+HeatingSystemScreen	ACCESSIBILITY ID	Heating System					ACCESSIBILITY ID	Heating System						
+ConventionalForcedAir	XPATH	//*[@content-desc='Conventional forced air' or @content-desc='Conventional Forced Air']					ACCESSIBILITY ID	Conventional forced air						
+HeatPump	XPATH	//*[@content-desc='Heat pump' or @content-desc='Heat Pump']					ACCESSIBILITY ID	Heat pump						
+Boiler	XPATH	//*[@content-desc='Boiler']					ACCESSIBILITY ID	Boiler						
+NoneCoolOnly	XPATH	//*[@content-desc='None (Cool only)' or @content-desc='None (Cool Only)']					ACCESSIBILITY ID	None (Cool only)						
+FuelSourceScreen	ACCESSIBILITY ID	Fuel Source					ACCESSIBILITY ID	Fuel Source						
+ConventionalGasHighEfficiency	ACCESSIBILITY ID	Gas - High Efficiency					ACCESSIBILITY ID	Gas - High Efficiency						
+ConventionalGasStandardEfficiency	ACCESSIBILITY ID	Gas - Standard Efficiency					ACCESSIBILITY ID	Gas - Standard Efficiency						
+ConventionalOil	ACCESSIBILITY ID	Oil					ACCESSIBILITY ID	Oil						
+ConventionalHotWaterFanCoil	ACCESSIBILITY ID	Hot Water - Fan Coil					ACCESSIBILITY ID	Hot Water - Fan Coil						
+ConventionalElectric	ACCESSIBILITY ID	Electric					ACCESSIBILITY ID	Electric						
+HeatPumpAirToAir	ACCESSIBILITY ID	Air to Air					ACCESSIBILITY ID	Air to Air						
+HeatPumpGeothermal	ACCESSIBILITY ID	Geothermal					ACCESSIBILITY ID	Geothermal						
+BoilerHotWater	ACCESSIBILITY ID	Hot Water - Radiant Heat					ACCESSIBILITY ID	Hot Water - Radiant Heat						
+BoilerSteam	ACCESSIBILITY ID	Steam					ACCESSIBILITY ID	Steam						
+CompressorStageScreen	ACCESSIBILITY ID	Compressor Stages					ACCESSIBILITY ID	Compressor Stages						
+Stage1	ACCESSIBILITY ID	1					ACCESSIBILITY ID	1						
+StageNone	ACCESSIBILITY ID	None					ACCESSIBILITY ID	None						
+Stage2	ACCESSIBILITY ID	2					ACCESSIBILITY ID	2						
+CoolingStageScreen	ACCESSIBILITY ID	Cool Stages					ACCESSIBILITY ID	Cool Stages						
+HeatingStageScreen	XPATH	//*[@content-desc='Heat Stages' or @content-desc='Electric Forced Air Heat Stage' or @content-desc='Fan Coil Heat Stage' or @content-desc='Radiant Heat Stage']					ACCESSIBILITY ID	Heat Stage						
+isSystemChangeOverScreen	ACCESSIBILITY ID	System Changeover					ACCESSIBILITY ID	System Changeover						
+SystemChangeOverAutomatic	XPATH	//*[@content-desc='Automatic' or @content-desc='Enabled (Automatic Available)']					ACCESSIBILITY ID	Automatic						
+SystemChangeOverManual	XPATH	//*[@content-desc='Manual' or @content-desc='Hidden (Manual Only)']					ACCESSIBILITY ID	Manual						
+ISUDropDownButton	XPATH	(//*[contains(@resource-id,'description')]/following-sibling::*)[1]					XPATH	//XCUIElementTypeButton[@name='Next']/preceding-sibling::XCUIElementTypeButton[1]						
+ISUDropDownValue	XPATH	((//*[contains(@resource-id,'description')]/following-sibling::*)[1]/*)[1]					XPATH	//XCUIElementTypeButton[@name='Next']/preceding-sibling::XCUIElementTypeButton[1]						
+isAutoChangeoverDifferentialScreen	ACCESSIBILITY ID	Auto Changeover Differential					ACCESSIBILITY ID	Auto Changeover Differential						
+GetAutoChangeOverDiffValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//XCUIElementTypeButton[@name='Next']/preceding-sibling::XCUIElementTypeStaticText						
+DecreaseDownButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//XCUIElementTypeStaticText[@name='Auto Changeover Differential']/parent::XCUIElementTypeOther/following-sibling::XCUIElementTypeOther[1]						
+IncreaseUpButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//XCUIElementTypeStaticText[@name='Auto Changeover Differential']/parent::XCUIElementTypeOther/following-sibling::XCUIElementTypeOther[2]						
+ReversingValveScreen	ACCESSIBILITY ID	Reversing Valve					ACCESSIBILITY ID	Reversing Valve						
+ReversingValveOBOnHeat	ACCESSIBILITY ID	B (O/B on heat)					ACCESSIBILITY ID	B (O/B on heat)						
+ReversingValveOBOnCool	ACCESSIBILITY ID	O (O/B on cool)					ACCESSIBILITY ID	O (O/B on cool)						
+AuxETerminalControlScreen	ACCESSIBILITY ID	Aux & E Terminal Control					ACCESSIBILITY ID	Aux & E Terminal Control						
+AuxETerminalControlDriveBothAuxE	ACCESSIBILITY ID	Drive both Aux & E Together					ACCESSIBILITY ID	Drive both Aux & E Together						
+AuxETerminalControlDriveAuxEIndependent	ACCESSIBILITY ID	Aux & E are Independent					ACCESSIBILITY ID	Aux & E are Independent						
+AuxBackUpHeatScreen	ACCESSIBILITY ID	Backup Heat Type					ACCESSIBILITY ID	Backup Heat Type						
+AuxBackUpHeatElectricForced	ACCESSIBILITY ID	Electric Forced Air					ACCESSIBILITY ID	Electric Forced Air						
+AuxBackUpHeatStandardEfficiency	ACCESSIBILITY ID	Standard Efficiency Gas Forced Air					ACCESSIBILITY ID	Standard Efficiency Gas Forced Air						
+AuxBackUpHeatHighEfficiency	ACCESSIBILITY ID	High Efficiency Gas Forced Air					ACCESSIBILITY ID	High Efficiency Gas Forced Air						
+AuxBackUpHeatOilForced	ACCESSIBILITY ID	Oil Forced Air					ACCESSIBILITY ID	Oil Forced Air						
+AuxBackUpHeatHotWaterRadiant	ACCESSIBILITY ID	Hot Water Radiant Heat					ACCESSIBILITY ID	Hot Water Radiant Heat						
+EmergencyHeatScreen	ACCESSIBILITY ID	Emergency Heat					ACCESSIBILITY ID	Emergency Heat						
+EmergencyHeatElectricForced	ACCESSIBILITY ID	Electric Forced Air					ACCESSIBILITY ID	Electric Forced Air						
+EmergencyHeatStandardEfficiency	ACCESSIBILITY ID	Standard Efficiency Gas Forced Air					ACCESSIBILITY ID	Standard Efficiency Gas Forced Air						
+EmergencyHeatHighEfficiency	ACCESSIBILITY ID	High Efficiency Gas Forced Air					ACCESSIBILITY ID	High Efficiency Gas Forced Air						
+EmergencyHeatOilForced	ACCESSIBILITY ID	Oil Forced Air					ACCESSIBILITY ID	Oil Forced Air						
+EmergencyHeatHotWaterRadiant	ACCESSIBILITY ID	Hot Water Radiant Heat					ACCESSIBILITY ID	Hot Water Radiant Heat						
+StagingControlHighCoolStageScreen	ACCESSIBILITY ID	Cool Staging Control					ACCESSIBILITY ID	Cool Staging Control						
+StagingControlHighHeatStageScreen	ACCESSIBILITY ID	Heat Staging Control					ACCESSIBILITY ID	Heat Staging Control						
+AuxBackUpHeatDifferentialScreen	XPATH	//*[@content-desc='Backup Heat Differential']					XPATH	//*[@name='Backup Heat Differential']						
+AuxHeatDifferentialDecrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//XCUIElementTypeStaticText[@name='Aux Backup Heat Differential']/following-sibling::XCUIElementTypeOther[2]						
+AuxHeatDifferentialValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//XCUIElementTypeStaticText[@name='Aux Backup Heat Differential']/following-sibling::XCUIElementTypeStaticText[1]						
+AuxHeatDifferentialIncrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//XCUIElementTypeStaticText[@name='Aux Backup Heat Differential']/following-sibling::XCUIElementTypeOther[3]						
+BackupHeatUpStageTimerScreen	ACCESSIBILITY ID	Backup Heat Upstage Timer					ACCESSIBILITY ID	Backup Heat Upstage Timer						
+BackupHeatUpStageTimerOff	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off						
+CompressorLockoutScreen	ACCESSIBILITY ID	Compressor Lockout / Balance Point					ACCESSIBILITY ID	Compressor Lockout / Balance Point						
+isBackupHeatLockOutScreen	ACCESSIBILITY ID	Backup Heat Lockout					ACCESSIBILITY ID	Backup Heat Lockout						
+isLockOutFanAfterCoolScreen	ACCESSIBILITY ID	Lockout Fan After a Cool Call					ACCESSIBILITY ID	Lockout Fan After a Cool Call						
+CompressorCyclePerHourStage1Screen	ACCESSIBILITY ID	Compressor Cycles per Hour - Stage 1					ACCESSIBILITY ID	Compressor Cycles per Hour - Stage 1						
+CompressorCyclePerHourStage2Screen	ACCESSIBILITY ID	Compressor Cycles per Hour - Stage 2					ACCESSIBILITY ID	Compressor Cycles per Hour - Stage 2						
+BackupHeatCyclesPerHourScreen	ACCESSIBILITY ID	Backup Heat Cycles Per Hour					ACCESSIBILITY ID	Backup Heat Cycles Per Hour						
+BackUpHeatCyclePerHourDecrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//XCUIElementTypeStaticText[contains(@name,'How many heat cycles per hour does your system use')]/following-sibling::XCUIElementTypeOther[1]						
+BackUpHeatCyclePerHourValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//XCUIElementTypeStaticText[contains(@name,'How many heat cycles per hour does your system use')]/following-sibling::XCUIElementTypeStaticText						
+BackUpHeatCyclePerHourIncrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//XCUIElementTypeStaticText[contains(@name,'How many heat cycles per hour does your system use')]/following-sibling::XCUIElementTypeOther[2]						
+isCompressorOffMinimumTimeScreen	ACCESSIBILITY ID	Compressor Protection					ACCESSIBILITY ID	Compressor Protection						
+isAdaptiveIntelligentRecoveryScreen	ACCESSIBILITY ID	Adaptive Intelligent Recovery					ACCESSIBILITY ID	Adaptive Intelligent Recovery						
+AdaptiveIntelligentRecoveryYes	ACCESSIBILITY ID	Yes					ACCESSIBILITY ID	Yes						
+AdaptiveIntelligentRecoveryNo	ACCESSIBILITY ID	No					ACCESSIBILITY ID	No						
+isMaximumCoolSetPointScreen	ACCESSIBILITY ID	Maximum Cool Setpoint					ACCESSIBILITY ID	Maximum Cool SetPoint						
+isMinimumCoolSetPointScreen	ACCESSIBILITY ID	Minimum Cool Setpoint					ACCESSIBILITY ID	Minimum Cool Setpoint						
+isMaximumHeatSetPointScreen	ACCESSIBILITY ID	Maximum Heat Setpoint					ACCESSIBILITY ID	Maximum Heat Setpoint						
+isMinimumHeatSetPointScreen	XPATH	//*[@content-desc='Minimum Heat Set Point' or @content-desc='Minimum Heat Setpoint']					ACCESSIBILITY ID	Minimum Heat Setpoint						
+MaxMinSetpointDecrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//XCUIElementTypeStaticText[contains(@name,'set point temperature for cooling?') or contains(@name,'set point temperature for heating?')]/following-sibling::XCUIElementTypeOther[1]						
+MaxMinSetpointValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//XCUIElementTypeStaticText[contains(@name,'set point temperature for cooling?') or contains(@name,'set point temperature for heating?')]/following-sibling::XCUIElementTypeStaticText						
+MaxMinSetpointIncrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//XCUIElementTypeStaticText[contains(@name,'set point temperature for cooling?') or contains(@name,'set point temperature for heating?')]/following-sibling::XCUIElementTypeOther[2]						
+isNumberOfAirFiltersScreen	ACCESSIBILITY ID	Number of Air Filters					ACCESSIBILITY ID	Number of Air Filters						
+AirFilter1	ACCESSIBILITY ID	1					ACCESSIBILITY ID	1						
+AirFilter2	ACCESSIBILITY ID	2					ACCESSIBILITY ID	2						
+AirFilterNone	ACCESSIBILITY ID	None					ACCESSIBILITY ID	None						
+isAirFilter1ReplacementReminder	ACCESSIBILITY ID	Air Filter 1 Replacement Reminder					ACCESSIBILITY ID	Air Filter 1 Replacement Reminder						
+isAirFilter2ReplacementReminder	ACCESSIBILITY ID	Air Filter 2 Replacement Reminder					ACCESSIBILITY ID	Air Filter 2 Replacement Reminder						
+isBacklightingScreen	ACCESSIBILITY ID	Backlighting					ACCESSIBILITY ID	Backlighting						
+BacklightingOnDemand	ACCESSIBILITY ID	On Demand					ACCESSIBILITY ID	On Demand						
+BacklightingContinuous	ACCESSIBILITY ID	Continuous					ACCESSIBILITY ID	Continuous						
+isIdleScreenSelectionScreen	ACCESSIBILITY ID	Idle Screen Selection					ACCESSIBILITY ID	Idle Screen Selection						
+IdleScreenSelectionMinimum	ACCESSIBILITY ID	Minimum					ACCESSIBILITY ID	Minimum						
+IdleScreenSelectionSetpointShownonIdleScreen	ACCESSIBILITY ID	Setpoint Shown on Idle Screen					ACCESSIBILITY ID	Setpoint Shown on Idle Screen						
+IdleScreenSelectionMaximum	ACCESSIBILITY ID	Maximum					ACCESSIBILITY ID	Maximum						
+isIdleScreenCustomizationScreen	ACCESSIBILITY ID	Idle Screen Customization					ACCESSIBILITY ID	Idle Screen Customization						
+IdleScreenCustomizationTime	ACCESSIBILITY ID	Time					ACCESSIBILITY ID	Time						
+IdleScreenCustomizationOutdoorTemperature	ACCESSIBILITY ID	Outdoor Temperature					ACCESSIBILITY ID	Outdoor Temperature						
+IdleScreenCustomizationOutdoorHumidity	ACCESSIBILITY ID	Outdoor Humidity					ACCESSIBILITY ID	Outdoor Humidity						
+IdleScreenCustomizationIndoorHumidity	ACCESSIBILITY ID	Indoor Humidity					ACCESSIBILITY ID	Indoor Humidity						
+isHomeScreenCustomizationScreen	ACCESSIBILITY ID	Home Screen Customization					ACCESSIBILITY ID	Home Screen Customization						
+HomeScreenCustomizationTime	ACCESSIBILITY ID	Time					ACCESSIBILITY ID	Time						
+HomeScreenCustomizationOutdoorTemperature	ACCESSIBILITY ID	Outdoor Temperature					ACCESSIBILITY ID	Outdoor Temperature						
+HomeScreenCustomizationOutdoorHumidity	ACCESSIBILITY ID	Outdoor Humidity					ACCESSIBILITY ID	Outdoor Humidity						
+HomeScreenCustomizationIndoorHumidity	ACCESSIBILITY ID	Indoor Humidity					ACCESSIBILITY ID	Indoor Humidity						
+isClockFormatScreen	ACCESSIBILITY ID	Clock Format					ACCESSIBILITY ID	Clock Format						
+12HourFormat	ACCESSIBILITY ID	12 Hour					ACCESSIBILITY ID	12 Hour						
+24HourFormat	ACCESSIBILITY ID	24 Hour					ACCESSIBILITY ID	24 Hour						
+isDayLightSavingTimescreen	ACCESSIBILITY ID	Daylight Saving Time					ACCESSIBILITY ID	Daylight Saving Time						
+DayLightSavingOff	ACCESSIBILITY ID	Off					ACCESSIBILITY ID	Off						
+DayLightSavingOn	ACCESSIBILITY ID	On					ACCESSIBILITY ID	On						
+isIndoorTemperatureDisplayOffsetScreen	ACCESSIBILITY ID	Indoor Temperature Display Offset					ACCESSIBILITY ID	Indoor Temperature Display Offset						
+EmergencyHeatCyclesPerHourScreen	ACCESSIBILITY ID	Emergency Heat Cycles Per Hour					ACCESSIBILITY ID	Emergency Heat Cycles Per Hour						
+EmergencyHeatCyclePerHourDecrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//*[@content-desc='Aux Backup Heat Differential']						
+EmergencyHeatCyclePerHourValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//*[@content-desc='Aux Backup Heat Differential']						
+EmergencyHeatCyclePerHourIncrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//*[@content-desc='Aux Backup Heat Differential']						
+FanOperationinHeatScreen	ACCESSIBILITY ID	Fan Operation in Heat					ACCESSIBILITY ID	Fan Operation in Heat						
+FanOperationinHeatEquipmentControlsFan	ACCESSIBILITY ID	Equipment controls fan					ACCESSIBILITY ID	Equipment controls fan						
+FanOperationinHeatThermostatControlsFan	ACCESSIBILITY ID	Thermostat controls fan					ACCESSIBILITY ID	Thermostat controls fan						
+HeatCyclePerHourStage1Screen	XPATH	//*[contains(@content-desc, 'Heat Cycles per Hour - Stage 1') or contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 1') or contains(@content-desc, 'Electric Forced Air Heat Cycles per Hour - Stage 1') or contains(@content-desc, 'Radiant Heat Cycles per Hour - Stage 1')]					ACCESSIBILITY ID	Heat Cycles/Hour - Stage 1						
+HeatCyclePerHourStage2Screen	XPATH	//*[contains(@content-desc, 'Heat Cycles per Hour - Stage 2') or contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 2') or contains(@content-desc, 'Electric Forced Air Heat Cycles per Hour - Stage 2') or contains(@content-desc, 'Radiant Heat Cycles per Hour - Stage 2')]					ACCESSIBILITY ID	Heat Cycles/Hour - Stage 2						
+HeatCyclePerHourDecrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//XCUIElementTypeStaticText[contains(@name,'heat cycles per hour') ]/following-sibling::XCUIElementTypeOther[1]						
+HeatCyclePerHourValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//XCUIElementTypeStaticText[contains(@name,'heat cycles per hour') ]/following-sibling::XCUIElementTypeStaticText[1]						
+HeatCyclePerHourIncrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//XCUIElementTypeStaticText[contains(@name,'heat cycles per hour') ]/following-sibling::XCUIElementTypeOther[2]						
+KeypadLockoutScreen	ACCESSIBILITY ID	Keypad Lockout					ACCESSIBILITY ID	Keypad Lockout						
+KeypadLockoutEnabled	ACCESSIBILITY ID	Enabled					ACCESSIBILITY ID	Enabled						
+KeypadLockoutDisabled	ACCESSIBILITY ID	Disabled					ACCESSIBILITY ID	Disabled						
+BackLightBrightnessScreen	ACCESSIBILITY ID	Backlight Brightness					ACCESSIBILITY ID	Backlight Brightness						
+ISUConfigurationSummaryScreen	ACCESSIBILITY ID	Summary					ACCESSIBILITY ID	Summary						
+isSelectDifferentWifiNetworkPopUp	ACCESSIBILITY ID	Would you like to select a different Wi-Fi network?					ACCESSIBILITY ID	Would you like to select a different Wi-Fi network?						
+SelectNetworkScreen	ACCESSIBILITY ID	Select a network for your device to use.					ACCESSIBILITY ID	Select a network for your device to use.						
+OtherNetworkButton	ACCESSIBILITY ID	Other Network					ACCESSIBILITY ID	Other Network						
+RefreshButton	ACCESSIBILITY ID	Refresh					ACCESSIBILITY ID	Refresh						
+NetworkPasswordScreen	XPATH	//*[contains(@content-desc,'Enter the password for ')]					XPATH	//*[contains(@name,'Enter the password for ')]						
+NetworkPasswordInput	XPATH	(//*[contains(@resource-id,'general_password')]/following-sibling::*)[1]					XPATH	//*[@name='Password']/following-sibling::XCUIElementTypeOther/XCUIElementTypeTextField						
+NetworkNameInput	XPATH	//*[contains(@content-desc,'Enter the SSID of the Wi-fi network.')]/following-sibling::android.widget.EditText					XPATH	//*[contains(@content-desc,'Enter the SSID of the Wi-fi network.')]/following-sibling::android.widget.EditText						
+SecurityScreen	ACCESSIBILITY ID	Select what type of security network uses.					ACCESSIBILITY ID	Select what type of security network uses.						
+WifiError	ACCESSIBILITY ID	Wi-Fi Error					ACCESSIBILITY ID	Wi-Fi Error						
+ConnectingToWifiPopUp	ACCESSIBILITY ID	Connecting to WiFi					ACCESSIBILITY ID	Connecting to WiFi						
+SetupCompleteScreen	XPATH	//*[contains(@content-desc,'Setup Complete')]					XPATH	//*[contains(@name,'Setup Complete')]						
+AddAnotherDeviceButton	XPATH	//*[@content-desc='Add Another Device']					XPATH	//*[@name='Add Another Device']						
+DoneButton	XPATH	//*[@content-desc='Done']					XPATH	//*[@name='Done']						
+AlreadyRegisteredPopUp	ACCESSIBILITY ID	Already Registered					ACCESSIBILITY ID	Already Registered						
+DeviceNotRegisteredPopUp	ACCESSIBILITY ID	Not Registered					ACCESSIBILITY ID	Not Registered						
+RegisteringDevicePopUp	ACCESSIBILITY ID	Registering Device					ACCESSIBILITY ID	Registering Device						
+DeleteButton	XPATH	//*[@content-desc='Delete']					XPATH	//*[@name='Delete']						
+CancelButton	XPATH	//*[@content-desc='Cancel']					XPATH	//*[@name='Cancel']						
+CoolCyclesPerHourScreen1	ACCESSIBILITY ID	Cool Cycles per Hour - Stage 1					ACCESSIBILITY ID	Cool Cycles per Hour - Stage 1						
+NetworkPasswordInputAfterClick	XPATH	//*[@content-desc='Password']					XPATH	//*[@name='Password']						
+BackupHeatSatgesScreen	XPATH	//*[@content-desc='Backup Heat Stages' or @content-desc='Backup Heat Type']					ACCESSIBILITY ID	Backup Heat Stages					ACCESSIBILITY ID	Backup Heat Stages
+CoolSatgesScreen	ACCESSIBILITY ID	Cool Stages					ACCESSIBILITY ID	Cool Stages						
+ComfortTglBtn	XPATH	//*[contains(@content-desc,'Comfort')]/preceding-sibling::android.widget.ImageView					XPATH	//*[contains(@content-desc,'Comfort')]/preceding-sibling::android.widget.ImageView						
+Forced Air	ACCESSIBILITY ID	Forced Air					ACCESSIBILITY ID	Forced Air						
+YesOption	XPATH	//*[@content-desc='Yes']					XPATH	//*[@name='Yes']						
+NoOption	XPATH	//*[@content-desc='No']					XPATH	//*[@name='No']						
+ForcedAir	XPATH	//*[@content-desc='Forced Air']					XPATH	//*[@content-desc='Forced Air']						
+Gas	XPATH	//*[@content-desc='Gas' or @content-desc='Gas - Standard Efficiency']					XPATH	//*[@content-desc='Gas']						
+Electric	XPATH	//*[@content-desc='Electric']					XPATH	//*[@content-desc='Electric']						
+HotWaterFanCoil	XPATH	//*[@content-desc='Hot Water Fan Coil' or @content-desc='Hot Water - Fan Coil']					XPATH	//*[@name='Fan Coil']						
+Oil	XPATH	//*[@content-desc='Oil']					XPATH	//*[@content-desc='Oil']						
+RetailStandardEfficiency	XPATH	//*[contains(@content-desc,'Standard Efficiency')]					XPATH	//*[@content-desc='Oil']						
+RetailHighEfficiency	XPATH	//*[contains(@content-desc,'High Efficiency')]					XPATH	//*[contains(@content-desc,'Standard Efficiency')]						
+isCWireAdapterScreen	ACCESSIBILITY ID	C-Wire Adapter					XPATH	//*[contains(@content-desc,'High Efficiency')]						
+HeatTypeScreen	ACCESSIBILITY ID	Heat Type					ACCESSIBILITY ID	C-Wire Adapter						
+FuelSourceScreenRetail	ACCESSIBILITY ID	Fuel Source					ACCESSIBILITY ID	Heat Type						
+EfficiencyScreen	ACCESSIBILITY ID	Efficiency					ACCESSIBILITY ID	Fuel Source						
+MoreStepScreen	XPATH	//*[contains(@content-desc,'One more step')]					XPATH	//*[contains(@content-desc,'One more step')]						
+Radiant	XPATH	//*[@content-desc='Radiant']					XPATH	//*[@content-desc='Radiant']						
+Hot Water	XPATH	//*[@content-desc='Hot Water' or @content-desc='Hot Water - Radiant Heat']					XPATH	//*[@name='Hot Water']						
+Steam	XPATH	//*[@content-desc='Steam']					XPATH	//*[@content-desc='Steam']						
+ElectricHeatStrips	ACCESSIBILITY ID	Electric Heat Strips					ACCESSIBILITY ID	Electric Heat Strips						
+CheckConfiguration	XPATH	//*[@content-desc='Check Configuration']					XPATH	//*[@content-desc='Check Configuration']						
+WarmAir	XPATH	//*[@content-desc='Warm Air']					XPATH	//*[@content-desc='Warm Air']						
+CoolAir	XPATH	//*[@content-desc='Cool Air']					XPATH	//*[@content-desc='Cool Air']						
+BackupHeatScreen	XPATH	//*[contains(@content-desc,'Backup Heat')]					XPATH	//*[contains(@content-desc,'Backup Heat')]						
+VerificationScreen	XPATH	//*[contains(@content-desc,'Verification')]					XPATH	//*[contains(@content-desc,'Verification')]						
+isBackupHeatScreen	XPATH	//*[@content-desc='Backup Heat' or @content-desc='Backup Heat Type']					ACCESSIBILITY ID	Backup Heat						
+ChooseDevice	ACCESSIBILITY ID	Choose Device					ACCESSIBILITY ID	Choose Device						
+IncorrectPinErrorMsg1	XPATH	//android.view.View[contains(@content-desc, '2 attempts remaining')]					XPATH	//*[contains(@name,'2 attempts remaining')]						
+IncorrectPinErrorMsg2	XPATH	//android.view.View[contains(@content-desc, '1 attempt remaining')]					XPATH	//*[contains(@name,'1 attempt remaining')]						
+ConnectionFailed	ACCESSIBILITY ID	Connection Failed					ACCESSIBILITY ID	Connection Failed						
+TryAgain	ACCESSIBILITY ID	Try Again					ACCESSIBILITY ID	Try Again						
+VerificationScreen	ACCESSIBILITY ID	Verification					ACCESSIBILITY ID	Verification						
+CheckConfigurationContent	XPATH	//*[@content-desc='Check Configuration']					XPATH	//*[@content-desc='Check Configuration']						
+BackupHeatScreen	ACCESSIBILITY ID	Backup Heat					ACCESSIBILITY ID	Backup Heat						
+isCheckConfigurationScreen	XPATH	//*[@content-desc='Check Configuration']					XPATH	//*[@content-desc='Check Configuration']						
+isVerificationScreen	ACCESSIBILITY ID	Verification					ACCESSIBILITY ID	Verification						
+AdvancedSetupBtn	XPATH	//*[contains(@content-desc,'Advanced Setup')]					XPATH	//*[contains(@content-desc,'Advanced Setup')]						
+isAdvancedSetupBtnPresent	XPATH	//*[contains(@content-desc,'Advanced Setup')]					XPATH	//*[contains(@content-desc,'Advanced Setup')]						
+ConnectAppScreen	XPATH	//*[@content-desc='Connect App']					XPATH	//*[@content-desc='Connect App']						
+CheckDisplayScreen	XPATH	//*[@content-desc='Check Display']					XPATH	//*[@content-desc='Check Display']						
+isTemperatureScaleScreenRch	XPATH	//*[@content-desc='Temperature Scale']					XPATH	//*[@content-desc='Conventional Forced Air']						
+ConventionalForcedAirRch	XPATH	//*[@content-desc='Conventional Forced Air']					XPATH	//*[@content-desc='Heat Pump']						
+HeatPumpRch	XPATH	//*[@content-desc='Heat Pump']					XPATH	//*[@content-desc='Boiler']						
+BoilerRch	XPATH	//*[@content-desc='Boiler']					XPATH	//*[@content-desc='None (Cool Only)']						
+CoolOnlyRch	XPATH	//*[@content-desc='None (Cool Only)']					XPATH	//*[@name='None (Cool Only)']						
+CoolStagesScreen	XPATH	//*[@content-desc='Cool Stages']					XPATH	//*[@name='Cool Stages']						
+HeatCoolStageNone	XPATH	//*[@content-desc='None']					XPATH	//*[@name='None']						
+HeatCoolStageOne	XPATH	//*[@content-desc='1']					XPATH	//*[@name='1']						
+HeatCoolStageTwo	XPATH	//*[@content-desc='2']					XPATH	//*[@name='2']						
+HeatStagesScreen	XPATH	//*[@content-desc='Heat Stages']					XPATH	//*[@name='Heat Stages']						
+ChangeoverManual	XPATH	//*[@content-desc='Hidden (Manual Only)']					XPATH	//*[@name='Hidden (Manual Only)']						
+ChangeoverAuto	XPATH	//*[@content-desc='Enabled (Automatic Available)']					XPATH	//*[@name='Enabled (Automatic Available)']						
+isAirFilter1ReplacementReminderValueRch	XPATH	//*[@content-desc='Off']					XPATH	//*[@name='Off']						
+BackLightBrightnessValueRch	XPATH	//*[@content-desc='5']					XPATH	//*[@name='5']						
+HeatingSystemScreenRch	XPATH	//*[@content-desc='Electric Forced Air Heat Stage' or @content-desc='Fan Coil Heat Stage' or @content-desc='Radiant Heat Stage' ]					XPATH	//*[@name='Electric Forced Air Heat Stage' or @content-desc='Fan Coil Heat Stage' or @content-desc='Radiant Heat Stage' ]						
+ElectricForcedAir	XPATH	//*[@content-desc='Electric Forced Air']					XPATH	//*[@content-desc='Electric Forced Air']						
+isBackupHeatScreen	XPATH	//*[@content-desc='Backup Heat' or @content-desc='Backup Heat Type']					XPATH	//*[@content-desc='Backup Heat' or @content-desc='Backup Heat Type']						
+VerificationScreen	ACCESSIBILITY ID	Verification					ACCESSIBILITY ID	Verification						
+RadiantHeatCyclesPerHourScreen	ACCESSIBILITY ID	Radiant Heat Cycles/Hour - Stage 1					ACCESSIBILITY ID	Radiant Heat Cycles/Hour - Stage 1						
+CurrentLockOutFanValueInMinutes	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.widget.Button[@name='Next']/preceding-sibling::android.view.View[3]						
+LockOutFanIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.widget.Button[@name='Next']/preceding-sibling::android.view.View[4]						
+LockOutFanDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.widget.Button[@name='Next']/preceding-sibling::android.view.View[2]						
+UpstageTimerDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]						
+UpstageTimerIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+CurrentUpstageTimerValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]						
+CompressorCyclesIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+CheckConfigurationContent	XPATH	//*[@content-desc='Check Configuration']					XPATH	//*[@content-desc='Check Configuration']						
+BackupHeatScreen	ACCESSIBILITY ID	Backup Heat					ACCESSIBILITY ID	Backup Heat						
+isCheckConfigurationScreen	XPATH	//*[@content-desc='Check Configuration']					XPATH	//*[@content-desc='Check Configuration']						
+isVerificationScreen	ACCESSIBILITY ID	Verification					ACCESSIBILITY ID	Verification						
+CompressorCyclesDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]						
+CurrentCompressorCyclesValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]						
+CompressorMinOffTimeDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]						
+CurrentCompressorMinOffTimeValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]						
+CompressorMinOffTimeIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+CurrentLabelAirFilterReminder	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[6]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[6]						
+CurrentAirFilterRemiderValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]						
+AirFilterIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+AirFilterDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]						
+CurrentBackLightBrightnessValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]						
+BackLightBrightnessIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]						
+BackLightBrightnessDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[2]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[2]						
+CoolCyclesPerHourScreen2	ACCESSIBILITY ID	Cool Cycles per Hour - Stage 2					ACCESSIBILITY ID	Cool Cycles per Hour - Stage 2						
+InvalidWiring	XPATH	//*[contains(@content-desc,'Invalid Wiring')]					XPATH	//*[contains(@name,'Invalid Wiring')]						
+ManuallyEnterWires	XPATH	//*[contains(@content-desc,'Manually Enter Wires')]					XPATH	//*[contains(@name,'Manually Enter Wires')]						
+WireR	ACCESSIBILITY ID	R					ACCESSIBILITY ID	R						
+WireC	ACCESSIBILITY ID	C					ACCESSIBILITY ID	C						
+WireRc	ACCESSIBILITY ID	Rc					ACCESSIBILITY ID	Rc						
+WireOB	ACCESSIBILITY ID	O/B					ACCESSIBILITY ID	O/B						
+WireY2	ACCESSIBILITY ID	Y2					ACCESSIBILITY ID	Y2						
+WireY1	ACCESSIBILITY ID	Y1					ACCESSIBILITY ID	Y1						
+WireK	ACCESSIBILITY ID	K					ACCESSIBILITY ID	K						
+WireW2	ACCESSIBILITY ID	W2					ACCESSIBILITY ID	W2						
+WireG	ACCESSIBILITY ID	G					ACCESSIBILITY ID	G						
+WireW	ACCESSIBILITY ID	W					ACCESSIBILITY ID	W						
+WireE	ACCESSIBILITY ID	E					ACCESSIBILITY ID	E						
+WireAL_A	ACCESSIBILITY ID	A-L/A					ACCESSIBILITY ID	A-L/A						
+ValidateWiringBtn	XPATH	//*[contains(@content-desc,'Validate Wiring')]					XPATH	//*[contains(@name,'Validate Wiring')]						
+WiresAreValid	XPATH	//*[contains(@content-desc,'Wires are Valid')]					XPATH	//*[contains(@name,'Wires are Valid')]						
+ValidatingCombination	XPATH	//*[contains(@content-desc,'Validating wire combination')]					XPATH	//*[contains(@name,'Validating wire combination')]						
+DenaliThermostat	XPATH	//*[contains(@content-desc,'Denali')or contains(@content-desc,'denali')or contains(@content-desc,'X8S Thermostat')]					XPATH	//*[contains(@name,'Denali')or contains(@name,'denali')or contains(@name,'X8S V Thermostat')]						
+isConnected	XPATH	//*[contains(@content-desc,'Connected')]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+isRegisteringDevice	XPATH	//*[contains(@content-desc,'Registering Device')]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+isSetupCompleteScreen	XPATH	//*[contains(@content-desc,'Setup Complete')]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+ConnectAppStepsDenaliScreen	XPATH	//*[contains(@content-desc,'Connect to App')]					XPATH	//*[contains(@name,'Connect to App')]						
+ExtendedFanRunTimeInHeatScreen	XPATH	//*[contains(@content-desc,'Extended Fan Run Time in Heat')]					XPATH	//*[contains(@name,'Extended Fan Run Time in Heat')]						
+AirFilterTypeScreen	XPATH	//*[contains(@content-desc,'Air Filter Type')]					XPATH	//*[contains(@name,'Air Filter Type')]						
+NoneInAirFilterType	XPATH	//*[contains(@content-desc,'None')]					XPATH	//*[contains(@name,'None')]						
+MediaInAirFilterType	XPATH	//*[contains(@content-desc,'Media')]					XPATH	//*[contains(@name,'Media')]						
+HumPadReplacementRemScreen	XPATH	//*[contains(@content-desc,'Humidifier Pad Replacement Reminder')]					XPATH	//*[contains(@name,'Humidifier Pad Replacement Reminder')]						
+SixCalMonths	XPATH	//*[contains(@content-desc,'6 Calendar Months')]					XPATH	//*[contains(@name,'6 Calendar Months')]						
+TwelveCalMonths	XPATH	//*[contains(@content-desc,'12 Calendar Months')]					XPATH	//*[contains(@name,'12 Calendar Months')]						
+DehumFilReplRemScreen	XPATH	//*[contains(@content-desc,'Dehumidifier Filter Replacement Reminder')]					XPATH	//*[contains(@name,'Dehumidifier Filter Replacement Reminder')]						
+DehumFilterReplReminderDrpDwn	XPATH	((//*[contains(@resource-id,'DEHUM_FILTER_TIMER_description')]/following-sibling::*)[1]/*)[1]					XPATH	((//*[contains(@name,'how often to trigger dehumidifier filter reminder')]//following-sibling::*)[1]/*)[1]						
+VentilationTypeScreen	XPATH	//*[contains(@content-desc,'Ventilation Type')]					XPATH	//*[contains(@name,'Ventilation Type')]						
+ErvHrvOption	XPATH	//*[contains(@content-desc,'ERV/HRV')]					XPATH	//*[contains(@name,'ERV/HRV')]						
+PassiveFanOnlyOption	XPATH	//*[contains(@content-desc,'Passive (Fan Only)')]					XPATH	//*[contains(@name,'Passive (Fan Only)')]						
+FreshAirDamperOption	XPATH	//*[contains(@content-desc,'Fresh Air Damper')]					XPATH	//*[contains(@name,'Fresh Air Damper')]						
+VentFilterCleaningRemScreen	XPATH	//*[contains(@content-desc,'Ventilator Filter Cleaning Reminder')]					XPATH	//*[contains(@name,'Ventilator Filter Cleaning Reminder')]						
+ThreeMonthCal	XPATH	//*[contains(@content-desc,'3 Calendar Months')]					XPATH	//*[contains(@name,'3 Calendar Months')]						
+SixMonthCal	XPATH	//*[contains(@content-desc,'6 Calendar Months')]					XPATH	//*[contains(@name,'6 Calendar Months')]						
+NineMonthCal	XPATH	//*[contains(@content-desc,'9 Calendar Months')]					XPATH	//*[contains(@name,'9 Calendar Months')]						
+TwelveMonthCal	XPATH	//*[contains(@content-desc,'12 Calendar Months')]					XPATH	//*[contains(@name,'12 Calendar Months')]						
+UVDeviceScreen	XPATH	//*[contains(@content-desc,'UV Devices')]					XPATH	//*[contains(@name,'UV Devices')]						
+KeypadLockoutFull	XPATH	//*[contains(@content-desc,'Full')]					XPATH	//*[contains(@name,'Full')]						
+ExtendedFanRunTimeInHeatDrpDwn	XPATH	((//*[contains(@resource-id,'FAN_OVRN_description')]//following-sibling::*)[2]/*)[1]					XPATH	((//*[contains(@name,'Select how long fan should run')]//following-sibling::*)[1]/*)[1]						
+UVValue0	XPATH	//*[contains(@content-desc,'0')]					XPATH	//*[contains(@name,'0')]						
+UVValue1	XPATH	//*[contains(@content-desc,'1')]					XPATH	//*[contains(@name,'1')]						
+UVValue2	XPATH	//*[contains(@content-desc,'2')]					XPATH	//*[contains(@name,'2')]						
+LanguageEnglish	XPATH	//*[contains(@content-desc,'English')]					XPATH	//*[contains(@name,'English')]						
+LanguageEspanol	XPATH	//*[contains(@content-desc,'Español')]					XPATH	//*[contains(@name,'Español')]						
+LanguageNederlands	XPATH	//*[contains(@content-desc,'Nederlands')]					XPATH	//*[contains(@name,'Nederlands')]						
+HumTypeNone	XPATH	//*[contains(@content-desc,'None')]					XPATH	//*[contains(@name,'None')]						
+HumTypeSteam	XPATH	//*[contains(@content-desc,'Steam')]					XPATH	//*[contains(@name,'Steam')]						
+HumTypeBypassorPoweed	XPATH	//*[contains(@content-desc,'Bypass or Fan Powered')]					XPATH	//*[contains(@name,'Bypass or Fan Powered')]						
+DehumTypeNone	XPATH	//*[contains(@content-desc,'None')]					XPATH	//*[contains(@name,'None')]						
+DehumTypeACwithFan	XPATH	//*[contains(@content-desc,'A/C with High Speed Fan')]					XPATH	//*[contains(@name,'A/C with High Speed Fan')]						
+DehumTypeWholeHouseDehum	XPATH	//*[contains(@content-desc,'Whole House Dehumidifier')]					XPATH	//*[contains(@name,'Whole House Dehumidifier')]						
+IndoorHumOffsetDropDownValue	XPATH	((//*[contains(@resource-id,'INDOOR_HUMIDITIY_DISPLAY_OFFSET_description')]/following-sibling::*)[1]/*)[1]					XPATH	((//*[contains(@name,'displayed indoor humidity')]/following-sibling::*)[1]//*)[1]						
+LanguageScreen	XPATH	//*[contains(@content-desc,'Language')]					XPATH	//*[contains(@name,'Language')]						
+HumidifierTypeScreen	XPATH	//*[contains(@content-desc,'Humidifier Type')]					XPATH	//*[contains(@name,'Humidifier Type')]						
+DehumidifierTypeScreen	XPATH	//*[contains(@content-desc,'Dehumidification Type')]					XPATH	//*[contains(@name,'Dehumidification Type')]						
+IndoorHumidityOffsetScreen	XPATH	//*[contains(@content-desc,'Indoor Humidity Display Offset')]					XPATH	//*[contains(@name,'Indoor Humidity Display Offset')]						
+DeleteErrorPopUp	XPATH	//*[contains(@content-desc,'Delete Error')]					XPATH	//*[contains(@name,'Delete Error')]						
+RegisteredandConnectedToWIFI	XPATH	//*[contains(@content-desc,'registered and connected')]					XPATH	//*[contains(@name,'registered and connected')]						
+IndoorAirQualityEquipmentScreen	XPATH	//*[contains(@content-desc,'Indoor Air Quality Equipment')]					XPATH	//*[contains(@name,'ndoor Air Quality Equipment')]						
+IndoorAirTypeNone	XPATH	//*[contains(@content-desc,'None')]					XPATH	//*[contains(@name,'None')]						
+HumidifierOpt	XPATH	//*[contains(@content-desc,'Humidifier')]					XPATH	//*[contains(@name,'Humidifier')]						
+DehumidifierOpt	XPATH	//*[contains(@content-desc,'Dehumidifier')]					XPATH	//*[contains(@name,'Dehumidifier')]						
+VentilatorOpt	XPATH	//*[contains(@content-desc,'Ventilator')]					XPATH	//*[contains(@name,'Ventilator')]						
+WifiInvalidPINErrorPopup	XPATH	//android.view.View[@content-desc='Wi-Fi Error']//parent::android.view.View					XPATH	//android.view.View[@name='Wi-Fi Error']//parent::android.view.View						
+WifiPasswordTryAgainButton	XPATH	//android.widget.Button[@content-desc='Try Again']					XPATH	//android.widget.Button[@name='Try Again']						
+WifiInvalidPINErrorMessage	XPATH	//*[contains(@content-desc,'Make sure password')]					XPATH	//*[contains(@name,'Make sure password')]						
+ConnectionFailed	XPATH	//*[contains(@content-desc,'Connection Failed')]					XPATH	//*[contains(@name,'Connection Failed')]						
+ApplicationtScreen	XPATH	//*[contains(@content-desc,'Application')]					XPATH	//*[contains(@name,'Application')]						
+Residential	XPATH	//*[contains(@content-desc,'Residential')]					XPATH	//*[contains(@name,'Residential')]						
+Commercial	XPATH	//*[contains(@content-desc,'Commercial')]					XPATH	//*[contains(@name,'Commercial')]						
+FloorSensorNO	XPATH	//*[contains(@content-desc,'No')]					XPATH	//*[contains(@name,'No')]						
+FloorSensorWired	XPATH	//*[contains(@content-desc,'Wired')]					XPATH	//*[contains(@name,'Wired')]						
+FloorSensorScreen	XPATH	//*[contains(@content-desc,'Floor Sensor')]					XPATH	//*[contains(@name,'Floor Sensor')]						
+BackupHeatTypeScreen	XPATH	//*[contains(@content-desc,'Extended Fan Run Time in Cool')]					XPATH	//*[contains(@name,'Extended Fan Run Time in Cool')]						
+IndoorHumidityScreen	XPATH	//*[contains(@content-desc,'Indoor Humidity')]					XPATH	//*[contains(@name,'Indoor Humidity')]						
+HeatingSystemDrpDwn	XPATH	(//*[contains(@content-desc,'Select heating system type')]//following-sibling::*)[1]					XPATH	(//*[contains(@name,'Select heating system type')]//following-sibling::*)[1]						
+Other	XPATH	//*[contains(@content-desc,'Other')]					XPATH	//*[contains(@name,'Other')]						
+FanCoil	XPATH	//*[contains(@content-desc,'Fan Coil')]					XPATH	//*[contains(@name,'Fan Coil')]						
+PTAC	XPATH	//*[contains(@content-desc,'Packaged Terminal Air Conditioner (PTAC)')]					XPATH	//*[contains(@name,'Packaged Terminal Air Conditioner (PTAC)')]						
+StandardEffGasForcedAir	XPATH	//*[contains(@content-desc,'Standard Efficiency Gas Forced Air')]					XPATH	//*[contains(@name,'Standard Efficiency Gas Forced Air')]						
+HighEffGasForcedAir	XPATH	//*[contains(@content-desc,'High Efficiency Gas Forced Air')]					XPATH	//*[contains(@name,'High Efficiency Gas Forced Air')]						
+OilForcedAir	XPATH	//*[contains(@content-desc,'Oil Forced Air')]					XPATH	//*[contains(@name,'Oil Forced Air')]						
+HotWaterFanCoil	XPATH	//*[contains(@content-desc,'Hot Water Fan Coil')]					XPATH	//*[contains(@name,'Hot Water Fan Coil')]						
+HotWaterRadiantHeat	XPATH	//*[contains(@content-desc,'Hot Water Radiant Heat')]					XPATH	//*[contains(@name,'Hot Water Radiant Heat')]						
+BackUpHeatTypeDrpDwn	XPATH	(//*[contains(@content-desc,'What kind of fuel source')]//following-sibling::*)[1]					XPATH	(//*[contains(@name,'What kind of fuel source')]//following-sibling::*)[1]						
+OccupancySensingScreen	XPATH	//*[contains(@content-desc,'Occupancy Sensing')]					XPATH	//*[contains(@name,'Occupancy Sensing')]						
+NoneOccupancySensing	XPATH	//*[contains(@content-desc,'None')]					XPATH	//*[contains(@name,'None')]						
+DryContactOrLTerminal	XPATH	//*[contains(@content-desc,'Dry Contact OR L Terminal')]					XPATH	//*[contains(@name,'Dry Contact OR L Terminal')]						
+WirelessSensor	XPATH	//*[contains(@content-desc,'Wireless Sensor(s)')]					XPATH	//*[contains(@name,'Wireless Sensor(s)')]						
+ThermostatInternalSensor	XPATH	//*[contains(@content-desc,'Thermostat Internal Sensor')]					XPATH	//*[contains(@name,'Thermostat Internal Sensor')]						
+WirelessInternalSensor	XPATH	//*[contains(@content-desc,'Wireless and Internal sensors')]					XPATH	//*[contains(@name,'Wireless and Internal sensors')]						
+TemperatureBalancingScreen	XPATH	//*[contains(@content-desc,'Temperature Balancing')]					XPATH	//*[contains(@name,'Temperature Balancing')]						
+WiredSensorsScreen	XPATH	//*[contains(@content-desc,'Wired Sensors')]					XPATH	//*[contains(@name,'Wired Sensors')]						
+IndoorAirTemperature	XPATH	//*[contains(@content-desc,'Indoor Air Temperature')]					XPATH	//*[contains(@name,'Indoor Air Temperature')]						
+ReturnAirTemperatureSensor	XPATH	//*[contains(@content-desc,'Return Air Temperature Sensor')]					XPATH	//*[contains(@name,'Return Air Temperature Sensor')]						
+DischargeAirTemperatureSensor	XPATH	//*[contains(@content-desc,'Discharge Air Temperature Sensor')]					XPATH	//*[contains(@name,'Discharge Air Temperature Sensor')]						
+FreezeProtectionScreen	XPATH	//*[contains(@content-desc,'Freeze Protection')]					XPATH	//*[contains(@name,'Freeze Protection')]						
+DryContacts1Screen	XPATH	//*[contains(@content-desc,'Dry Contacts 1')]					XPATH	//*[contains(@name,'Dry Contacts 1')]						
+DryContacts2Screen	XPATH	//*[contains(@content-desc,'Dry Contacts 2')]					XPATH	//*[contains(@name,'Dry Contacts 2')]						
+FullDrainPanAlert	XPATH	//*[contains(@content-desc,'Full Drain Pan Alert')]					XPATH	//*[contains(@name,'Full Drain Pan Alert')]						
+DirtyFilterAlert	XPATH	//*[contains(@content-desc,'Dirty Filter Alert')]					XPATH	//*[contains(@name,'Dirty Filter Alert')]						
+WaterLeakAlert	XPATH	//*[contains(@content-desc,'Water Leak Alert')]					XPATH	//*[contains(@name,'Water Leak Alert')]						
+SystemShutdownAlert	XPATH	//*[contains(@content-desc,'System Shutdown Alert')]					XPATH	//*[contains(@name,'System Shutdown Alert')]						
+ServiceNeededAlert	XPATH	//*[contains(@content-desc,'Service Needed Alert')]					XPATH	//*[contains(@name,'Service Needed Alert')]						
+FanFailureAlert	XPATH	//*[contains(@content-desc,'Fan Failure Alert')]					XPATH	//*[contains(@name,'Fan Failure Alert')]						
+CustomDryContact1	XPATH	//*[contains(@content-desc,'Custom Dry Contact 1')]					XPATH	//*[contains(@name,'Custom Dry Contact 1')]						
+CustomDryContact2	XPATH	//*[contains(@content-desc,'Custom Dry Contact 2')]					XPATH	//*[contains(@name,'Custom Dry Contact 2')]						
+CustomDryContact3	XPATH	//*[contains(@content-desc,'Custom Dry Contact 3')]					XPATH	//*[contains(@name,'Custom Dry Contact 3')]						
+CustomDryContact4	XPATH	//*[contains(@content-desc,'Custom Dry Contact 4')]					XPATH	//*[contains(@name,'Custom Dry Contact 4')]						
+AirFilterReplacementReminderDrpDwn	XPATH	((//*[contains(@resource-id,'FILTER1_TIMER_description')]/following-sibling::*)[1]/*)[1]					XPATH	(//*[contains(@name,'Select how often to trigger filter reminder')]//following-sibling::*)[1]						
+DropDownLocator	XPATH	(//*[@class='android.widget.ImageView'])[last()]					XPATH	//*[@type='XCUIElementTypeButton' and not(@name='Next') and not(@name='Exit') and not(@name='Back') and not(@name='More Info')][1]						
+IndoorAirTemperatureChecked	XPATH	(//*[contains(@content-desc,'Indoor Air Temperature')]/preceding-sibling::*[contains(@resource-id,'check')])[1]					XPATH	//*[contains(@name,'Indoor Air Temperature')]						
+ReturnAirTemperatureSensorChecked	XPATH	(//*[contains(@content-desc,'Return Air Temperature Sensor')]/preceding-sibling::*[contains(@resource-id,'check')])[1]					XPATH	//*[contains(@name,'Return Air Temperature Sensor')]						
+DischargeAirTemperatureSensorChecked	XPATH	(//*[contains(@content-desc,'Discharge Air Temperature Sensor')]/preceding-sibling::*[contains(@resource-id,'check')])[1]					XPATH	//*[contains(@name,'Discharge Air Temperature Sensor')]						
+FullDrainPanAlertChecked	XPATH	//*[contains(@content-desc,'Full Drain Pan Alert')]/android.widget.ImageView					XPATH	//*[contains(@name,'Full Drain Pan Alert')]						
+DirtyFilterAlertChecked	XPATH	//*[contains(@content-desc,'Dirty Filter Alert')]/android.widget.ImageView					XPATH	//*[contains(@name,'Dirty Filter Alert')]						
+WaterLeakAlertChecked	XPATH	//*[contains(@content-desc,'Water Leak Alert')]/android.widget.ImageView					XPATH	//*[contains(@name,'Water Leak Alert')]						
+SystemShutdownAlertChecked	XPATH	//*[contains(@content-desc,'System Shutdown Alert')]/android.widget.ImageView					XPATH	//*[contains(@name,'System Shutdown Alert')]						
+ServiceNeededAlertChecked	XPATH	//*[contains(@content-desc,'Service Needed Alert')]/android.widget.ImageView					XPATH	//*[contains(@name,'Service Needed Alert')]						
+FanFailureAlertChecked	XPATH	//*[contains(@content-desc,'Fan Failure Alert')]/android.widget.ImageView					XPATH	//*[contains(@name,'Fan Failure Alert')]						
+CustomDryContact1Checked	XPATH	//*[contains(@content-desc,'Custom Dry Contact 1')]/android.widget.ImageView					XPATH	//*[contains(@name,'Custom Dry Contact 1')]						
+CustomDryContact2Checked	XPATH	//*[contains(@content-desc,'Custom Dry Contact 2')]/android.widget.ImageView					XPATH	//*[contains(@name,'Custom Dry Contact 2')]						
+CustomDryContact3Checked	XPATH	//*[contains(@content-desc,'Custom Dry Contact 3')]/android.widget.ImageView					XPATH	//*[contains(@name,'Custom Dry Contact 3')]						
+CustomDryContact4Checked	XPATH	//*[contains(@content-desc,'Custom Dry Contact 4')]/android.widget.ImageView					XPATH	//*[contains(@name,'Custom Dry Contact 4')]						
+StagingControlPrimaryHeatDifferentialScreen	XPATH	//*[contains(@content-desc,'Staging Control') and contains(@content-desc,'Stage 2')]					XPATH	//*[contains(@name,'Staging Control') and contains(@name,'Stage 2')]						
+StagingControlCoolDifferentialScreen	XPATH	//*[contains(@content-desc,'Staging Control') and contains(@content-desc,'Stage 2')and contains(@content-desc,'Cool')]					XPATH	//*[contains(@name,'Staging Control') and contains(@name,'Stage 2')and contains(@name,'Cool')]						
+HeatingStage3WiringScreen	XPATH	//*[contains(@content-desc,'Heat Stage 3 Wiring')]					XPATH	//*[contains(@name,'Heat Stage 3 Wiring')]						
+StagingControlPrimaryHeatDifferential3Screen	XPATH	//*[contains(@content-desc,'Staging Control') and contains(@content-desc,'Stage 3')]					XPATH	//*[contains(@name,'Staging Control') and contains(@name,'Stage 3')]						
+HeatCyclePerHourStage3Screen	XPATH	//*[contains(@content-desc, 'Heat Cycles per Hour - Stage 3') or contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 3') or contains(@content-desc, 'Electric Forced Air Heat Cycles per Hour - Stage 3') or contains(@content-desc, 'Radiant Heat Cycles per Hour - Stage 3')]					ACCESSIBILITY ID	Heat Cycles/Hour - Stage 2						
+Stage3	ACCESSIBILITY ID	3					ACCESSIBILITY ID	3						
+MinNonCompressorOnTimeScreen	XPATH	//*[@content-desc='Minimum Non-Compressor On Time']					XPATH	//*[@name='Minimum Non-Compressor On Time']						
+CurrentMinNonCompressorOnTime	XPATH	//*[contains(@resource-id,'MIN_NONCMPR') and contains(@resource-id,'description')]/following-sibling::*[2]					XPATH	//*[contains(@name,'Select the minimum amount of time')]/following-sibling::*[2]						
+MinNonCompressorOnTimeDecrease	XPATH	//*[contains(@resource-id,'MIN_NONCMPR') and contains(@resource-id,'description')]/following-sibling::*[1]					XPATH	//*[contains(@name,'Select the minimum amount of time')]/following-sibling::*[1]						
+MinNonCompressorOnTimeIncrease	XPATH	//*[contains(@resource-id,'MIN_NONCMPR') and contains(@resource-id,'description')]/following-sibling::*[3]					XPATH	//*[contains(@name,'Select the minimum amount of time')]/following-sibling::*[3]						
+AirSensorOnly	XPATH	//*[@content-desc='Air Sensor Only']					XPATH	//*[@name='Air Sensor Only']						
+RadiantFloorHeatSensingScreen	XPATH	//*[@content-desc='Radiant Floor Heat Sensing']					XPATH	//*[@name='Radiant Floor Heat Sensing']						
+RadiantHeat	XPATH	//*[contains(@content-desc,'Radiant Heat')]					XPATH	//*[contains(@name,'Radiant Heat')]						
+HotWaterRadiantHeat	XPATH	//*[contains(@content-desc,'Hot Water - Radiant Heat') or contains(@content-desc,'Hot Water  Radiant Heat') ]					XPATH	//*[contains(@name,'Hot Water - Radiant Heat') or contains(@name,'Hot Water Radiant Heat')]						
+HotWaterRadiantFloorHeat	XPATH	//*[contains(@content-desc,'Hot Water Radiant Floor Heat')]					XPATH	//*[contains(@name,'Hot Water Radiant Floor Heat')]						
+AirandFloorSensor	XPATH	//*[contains(@content-desc,'Air and Floor Sensors')]					XPATH	//*[contains(@name,'Air and Floor Sensors')]						
+FloorTemSensorChecked	XPATH	(//*[contains(@content-desc,'Floor Temperature Sensor')]/preceding-sibling::*[contains(@resource-id,'check')])[1]					XPATH	(//*[contains(@content-desc,'Floor Temperature Sensor')]/preceding-sibling::*)[1]						
+FloorTemSensor	XPATH	//*[contains(@content-desc,'Floor Temperature Sensor')]					XPATH	//*[contains(@name,'Floor Temperature Sensor')]						
+IsuTempSensorWiringAssg1	XPATH	//*[contains(@content-desc,'ISU_TEMP_SENSOR_WIRING_ASSIGNMENT_1')]					XPATH	//*[contains(@name,'ISU_TEMP_SENSOR_WIRING_ASSIGNMENT_1')]						
+ThermostatS1	XPATH	//*[contains(@content-desc,'Thermostat S')]					XPATH	//*[contains(@name,'Thermostat S1')]						
+FloorSensorWiringAssignmentScreen	XPATH	//*[contains(@content-desc,'Floor Temperature Sensor')]					XPATH	//*[contains(@name,'Floor Temperature Sensor')]						
+MinFloorTempLimitScreen	XPATH	//*[contains(@content-desc,'Minimum Floor Temperature Limit')]					XPATH	//*[contains(@name,'Minimum Floor Temperature Limit')]						
+MaxFloorTempLimitScreen	XPATH	//*[contains(@content-desc,'Maximum Floor Temperature Limit')]					XPATH	//*[contains(@name,'Maximum Floor Temperature Limit')]						
+CurrentMinFloorTempLimit	XPATH	//*[contains(@resource-id,'MIN_FLOOR_TEMPERATURE_LIMIT') and contains(@resource-id,'description')]/following-sibling::*[2]					XPATH	//*[contains(@name,'minimum limit of the floor')]/following-sibling::*[2]						
+MinFloorTempLimitDecrease	XPATH	//*[contains(@resource-id,'MIN_FLOOR_TEMPERATURE_LIMIT') and contains(@resource-id,'description')]/following-sibling::*[1]					XPATH	//*[contains(@name,'minimum limit of the floor')]/following-sibling::*[1]						
+MinFloorTempLimitIncrease	XPATH	//*[contains(@resource-id,'MIN_FLOOR_TEMPERATURE_LIMIT') and contains(@resource-id,'description')]/following-sibling::*[3]					XPATH	//*[contains(@name,'minimum limit of the floor')]/following-sibling::*[3]						
+CurrentMaxFloorTempLimit	XPATH	//*[contains(@resource-id,'MAX_FLOOR_TEMPERATURE_LIMIT') and contains(@resource-id,'description')]/following-sibling::*[2]					XPATH	//*[contains(@name,'maximum limit of the floor')]/following-sibling::*[2]						
+MaxFloorTempLimitDecrease	XPATH	//*[contains(@resource-id,'MAX_FLOOR_TEMPERATURE_LIMIT') and contains(@resource-id,'description')]/following-sibling::*[1]					XPATH	//*[contains(@name,'maximum limit of the floor')]/following-sibling::*[1]						
+MaxFloorTempLimitIncrease	XPATH	//*[contains(@resource-id,'MAX_FLOOR_TEMPERATURE_LIMIT') and contains(@resource-id,'description')]/following-sibling::*[3]					XPATH	//*[contains(@name,'maximum limit of the floor')]/following-sibling::*[3]						
+DenaliTradeThermostat	XPATH	//*[contains(@content-desc,'Denali')or contains(@content-desc,'denali')or contains(@content-desc,'ElitePRO S1200 Thermostat')]					XPATH	//*[contains(@name,'Denali')or contains(@name,'denali')or contains(@name,'ElitePRO S1200 Thermostat')]						
+ControlModeScreen	XPATH	//*[contains(@content-desc,'Control Mode')]					XPATH	//*[contains(@name,'Control Mode')]						
+NoRemoteSetbackOccupancySensing	XPATH	//*[contains(@content-desc,'No Remote Setback')]					XPATH	//*[contains(@name,'No Remote Setback')]						
+EquipmentTypeScreen	XPATH	//*[contains(@content-desc,'Equipment Type')]					XPATH	//*[contains(@name,'Equipment Type')]						
+TemperatureAlertCheckBox	XPATH	//*[@content-desc='ISU_off']/preceding-sibling::android.widget.ImageView					XPATH	//*[@name='ISU_off']/preceding-sibling::android.widget.ImageView						
+SelectRoomScreen	XPATH	//*[contains(@content-desc,'In which room will your thermostat be located')]					XPATH	//*[contains(@name,'In which room will your thermostat be located')]						
+AddRoomBtn	XPATH	//*[contains(@content-desc,'Add Room')]					XPATH	//*[contains(@name,'Add Room')]						
+RoomNameInput	XPATH	(//*[contains(@content-desc,'which room ')]/following-sibling::*)[2]					XPATH	(//*[contains(@name,'which room ')]/following-sibling::*)[2]						
+HighTemAlertCheckBox	XPATH	//android.view.View[@resource-id='ISU_off']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']					XPATH	//android.view.View[@resource-id='ISU_off']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']						
+LowTemAlertCheckBox	XPATH	//android.view.View[@resource-id='ISU_off']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']					XPATH	//android.view.View[@resource-id='ISU_off']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']						
+MaxMinAlertValue	XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[2]					XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[2]						
+MaxMinAlertValueIncrease	XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[3]						
+MaxMinAlertValueDecrease	XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[1]					XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[1]						
+BackupHeatTypeDrpDwn	XPATH	(//*[contains(@resource-id,'ISU_BACKUP_HEAT_TYPE_description')]/following-sibling::*)[1]					XPATH	(//*[contains(@resource-id,'ISU_BACKUP_HEAT_TYPE_description')]/following-sibling::*)[1]						
+OutdoorHumidityOffsetScreen	XPATH	//*[contains(@content-desc,'Outdoor Humidity Display Offset')]					XPATH	//*[contains(@content-desc,'Outdoor Humidity Display Offset')]						
+OutdoorTempOffsetScreen	XPATH	//*[contains(@content-desc,'Outdoor Temperature Display Offset')]					XPATH	//*[contains(@content-desc,'Outdoor Temperature Display Offset')]						
+CompressorCoolStage4DifferentialScreen	XPATH	//*[contains(@content-desc, 'Staging Control - Cool Stage 4 Differential') or contains(@content-desc,'Staging Control - Compressor Cool Stage 4 Differential')]					XPATH	//*[contains(@content-desc, 'Staging Control - Cool Stage 4 Differential') or contains(@content-desc,'Staging Control - Compressor Cool Stage 4 Differential')]						
+LTerminalAlertScreen	XPATH	//*[@content-desc='L Terminal Alert']					XPATH	//*[@content-desc='L Terminal Alert']						
+BackupHeatWiringScreen	XPATH	//*[contains(@content-desc,'Backup Heat Wiring')]					XPATH	//*[contains(@content-desc,'Backup Heat Wiring')]						
+BackupHeatWiringThermostatL	XPATH	//*[contains(@content-desc,'Thermostat L')]					XPATH	//*[contains(@content-desc,'Thermostat L')]						
+BackupHeatWiringThermostatAux	XPATH	//*[contains(@content-desc,'Thermostat Aux')]					XPATH	//*[contains(@content-desc,'Thermostat Aux')]						
+HPFailNone	XPATH	//*[@content-desc='None']					XPATH	//*[@content-desc='None']						
+HeatPumpFailureIndication	XPATH	//*[@content-desc='Heat Pump Failure Indication']					XPATH	//*[@content-desc='Heat Pump Failure Indication']						
+HeatPumpStage2WiringScreen	XPATH	//*[@content-desc='Heat Pump Stage 2 Wiring']					XPATH	//*[@content-desc='Heat Pump Stage 2 Wiring']						
+ComfortCheckBoxChecked	XPATH	//android.view.View[@resource-id='ISU_comfort']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']					XPATH	//android.view.View[@resource-id='ISU_comfort']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']						
+HPBackUpHeatDifferentialValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[6]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[6]						
+HPBackUpHeatDifferentialValueIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[7]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[7]						
+HPBackUpHeatDifferentialValueDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+BackupHeatOperationScreen	XPATH	//*[contains(@content-desc,'Backup Heat Operation')]					XPATH	//*[contains(@content-desc,'Backup Heat Operation')]						
+BackupHeatAllowedWithPrimaryHeat	XPATH	//*[contains(@content-desc,'Allowed to Run with Primary Heat')]					XPATH	//*[contains(@content-desc,'Allowed To Run With Primary Heat')]						
+BackupHeatNotAllowedWithPrimaryHeat	XPATH	//*[contains(@content-desc,'Not Allowed to Run with Primary Heat')]					XPATH	//*[contains(@content-desc,'Not Allowed To Run With Primary Heat')]						
+EmergencyHeatOperationScreen	XPATH	//*[contains(@content-desc,'Emergency Heat Operation')]					XPATH	//*[contains(@content-desc,'Emergency Heat Operation')]						
+EmergencyHeatAllowedWithPrimaryHeat	XPATH	//*[contains(@content-desc,'Allowed to Run with Primary Heat')]					XPATH	//*[contains(@content-desc,'Allowed To Run With Primary Heat')]						
+EmergencyHeatNotAllowedWithPrimaryHeat	XPATH	//*[contains(@content-desc,'Not Allowed to Run with Primary Heat')]					XPATH	//*[contains(@content-desc,'Not Allowed To Run With Primary Heat')]						
+FanCoilChangeoverTemperatureSensorChecked	XPATH	//android.view.View[@content-desc='Fan Coil Changeover Temperature sensor']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']					XPATH	//android.view.View[@content-desc='Fan Coil Changeover Temperature sensor']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']						
+FanCoilChangeoverTemperatureSensor	XPATH	//*[contains(@content-desc,'Fan Coil Changeover Temperature sensor')]					XPATH	//*[contains(@content-desc,'Fan Coil Changeover Temperature sensor')]						
+ComfortChecked	XPATH	//*[contains(@resource-id,'ISU_STAGING_CONTROL') and contains(@resource-id,'description')]/following-sibling::*[contains(@resource-id,'check')]					XPATH	//*[contains(@resource-id,'ISU_STAGING_CONTROL') and contains(@resource-id,'description')]/following-sibling::*[contains(@resource-id,'check')]						
+ComfortCheckBox	XPATH	(//*[contains(@resource-id,'ISU_STAGING_CONTROL') and contains(@resource-id,'description')]/following-sibling::android.view.View)[1]					XPATH	(//*[contains(@resource-id,'ISU_STAGING_CONTROL') and contains(@resource-id,'description')]/following-sibling::android.view.View)[1]						
+FloorEconomyModeScreen	XPATH	//*[contains(@content-desc,'Floor Economy Mode')]					XPATH	//*[contains(@name,'Floor Economy Mode')]						
+2PipeFanCoil	XPATH	//*[contains(@content-desc,'2 Pipe Fan Coil')]					XPATH	//*[contains(@name,'2 Pipe Fan Coil')]						
+4PipeFanCoil	XPATH	//*[contains(@content-desc,'4 Pipe Fan Coil')]					XPATH	//*[contains(@@name,'4 Pipe Fan Coil')]						
+ChangeoverSensorScreen	XPATH	//*[contains(@content-desc,'Changeover Sensor')]					XPATH	//*[contains(@name,'Changeover Sensor')]						
+ChangeoverSensorNone	XPATH	//*[contains(@content-desc,'None')]					XPATH	//*[contains(@name,'None')]						
+ChangeoverSensorDryContactSwitch	XPATH	//*[contains(@content-desc,'Dry Contact Switch')]					XPATH	//*[contains(@name,'Dry Contact Switch')]						
+ChangeoverSensor10KSensor	XPATH	//*[contains(@content-desc,'10K Sensor')]					XPATH	//*[contains(@name,'10K Sensor')]						
+ChangeoverSensor20KSensor	XPATH	//*[contains(@content-desc,'20K Sensor')]					XPATH	//*[contains(@name,'20K Sensor')]						
+DryContactSwitchScreen	XPATH	//*[contains(@content-desc,'Dry Contact Switch')]					XPATH	//*[contains(@name,'Dry Contact Switch')]						
+DryContactSwitchOpenInCool	XPATH	//*[contains(@content-desc,'Open in Cool')]					XPATH	//*[contains(@content-desc,'Open in Cool')]						
+DryContactSwitchOpenInHeat	XPATH	//*[contains(@content-desc,'Open in Heat')]					XPATH	//*[contains(@content-desc,'Open in Heat')]						
+FanCoilStagesScreen	XPATH	//*[contains(@content-desc,'Fan Coil Stages')]					XPATH	//*[contains(@content-desc,'Fan Coil Stages')]						
+FanCoilStage1	XPATH	//*[contains(@content-desc,'1')]					XPATH	//*[contains(@content-desc,'1')]						
+FanStagesScreen	XPATH	//*[contains(@content-desc,'Fan Stages')]					XPATH	//*[contains(@content-desc,'Fan Stages')]						
+FanSpeedIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+FanSpeedValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]						
+FanSpeedDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]						
+FanMediumSpeedWiringScreen	XPATH	//*[contains(@content-desc,'Medium Speed Wiring')]					XPATH	//*[contains(@content-desc,'Medium Speed Wiring')]						
+FanMediumSpeedWiringThermostatY2	XPATH	//*[contains(@content-desc,'Thermostat Y2')]					XPATH	//*[contains(@content-desc,'Thermostat Y2')]						
+FanHighSpeedWiringScreen	XPATH	//*[contains(@content-desc,'High Speed Wiring')]					XPATH	//*[contains(@content-desc,'High Speed Wiring')]						
+FanHighSpeedWiringNone	XPATH	//*[contains(@content-desc,'None')]					XPATH	//*[contains(@content-desc,'None')]						
+FanHighSpeedWiringThermostatU	XPATH	//*[contains(@content-desc,'Thermostat U')]					XPATH	//*[contains(@content-desc,'Thermostat U')]						
+FanHighSpeedWiringThermostatL	XPATH	//*[contains(@content-desc,'Thermostat L')]					XPATH	//*[contains(@content-desc,'Thermostat L')]						
+AllowedFanModesScreen	XPATH	//*[@content-desc='Allowed Fan Modes']					XPATH	//*[@content-desc='Allowed Fan Modes']						
+FanSpeedAuto	XPATH	//*[@content-desc='Auto']					XPATH	//*[@content-desc='Auto']						
+FanSpeedMultipleSpeeds	XPATH	//*[@content-desc='Multiple Speeds']					XPATH	//*[@content-desc='Multiple Speeds']						
+FanSpeedAutoAndMultipleSpeed	XPATH	//*[@content-desc='Auto & Multiple Speed']					XPATH	//*[@content-desc='Auto & Multiple Speed']						
+FanSpeedOn	XPATH	//*[@content-desc='On']					XPATH	//*[@content-desc='On']						
+FanSpeedAutoAndOn	XPATH	//*[@content-desc='Auto & On']					XPATH	//*[@content-desc='Auto & On']						
+StartFanonHighSpeedScreen	XPATH	//*[contains(@content-desc,'Start Fan On High Speed')]					XPATH	//*[contains(@content-desc,'Start Fan On High Speed')]						
+StartFanonHighSpeedDisabled	XPATH	//*[contains(@content-desc,'Disabled (Off)')]					XPATH	//*[contains(@content-desc,'Disabled (Off)')]						
+StartFanonHighSpeedEnabled	XPATH	//*[contains(@content-desc,'Enabled (On)')]					XPATH	//*[contains(@content-desc,'Enabled (On)')]						
+FanResetTimerScreen	XPATH	//*[contains(@content-desc,'Fan Reset Timer')]					XPATH	//*[contains(@content-desc,'Fan Reset Timer')]						
+FanResetTimerInactive	XPATH	//*[contains(@content-desc,'Inactive')]					XPATH	//*[contains(@content-desc,'Inactive')]						
+FanResetTimerAfter2Hours	XPATH	//*[contains(@content-desc,'Reset after 2 hours')]					XPATH	//*[contains(@content-desc,'Reset after 2 hours')]						
+FanResetTimerAfter4Hours	XPATH	//*[contains(@content-desc,'All Reset after 4 hours')]					XPATH	//*[contains(@content-desc,'All Reset after 4 hours')]						
+ChangeoverSensorWiringScreen	XPATH	//*[contains(@content-desc,'Changeover Sensor')]					XPATH	//*[contains(@content-desc,'Changeover Sensor')]						
+ChangeoverSensorWiringNone	XPATH	//*[contains(@content-desc,'None')]					XPATH	//*[contains(@content-desc,'None')]						
+ChangeoverSensorWiringThermostatS	XPATH	//*[contains(@content-desc,'Thermostat S')]					XPATH	//*[contains(@content-desc,'Thermostat S')]						
+FanCoilChangeoverTemperatureSensorChecked	XPATH	//android.view.View[@content-desc='Fan Coil Changeover Temperature sensor']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']					XPATH	//android.view.View[@content-desc='Fan Coil Changeover Temperature sensor']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']						
+FanCoilChangeoverTemperatureSensor	XPATH	//*[contains(@content-desc,'Fan Coil Changeover Temperature sensor')]					XPATH	//*[contains(@content-desc,'Fan Coil Changeover Temperature sensor')]						
+PipeSensorThresholdforCoolingScreen	XPATH	//*[contains(@content-desc,'Pipe Sensor Threshold for Cooling')]					XPATH	//*[contains(@content-desc,'Pipe Sensor Threshold for Cooling')]						
+PipeSensorThresholdforHeatingScreen	XPATH	//*[contains(@content-desc,'Pipe Sensor Threshold for Heating')]					XPATH	//*[contains(@content-desc,'Pipe Sensor Threshold for Heating')]						
+PipeSensorThresholdValueForCoolingAndHeating	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]						
+PipeSensorThresholdValueForCoolingAndHeatingIncrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[2]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[2]						
+PipeSensorThresholdValueForCoolingAndHeatingIncrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]						
+FanCoilCoolStage4	ACCESSIBILITY ID	4					ACCESSIBILITY ID	4						
+FanCoilHeatStageScreen	XPATH	//*[contains(@content-desc,'Fan Coil Heat Stage')]					XPATH	//*[contains(@content-desc,'Fan Coil Heat Stage')]						
+CoolStage3WiringScreen	XPATH	//*[contains(@content-desc,'Cool Stage 3 Wiring')]					XPATH	//*[contains(@content-desc,'Cool Stage 3 Wiring')]						
+FanCoilHeatStage3WiringScreen	XPATH	//*[contains(@content-desc,'Fan Coil Heat Stage 3 Wiring')]					XPATH	//*[contains(@content-desc,'Fan Coil Heat Stage 3 Wiring')]						
+CompressorCoolStage3DifferentialScreen	XPATH	//*[contains(@content-desc, 'Staging Control - Cool Stage 3 Differential') or contains(@content-desc,'Staging Control - Compressor Cool Stage 3 Differential')]					XPATH	//*[contains(@content-desc, 'Staging Control - Cool Stage 3 Differential') or contains(@content-desc,'Staging Control - Compressor Cool Stage 3 Differential')]						
+FanCoilHeatDifferentialStage2Screen	XPATH	//*[contains(@content-desc, 'Staging Control - Fan Coil Heat Differential Stage 2')]					XPATH	//*[contains(@content-desc, 'Staging Control - Fan Coil Heat Differential Stage 2')]						
+FanCoilHeatDifferentialStage3Screen	XPATH	//*[contains(@content-desc, 'Staging Control - Fan Coil Heat Differential Stage 3')]					XPATH	//*[contains(@content-desc, 'Staging Control - Fan Coil Heat Differential Stage 3')]						
+CoolCyclesStage3PerHourScreen	XPATH	//*[contains(@content-desc, 'Cool Stage 3 Cycles Per Hour')]					XPATH	//*[contains(@content-desc, 'Cool Stage 3 Cycles Per Hour')]						
+FanCoilHeatCyclesPerHourStage1Screen	XPATH	//*[contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 1')]					XPATH	//*[contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 1')]						
+FanCoilHeatCyclesPerHourStage2Screen	XPATH	//*[contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 2')]					XPATH	//*[contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 2')]						
+FanCoilHeatCyclesPerHourStage3Screen	XPATH	//*[contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 3')]					XPATH	//*[contains(@content-desc, 'Fan Coil Heat Cycles per Hour - Stage 3')]						
+CurrentFanCoilHeatCyclesValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]						
+FanCoilHeatCyclesValueIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+FanCoilHeatCyclesValueDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]						
+CoolStage4WiringScreen	XPATH	//*[contains(@content-desc,'Cool Stage 4 Wiring')]					XPATH	//*[contains(@content-desc,'Cool Stage 4 Wiring')]						
+CoolCyclesStage4PerHourScreen	XPATH	//*[contains(@content-desc, 'Cool Stage 4 Cycles Per Hour')]					XPATH	//*[contains(@content-desc, 'Cool Stage 4 Cycles Per Hour')]						
+HeatStagingControlScreen	XPATH	//*[contains(@content-desc,'Heat Staging Control')]					XPATH	//*[contains(@content-desc,'Heat Staging Control')]						
+BackupHeatDifferential	XPATH	//*[contains(@content-desc,'Backup Heat Differential')]					XPATH	//*[contains(@content-desc,'Backup Heat Differential')]						
+HeatStagingControlNo	XPATH	//*[contains(@content-desc,'No')]					XPATH	//*[contains(@content-desc,'No')]						
+HeatStagingControlYes	XPATH	//*[contains(@content-desc,'Yes')]					XPATH	//*[contains(@content-desc,'Yes')]						
+ElectronicAirCleanerInAirFilterType	XPATH	//*[contains(@content-desc,'Electronic Air Cleaner')]					XPATH	//*[contains(@content-desc,'Electronic Air Cleaner')]						
+HeatingSystem	XPATH	//android.view.View[contains(@resource-id,'heating_system_gas')]					XPATH	//android.view.View[contains(@resource-id,'heating_system_gas')]						
+HeatingStages	XPATH	(//*[contains(@resource-id,'heating_stages')]//following-sibling::*)[2]					XPATH	(//*[contains(@resource-id,'heating_stages')]//following-sibling::*)[2]						
+CoolingStages	XPATH	(//*[contains(@resource-id,'cooling_stages')]//following-sibling::*)[2]					XPATH	(//*[contains(@resource-id,'cooling_stages')]//following-sibling::*)[2]						
+HighTemAlertCheckBox	XPATH	//android.view.View[@resource-id='ISU_off']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']					XPATH	//android.view.View[@resource-id='ISU_off']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']						
+LowTemAlertCheckBox	XPATH	//android.view.View[@resource-id='ISU_off']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']					XPATH	//android.view.View[@resource-id='ISU_off']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']						
+MaxMinAlertValue	XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[2]					XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[2]						
+MaxMinAlertValueIncrease	XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[3]					XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[3]						
+MaxMinAlertValueDecrease	XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[1]					XPATH	//android.view.View[@resource-id='ISU_off']/following-sibling::android.view.View[1]						
+CompressorCoolStage4DifferentialScreen	XPATH	//*[contains(@content-desc, 'Staging Control - Cool Stage 4 Differential') or contains(@content-desc,'Staging Control - Compressor Cool Stage 4 Differential')]					XPATH	//*[contains(@content-desc, 'Staging Control - Cool Stage 4 Differential') or contains(@content-desc,'Staging Control - Compressor Cool Stage 4 Differential')]						
+LTerminalAlertScreen	XPATH	//*[@content-desc='L Terminal Alert']					XPATH	//*[@content-desc='L Terminal Alert']						
+BackupHeatWiringScreen	XPATH	//*[contains(@content-desc,'Backup Heat Wiring')]					XPATH	//*[contains(@content-desc,'Backup Heat Wiring')]						
+BackupHeatWiringThermostatL	XPATH	//*[contains(@content-desc,'Thermostat L')]					XPATH	//*[contains(@content-desc,'Thermostat L')]						
+BackupHeatWiringThermostatAux	XPATH	//*[contains(@content-desc,'Thermostat Aux')]					XPATH	//*[contains(@content-desc,'Thermostat Aux')]						
+HPFailNone	XPATH	//*[@content-desc='None']					XPATH	//*[@content-desc='None']						
+HeatPumpFailureIndication	XPATH	//*[@content-desc='Heat Pump Failure Indication']					XPATH	//*[@content-desc='Heat Pump Failure Indication']						
+HeatPumpStage2WiringScreen	XPATH	//*[@content-desc='Heat Pump Stage 2 Wiring']					XPATH	//*[@content-desc='Heat Pump Stage 2 Wiring']						
+ComfortCheckBoxChecked	XPATH	//android.view.View[@resource-id='ISU_comfort']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']					XPATH	//android.view.View[@resource-id='ISU_comfort']/preceding-sibling::android.view.View[@resource-id='assets/svgs/check']						
+HPBackUpHeatDifferentialValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[6]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[6]						
+HPBackUpHeatDifferentialValueIncreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[7]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[7]						
+HPBackUpHeatDifferentialValueDecreaseButton	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]						
+CoolStagingControlScreen	XPATH	//*[contains(@content-desc,'Cool Staging Control')]					XPATH	//*[contains(@content-desc,'Cool Staging Control')]						
+CoolStagingControlNo	XPATH	//*[contains(@content-desc,'No')]					XPATH	//*[contains(@content-desc,'No')]						
+CoolStagingControlYes	XPATH	//*[contains(@content-desc,'Yes')]					XPATH	//*[contains(@content-desc,'Yes')]						
+CompressorCoolStage2DifferentialScreen	XPATH	//*[contains(@content-desc, 'Staging Control - Cool Stage 2 Differential') or contains(@content-desc,'Staging Control - Compressor Cool Stage 2 Differential')]					XPATH	//*[contains(@content-desc,'Staging Control - Compressor Cool Stage 2 Differential')]						
+CompressorCoolStage2DifferentialDecrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[5]						
+CompressorCoolStage2DifferentialIncrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[7]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[7]						
+CompressorCoolStage2DifferentialValue	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[6]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[6]						
+CompressorHeatDifferentialStage2Screen	XPATH	//*[contains(@content-desc,'Staging Control - Compressor Heat Differential Stage 2')]					XPATH	//*[contains(@content-desc,'Staging Control - Compressor Heat Differential Stage 2')]						
+CompressorHeatDifferentialStage2Decrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[5]						
+CompressorHeatDifferentialStage2Increase	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[7]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[7]						
+CompressorHeatDifferentialStage2Value	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[6]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[6]						
+FCHotWaterFanCoil	XPATH	//*[contains(@content-desc,'Hot Water - Fan Coil')]					XPATH	//*[contains(@content-desc,'Hot Water - Fan Coil')]						
+ComfortCheckBox	XPATH	//android.view.View[@resource-id='ISU_comfort']/preceding-sibling::android.view.View[3]					XPATH	//*[@resource-id='ISU_comfort']/preceding-sibling::android.widget.ImageView						
+HeatPumpStage2WiringScreen	XPATH	//*[contains(@content-desc,'Heat Pump Stage 2 Wiring')]			 		XPATH	//*[contains(@content-desc,'Heat Pump Stage 2 Wiring')]						
+HeatPumpStage2WiringNone	XPATH	//*[contains(@content-desc,'None')]				 	XPATH	//*[contains(@content-desc,'None')]						
+HeatPumpStage2WiringThermostatU	XPATH	//*[contains(@content-desc,'Thermostat U')]			 	 	XPATH	//*[contains(@content-desc,'Thermostat U')]						
+HeatPumpStage2WiringThermostatL	XPATH	//*[contains(@content-desc,'Thermostat L')]			 	 	XPATH	//*[contains(@content-desc,'Thermostat L')]						
+BackupHeatStage2DifferentialScreen	XPATH	//*[contains(@content-desc,'Backup Heat Stage 2 Differential')]			 		XPATH	//*[contains(@content-desc,'Backup Heat Stage 2 Differential')]						
+BackupHeatStage2DifferentialDecreaseButton	XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[5]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[5]						
+BackupHeatStage2DifferentialValue	XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[6]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[6]						
+BackupHeatStage2DifferentialIncreaseButton	XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[7]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[7]						
+BackupHeatCyclesPerHourStage2Screen	XPATH	//*[contains(@content-desc,'Backup Heat Cycles/Hour - Stage 2')]					XPATH	//*[contains(@content-desc,'Backup Heat Cycles/Hour - Stage 2')]						
+BackUpHeatCyclePerHourStage2Decrease	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[3]]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[4]						
+BackUpHeatCyclePerHourStage2Value	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[4]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[3]						
+BackUpHeatCyclePerHourStage2Increase	XPATH	//android.view.View[@resource-id='SecondaryFooterButtonKey']/preceding-sibling::android.view.View[5]					XPATH	//android.widget.Button[@content-desc='Next']/preceding-sibling::android.view.View[5]						
+ExternalFossilFuelKitScreen	ACCESSIBILITY ID	External Fossil Fuel Kit					ACCESSIBILITY ID	External Fossil Fuel Kit	 	 				
+ThermostatControlsBackupHeat	XPATH	//*[contains(@content-desc,'Thermostat Controls Backup Heat')]					XPATH	//*[contains(@content-desc,'Thermostat Controls Backup Heat')]						
+ExternalFossilFuelKitControlsBackupHeat	XPATH	//*[contains(@content-desc,'External Fossil Fuel Kit Controls Backup Heat')]					XPATH	//*[contains(@content-desc,'External Fossil Fuel Kit Controls Backup Heat')]						
+GleneaglesControlHubTab	XPATH	//*[contains(@content-desc,'NXT Smart Thermostat Kit')]					XPATH	//*[contains(@name,'NXT Smart Thermostat Kit ')]						
+PrepareHardwareScreen	XPATH	//*[contains(@content-desc,'Prepare Hardware')]					XPATH	//*[contains(@name,'Prepare Hardware')]						
+InitiateParingScreen	XPATH	//*[contains(@content-desc,'Initiate Pairing')]					XPATH	//*[contains(@name,'Initiate Pairing')]						
+ConfirmConnectionScreen	XPATH	//*[contains(@content-desc,'Confirm Connection')]					XPATH	//*[contains(@name,'Confirm Connection')]						
+SkipBtnTab	XPATH	//*[contains(@content-desc,'Skip')]					XPATH	//*[contains(@content-desc,'Skip')]						
+UsingNxtScreen	XPATH	//*[contains(@content-desc,'Using NXT?')]					XPATH	//*[contains(@content-desc,'Using NXT?')]						
+InstallNxtScreen	XPATH	//*[contains(@content-desc,'Install NXT')]					XPATH	//*[contains(@content-desc,'Install NXT')]						
+BindNxtScreen	XPATH	//*[contains(@content-desc,'Bind NXT')]					XPATH	//*[contains(@content-desc,'Bind NXT')]						
+SuccessPopUp	XPATH	//*[contains(@content-desc,'Success')]					XPATH	//*[contains(@content-desc,'Success')]						
+DemandControlScreen	XPATH	//*[contains(@content-desc,'Demand Control')]					XPATH	//*[contains(@content-desc,'Demand Control')]						
+WiredViaNxtOpt	XPATH	//*[contains(@content-desc,'Wired via NXT')]					XPATH	//*[contains(@content-desc,'Wired via NXT')]						
+WiredViaEIMOpt	XPATH	//*[contains(@content-desc,'Wireless via EIM')]					XPATH	//*[contains(@content-desc,'Wireless via EIM')]						
+InstallControlModuleScreen	XPATH	//*[contains(@content-desc,'Install Control Module')]					XPATH	//*[contains(@content-desc,'Install Control Module')]						
+BindControlModule	XPATH	//*[contains(@content-desc,'Bind Control Module')]					XPATH	//*[contains(@content-desc,'Bind Control Module')]						
+
+
+
+
+
+
+

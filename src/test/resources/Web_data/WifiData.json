@@ -1,0 +1,308 @@
+{
+	"netgear": {
+		"AC1750": {
+			"username": "admin",
+			"password": "Password@1",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "netgear",
+			"routermodel": "AC1750",
+			"relay": "0"
+		},
+		"R6250": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "netgear",
+			"routermodel": "R6250",
+			"relay": "0"
+		},
+		"WNDR3800CH": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "netgear",
+			"routermodel": "WNDR3800CH",
+			"relay": "4"
+		},
+		"R7000": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "netgear",
+			"routermodel": "R7000",
+			"relay": "1"
+		},
+		"R6400v2": {
+			"username": "admin",
+			"password": "Home@1234.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "netgear",
+			"routermodel": "R6400v2",
+			"relay": "5"
+		},
+		"RAX10": {
+			"username": "admin",
+			"password": "Home@1234.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "netgear",
+			"routermodel": "RAX10",
+			"relay": "3"
+		}
+	},
+	"tplink": {
+		"AX1500": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": false,
+			"authenticationtype": "password",
+			"routername": "tplink",
+			"routermodel": "AX1500",
+			"relay": "0"
+		},
+		"AX1800": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": false,
+			"authenticationtype": "password",
+			"routername": "tplink",
+			"routermodel": "AX1800",
+			"relay": "12"
+		},
+		"TLWR740N": {
+			"username": "admin",
+			"password": "admin",
+			"ispopup": false,
+			"authenticationtype": "password",
+			"routername": "tplink",
+			"routermodel": "TLWR740N",
+			"relay": "0"
+		}
+	},
+	"asus": {
+		"RTAC68U": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "asus",
+			"routermodel": "RTAC68U",
+			"relay": "0"
+		}
+	},
+	"intellinet": {
+		"150N3G": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "intellinet",
+			"routermodel": "150N3G",
+			"role": "internet_then_ip",
+			"relay": "0"
+		}
+	},
+	"dlink": {
+		"RTAC68U": {
+			"username": "admin",
+			"password": "Password@1",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "dlink",
+			"routermodel": "RTAC68U",
+			"relay": "0"
+		},
+		"DIR1750": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "dlink",
+			"routermodel": "DIR1750",
+			"relay": "16"
+		},
+		"DIR890L": {
+			"username": "admin",
+			"password": "Home@123",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "dlink",
+			"routermodel": "DIR890L",
+			"relay": "0"
+		}
+	},
+	"cisco": {
+		"RTAC68U": {
+			"username": "admin",
+			"password": "Password@1",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "asus",
+			"routermodel": "RTAC68U",
+			"relay": "0"
+		},
+		"WRT120N": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "cisco",
+			"routermodel": "WRT120N",
+			"relay": "0"
+		},
+		"EA6300V2": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "cisco",
+			"routermodel": "EA6300V2",
+			"relay": "6"
+		},
+		"EA6900V1": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "cisco",
+			"routermodel": "EA6900V1",
+			"relay": "6"
+		}
+	},
+	"buffalo": {
+		"RTAC68U": {
+			"username": "admin",
+			"password": "Password@1",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "buffalo",
+			"routermodel": "RTAC68U",
+			"relay": "0"
+		},
+		"WZR-600DHP": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "buffalo",
+			"routermodel": "WZR-600DHP",
+			"relay": "0"
+		}
+	},
+	"amped": {
+		"R2000G": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "amped",
+			"routermodel": "R20000G",
+			"role": "ip_then_internet",
+			"relay": "19"
+		},
+		"RTA15": {
+			"username": "admin",
+			"password": "admin",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "amped",
+			"routermodel": "RTA15",
+			"role": "ip_then_internet",
+			"relay": "0"
+		}
+	},
+	"airlive": {
+		"WN220R": {
+			"username": "admin",
+			"password": "airlive",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "airlive",
+			"routermodel": "WN220R",
+			"relay": "0"
+		}
+	},
+	"centurylink": {
+		"ZYXELC3000Z": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "centurylink",
+			"routermodel": "ZYXELC3000Z",
+			"relay": "0"
+		}
+	},
+	"vizio": {
+		"XWR100": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": false,
+			"authenticationtype": "yes",
+			"routername": "vizio",
+			"routermodel": "XWR100",
+			"relay": "7"
+		}
+	},
+	"belkin": {
+		"F9K1102V1": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": false,
+			"authenticationtype": "yes",
+			"routername": "belkin",
+			"routermodel": "F9K1102V1",
+			"role": "ip_then_internet",
+			"relay": "0"
+		}
+	},
+	"verizon": {
+		"MI424WR": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "verizon",
+			"routermodel": "MI424WR",
+			"role": "ip_then_internet",
+			"relay": "0"
+		}
+	},
+	"westerndigital": {
+		"MyNetN900": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": false,
+			"authenticationtype": "yes",
+			"routername": "westerndigital",
+			"routermodel": "MyNetN900",
+			"role": "ip_then_internet",
+			"relay": "0"
+		}
+	},
+	"hawking": {
+		"HW2R1150M": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "hawking",
+			"routermodel": "HW2R1150M",
+			"relay": "0"
+		},
+		"HAW2R1300N": {
+			"username": "admin",
+			"password": "Home@123.",
+			"ispopup": true,
+			"authenticationtype": "no",
+			"routername": "hawking",
+			"routermodel": "HAW2R1300N",
+			"relay": "0"
+		}
+	}
+}

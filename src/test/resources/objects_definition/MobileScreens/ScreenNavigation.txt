@@ -1,0 +1,26 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+BackButton	XPATH	//*[@content-desc='Navigate Up']					XPATH	//*[@name='BACK' or @name='Back']	XPATH	//*[@name='BACK' or @name='Back']	XPATH	//*[@name='BACK' or @name='Back']
+CrossAndCloseBTN	XPATH	//*[@content-desc='Navigate up']					NAME	Close_button	NAME	Close_button	NAME	Close_button
+CancelBTN	XPATH	//*[@text='Cancel']					NAME	Cancel	NAME	Cancel	NAME	Cancel
+SpecialCancelButton	XPATH	//*[@text='CANCEL']					NAME	CANCEL	NAME	CANCEL	NAME	CANCEL
+AddNewDeviceBTN	XPATH	//*[contains(@resource-id,'dashboard_add_view')]/child::android.widget.ImageView[contains(@resource-id,'dashboard_add')]					XPATH	//XCUIElementTypeButton[@name='Add New Device']	XPATH	//XCUIElementTypeButton[@name='Add New Device']	XPATH	//XCUIElementTypeButton[@name='Add New Device']
+ThermostatSettingBTN	XPATH	//*[contains(@resource-id,'action_settings')]					NAME	action_settings	NAME	action_settings	NAME	action_settings
+ManageAlertsBTN	XPATH	//*[@text='Manage Alerts']					NAME	AlertSettings_title	NAME	AlertSettings_title	NAME	AlertSettings_title
+SleepBrightnessModeBTN	XPATH	//*[@text='Sleep Brightness Mode']					NAME	brightMode_title	NAME	brightMode_title	NAME	brightMode_title
+ResetWiFiBTN	XPATH	//*[@text='Reset Wi-Fi']					NAME	ResetWifi_title	NAME	ResetWifi_title	NAME	ResetWifi_title
+ThermostatConfigurationBTN	XPATH	//*[@text='Thermostat Configuration']					NAME	ThermostatConfiguration_title	NAME	ThermostatConfiguration_title	NAME	ThermostatConfiguration_title
+HambererSecondaryMenuBTN	XPATH	//android.widget.ImageButton[@content-desc='Main Menu']					NAME	menu	NAME	menu	NAME	menu
+GeofenceBTN	XPATH	//*[@text='Geofence']					NAME	geofence_radius_title	NAME	geofence_radius_title	NAME	geofence_radius_title
+VacationBTN	XPATH	//*[@text='Vacation']					NAME	vacation_title	NAME	vacation_title	NAME	vacation_title
+ActivityHistoryBTN	XPATH	//*[@text='Activity History']					NAME	messages_title	NAME	messages_title	NAME	messages_title
+UsersBTN	XPATH	//*[@text='Users']					NAME	manage_users_title	NAME	manage_users_title	NAME	manage_users_title
+AddressBTN	XPATH	//*[@text='Address']					NAME	details_title	NAME	details_title	NAME	details_title
+AccountDetailsBTN	XPATH	//*[@text='Account Details']					NAME	my_account_title	NAME	my_account_title	NAME	my_account_title
+ConnectedServicesBTN	XPATH	//*[@text='Connected Services']					NAME	connected_services_title	NAME	connected_services_title	NAME	connected_services_title
+DiagnosticsBTN	XPATH	//*[@text='Diagnostics']					NAME	app_diagnostics_title	NAME	app_diagnostics_title	NAME	app_diagnostics_title
+AbouttheappBTN	XPATH	//*[@text='About the app']					NAME	app_settings_and_info_title	NAME	app_settings_and_info_title	NAME	app_settings_and_info_title
+LogOutBTN	XPATH	//*[@text='Log Out']					XPATH	//*[@value='Log Out']	XPATH	//*[@value='Log Out']	XPATH	//*[@value='Log Out']
+HomeKitUsersBTN	ID	NotApplicable					NAME	HomeKitSetUp_title	NAME	HomeKitSetUp_title	NAME	HomeKitSetUp_title
+SystemModeBTN	XPATH	//*[@text='MODE']/parent::android.widget.LinearLayout					XPATH	//XCUIElementTypeStaticText[@name='MODE']/preceding-sibling::XCUIElementTypeButton	XPATH	//XCUIElementTypeStaticText[@name='MODE']/preceding-sibling::XCUIElementTypeButton	XPATH	//XCUIElementTypeStaticText[@name='MODE']/preceding-sibling::XCUIElementTypeButton
+FanModeBTN	XPATH	//*[@text='FAN']/parent::android.widget.LinearLayout					XPATH	//XCUIElementTypeStaticText[@name='FAN']/preceding-sibling::XCUIElementTypeButton	XPATH	//XCUIElementTypeStaticText[@name='FAN']/preceding-sibling::XCUIElementTypeButton	XPATH	//XCUIElementTypeStaticText[@name='FAN']/preceding-sibling::XCUIElementTypeButton
+ScheduleBTN	XPATH	//*[@text='SCHEDULE']/parent::android.widget.LinearLayout					XPATH	//XCUIElementTypeStaticText[@name='SCHEDULE']/preceding-sibling::XCUIElementTypeButton	XPATH	//XCUIElementTypeStaticText[@name='SCHEDULE']/preceding-sibling::XCUIElementTypeButton	XPATH	//XCUIElementTypeStaticText[@name='SCHEDULE']/preceding-sibling::XCUIElementTypeButton

@@ -1,0 +1,20 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+BackToViewList	xPATH	//*[@content-desc='Navigate Up']					ID	nav bar back				
+ActivityLogTime	ID	view_notification_row_time	ID	view_notification_row_time	ID	view_notification_row_time						
+PanelState	id	text_status	id	text_status	id	text_status	NAME	PanelState	NAME	PanelState	NAME	PanelState
+CancelButton	XPATH	//*[@text='Cancel']	XPATH	//*[@text='Cancel']	XPATH	//*[@text='Cancel']						
+ActivityLogSubHeader	id	activity_logs_sub_heading_text	id	activity_logs_sub_heading_text	id	activity_logs_sub_heading_text	name	Events_1_0_Subtitle	name	Events_1_0_Subtitle	name	Events_1_0_Subtitle
+EditHistory	XPATH	//*[@text='Edit']	XPATH	//*[@text='Edit']	XPATH	//*[@text='Edit']						
+AcitvityLogScrollUp	id	bottom_sheet_carat_image	id	bottom_sheet_carat_image	id	bottom_sheet_carat_image	NAME	icon_arch	NAME	icon_arch	NAME	icon_arch
+ActivityLogDay	id	bump_line_separator_image	id	bump_line_separator_image	id	bump_line_separator_image	NAME	icon_arrow_up	NAME	icon_arrow_up	NAME	icon_arrow_up
+ActivityLogDescription	ID	view_notification_row_description	ID	view_notification_row_description	ID	view_notification_row_description						
+NoMessagesLable	ID	fragment_notification_list_empty	ID	fragment_notification_list_empty	ID	fragment_notification_list_empty						
+ClickToViewDetailedIssue	id	status_left_drawable										
+ActivityHistoryTitle	ID	toolbar_title	ID	toolbar_title	ID	toolbar_title						
+TimerProgressBar	id	countdown_time_text	id	countdown_time_text	id	countdown_time_text	name	countDownTimer	name	countDownTimer	name	countDownTimer
+ActivityLogHeader	ID	view_notification_row_title	ID	view_notification_row_title	ID	view_notification_row_title						
+AcitvityLogScrollDown	id	bottom_sheet_carat_image	id	bottom_sheet_carat_image	id	bottom_sheet_carat_image	NAME	icon_arrow_up	NAME	icon_arrow_up	NAME	icon_arrow_up
+SelectAllButton	XPATH	//*[@text='Select all']	XPATH	//*[@text='Select all']	XPATH	//*[@text='Select all']						
+DeleteButton	XPATH	//*[@text='Delete']	XPATH	//*[@text='Delete']	XPATH	//*[@text='Delete']						
+ProgressBar	id	progress_bar	id	progress_bar	id	progress_bar	name	activityIndicator	name	activityIndicator	name	activityIndicator
+BackArrow	XPATH	//*[@content-desc='Navigate Up']	XPATH	//*[@content-desc='Navigate Up']	XPATH	//*[@content-desc='Navigate Up']						

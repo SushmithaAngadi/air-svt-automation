@@ -1,0 +1,63 @@
+FieldName	Selector-Type	Selector-Value
+PasswordTB	XPATH	//div[@class='login-main-container-page']/child::div//*[@type = 'password']
+LoginBtn	XPATH	//*[text()='LOG IN']/parent::a
+AdvancedBtn	XPATH	//*[text()='Advanced']/parent::a
+WirelessBtn	XPATH	//*[text()='Wireless']/parent::a/parent::li[@navi-value='wirelessAdvUl']/a
+WirelessSettingsBtn	XPATH	//*[text()='Wireless Settings']/parent::a
+SmartConnectionCB	XPATH	//*[text()='//*[text()='Smart Connect']/parent::div/parent::div/following-sibling::div/child::div/ul/li/div/label
+TwoGDiv	XPATH	//div[@class='panel-content']
+FiveGDiv	XPATH	//div[@class='page-content-container']/div[1]
+FiveGTarget	XPATH	//*[@id='index-view']/div[2]/div[2]/div/div[2]/div[2]
+SmartConnectionChBx	XPATH	//*[text()='Smart Connect']/parent::div/parent::div/following-sibling::div/child::div/ul/li/div/label
+24GhzChBx	XPATH	//*[text()='2.4GHz']/parent::div/parent::div/following-sibling::div/child::div/ul/li/div/label
+5GhzChBx	XPATH	//*[text()='5GHz']/parent::div/parent::div/following-sibling::div/child::div/ul/li/div/label
+SecurityDrpDwn	XPATH	//*[text()='Security']/parent::div/parent::div/following-sibling::div//input[contains(@class,'combobox-text')]
+VersionDrpDwn24Ghz	XPATH	//*[@id='personal-version-2g']/div[2]/div[1]/span[2]/input
+EncryptionDrpDwn24Ghz	XPATH	//*[@id='personal-encryption-2g']/div[2]/div[1]/span[2]/input
+ChannelWidthDrpDwn24Ghz	XPATH	//*[@id='channelwidth-2g']//input[contains(@class,'combobox-text')]
+ChannelDrpDwn24Ghz	XPATH	//*[@id='channel-2g']/div[2]/div[1]/span[2]/input
+ModeDrpDwn24Ghz	XPATH	//*[@id='mode-2g']/div[2]/div[1]/span[2]/input
+SecurityDrpDwn5Ghz	XPATH	//*[text()='Security']/parent::div/parent::div/parent::div[@data-bind='{wireless5g1.encryption}']//input[@type='text']
+SecurityDrpDwn24Ghz	XPATH	//*[text()='Security']/parent::div/parent::div/parent::div[@data-bind='{wireless24g.encryption}']//input[@type='text']
+VersionDrpDwn5Ghz	XPATH	//*[@id='personal-version-5g1']/div[2]/div[1]/span[2]/input
+EncryptionDrpDwn5Ghz	XPATH	//*[@id='personal-encryption-5g1']/div[2]/div[1]/span[2]/input
+ChannelWidthDrpDwn5Ghz	XPATH	//*[@id='channelwidth-5g1']/div[2]/div[1]/span[2]/input
+ChannelDrpDwn5Ghz	XPATH	//*[@id='channel-5g1']/div[2]/div[1]/span[2]/input
+ModeDrpDwn5Ghz	XPATH	//*[@id='mode-5g1']/div[2]/div[1]/span[2]/input
+SaveBtn	XPATH	//*[@id='save-data']/div[2]/div[1]/a
+OkBtn	XPATH	//*[contains(@data-bind,'wirelessOnSmartOffNote')]/child::div//*[@class='button-button']
+24GhzSSID	XPATH	//*[@id='wireless-setting-2g']//*[text()='Hide SSID']/parent::label
+5GhzSSID	XPATH	//*[@id='wireless-setting-5g1']//*[text()='Hide SSID']/parent::label
+SSID24_GHz	XPATH	//*[contains(@data-bind,'wireless24g.ssid')]//input
+SSID5_GHz	XPATH	//*[contains(@data-bind,'wireless5g1.ssid')]//input
+Password24GHz	XPATH	 //*[contains(@data-bind,'wireless24g.pskKey')]//input[not(@disabled)]
+Password5GHz	XPATH	//*[contains(@data-bind,'wireless5g1.pskKey')]//input[not(@disabled)]
+DHCP_checkbox	XPATH	//*[@class='widget-wrap']//input
+Leasetimeminutes	XPATH	//*[@class='container widget-container text-container unit']//input
+DNSIP_1	XPATH	//*[@label-field='{NETWORK_DHCP.PRIMARY_DNS}']//input
+DNSIP_2	XPATH	//*[@label-field='{NETWORK_DHCP.SECONDARY_DNS}']//input
+TPLinkIDpopup	XPATH	//div[@id='global-confirm']/div/div[@class='position-center-right']/div/a[@class='widget-close msg-close']
+DHCP_checkbox_AX1800	XPATH	//*[@class='widget-wrap']//input/parent::label
+DHCP_Enable_TLWR740N	XPATH	//*[@name='dhcpserver'][2]
+DHCP_Disable_TLWR740N	XPATH	//*[@name='dhcpserver'][1]
+LeaseTime_TLWR740N	XPATH	//*[@name='Lease']
+DHCPStartIP_TLWR740N	XPATH	//*[@name='ip1']
+DHCPEndIP_TLWR740N	XPATH	//*[@name='ip2']
+DHCP_TLWR740N	XPATH	//*[text()='DHCP']
+wiireless_TLWR740N	XPATH	//*[text()='Wireless']
+SSID_checkbox_TLWR740N	XPATH	//*[text()='Enable SSID Broadcast']/preceding-sibling::input
+SSIDname_TLWR740N	XPATH	//*[@id='ssid']
+Channel_TLWR740N	XPATH	//*[@id='channel']
+Mode_TLWR740N	XPATH	//*[@name='mode']
+Bandwidth_TLWR740N	XPATH	//*[@name='chanWidth']
+SaveBtn_TLWR740N	XPATH	//*[@name='Save']
+
+
+
+
+
+
+
+
+
+

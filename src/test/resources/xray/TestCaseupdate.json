@@ -1,0 +1,19 @@
+{
+	"tests": [
+		{
+			"start": "2026-01-15T16:27:28+05:30",
+			"finish": "2026-01-15T16:27:28+05:30",
+			"comment": "Detailed Execution Report :: http://10.56.112.21:8080/results/Comfort_System_Automation_2026_01_15_16_27_25/rebot_Comfort_System_Automation_2026_01_15_16_27_25/report.html",
+			"testKey": "LZ62319-5776",
+			"status": "PASSED"
+		}
+	],
+	"info": {
+		"summary": "Gleneagles DIY Skip ISU, Cofigure WIFI",
+		"description": "This execution is automatically created when importing execution results from an external source",
+		"finishDate": "2026-01-15T16:27:30+05:30",
+		"testPlanKey": "",
+		"startDate": "2026-01-15T16:27:28+05:30",
+		"revision": "6.2.0"
+	}
+}

@@ -1,0 +1,29 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+IsCustomerListUpdated	XPATH	//android.view.View[contains(@content-desc,'Recent Customers')]/following-sibling::android.view.View//android.widget.ImageView					ACCESSIBILITY ID	NOT APPLICABLE	ACCESSIBILITY ID	NOT APPLICABLE	ACCESSIBILITY ID	NOT APPLICABLE
+CustomerSearchButton	XPATH	//android.widget.EditText					XPATH	//XCUIElementTypeStaticText[@name='Customers']/following-sibling::XCUIElementTypeTextField	XPATH	//XCUIElementTypeStaticText[@name='Customers']/following-sibling::XCUIElementTypeTextField	XPATH	//XCUIElementTypeStaticText[@name='Customers']/following-sibling::XCUIElementTypeTextField
+CustomerselectInList	XPATH						XPATH	//*[contains(@name,'raajashekaranpl@gmail.com')]	XPATH	//*[contains(@name,'raajashekaranpl@gmail.com')]	XPATH	//*[contains(@name,'raajashekaranpl@gmail.com')]
+AddCustomerButton	ACCESSIBILITY ID	Add Customer					ACCESSIBILITY ID	Add Customer	ACCESSIBILITY ID	Add Customer	ACCESSIBILITY ID	Add Customer
+EmailTextBox	XPATH	//android.widget.EditText[contains(@text,'Email')]					XPATH	//*[contains(@name,'Email')]	XPATH	//*[contains(@name,'Email')]	XPATH	//*[contains(@name,'Email')]
+FirstNameTextBox	XPATH	//android.widget.EditText[contains(@text,'First Name')]					XPATH	//*[contains(@name,'First Name')]	XPATH	//*[contains(@name,'First Name')]	XPATH	//*[contains(@name,'First Name')]
+LastNameTextBox	XPATH	//android.widget.EditText[contains(@text,'Last Name')]					XPATH	//*[contains(@name,'Last Name')]	XPATH	//*[contains(@name,'Last Name')]	XPATH	//*[contains(@name,'Last Name')]
+PhoneNumberTextBox	XPATH	//android.widget.EditText[contains(@text,'Phone Number')]					XPATH	//*[contains(@name,'Phone Number')]	XPATH	//*[contains(@name,'Phone Number')]	XPATH	//*[contains(@name,'Phone Number')]
+LocationNameTextBox	XPATH	//android.widget.EditText[contains(@text,'Location Name')]					XPATH	//*[contains(@name,'Location Name')]	XPATH	//*[contains(@name,'Location Name')]	XPATH	//*[contains(@name,'Location Name')]
+CountryListBox	XPATH	//android.widget.Button[contains(@content-desc,'Country')]					XPATH	//*[contains(@name,'Country')]	XPATH	//*[contains(@name,'Country')]	XPATH	//*[contains(@name,'Country')]
+AddressTextBox	XPATH	//android.widget.EditText[contains(@text,'Address')]					XPATH	//*[contains(@name,'Address')]	XPATH	//*[contains(@name,'Address')]	XPATH	//*[contains(@name,'Address')]
+CityTextBox	XPATH	//android.widget.EditText[contains(@text,'City')]					XPATH	//*[contains(@name,'City')]	XPATH	//*[contains(@name,'City')]	XPATH	//*[contains(@name,'City')]
+StateProvinceTextBox	XPATH	//android.widget.EditText[contains(@text,'State/Province')]					XPATH	//*[contains(@name,'State/Province')]	XPATH	//*[contains(@name,'State/Province')]	XPATH	//*[contains(@name,'State/Province')]
+ZipCode	XPATH	//android.widget.EditText[contains(@text,'Zipcode/Postal Code')]					XPATH	//*[contains(@name,'Zipcode/Postal')]	XPATH	//*[contains(@name,'Zipcode/Postal')]	XPATH	//*[contains(@name,'Zipcode/Postal')]
+NewLocationScreen	ACCESSIBILITY ID	New Location					ACCESSIBILITY ID	New Location	ACCESSIBILITY ID	New Location	ACCESSIBILITY ID	New Location
+NewCustomerScreen	ACCESSIBILITY ID	New Customer					ACCESSIBILITY ID	New Customer	ACCESSIBILITY ID	New Customer	ACCESSIBILITY ID	New Customer
+PrimaryLocationScreen	ACCESSIBILITY ID	Primary Location					ACCESSIBILITY ID	Primary Location	ACCESSIBILITY ID	Primary Location	ACCESSIBILITY ID	Primary Location
+UnitedStateCountry	ACCESSIBILITY ID	United States					ACCESSIBILITY ID	United States	ACCESSIBILITY ID	United States	ACCESSIBILITY ID	United States
+CanadaCountry	ACCESSIBILITY ID	Canada					ACCESSIBILITY ID	Canada	ACCESSIBILITY ID	Canada	ACCESSIBILITY ID	Canada
+MexicoCountry	ACCESSIBILITY ID	Mexico					ACCESSIBILITY ID	Mexico	ACCESSIBILITY ID	Mexico	ACCESSIBILITY ID	Mexico
+VerifyInfoScreen	ACCESSIBILITY ID	Verify Info					ACCESSIBILITY ID	Verify Info	ACCESSIBILITY ID	Verify Info	ACCESSIBILITY ID	Verify Info
+isSelectLocationScreen	ACCESSIBILITY ID	Select Location					ACCESSIBILITY ID	Select Location				
+HomeLocation	XPATH	//*[contains(@content-desc,'Home')]					XPATH	//*[contains(@name,'Home')]				
+IsVerifyInfoScreen	ACCESSIBILITY ID	Verify Info					ACCESSIBILITY ID	Verify Info				
+NextButton	ACCESSIBILITY ID	Next					ACCESSIBILITY ID	Next				
+isSuccessScreen	XPATH	//*[contains(@content-desc,'Success')]					XPATH	//*[contains(@name,'Success')]				
+DoneButton	ACCESSIBILITY ID	Done					ACCESSIBILITY ID	Done				
+isRecentCustomers	ACCESSIBILITY ID	Recent Customers					ACCESSIBILITY ID	Recent Customers				

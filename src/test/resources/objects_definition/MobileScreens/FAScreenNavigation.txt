@@ -1,0 +1,34 @@
+FieldName	Android-Medium-Selector-Type	Android-Medium-Selector-Value	Android-Large-Selector-Type	Android-Large-Selector-Value	Android-Extra-Large-Selector-Type	Android-Extra-Large-Selector-Value	IOS-Medium-Selector-Type	IOS-Medium-Selector-Value	IOS-Large-Selector-Type	IOS-Large-Selector-Value	IOS-Extra-Large-Selector-Type	IOS-Extra-Large-Selector-Value
+BackToDashBoard	XPATH	//*[contains(@content-desc,'Dashboard')]					XPATH	//*[contains(@label,'Dashboard')]
+CrossBtninAccountMenu	XPATH	//*[contains(@content-desc,'My Account')]//preceding-sibling::*					XPATH	//*[contains(@label,'My Account')]//preceding-sibling::*
+AlertManagment	XPATH	//*[contains(@content-desc,'Alert Management')]					XPATH	//*[contains(@label,'Alert Management')]
+HamburgerinDashboard	XPATH	//*[contains(@content-desc,'Alert Management')]					XPATH	//*[contains(@label,'Alert Management')]
+VacationOption	XPATH	//*[contains(@content-desc,'Vacation')]					XPATH	//*[contains(@label,'Vacation')]
+ActivityOption	XPATH	//*[contains(@content-desc,'Activity')]					XPATH	//*[contains(@label,'Activity')]
+MyLocationOption	XPATH	//*[contains(@content-desc,'My Locations')]					XPATH	//*[contains(@label,'My Locations')]
+AppSettingsOption	XPATH	//*[contains(@content-desc,'App Settings')]					XPATH	//*[contains(@label,'App Settings')]
+DetailsTab	XPATH	//*[contains(@content-desc,'Details')]					XPATH	//*[contains(@label,'Details')]
+SettingsIcon	XPATH	(//android.widget.ImageView)[last()]					XPATH	(//XCUIElementTypeButton)[last()]
+BackToDashBoardTab	XPATH	//*[contains(@content-desc,'Dashboard')]					XPATH	//*[contains(@label,'Dashboard')]
+ScheduleNowTab	XPATH	//*[contains(@content-desc,'Schedule')]//*[ contains(@content-desc,'Now')]					XPATH	//*[ contains(@label,'Now')]
+AdvancedSetupBtn	XPATH	"//*[contains(@content-desc,'Advanced Setup')]"					XPATH	"//*[contains(@content-desc,'Advanced Setup')]"				
+isAdvancedSetupBtnPresent	XPATH	"//*[contains(@content-desc,'Advanced Setup')]"					XPATH	"//*[contains(@content-desc,'Advanced Setup')]"				
+FujiThermostat	XPATH	//*[contains(@content-desc,'Fuji (In Progress)') or contains(@content-desc,'X2S Smart')]					XPATH	//*[contains(@label,'Fuji (In Progress)') or contains(@label,'X2S Smart')]
+WireR	ACCESSIBILITY ID	R					ACCESSIBILITY ID	R
+WireC	ACCESSIBILITY ID	C					ACCESSIBILITY ID	C
+WireRc	ACCESSIBILITY ID	Rc					ACCESSIBILITY ID	Rc
+WireOB	ACCESSIBILITY ID	O/B					ACCESSIBILITY ID	O/B
+WireY2	ACCESSIBILITY ID	Y2					ACCESSIBILITY ID	Y2
+WireY1	ACCESSIBILITY ID	Y1					ACCESSIBILITY ID	Y1
+WireK	ACCESSIBILITY ID	K					ACCESSIBILITY ID	K
+WireW2	ACCESSIBILITY ID	W2					ACCESSIBILITY ID	W2
+WireG	ACCESSIBILITY ID	G					ACCESSIBILITY ID	G
+WireW	ACCESSIBILITY ID	W					ACCESSIBILITY ID	W
+WireE	ACCESSIBILITY ID	E					ACCESSIBILITY ID	E
+WireAL_A	ACCESSIBILITY ID	A-L/A					ACCESSIBILITY ID	A-L/A
+DenaliThermostat	XPATH	//*[contains(@content-desc,'Denali')or contains(@content-desc,'denali')or contains(@content-desc,'X8S Thermostat')]					XPATH	//*[contains(@label,'Denali')or contains(@label,'denali')or contains(@label,'X8S Thermostat')]
+DenaliTradeThermostat	XPATH	//*[contains(@content-desc,'Denali')or contains(@content-desc,'denali')or contains(@content-desc,'ElitePRO S1200 Thermostat')]					XPATH	//*[contains(@label,'Denali')or contains(@label,'denali')or contains(@label,'ElitePRO S1200 Thermostat')]
+GleneaglesControlHubTab	XPATH	//*[contains(@content-desc,'NXT Smart Thermostat Kit ')]					XPATH	//*[contains(@name,'NXT Smart Thermostat Kit ')]						
+
+
+

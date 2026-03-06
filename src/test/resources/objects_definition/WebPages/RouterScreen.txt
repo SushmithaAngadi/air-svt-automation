@@ -1,0 +1,8 @@
+FieldName	Selector-Type	Selector-Value
+BandwidthTab	XPATH	//a[text()='Bandwidth Control']
+DownloadBandWidthTB	XPATH	//input[@name='down_bandWidth']
+EnableBandwidthCheckBox	XPATH	//input[@name='QoSCtrl']
+SaveBT	XPATH	//input[@name='Save']
+UsernameTB	XPATH	//input[@name='Save']
+PasswordTB	ID	pcPassword
+SubmitBT	ID	pcSub
