@@ -260,11 +260,11 @@ public class ReziDIYScreen extends MobileScreens {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			if (MobileUtils.getMobElement(testCase, "XPATH",
 					"//android.view.View[@content-desc='Discovered Devices']/following-sibling::android.view.View//android.widget.ImageView")
-					.getAttribute("content-desc").toUpperCase().contains("LYRIC")) {
+					.getDomAttribute("content-desc").toUpperCase().contains("LYRIC")) {
 				return "Lyric";
 			} else if (MobileUtils.getMobElement(testCase, "XPATH",
 					"//android.view.View[@content-desc='Discovered Devices']/following-sibling::android.view.View//android.widget.ImageView")
-					.getAttribute("content-desc").toUpperCase().contains("TSTAT")) {
+					.getDomAttribute("content-desc").toUpperCase().contains("TSTAT")) {
 				return "Tstat";
 			} else {
 				Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE, "Lyric or Tstat not availble in List");
@@ -582,10 +582,10 @@ public class ReziDIYScreen extends MobileScreens {
 	public String getValueinCyclePerHourStage() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "GetCyclePerHourValue")
-					.getAttribute("content-desc").replace("°", "");
+					.getDomAttribute("content-desc").replace("°", "");
 		} else {
 //			Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE, "Need to implement for IOS");
-			return MobileUtils.getMobElement(objectDefinition, testCase, "GetCyclePerHourValue").getAttribute("label")
+			return MobileUtils.getMobElement(objectDefinition, testCase, "GetCyclePerHourValue").getDomAttribute("label")
 					.replace("°", "");
 		}
 	}
@@ -837,7 +837,7 @@ public class ReziDIYScreen extends MobileScreens {
 		else
 			getattribute = "label";
 
-		return MobileUtils.getAttribute(testCase, objectDefinition, "", getattribute);
+		return MobileUtils.getDomAttribute(testCase, objectDefinition, "", getattribute);
 
 	}
 
@@ -2114,11 +2114,11 @@ public class ReziDIYScreen extends MobileScreens {
 	public String getValueinSecondTextFromUpandDownBetween() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "GetFirstUpAndDownValueInOtherWay")
-					.getAttribute("content-desc");
+					.getDomAttribute("content-desc");
 		} else {
 			Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE, "Need to implement for IOS");
 			return MobileUtils.getMobElement(objectDefinition, testCase, "GetFirstUpAndDownValueInOtherWay")
-					.getAttribute("label");
+					.getDomAttribute("label");
 		}
 
 	}
@@ -2516,10 +2516,10 @@ public class ReziDIYScreen extends MobileScreens {
 		String getText = null;
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			getText = MobileUtils.getMobElement(objectDefinition, testCase, "InbetweenTextUpandDown")
-					.getAttribute("text");
+					.getDomAttribute("text");
 		} else {
 			getText = MobileUtils.getMobElement(objectDefinition, testCase, "InbetweenTextUpandDown")
-					.getAttribute("label");
+					.getDomAttribute("label");
 
 		}
 		if (getText.contains("°")) {

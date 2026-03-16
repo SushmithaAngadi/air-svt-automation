@@ -282,124 +282,124 @@ public class ReziSystemTestScreen extends MobileScreens {
 	public String getCurrentTempereature() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "TemperatureFromAPPSystemTest")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "TemperatureFromAPPSystemTest")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
 	public String getCompressorHeatStage1SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CompressorHeatStage1SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CompressorHeatStage1SwitchOnOff")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
 	public String getCompressorHeatStage2SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CompressorHeatStage2SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CompressorHeatStage2SwitchOnOff")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
 	public String getBackUpHeatStage1SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "BackUpHeatStage1SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "BackUpHeatStage1SwitchOnOff")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
 	public String getCompressorCoolStage1SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CompressorCoolStage1SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CompressorCoolStage1SwitchOnOff")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
 	public String getCompressorCoolStage2SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CompressorCoolStage2SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CompressorCoolStage2SwitchOnOff")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
 	public String getEmergencyHeatStage1SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "EmergencyHeatStage1SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "EmergencyHeatStage1SwitchOnOff")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
 	public String getFanSwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "FanSwitchOnOff").getAttribute("checked");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "FanSwitchOnOff").getDomAttribute("checked");
 		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "FanSwitchOnOff").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "FanSwitchOnOff").getDomAttribute("value");
 		}
 	}
 
 	public String getVentilationSwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "VentilationSwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "VentilationSwitchOnOff")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
 	public String getHeatStage1SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "HeatStage1SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "HeatStage1SwitchOnOff").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "HeatStage1SwitchOnOff").getDomAttribute("value");
 		}
 	}
 
 	public String getHeatStage2SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "HeatStage2SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "HeatStage2SwitchOnOff").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "HeatStage2SwitchOnOff").getDomAttribute("value");
 		}
 	}
 
 	public String getCoolStage1SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CoolStage1SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CoolStage1SwitchOnOff").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "CoolStage1SwitchOnOff").getDomAttribute("value");
 		}
 	}
 
 	public String getCoolStage2SwitchOnOff() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "CoolStage2SwitchOnOff")
-					.getAttribute("checked");
+					.getDomAttribute("checked");
 		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CoolStage2SwitchOnOff").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "CoolStage2SwitchOnOff").getDomAttribute("value");
 		}
 	}
 
@@ -408,7 +408,7 @@ public class ReziSystemTestScreen extends MobileScreens {
 //			return MobileUtils.getMobElement(objectDefinition, testCase, "").getText();
 //		} else {
 //			return MobileUtils.getMobElement(objectDefinition, testCase, "")
-//					.getAttribute("value");
+//					.getDomAttribute("value");
 //		}
 //	}
 

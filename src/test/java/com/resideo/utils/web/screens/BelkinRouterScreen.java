@@ -82,13 +82,13 @@ public class BelkinRouterScreen extends WebScreens {
 		}
 		WebElement DHCP = WebUtils.getWebElement(testCase, fieldObjects, "PassPhraseCheckbox");
 		if (isDHCPEn) {
-			if (!DHCP.getAttribute("class").contains("checked")) {
+			if (!DHCP.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "PassPhraseCheckbox");
 			} else {
 				return true;
 			}
 		} else {
-			if (DHCP.getAttribute("class").contains("checked")) {
+			if (DHCP.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "PassPhraseCheckbox");
 			} else {
 				return true;
@@ -231,13 +231,13 @@ public class BelkinRouterScreen extends WebScreens {
 		WebElement DHCP_on = WebUtils.getWebElement(testCase, fieldObjects, "DHCPOncheckbox");
 		WebElement DHCP_off = WebUtils.getWebElement(testCase, fieldObjects, "DHCPOffcheckbox");
 		if (isDHCPEn) {
-			if (!DHCP_on.getAttribute("class").contains("checked")) {
+			if (!DHCP_on.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCPOncheckbox");
 			} else {
 				return true;
 			}
 		} else {
-			if (!DHCP_off.getAttribute("class").contains("checked")) {
+			if (!DHCP_off.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCPOffcheckbox");
 			} else {
 				return true;

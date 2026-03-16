@@ -14,7 +14,7 @@ import com.resideo.commons.report.FailType;
 
 import java.time.Duration;
 
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 
 public class ActivityLogsScreen extends MobileScreens {
 

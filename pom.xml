@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.resideo</groupId>
     <artifactId>air-svt-automation</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>25</maven.compiler.source>
@@ -324,7 +324,7 @@
 		<dependency>
             <groupId>com.resideo</groupId>
             <artifactId>svt-core-framework</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
             <exclusions>
                 <!-- Avoid pulling legacy guava-jdk5 (breaks FluentIterable.toSet at runtime) -->
                 <exclusion>
@@ -435,6 +435,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
             <version>1.12.0</version>
+        </dependency>
+        <!-- JCommander required by TestNG at runtime (optional since TestNG 7.5+) -->
+        <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.82</version>
         </dependency>
     </dependencies>
     <build>

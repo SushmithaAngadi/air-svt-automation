@@ -212,7 +212,7 @@ public class SchedulingScreen extends MobileScreens {
 			if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 				string =  MobileUtils.getMobElements(objectDefinition, testCase, "CoolSetPointChooser").get(0).getText();
 			} else {
-				string = testCase.getMobileDriver().findElements(By.name("Dialer")).get(0).getAttribute("value");
+				string = testCase.getMobileDriver().findElements(By.name("Dialer")).get(0).getDomAttribute("value");
 			}
 		}else{
 			string =  MobileUtils.getMobElement(objectDefinition, testCase, "CoolSetPointChooser").getText();
@@ -245,7 +245,7 @@ public class SchedulingScreen extends MobileScreens {
 					+ "_Everyday')]//android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.TextView[1]");
 		} else {
 			string =  MobileUtils.getMobElement(testCase, "name", "Everyday_" + periodName + "_CoolTemperature")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 		return string;
 	}
@@ -342,7 +342,7 @@ public class SchedulingScreen extends MobileScreens {
 			if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 				return  MobileUtils.getMobElements(objectDefinition, testCase, "HeatSetPointChooser").get(1).getText();
 			} else {
-				return testCase.getMobileDriver().findElements(By.name("Dialer")).get(1).getAttribute("value");
+				return testCase.getMobileDriver().findElements(By.name("Dialer")).get(1).getDomAttribute("value");
 			} 
 		}else{
 			return  MobileUtils.getMobElement(objectDefinition, testCase, "HeatSetPointChooser").getText();
@@ -373,7 +373,7 @@ public class SchedulingScreen extends MobileScreens {
 					+ "_Everyday')]//android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.TextView[2]");
 		} else {
 			return MobileUtils.getMobElement(testCase, "name", "Everyday_" + periodName + "_HeatTemperature")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
@@ -405,7 +405,7 @@ public class SchedulingScreen extends MobileScreens {
 	}
 
 	public String getPeriodName(String locatorValue) {
-		return MobileUtils.getMobElement(testCase, "name", locatorValue).getAttribute("name");
+		return MobileUtils.getMobElement(testCase, "name", locatorValue).getDomAttribute("name");
 	}
 
 	public boolean isSchedulePeriodHeatSetPointVisible(int timeOut) {
@@ -433,11 +433,11 @@ public class SchedulingScreen extends MobileScreens {
 	}
 
 	public String getTimeChooserEndTimeValue() {
-		return MobileUtils.getMobElement(objectDefinition, testCase, "TimeChooserEndTime").getAttribute("value");
+		return MobileUtils.getMobElement(objectDefinition, testCase, "TimeChooserEndTime").getDomAttribute("value");
 	}
 
 	public String getTimeChooserValue() {
-		return MobileUtils.getMobElement(objectDefinition, testCase, "TimeChooser").getAttribute("value");
+		return MobileUtils.getMobElement(objectDefinition, testCase, "TimeChooser").getDomAttribute("value");
 	}
 
 	public String getTimeOfEverydayScheduleOfGivenPeriod(String periodName) {
@@ -462,12 +462,12 @@ public class SchedulingScreen extends MobileScreens {
 	}
 
 	public String getTimeScheduleEndTimeValue() {
-		return MobileUtils.getMobElement(objectDefinition, testCase, "TimeScheduleEndTime").getAttribute("value");
+		return MobileUtils.getMobElement(objectDefinition, testCase, "TimeScheduleEndTime").getDomAttribute("value");
 	}
 
 	public String getValueOfEverydayHeatTemperatureElementAtIndex(int index) {
 		return MobileUtils.getMobElement(testCase, "name", "Everyday_" + index + "_HeatTemperature")
-				.getAttribute("value");
+				.getDomAttribute("value");
 	}
 
 	public List<WebElement> getValueOfEverydayTimeElementAtIndex(int index) {
@@ -490,27 +490,27 @@ public class SchedulingScreen extends MobileScreens {
 
 	public String getValueOfWeekdayHeatTemperatureElementAtIndex(String periodName) {
 		return MobileUtils.getMobElement(testCase, "name", "Monday - Friday_" + periodName + "_HeatTemperature")
-				.getAttribute("value");
+				.getDomAttribute("value");
 	}
 
 	public String getValueOfWeekdayCoolTemperatureElementAtIndex(String periodName) {
 		return MobileUtils.getMobElement(testCase, "name", "Monday - Friday_" + periodName + "_CoolTemperature")
-				.getAttribute("value");
+				.getDomAttribute("value");
 	}
 
 	public String getValueOfWeekendHeatTemperatureElementAtIndex(String periodName) {
 		return MobileUtils.getMobElement(testCase, "name", "Saturday - Sunday_" + periodName + "_HeatTemperature")
-				.getAttribute("value");
+				.getDomAttribute("value");
 	}
 
 	public String getValueOfWeekendCoolTemperatureElementAtIndex(String periodName) {
 		return MobileUtils.getMobElement(testCase, "name", "Saturday - Sunday_" + periodName + "_CoolTemperature")
-				.getAttribute("value");
+				.getDomAttribute("value");
 	}
 
 	public String getValueOfWeekendHeatTemperatureElementAtIndex(int index) {
 		return MobileUtils.getMobElement(testCase, "name", "Saturday - Sunday_" + index + "_HeatTemperature")
-				.getAttribute("value");
+				.getDomAttribute("value");
 	}
 
 	public WebElement getWeekday1Element() {
@@ -1056,7 +1056,7 @@ public class SchedulingScreen extends MobileScreens {
 	}
 
 	public String getGeofenceSleepSubTitleText() {
-		return MobileUtils.getMobElement(objectDefinition, testCase, "GeofenceSleepSubTitle").getAttribute("value");
+		return MobileUtils.getMobElement(objectDefinition, testCase, "GeofenceSleepSubTitle").getDomAttribute("value");
 	}
 
 	public boolean isViewByIndividualDaysVisible(int timeOut) {
@@ -1236,7 +1236,7 @@ public class SchedulingScreen extends MobileScreens {
 			}
 			else 
 			{
-				if(MobileUtils.getMobElement(objectDefinition, testCase, "ToolbarTitle").getAttribute("value").contains("Schedule_"))
+				if(MobileUtils.getMobElement(objectDefinition, testCase, "ToolbarTitle").getDomAttribute("value").contains("Schedule_"))
 					return true;
 				else
 					return false;

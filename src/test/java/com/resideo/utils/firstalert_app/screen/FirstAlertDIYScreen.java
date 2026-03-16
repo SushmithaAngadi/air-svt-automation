@@ -20,9 +20,7 @@ import com.resideo.utils.stat.cattgrpccommands.PairingPinMsg;
 import com.resideo.utils.stat.cattgrpccommands.PairingPinMsg.PairingPinMode;
 import com.resideo.utils.stat.mqtt.MqttManager;
 import com.resideo.utils.stat.mqtt.MqttSerialController;
-
-import org.openqa.selenium.WebElement;
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.*;
@@ -69,18 +67,19 @@ public class FirstAlertDIYScreen extends MobileScreens {
         return screenName;
     }
 
-    public static boolean chooseNetworktoConnectYourThermostat(TestCases testCase, FirstAlertDIYScreen diy, Boolean InvalidPIN, Integer setValue) {
+    public static boolean chooseNetworktoConnectYourThermostat(TestCases testCase, FirstAlertDIYScreen diy,
+            Boolean InvalidPIN, Integer setValue) {
         boolean flag = false;
         boolean isrefreshdone = false, screenLoadedAfterRefresh = true;
         try {
             int count = 0;
             String wifiSSID = SuiteConstants.getConstantValue(SuiteConstantTypes.PROJECT_SPECIFIC, "WIFI_SSID").trim();
-            String wifiCorrectPwd = SuiteConstants.getConstantValue(SuiteConstantTypes.PROJECT_SPECIFIC, "WIFI_PASSWORD").trim();
+            String wifiCorrectPwd = SuiteConstants
+                    .getConstantValue(SuiteConstantTypes.PROJECT_SPECIFIC, "WIFI_PASSWORD").trim();
             String wifiPassword;
             wifiPassword = SuiteConstants.getConstantValue(
                     SuiteConstantTypes.PROJECT_SPECIFIC,
-                    InvalidPIN ? "WIFI_INCORRECTPASSWORD" : "WIFI_PASSWORD"
-            ).trim();
+                    InvalidPIN ? "WIFI_INCORRECTPASSWORD" : "WIFI_PASSWORD").trim();
             for (int i = 5; i >= 0; i--) {
                 if (diy.isSelectNetworkScreen(30)) {
                     if (diy.isexpectedNetworkPresent(wifiSSID)) {
@@ -97,11 +96,15 @@ public class FirstAlertDIYScreen extends MobileScreens {
                                                 flag = true;
                                                 if (diy.getTextOfWifiErrorMessage().contains(diy.WiFiErrorMessage())) {
                                                     Keyword.ReportStep_Pass(testCase,
-                                                            "Wifi Error Message is displayed properly for Incorrect PIN entered as " + diy.WifiInvalidPINErrorMessage().getAttribute("content-desc"));
+                                                            "Wifi Error Message is displayed properly for Incorrect PIN entered as "
+                                                                    + diy.WifiInvalidPINErrorMessage()
+                                                                            .getDomAttribute("content-desc"));
                                                     flag = true;
                                                 } else {
                                                     Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
-                                                            "Wifi Error Message is not displayed properly for Incorrect PIN entered as " + diy.WifiInvalidPINErrorMessage().getAttribute("content-desc"));
+                                                            "Wifi Error Message is not displayed properly for Incorrect PIN entered as "
+                                                                    + diy.WifiInvalidPINErrorMessage()
+                                                                            .getDomAttribute("content-desc"));
                                                     flag = false;
                                                 }
                                                 diy.clickWifiPasswordTryAgainButton();
@@ -190,32 +193,34 @@ public class FirstAlertDIYScreen extends MobileScreens {
                                 flag = false;
                             }
                         } else {
-//							IOS need to develop
-//							if (diy.clickOnSecurityTypeFromList()) {
-//								if (MobileUtils.setValueToElement(testCase, "XPATH", "//XCUIElementTypeTextField[1]",
-//										wifiSSID)) {
-//									if (MobileUtils.setValueToElement(testCase, "XPATH",
-//											"//XCUIElementTypeSecureTextField[1]", wifiPassword)) {
-//										flag = LyricUtils.hideKeyboard(testCase);
-//										flag = true;
-//										System.out.println("Wifi manually set " + flag);
-//										Keyword.ReportStep_Pass(testCase, "Manually selected Wifi Name :: " + wifiSSID
-//												+ " , Wifi password :: " + wifiPassword + " , in add network");
-//									} else {
-//										Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
-//												"Wifi ssid Password not able to set");
-//										flag = false;
-//									}
-//								} else {
-//									Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
-//											"Wifi ssid Name not able to set");
-//									flag = false;
-//								}
-//							} else {
-//								Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
-//										"Not able  to click on Wifi security network manually");
-//								flag = false;
-//							}
+                            // IOS need to develop
+                            // if (diy.clickOnSecurityTypeFromList()) {
+                            // if (MobileUtils.setValueToElement(testCase, "XPATH",
+                            // "//XCUIElementTypeTextField[1]",
+                            // wifiSSID)) {
+                            // if (MobileUtils.setValueToElement(testCase, "XPATH",
+                            // "//XCUIElementTypeSecureTextField[1]", wifiPassword)) {
+                            // flag = LyricUtils.hideKeyboard(testCase);
+                            // flag = true;
+                            // System.out.println("Wifi manually set " + flag);
+                            // Keyword.ReportStep_Pass(testCase, "Manually selected Wifi Name :: " +
+                            // wifiSSID
+                            // + " , Wifi password :: " + wifiPassword + " , in add network");
+                            // } else {
+                            // Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
+                            // "Wifi ssid Password not able to set");
+                            // flag = false;
+                            // }
+                            // } else {
+                            // Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
+                            // "Wifi ssid Name not able to set");
+                            // flag = false;
+                            // }
+                            // } else {
+                            // Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
+                            // "Not able to click on Wifi security network manually");
+                            // flag = false;
+                            // }
                         }
                     } else {
                         flag = false;
@@ -233,7 +238,7 @@ public class FirstAlertDIYScreen extends MobileScreens {
 
         } catch (
 
-                Exception e) {
+        Exception e) {
             Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE, "Exception Occured Due to " + e);
             flag = false;
         }
@@ -392,9 +397,9 @@ public class FirstAlertDIYScreen extends MobileScreens {
         for (WebElement element : locationsElements) {
             String locationName = null;
             if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-                locationName = element.getAttribute("content-desc");
+                locationName = element.getDomAttribute("content-desc");
             } else {
-                locationName = element.getAttribute("name");
+                locationName = element.getDomAttribute("name");
             }
             if (locationName != null) {
                 locationNames.add(locationName);
@@ -604,18 +609,26 @@ public class FirstAlertDIYScreen extends MobileScreens {
 
     public boolean isBLEDeviceIsPresent(String macname) {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-        	String a =macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "");
-            return MobileUtils.isMobElementExists("XPATH", "//*[contains(@content-desc,'" + macname + "') or contains(@content-desc,'" + macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "") + "') ]", testCase);
+            return MobileUtils.isMobElementExists("XPATH",
+                    "//*[contains(@content-desc,'" + macname + "') or contains(@content-desc,'"
+                            + macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "") + "') ]",
+                    testCase);
         } else {
-            return MobileUtils.isMobElementExists("XPATH", "//*[contains(@content-desc,'" + macname + "') or contains(@content-desc,'" + macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "") + "') ]", testCase);
+            return MobileUtils.isMobElementExists( "XPATH",
+                    "//*[contains(@label,'" + macname + "') or contains(@label,'"
+                            + macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "") + "') ]",testCase);
         }
     }
 
     public boolean clickOnParticularDiscoveredDevice(String macname) {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-            return MobileUtils.clickOnElement(testCase, "XPATH","//*[contains(@content-desc,'" + macname + "') or contains(@content-desc,'" + macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "") + "') ]");
+            return MobileUtils.clickOnElement(testCase, "XPATH",
+                    "//*[contains(@content-desc,'" + macname + "') or contains(@content-desc,'"
+                            + macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "") + "') ]");
         } else {
-            return MobileUtils.clickOnElement(testCase, "XPATH","//*[contains(@content-desc,'" + macname + "') or contains(@content-desc,'" + macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "") + "') ]");
+            return MobileUtils.clickOnElement(testCase, "XPATH",
+                    "//*[contains(@label,'" + macname + "') or contains(@label,'"
+                            + macname.replaceAll("(.{2})", "$1:").replaceAll(":$", "") + "') ]");
         }
     }
 
@@ -743,7 +756,7 @@ public class FirstAlertDIYScreen extends MobileScreens {
                 && pgsrc.contains("INSTALLATION") && !pgsrc.contains("IS YOUR THERMOSTAT DISPLAYING BLE AT THE TOP")
                 && !pgsrc.contains("PRESS AND HOLD THE THERMOSTAT NETWORK NAME FOR 5 SECONDS")
                 && !(pgsrc.contains("CONNECT TO THE THERMOSTAT WI-FI NETWORK")
-                || pgsrc.contains("CONNECT TO YOUR THERMOSTAT'S WI-FI NETWORK"))) {
+                        || pgsrc.contains("CONNECT TO YOUR THERMOSTAT'S WI-FI NETWORK"))) {
             screenName = "displaying network name";
         } else if (pgsrc.contains("IS YOUR THERMOSTAT DISPLAYING BLE AT THE TOP") && pgsrc.contains("YES")
                 && pgsrc.contains("NO") && pgsrc.contains("CANCEL") && pgsrc.contains("INSTALLATION")) {
@@ -753,11 +766,11 @@ public class FirstAlertDIYScreen extends MobileScreens {
             screenName = "enable ap mode";
         } else if (pgsrc.contains("CONNECT") && (pgsrc.contains("CANCEL") || pgsrc.contains("NEXT"))
                 && (pgsrc.contains("CONNECT TO THE THERMOSTAT WI-FI NETWORK")
-                || pgsrc.contains("CONNECT TO YOUR THERMOSTAT'S WI-FI NETWORK"))) {
+                        || pgsrc.contains("CONNECT TO YOUR THERMOSTAT'S WI-FI NETWORK"))) {
             screenName = "connect to thermostat network";
         } else if (pgsrc.contains("START THERMOSTAT NETWORK")
                 && pgsrc.contains(
-                "PRESS THE CENTER TEMPERATURE ON YOUR THERMOSTAT FOR 5 SECONDS UNTIL YOU SEE LYRIC OR TSTAT")
+                        "PRESS THE CENTER TEMPERATURE ON YOUR THERMOSTAT FOR 5 SECONDS UNTIL YOU SEE LYRIC OR TSTAT")
                 && pgsrc.contains("INSTALLATION") && pgsrc.contains("CANCEL")) {
             screenName = "start thermostat network";
         } else if (pgsrc.contains("LOCAL NETWORK") && pgsrc.contains("IOS SETTINGS")
@@ -777,7 +790,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
         } else if (pgsrc.contains("ARE YOU A PROFESSIONAL CONTRACTOR") && pgsrc.contains("YES") && pgsrc.contains("NO")
                 && pgsrc.contains("CANCEL")) {
             screenName = "are you contractor";
-//            } else if (pgsrc.contains("") && pgsrc.contains("") && pgsrc.contains("") && pgsrc.contains("")) {
+            // } else if (pgsrc.contains("") && pgsrc.contains("") && pgsrc.contains("") &&
+            // pgsrc.contains("")) {
         } else {
             screenName = "unknown";
         }
@@ -791,12 +805,12 @@ public class FirstAlertDIYScreen extends MobileScreens {
             String deviceNeedToInstall = SuiteConstants
                     .getConstantValue(SuiteConstantTypes.PROJECT_SPECIFIC, "DEVICE_UNDER_TEST").trim();
             if (deviceNeedToInstall.contains("DENALI")) {
-            	macID = MqttManager.getMacId();
+                macID = MqttManager.getMacId();
                 macID = "TSTAT " + macID.substring(6, 12);
-            } else  if ( deviceNeedToInstall.contains("GLENEAGLES")) {
-            	 macID = MqttSerialController.getDeviceInformation("MACID");
-                 macID = macID.substring(6, 12);
-            }else {
+            } else if (deviceNeedToInstall.contains("GLENEAGLES")) {
+                macID = MqttSerialController.getDeviceInformation("MACID");
+                macID = macID.substring(6, 12);
+            } else {
                 macID = StatCommands.getInstance().cattCommandsStub
                         .getDeviceInfo(DeviceInfoMsg.newBuilder().setItem(DeviceInfoItem.MAC_ID).build()).getStrVal();
             }
@@ -887,12 +901,12 @@ public class FirstAlertDIYScreen extends MobileScreens {
                                     SystemState.getStatus().isBleErrorConnectingtoThermostat(true);
                                     clickOnOkButton();
                                     return true;
-                                }else if(deviceNeedToInstall.contains("GLENEAGLES")&& isConfirmConnectionScreen()) {
-                                	return true;
-                                }else if( isSecurityCodeScreen()) {
-                                	return true;
-                                }else {
-                                	return false;
+                                } else if (deviceNeedToInstall.contains("GLENEAGLES") && isConfirmConnectionScreen()) {
+                                    return true;
+                                } else if (isSecurityCodeScreen()) {
+                                    return true;
+                                } else {
+                                    return false;
                                 }
                             } catch (StaleElementReferenceException e) {
                                 Keyword.ReportStep_Pass(testCase,
@@ -925,7 +939,7 @@ public class FirstAlertDIYScreen extends MobileScreens {
 
                 } catch (
 
-                        StaleElementReferenceException e) {
+                StaleElementReferenceException e) {
                     Keyword.ReportStep_Pass(testCase, "Stale element reference exceotion, skipping for retry..");
                     flag = false;
                 } catch (TimeoutException e) {
@@ -952,13 +966,13 @@ public class FirstAlertDIYScreen extends MobileScreens {
         return flag;
     }
 
-//	from here all ISU Screens verification methods
+    // from here all ISU Screens verification methods
 
     protected boolean isConfirmConnectionScreen() {
-    	return MobileUtils.isMobElementExists(objectDefinition, testCase, "ConfirmConnectionScreen", 10);
-	}
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "ConfirmConnectionScreen", 10);
+    }
 
-	public boolean set4_DigitPin() {
+    public boolean set4_DigitPin() {
         boolean flag = false;
 
         String deviceNeedToInstall;
@@ -1022,8 +1036,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
                         .getPairingPin(PairingPinMsg.newBuilder().setPinMode(PairingPinMode.RADIO).build()).getStrVal();
             }
 
-//			System.out.println("Current Pin is " + pin);
-//			System.out.println("Previous Pin is " + previousPin);
+            // System.out.println("Current Pin is " + pin);
+            // System.out.println("Previous Pin is " + previousPin);
             if (pin.equals("") || pin.toUpperCase().contains("INVALID")) {
 
                 System.out.println("Retry Pin, Pin is:: " + pin);
@@ -1084,10 +1098,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public String getValueinAutoChangeOverDiff() {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.getMobElement(objectDefinition, testCase, "GetAutoChangeOverDiffValue")
-                    .getAttribute("content-desc").replace("°", "");
+                    .getDomAttribute("content-desc").replace("°", "");
         } else {
             return MobileUtils.getMobElement(objectDefinition, testCase, "GetAutoChangeOverDiffValue")
-                    .getAttribute("label").replace("°", "");
+                    .getDomAttribute("name").replace("°", "");
         }
     }
 
@@ -1139,10 +1153,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
         String getText = null;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "AuxHeatDifferentialValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "AuxHeatDifferentialValue")
-                    .getAttribute("label");
+                    .getDomAttribute("name");
 
         }
         if (getText.contains("°")) {
@@ -1151,20 +1165,20 @@ public class FirstAlertDIYScreen extends MobileScreens {
         return getText;
     }
 
-	public String getISUDropDownValue() {
-		String val;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			val = MobileUtils.getMobElement(objectDefinition, testCase, "ISUDropDownValue")
-					.getAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
-		} else {
-			val = MobileUtils.getMobElement(objectDefinition, testCase, "ISUDropDownValue").getAttribute("resource-id")
-					.replace("ISU", "").replace("_", "").trim();
-		}
-		if (val == null) {
-			return "";
-		}
-		return val;
-	}
+    public String getISUDropDownValue() {
+        String val;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            val = MobileUtils.getMobElement(objectDefinition, testCase, "ISUDropDownValue")
+                    .getDomAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
+        } else {
+            val = MobileUtils.getMobElement(objectDefinition, testCase, "ISUDropDownValue").getDomAttribute("resource-id")
+                    .replace("ISU", "").replace("_", "").trim();
+        }
+        if (val == null) {
+            return "";
+        }
+        return val;
+    }
 
     public boolean isBackupHeatUpStageTimerScreen(int timeOut) {
         return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatUpStageTimerScreen", timeOut);
@@ -1200,10 +1214,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
         String getText = null;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackUpHeatCyclePerHourValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackUpHeatCyclePerHourValue")
-                    .getAttribute("label");
+                    .getDomAttribute("label");
 
         }
         return getText;
@@ -1246,10 +1260,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
         String getText = null;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "MaxMinSetpointValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "MaxMinSetpointValue")
-                    .getAttribute("label");
+                    .getDomAttribute("label");
 
         }
         if (getText.contains("°")) {
@@ -1315,10 +1329,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
         String getText = null;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "EmergencyHeatCyclePerHourValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "EmergencyHeatCyclePerHourValue")
-                    .getAttribute("label");
+                    .getDomAttribute("label");
 
         }
         return getText;
@@ -1356,10 +1370,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
         String getText = null;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "HeatCyclePerHourValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "HeatCyclePerHourValue")
-                    .getAttribute("label");
+                    .getDomAttribute("label");
 
         }
         return getText;
@@ -1468,7 +1482,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
             WebElement mobElement = MobileUtils.getMobElement(objectDefinition, testCase, "NetworkNameInput");
             mobElement.click();
             mobElement.sendKeys(networkName);
-            flag = MobileUtils.clickOnElement(testCase, "NAME", "Done");
+            ((CustomAndroidDriver) testCase.getMobileDriver()).pressKey(new KeyEvent().withKey(AndroidKey.ENTER));
+            flag = true;
         }
         return flag;
     }
@@ -1513,9 +1528,9 @@ public class FirstAlertDIYScreen extends MobileScreens {
     }
 
     public boolean ClickOnDoneButton() {
-		if (MobileUtils.isMobElementExists(objectDefinition, testCase, "DoneButton", 20))
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "DoneButton");
-		return false;
+        if (MobileUtils.isMobElementExists(objectDefinition, testCase, "DoneButton", 20))
+            return MobileUtils.clickOnElement(objectDefinition, testCase, "DoneButton");
+        return false;
     }
 
     public boolean isAlreadyRegisteredPopUp(int timeOut) {
@@ -1530,35 +1545,38 @@ public class FirstAlertDIYScreen extends MobileScreens {
         return MobileUtils.isMobElementExists(objectDefinition, testCase, "RegisteringDevicePopUp", timeOut);
     }
 
-	public boolean isDeviceSyncComplete(String DeviceName) {
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.isMobElementExists("XPATH", "//android.view.View[contains(@content-desc,'" + DeviceName
-					+ "')]/*[(contains(@content-desc,'Currently') or contains(@resource-id,'current_label')) or (contains(@content-desc,'"
-					+ DeviceName + "') and contains(@resource-id,'indoor_temperature_readout'))]", testCase, 2);
-		} else {
-			return MobileUtils.isMobElementExists("XPATH", "//android.view.View[contains(@content-desc,'" + DeviceName
-					+ "')]/*[(contains(@content-desc,'Currently') or contains(@resource-id,'current_label')) or (contains(@content-desc,'"
-					+ DeviceName + "') and contains(@resource-id,'indoor_temperature_readout'))]", testCase, 2);
-		}
-	}
+    public boolean isDeviceSyncComplete(String DeviceName) {
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            return MobileUtils.isMobElementExists("XPATH", "//android.view.View[contains(@content-desc,'" + DeviceName
+                    + "')]/*[(contains(@content-desc,'Currently') or contains(@resource-id,'current_label')) or (contains(@content-desc,'"
+                    + DeviceName + "') and contains(@resource-id,'indoor_temperature_readout'))]", testCase, 2);
+        } else {
+            return MobileUtils.isMobElementExists("XPATH", "//android.view.View[contains(@name,'" + DeviceName
+                    + "')]/*[(contains(@name,'Currently') or contains(@resource-id,'current_label')) or (contains(@name,'"
+                    + DeviceName + "') and contains(@resource-id,'indoor_temperature_readout'))]", testCase, 2);
+        }
+    }
 
     public boolean isDeviceSyncInProgress(String DeviceName) {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-            return MobileUtils.isMobElementExists("XPATH", "//android.view.View[contains(@content-desc,'"+DeviceName+"') and contains(@resource-id,'device_sync_progress')]", testCase, 2);
+            return MobileUtils.isMobElementExists("XPATH", "//android.view.View[contains(@content-desc,'" + DeviceName
+                    + "') and contains(@resource-id,'device_sync_progress')]", testCase, 2);
         } else {
             return MobileUtils.isMobElementExists("XPATH",
-            		"//android.view.View[contains(@content-desc,'"+DeviceName+"') and contains(@resource-id,'device_sync_progress')]", testCase, 2);
+                    "//android.view.View[contains(@name,'" + DeviceName
+                            + "') and contains(@resource-id,'device_sync_progress')]",
+                    testCase, 2);
         }
     }
 
     public boolean isDeviceSyncError(String DeviceName) {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.isMobElementExists("XPATH", "//*[contains(@content-desc,'" + DeviceName
-                            + "') and contains(@content-desc,'An error occurred while syncing your device.') or contains(@content-desc,'Contact Customer Support')]",
+                    + "') and contains(@content-desc,'An error occurred while syncing your device.') or contains(@content-desc,'Contact Customer Support')]",
                     testCase, 2);
         } else {
             return MobileUtils.isMobElementExists("XPATH", "//*[contains(@name,'" + DeviceName
-                            + "') and contains(@name,'An error occurred while syncing your device.') or contains(@name,'Contact Customer Support')]",
+                    + "') and contains(@name,'An error occurred while syncing your device.') or contains(@name,'Contact Customer Support')]",
                     testCase, 2);
         }
     }
@@ -1574,7 +1592,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
 
     public boolean ClickOnDeviceNameOnDashboard() {
         Point cordinates;
-//		String deviceName = testCase.getTestCaseInputs().getInputValue("LOCATION1_DEVICE1_NAME");
+        // String deviceName =
+        // testCase.getTestCaseInputs().getInputValue("LOCATION1_DEVICE1_NAME");
         String deviceName = SystemState.getStatus().getTstatName();
         Dimension size;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
@@ -1645,7 +1664,7 @@ public class FirstAlertDIYScreen extends MobileScreens {
         return MobileUtils.clickOnElement(objectDefinition, testCase, "CancelButton");
     }
 
-// value selection methods
+    // value selection methods
 
     public boolean ClickOndeviceDetailsButton() {
         return MobileUtils.clickOnElement(objectDefinition, testCase, "DoneButton");
@@ -1711,8 +1730,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "PTAC");
             }
             case "RADIANT HEAT": {
-				return MobileUtils.clickOnElement(objectDefinition, testCase, "RadiantHeat");
-			}
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "RadiantHeat");
+            }
             default:
                 Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE,
                         "User Expected ISU Value not available For Heating System, User Expected ISU Value is :"
@@ -1750,13 +1769,13 @@ public class FirstAlertDIYScreen extends MobileScreens {
             case "STEAM": {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "BoilerSteam");
             }
-            case "HOT WATER RADIANT HEAT": 
-    		case "HOT WATER - RADIANT HEAT": {
-    			return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantHeat");
-    		}
-    		case "HOT WATER RADIANT FLOOR HEAT": {
-    			return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantFloorHeat");
-    		}
+            case "HOT WATER RADIANT HEAT":
+            case "HOT WATER - RADIANT HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantHeat");
+            }
+            case "HOT WATER RADIANT FLOOR HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantFloorHeat");
+            }
             default: {
                 Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE,
                         "User Expected ISU Value not available For Fuel Source System, User Expected ISU Value is :"
@@ -1836,8 +1855,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
         boolean flag = false;
         String isuValue = ISUValue.toUpperCase();
         if (ISUValue.toUpperCase().contains("DEFAULT")) {
-        	isuValue="0 DEG";
-        } 
+            isuValue = "0 DEG";
+        }
         if (isuValue.contains("DEG")) {
             isuValue = isuValue.split("DEG")[0].trim();
         }
@@ -1883,7 +1902,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "AuxETerminalControlDriveBothAuxE");
             }
             case "AUX AND E ARE INDEPENDENT": {
-                return MobileUtils.clickOnElement(objectDefinition, testCase, "AuxETerminalControlDriveAuxEIndependent");
+                return MobileUtils.clickOnElement(objectDefinition, testCase,
+                        "AuxETerminalControlDriveAuxEIndependent");
             }
             default: {
                 return false;
@@ -1934,7 +1954,7 @@ public class FirstAlertDIYScreen extends MobileScreens {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "EmergencyHeatHighEfficiency");
             }
             case "OIL FORCED":
-            case "OIL FORCED AIR":{
+            case "OIL FORCED AIR": {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "EmergencyHeatOilForced");
             }
             case "HOT WATER RADIANT": {
@@ -1970,7 +1990,7 @@ public class FirstAlertDIYScreen extends MobileScreens {
         if (ISUValue.toUpperCase().contains("DEFAULT")) {
             flag = true;
         } else if (ISUValue.toUpperCase().contains("COMFORT")) {
-//			To enable this option need to have ID for the element
+            // To enable this option need to have ID for the element
         } else {
             Integer valueOf = Integer.valueOf(isuValue);
             Integer currentValue = Integer.valueOf(getAuxBackUpHeatDifferential());
@@ -2035,7 +2055,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
         if (ISUValue.toUpperCase().contains("DEFAULT")) {
             flag = true;
         } else {
-//			need to develop this after the check ID is available till then only default works
+            // need to develop this after the check ID is available till then only default
+            // works
         }
         return flag;
     }
@@ -2265,7 +2286,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "IdleScreenCustomizationTime");
             }
             case "OUTDOOR TEMPERATURE": {
-                return MobileUtils.clickOnElement(objectDefinition, testCase, "IdleScreenCustomizationOutdoorTemperature");
+                return MobileUtils.clickOnElement(objectDefinition, testCase,
+                        "IdleScreenCustomizationOutdoorTemperature");
             }
             case "OUTDOOR HUMIDITY": {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "IdleScreenCustomizationOutdoorHumidity");
@@ -2285,7 +2307,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "HomeScreenCustomizationTime");
             }
             case "OUTDOOR TEMPERATURE": {
-                return MobileUtils.clickOnElement(objectDefinition, testCase, "HomeScreenCustomizationOutdoorTemperature");
+                return MobileUtils.clickOnElement(objectDefinition, testCase,
+                        "HomeScreenCustomizationOutdoorTemperature");
             }
             case "OUTDOOR HUMIDITY": {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "HomeScreenCustomizationOutdoorHumidity");
@@ -2333,48 +2356,48 @@ public class FirstAlertDIYScreen extends MobileScreens {
 
     public boolean ISUTemperatureDisplayOffset(String ISUValue) {
         boolean flag = false;
-        ISUValue=ISUValue.toUpperCase().replace(" ", "");
+        ISUValue = ISUValue.toUpperCase().replace(" ", "");
         if (ISUValue.contains("DEG")) {
             ISUValue = ISUValue.toUpperCase().replace("DEG", "°");
-        }else if (ISUValue.toUpperCase().contains("OFF")) {
-        	ISUValue="Off";
+        } else if (ISUValue.toUpperCase().contains("OFF")) {
+            ISUValue = "Off";
         }
-        if(ISUValue.contains("F")) {
-        	ISUValue=ISUValue.toUpperCase().replace("F", "")+ " "+ "F";
-        }else  if(ISUValue.contains("C")) {
-        	ISUValue=ISUValue.toUpperCase().replace("C", "")+ " "+ "C";
+        if (ISUValue.contains("F")) {
+            ISUValue = ISUValue.toUpperCase().replace("F", "") + " " + "F";
+        } else if (ISUValue.contains("C")) {
+            ISUValue = ISUValue.toUpperCase().replace("C", "") + " " + "C";
         }
-       
+
         if (ISUValue.toUpperCase().contains("DEFAULT")) {
             flag = true;
         } else {
-			if (isISUDropDownButtonPresent()) {
-				if (getISUDropDownValue().toUpperCase().contains(ISUValue.toUpperCase())) {
-		            flag = true;
-				} else if (!clickOnISUDropDownButton()) {
-					flag = false;
-					Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
-							"Not able to click on Element, Pls check the screenshot, Whether Drop Down available or not? ");
-				}
-			}
-			if (!flag) {
-				if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-					flag = MobileUtils.isMobElementExists("XPATH", "//*[contains(@content-desc,'" + ISUValue + "')]",
-							testCase, 3);
-					flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
-							"//*[contains(@content-desc,'" + ISUValue + "')]");
-				} else {
-					flag = MobileUtils.isMobElementExists("XPATH",
-							"//*[contains(@name,'" + getDropDownValuesByDefault(ISUValue) + "')]", testCase, 3);
-					flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
-							"//*[contains(@name,'" + getDropDownValuesByDefault(ISUValue) + "')]");
-				}
-			}
+            if (isISUDropDownButtonPresent()) {
+                if (getISUDropDownValue().toUpperCase().contains(ISUValue.toUpperCase())) {
+                    flag = true;
+                } else if (!clickOnISUDropDownButton()) {
+                    flag = false;
+                    Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
+                            "Not able to click on Element, Pls check the screenshot, Whether Drop Down available or not? ");
+                }
+            }
+            if (!flag) {
+                if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+                    flag = MobileUtils.isMobElementExists("XPATH", "//*[contains(@content-desc,'" + ISUValue + "')]",
+                            testCase, 3);
+                    flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
+                            "//*[contains(@content-desc,'" + ISUValue + "')]");
+                } else {
+                    flag = MobileUtils.isMobElementExists("XPATH",
+                            "//*[contains(@name,'" + getDropDownValuesByDefault(ISUValue) + "')]", testCase, 3);
+                    flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
+                            "//*[contains(@name,'" + getDropDownValuesByDefault(ISUValue) + "')]");
+                }
+            }
         }
         return flag;
     }
 
-	public boolean ISUEmergencyHeatCyclePerHour(String ISUValue, int maxLimit) {
+    public boolean ISUEmergencyHeatCyclePerHour(String ISUValue, int maxLimit) {
         boolean flag = false;
         if (ISUValue.toUpperCase().contains("DEFAULT")) {
             flag = true;
@@ -2430,7 +2453,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "FanOperationinHeatEquipmentControlsFan");
             }
             case "THERMOSTAT CONTROLS FAN": {
-                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanOperationinHeatThermostatControlsFan");
+                return MobileUtils.clickOnElement(objectDefinition, testCase,
+                        "FanOperationinHeatThermostatControlsFan");
             }
             default: {
                 return false;
@@ -2600,10 +2624,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
         String getText = null;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "CheckConfigurationContent")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "CheckConfigurationContent")
-                    .getAttribute("label");
+                    .getDomAttribute("name");
 
         }
         return getText;
@@ -2776,10 +2800,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
             String currentValue = null;
             if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
                 currentValue = MobileUtils.getMobElement(objectDefinition, testCase, "CurrentUpstageTimerValue")
-                        .getAttribute("content-desc");
+                        .getDomAttribute("content-desc");
             } else {
                 currentValue = MobileUtils.getMobElement(objectDefinition, testCase, "CurrentUpstageTimerValue")
-                        .getAttribute("label");
+                        .getDomAttribute("name");
             }
             if (currentValue.equalsIgnoreCase("Off")) {
                 return 0;
@@ -2906,10 +2930,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
             String currentValue = null;
             if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
                 currentValue = MobileUtils.getMobElement(objectDefinition, testCase, "CurrentLockOutFanValueInMinutes")
-                        .getAttribute("content-desc");
+                        .getDomAttribute("content-desc");
             } else {
                 currentValue = MobileUtils.getMobElement(objectDefinition, testCase, "CurrentLockOutFanValueInMinutes")
-                        .getAttribute("label");
+                        .getDomAttribute("name");
 
             }
             if (currentValue.equalsIgnoreCase("Off")) {
@@ -2968,10 +2992,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public String getCurrentCompressorCyclesValue() {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentCompressorCyclesValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentCompressorCyclesValue")
-                    .getAttribute("label");
+                    .getDomAttribute("name");
         }
     }
 
@@ -3043,10 +3067,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
         String currentValueText = null;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             currentValueText = MobileUtils.getMobElement(objectDefinition, testCase, "CurrentCompressorMinOffTimeValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             currentValueText = MobileUtils.getMobElement(objectDefinition, testCase, "CurrentCompressorMinOffTimeValue")
-                    .getAttribute("label");
+                    .getDomAttribute("name");
 
         }
         if (currentValueText.equalsIgnoreCase("Off")) {
@@ -3136,10 +3160,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public String getCurrentAirFilterValue() {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentAirFilterRemiderValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentAirFilterRemiderValue")
-                    .getAttribute("label");
+                    .getDomAttribute("name");
 
         }
     }
@@ -3147,10 +3171,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public String getCurrentAirFilterLabel() {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentLabelAirFilterReminder")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentLabelAirFilterReminder")
-                    .getAttribute("label");
+                    .getDomAttribute("name");
 
         }
     }
@@ -3198,10 +3222,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public String getCurrentBackLightBrightnessValue() {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentBackLightBrightnessValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentBackLightBrightnessValue")
-                    .getAttribute("label");
+                    .getDomAttribute("name");
 
         }
     }
@@ -3313,7 +3337,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
                         if (isRegistering()) {
                             System.out.println("Registering device .....");
                             return false;
-                        } else return isSetupCompleteScreen();
+                        } else
+                            return isSetupCompleteScreen();
                     } catch (StaleElementReferenceException e) {
                         Keyword.ReportStep_Pass(testCase, "Stale element reference exceotion, skipping for retry..");
                         return false;
@@ -3394,21 +3419,23 @@ public class FirstAlertDIYScreen extends MobileScreens {
                         flag = MobileUtils.clickOnElement(testCase, "XPATH",
                                 "//*[contains(@content-desc,'" + DrpDwnVal + "')]");
                     } else {
-//						if(ExistingDrpDwnValue.contains("OFF")) {
-//							ExistingDrpDwnValue="0";
-//						}
-//						if(Integer.parseInt(ExistingDrpDwnValue)< Integer.parseInt(DrpDwnVal)) {
-//							NavigatingScreenToScreeninFA navigateTo = new NavigatingScreenToScreeninFA(testCase);
-//							if (navigateTo.scrollToExpectedElement("FujiThermostat","")) {
-//
-//							}
-//							//Scroll down
-//						}else if(Integer.parseInt(ExistingDrpDwnValue)> Integer.parseInt(DrpDwnVal)) {
-//							//Scroll up
-//						}
+                        // if(ExistingDrpDwnValue.contains("OFF")) {
+                        // ExistingDrpDwnValue="0";
+                        // }
+                        // if(Integer.parseInt(ExistingDrpDwnValue)< Integer.parseInt(DrpDwnVal)) {
+                        // NavigatingScreenToScreeninFA navigateTo = new
+                        // NavigatingScreenToScreeninFA(testCase);
+                        // if (navigateTo.scrollToExpectedElement("FujiThermostat","")) {
+                        //
+                        // }
+                        // //Scroll down
+                        // }else if(Integer.parseInt(ExistingDrpDwnValue)> Integer.parseInt(DrpDwnVal))
+                        // {
+                        // //Scroll up
+                        // }
                     }
-//					flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
-//							"//*[contains(@content-desc,'" + DrpDwnVal + "')]");
+                    // flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
+                    // "//*[contains(@content-desc,'" + DrpDwnVal + "')]");
 
                 } else {
                     flag = MobileUtils.isMobElementExists("XPATH", "//*[contains(@name,'" + DrpDwnVal + "')]", testCase,
@@ -3443,13 +3470,13 @@ public class FirstAlertDIYScreen extends MobileScreens {
     }
 
     public String getExtendedFanRunTimeInHeatDrpDwnValue() {
-    	String val;
+        String val;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-        	val= MobileUtils.getMobElement(objectDefinition, testCase, "ExtendedFanRunTimeInHeatDrpDwn")
-                    .getAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
+            val = MobileUtils.getMobElement(objectDefinition, testCase, "ExtendedFanRunTimeInHeatDrpDwn")
+                    .getDomAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
         } else {
-        	val= MobileUtils.getMobElement(objectDefinition, testCase, "ExtendedFanRunTimeInHeatDrpDwn")
-                    .getAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
+            val = MobileUtils.getMobElement(objectDefinition, testCase, "ExtendedFanRunTimeInHeatDrpDwn")
+                    .getDomAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
         }
         return val;
     }
@@ -3458,21 +3485,21 @@ public class FirstAlertDIYScreen extends MobileScreens {
         return MobileUtils.isMobElementExists(objectDefinition, testCase, "AirFilterTypeScreen", 2);
     }
 
-	public boolean selectAirFilterType(String iSUValue) {
-		switch (iSUValue.toUpperCase()) {
-		case "NONE": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "NoneInAirFilterType");
-		}
-		case "MEDIA": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "MediaInAirFilterType");
-		}
-		case "ELECTRONIC AIR CLEANER": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ElectronicAirCleanerInAirFilterType");
-		}
-		default:
-			return false;
-		}
-	}
+    public boolean selectAirFilterType(String iSUValue) {
+        switch (iSUValue.toUpperCase()) {
+            case "NONE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "NoneInAirFilterType");
+            }
+            case "MEDIA": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "MediaInAirFilterType");
+            }
+            case "ELECTRONIC AIR CLEANER": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ElectronicAirCleanerInAirFilterType");
+            }
+            default:
+                return false;
+        }
+    }
 
     public boolean isHumidificationPadReplacementReminderScreen(int timeOut) {
         return MobileUtils.isMobElementExists(objectDefinition, testCase, "HumPadReplacementRemScreen", 2);
@@ -3481,7 +3508,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public boolean selectHumPadReplReminder(String iSUValue) {
         switch (iSUValue.toUpperCase()) {
             case "OFF": {
-                return MobileUtils.clickOnElement(objectDefinition, testCase, "isAirFilter1ReplacementReminderValueRch");
+                return MobileUtils.clickOnElement(objectDefinition, testCase,
+                        "isAirFilter1ReplacementReminderValueRch");
             }
             case "6 CALENDER MONTHS": {
                 return MobileUtils.clickOnElement(objectDefinition, testCase, "SixCalMonths");
@@ -3515,21 +3543,23 @@ public class FirstAlertDIYScreen extends MobileScreens {
                         flag = MobileUtils.clickOnElement(testCase, "XPATH",
                                 "//*[contains(@content-desc,'" + DrpDwnVal + "')]");
                     } else {
-//						if(ExistingDrpDwnValue.contains("OFF")) {
-//							ExistingDrpDwnValue="0";
-//						}
-//						if(Integer.parseInt(ExistingDrpDwnValue)< Integer.parseInt(DrpDwnVal)) {
-//							NavigatingScreenToScreeninFA navigateTo = new NavigatingScreenToScreeninFA(testCase);
-//							if (navigateTo.scrollToExpectedElement("FujiThermostat","")) {
-//
-//							}
-//							//Scroll down
-//						}else if(Integer.parseInt(ExistingDrpDwnValue)> Integer.parseInt(DrpDwnVal)) {
-//							//Scroll up
-//						}
+                        // if(ExistingDrpDwnValue.contains("OFF")) {
+                        // ExistingDrpDwnValue="0";
+                        // }
+                        // if(Integer.parseInt(ExistingDrpDwnValue)< Integer.parseInt(DrpDwnVal)) {
+                        // NavigatingScreenToScreeninFA navigateTo = new
+                        // NavigatingScreenToScreeninFA(testCase);
+                        // if (navigateTo.scrollToExpectedElement("FujiThermostat","")) {
+                        //
+                        // }
+                        // //Scroll down
+                        // }else if(Integer.parseInt(ExistingDrpDwnValue)> Integer.parseInt(DrpDwnVal))
+                        // {
+                        // //Scroll up
+                        // }
                     }
-//					flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
-//							"//*[contains(@content-desc,'" + DrpDwnVal + "')]");
+                    // flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
+                    // "//*[contains(@content-desc,'" + DrpDwnVal + "')]");
 
                 } else {
                     flag = MobileUtils.isMobElementExists("XPATH", "//*[contains(@name,'" + DrpDwnVal + "')]", testCase,
@@ -3553,10 +3583,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public String getExistingValOfDehumFilterReplRemDrpDwn() {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.getMobElement(objectDefinition, testCase, "DehumFilterReplReminderDrpDwn")
-            		.getAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
+                    .getDomAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
         } else {
             return MobileUtils.getMobElement(objectDefinition, testCase, "DehumFilterReplReminderDrpDwn")
-            		.getAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
+                    .getDomAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
         }
     }
 
@@ -3605,7 +3635,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public boolean selectVentFilterCleaningReminder(String iSUValue) {
         switch (iSUValue.toUpperCase()) {
             case "OFF": {
-                return MobileUtils.clickOnElement(objectDefinition, testCase, "isAirFilter1ReplacementReminderValueRch");
+                return MobileUtils.clickOnElement(objectDefinition, testCase,
+                        "isAirFilter1ReplacementReminderValueRch");
             }
             case "3 CALENDAR MONTHS":
             case "3 MONTHS": {
@@ -3730,10 +3761,10 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public String getIndoorHumOffsetDropDownValue() {
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.getMobElement(objectDefinition, testCase, "IndoorHumOffsetDropDownValue")
-            		.getAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
+                    .getDomAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
         } else {
             return MobileUtils.getMobElement(objectDefinition, testCase, "IndoorHumOffsetDropDownValue")
-            		.getAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
+                    .getDomAttribute("resource-id").replace("ISU", "").replace("_", "").trim();
         }
     }
 
@@ -3763,7 +3794,8 @@ public class FirstAlertDIYScreen extends MobileScreens {
     }
 
     public boolean isDeviceNameDisplayingOnDashBoard() {
-//		String deviceName = testCase.getTestCaseInputs().getInputValue("LOCATION1_DEVICE1_NAME");
+        // String deviceName =
+        // testCase.getTestCaseInputs().getInputValue("LOCATION1_DEVICE1_NAME");
         String deviceName = SystemState.getStatus().getTstatName();
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             return MobileUtils.isMobElementExists("xpath",
@@ -3845,7 +3877,7 @@ public class FirstAlertDIYScreen extends MobileScreens {
 
     public String getTextOfWifiErrorMessage() {
         return MobileUtils.getMobElement(objectDefinition, testCase, "WifiInvalidPINErrorMessage")
-                .getAttribute("content-desc");
+                .getDomAttribute("content-desc");
     }
 
     public WebElement WifiInvalidPINErrorMessage() {
@@ -3859,7 +3891,6 @@ public class FirstAlertDIYScreen extends MobileScreens {
     public String WiFiErrorMessage() {
         return "Make sure password is entered correctly";
     }
-
 
     public boolean isConnectionFailedPopUp(int timeOut) {
         return MobileUtils.isMobElementExists(objectDefinition, testCase, "ConnectionFailed", 2);
@@ -3964,40 +3995,40 @@ public class FirstAlertDIYScreen extends MobileScreens {
     }
 
     public boolean ISUHeatingSystemFromDrpDwn(String iSUValue) {
-//        if (clickOnHeatingSystemDrpDwn()) {
-            switch (iSUValue.toUpperCase()) {
-                case "CONVENTIONAL FORCED AIR": {
-                    return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalForcedAir");
-                }
-                case "HEAT PUMP": {
-                    return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPump");
-                }
-                case "BOILER": {
-                    return MobileUtils.clickOnElement(objectDefinition, testCase, "Boiler");
-                }
-                case "OTHER": {
-                    return MobileUtils.clickOnElement(objectDefinition, testCase, "Other");
-                }
-                case "NONE COOL ONLY": {
-                    return MobileUtils.clickOnElement(objectDefinition, testCase, "NoneCoolOnly");
-                }
-                case "FAN COIL": {
-                    return MobileUtils.clickOnElement(objectDefinition, testCase, "FanCoil");
-                }
-                case "PACKAGED TERMINAL AIR CONDITIONER (PTAC)": {
-                    return MobileUtils.clickOnElement(objectDefinition, testCase, "PTAC");
-                }
-                case "RADIANT HEAT": {
-    				return MobileUtils.clickOnElement(objectDefinition, testCase, "RadiantHeat");
-    			}
-                default:
-                    Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE,
-                            "User Expected ISU Value not available For Heating System, User Expected ISU Value is :"
-                                    + iSUValue);
-                    return false;
+        // if (clickOnHeatingSystemDrpDwn()) {
+        switch (iSUValue.toUpperCase()) {
+            case "CONVENTIONAL FORCED AIR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalForcedAir");
             }
-//        }
-//        return false;
+            case "HEAT PUMP": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPump");
+            }
+            case "BOILER": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "Boiler");
+            }
+            case "OTHER": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "Other");
+            }
+            case "NONE COOL ONLY": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "NoneCoolOnly");
+            }
+            case "FAN COIL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanCoil");
+            }
+            case "PACKAGED TERMINAL AIR CONDITIONER (PTAC)": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "PTAC");
+            }
+            case "RADIANT HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "RadiantHeat");
+            }
+            default:
+                Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE,
+                        "User Expected ISU Value not available For Heating System, User Expected ISU Value is :"
+                                + iSUValue);
+                return false;
+        }
+        // }
+        // return false;
     }
 
     private boolean clickOnHeatingSystemDrpDwn() {
@@ -4030,84 +4061,95 @@ public class FirstAlertDIYScreen extends MobileScreens {
         return MobileUtils.isMobElementExists(objectDefinition, testCase, "WiredSensorsScreen");
     }
 
-	public boolean selectWiredSensors(String iSUValue) {
-		boolean flag = true;
-		try {
-			if (iSUValue.contains("INDOOR AIR TEMPERATURE")) {
-				if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "IndoorAirTemperatureChecked", 1)) {
-					flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "IndoorAirTemperature");
-					flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase, "IndoorAirTemperatureChecked", 1);
-				}
-			} else {
-				if (MobileUtils.isMobElementExists(objectDefinition, testCase, "IndoorAirTemperatureChecked", 1)) {
-					flag = MobileUtils.clickOnElement(objectDefinition, testCase, "IndoorAirTemperature");
-					flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase, "IndoorAirTemperatureChecked", 1);
-				}
-			}
-			if (iSUValue.contains("RETURN AIR TEMPERATURE SENSOR")) {
-				if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "ReturnAirTemperatureSensorChecked",
-						1)) {
-					flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "ReturnAirTemperatureSensor");
-					flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase, "ReturnAirTemperatureSensorChecked", 1);}
-			} else {
-				if (MobileUtils.isMobElementExists(objectDefinition, testCase, "ReturnAirTemperatureSensorChecked",
-						1)) {
-					flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "ReturnAirTemperatureSensor");
-					flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase, "ReturnAirTemperatureSensorChecked", 1);
-				}
-			}
-			if (iSUValue.contains("DISCHARGE AIR TEMPERATURE SENSOR")) {
-				if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "DischargeAirTemperatureSensorChecked",
-						1)) {
-					flag = flag
-							&& MobileUtils.clickOnElement(objectDefinition, testCase, "DischargeAirTemperatureSensor");
-					flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase, "DischargeAirTemperatureSensorChecked", 1);
-				}
-			} else {
-				if (MobileUtils.isMobElementExists(objectDefinition, testCase, "DischargeAirTemperatureSensorChecked",
-						1)) {
-					flag = flag
-							&& MobileUtils.clickOnElement(objectDefinition, testCase, "DischargeAirTemperatureSensor");
-					flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase, "DischargeAirTemperatureSensorChecked", 1);
-				}
-			}
-			if (iSUValue.contains("FLOOR TEMPERATURE SENSOR")) {
-				if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensorChecked", 1)) {
-					flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "FloorTemSensor");
-					flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensorChecked", 1);
-				}
-			} else {
-				if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensor", 1)) {
-					if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensorChecked", 1)) {
-						flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "FloorTemSensor");
-						flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensorChecked", 1);
-					}
-				}
-			}
-			if (iSUValue.contains("FAN COIL CHANGEOVER TEMPERATURE SENSOR")) {
-				if (!MobileUtils.isMobElementExists(objectDefinition, testCase,
-						"FanCoilChangeoverTemperatureSensorChecked", 1)) {
-					flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase,
-							"FanCoilChangeoverTemperatureSensor");
-					flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilChangeoverTemperatureSensorChecked", 1);
-				}
-			} else {
-				if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilChangeoverTemperatureSensor",
-						1)) {
-					if (MobileUtils.isMobElementExists(objectDefinition, testCase,
-							"FanCoilChangeoverTemperatureSensorChecked", 1)) {
-						flag = MobileUtils.clickOnElement(objectDefinition, testCase,
-								"FanCoilChangeoverTemperatureSensor");
-						flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilChangeoverTemperatureSensorChecked", 1);
-					}
-				}
-			}
+    public boolean selectWiredSensors(String iSUValue) {
+        boolean flag = true;
+        try {
+            if (iSUValue.contains("INDOOR AIR TEMPERATURE")) {
+                if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "IndoorAirTemperatureChecked", 1)) {
+                    flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "IndoorAirTemperature");
+                    flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase,
+                            "IndoorAirTemperatureChecked", 1);
+                }
+            } else {
+                if (MobileUtils.isMobElementExists(objectDefinition, testCase, "IndoorAirTemperatureChecked", 1)) {
+                    flag = MobileUtils.clickOnElement(objectDefinition, testCase, "IndoorAirTemperature");
+                    flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase,
+                            "IndoorAirTemperatureChecked", 1);
+                }
+            }
+            if (iSUValue.contains("RETURN AIR TEMPERATURE SENSOR")) {
+                if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "ReturnAirTemperatureSensorChecked",
+                        1)) {
+                    flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "ReturnAirTemperatureSensor");
+                    flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase,
+                            "ReturnAirTemperatureSensorChecked", 1);
+                }
+            } else {
+                if (MobileUtils.isMobElementExists(objectDefinition, testCase, "ReturnAirTemperatureSensorChecked",
+                        1)) {
+                    flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "ReturnAirTemperatureSensor");
+                    flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase,
+                            "ReturnAirTemperatureSensorChecked", 1);
+                }
+            }
+            if (iSUValue.contains("DISCHARGE AIR TEMPERATURE SENSOR")) {
+                if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "DischargeAirTemperatureSensorChecked",
+                        1)) {
+                    flag = flag
+                            && MobileUtils.clickOnElement(objectDefinition, testCase, "DischargeAirTemperatureSensor");
+                    flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase,
+                            "DischargeAirTemperatureSensorChecked", 1);
+                }
+            } else {
+                if (MobileUtils.isMobElementExists(objectDefinition, testCase, "DischargeAirTemperatureSensorChecked",
+                        1)) {
+                    flag = flag
+                            && MobileUtils.clickOnElement(objectDefinition, testCase, "DischargeAirTemperatureSensor");
+                    flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase,
+                            "DischargeAirTemperatureSensorChecked", 1);
+                }
+            }
+            if (iSUValue.contains("FLOOR TEMPERATURE SENSOR")) {
+                if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensorChecked", 1)) {
+                    flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "FloorTemSensor");
+                    flag = flag
+                            && MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensorChecked", 1);
+                }
+            } else {
+                if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensor", 1)) {
+                    if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorTemSensorChecked", 1)) {
+                        flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "FloorTemSensor");
+                        flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase,
+                                "FloorTemSensorChecked", 1);
+                    }
+                }
+            }
+            if (iSUValue.contains("FAN COIL CHANGEOVER TEMPERATURE SENSOR")) {
+                if (!MobileUtils.isMobElementExists(objectDefinition, testCase,
+                        "FanCoilChangeoverTemperatureSensorChecked", 1)) {
+                    flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase,
+                            "FanCoilChangeoverTemperatureSensor");
+                    flag = flag && MobileUtils.isMobElementExists(objectDefinition, testCase,
+                            "FanCoilChangeoverTemperatureSensorChecked", 1);
+                }
+            } else {
+                if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilChangeoverTemperatureSensor",
+                        1)) {
+                    if (MobileUtils.isMobElementExists(objectDefinition, testCase,
+                            "FanCoilChangeoverTemperatureSensorChecked", 1)) {
+                        flag = MobileUtils.clickOnElement(objectDefinition, testCase,
+                                "FanCoilChangeoverTemperatureSensor");
+                        flag = flag && !MobileUtils.isMobElementExists(objectDefinition, testCase,
+                                "FanCoilChangeoverTemperatureSensorChecked", 1);
+                    }
+                }
+            }
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return flag;
-	}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return flag;
+    }
 
     public boolean isFreezeProtectionScreen(int timeOut) {
         return MobileUtils.isMobElementExists(objectDefinition, testCase, "FreezeProtectionScreen");
@@ -4122,104 +4164,104 @@ public class FirstAlertDIYScreen extends MobileScreens {
     }
 
     public boolean selectDryContacts1(String iSUValue) {
-		boolean flag=true;
-		if (iSUValue.contains("FULL DRAIN PAN ALERT")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "FullDrainPanAlertChecked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "FullDrainPanAlert");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FullDrainPanAlertChecked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "FullDrainPanAlert");
-			} 
-		}
-		if (iSUValue.contains("DIRTY FILTER ALERT")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "DirtyFilterAlertChecked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "DirtyFilterAlert");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "DirtyFilterAlertChecked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "DirtyFilterAlert");
-			} 
-		}
-		if (iSUValue.contains("WATER LEAK ALERT")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "WaterLeakAlertChecked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "WaterLeakAlert");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "WaterLeakAlertChecked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "WaterLeakAlert");
-			} 
-		}
-		if (iSUValue.contains("SYSTEM SHUTDOWN ALERT")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "SystemShutdownAlertChecked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "SystemShutdownAlert");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "SystemShutdownAlertChecked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "SystemShutdownAlert");
-			} 
-		}
-		if (iSUValue.contains("SERVICE NEEDED ALERT")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "ServiceNeededAlertChecked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "ServiceNeededAlert");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "ServiceNeededAlertChecked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "ServiceNeededAlert");
-			} 
-		}
-		if (iSUValue.contains("FAN FAILURE ALERT")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "FanFailureAlertChecked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "FanFailureAlert");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FanFailureAlertChecked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "FanFailureAlert");
-			} 
-		}
-		return flag;
-	}
+        boolean flag = true;
+        if (iSUValue.contains("FULL DRAIN PAN ALERT")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "FullDrainPanAlertChecked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "FullDrainPanAlert");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FullDrainPanAlertChecked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "FullDrainPanAlert");
+            }
+        }
+        if (iSUValue.contains("DIRTY FILTER ALERT")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "DirtyFilterAlertChecked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "DirtyFilterAlert");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "DirtyFilterAlertChecked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "DirtyFilterAlert");
+            }
+        }
+        if (iSUValue.contains("WATER LEAK ALERT")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "WaterLeakAlertChecked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "WaterLeakAlert");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "WaterLeakAlertChecked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "WaterLeakAlert");
+            }
+        }
+        if (iSUValue.contains("SYSTEM SHUTDOWN ALERT")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "SystemShutdownAlertChecked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "SystemShutdownAlert");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "SystemShutdownAlertChecked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "SystemShutdownAlert");
+            }
+        }
+        if (iSUValue.contains("SERVICE NEEDED ALERT")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "ServiceNeededAlertChecked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "ServiceNeededAlert");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "ServiceNeededAlertChecked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "ServiceNeededAlert");
+            }
+        }
+        if (iSUValue.contains("FAN FAILURE ALERT")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "FanFailureAlertChecked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "FanFailureAlert");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "FanFailureAlertChecked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "FanFailureAlert");
+            }
+        }
+        return flag;
+    }
 
-	public boolean selectDryContacts2(String iSUValue) {
-		boolean flag=true;
-		if (iSUValue.contains("CUSTOM DRY CONTACT 1")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact1Checked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact1");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact1Checked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact1");
-			} 
-		}
-		if (iSUValue.contains("CUSTOM DRY CONTACT 2")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact2Checked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact2");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact2Checked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact2");
-			} 
-		}
-		if (iSUValue.contains("CUSTOM DRY CONTACT 3")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact3Checked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact3");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact3Checked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact3");
-			} 
-		}
-		if (iSUValue.contains("CUSTOM DRY CONTACT 4")) {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact4Checked",1)) {
-				flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact4");
-			} 
-		} else {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact4Checked",1)) {
-				flag = MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact4");
-			} 
-		}
-		return flag;
-	}
+    public boolean selectDryContacts2(String iSUValue) {
+        boolean flag = true;
+        if (iSUValue.contains("CUSTOM DRY CONTACT 1")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact1Checked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact1");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact1Checked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact1");
+            }
+        }
+        if (iSUValue.contains("CUSTOM DRY CONTACT 2")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact2Checked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact2");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact2Checked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact2");
+            }
+        }
+        if (iSUValue.contains("CUSTOM DRY CONTACT 3")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact3Checked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact3");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact3Checked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact3");
+            }
+        }
+        if (iSUValue.contains("CUSTOM DRY CONTACT 4")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact4Checked", 1)) {
+                flag = flag && MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact4");
+            }
+        } else {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CustomDryContact4Checked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "CustomDryContact4");
+            }
+        }
+        return flag;
+    }
 
     public boolean ISUAirFilterReplacementReminderDrpDwn(String ISUValue) {
         boolean flag = false;
@@ -4232,11 +4274,13 @@ public class FirstAlertDIYScreen extends MobileScreens {
         if (clickOnAirFilterReplacementReminderDrpDwn()) {
             if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 
-                flag = navigateTo.scrollToExpectedElementVertically("XPATH", "//*[contains(@content-desc,'" + ISUValue + "')]", "UP");
+                flag = navigateTo.scrollToExpectedElementVertically("XPATH",
+                        "//*[contains(@content-desc,'" + ISUValue + "')]", "UP");
                 flag = flag && MobileUtils.clickOnElement(testCase, "XPATH",
                         "//*[contains(@content-desc,'" + ISUValue + "')]");
             } else {
-                flag = navigateTo.scrollToExpectedElementVertically("XPATH", "//*[contains(@name,'" + ISUValue + "')]", "UP");
+                flag = navigateTo.scrollToExpectedElementVertically("XPATH", "//*[contains(@name,'" + ISUValue + "')]",
+                        "UP");
                 flag = flag && MobileUtils.clickOnElement(testCase, "XPATH", "//*[contains(@name,'" + ISUValue + "')]");
             }
         } else {
@@ -4254,237 +4298,246 @@ public class FirstAlertDIYScreen extends MobileScreens {
 
     public boolean selectISUValue(TestCases testCase, String ISUValue) {
         if (MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatTypeDrpDwn", 1))
-        	MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatTypeDrpDwn");
+            MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatTypeDrpDwn");
         String isuValueXpath = getDynamicLocatorAndroidIOS(testCase, ISUValue);
         return MobileUtils.clickOnElement(testCase, "XPATH", isuValueXpath);
     }
 
-	public boolean isStagingControlPrimaryHeatDifferentialScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "StagingControlPrimaryHeatDifferentialScreen", timeOut);
-	}
+    public boolean isStagingControlPrimaryHeatDifferentialScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "StagingControlPrimaryHeatDifferentialScreen",
+                timeOut);
+    }
 
-	public boolean isStagingControlCoolDifferentialScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "StagingControlCoolDifferentialScreen", timeOut);
-	}
+    public boolean isStagingControlCoolDifferentialScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "StagingControlCoolDifferentialScreen",
+                timeOut);
+    }
 
-	public boolean isHeatingStage3WiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "HeatingStage3WiringScreen", timeOut);
-	}
+    public boolean isHeatingStage3WiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "HeatingStage3WiringScreen", timeOut);
+    }
 
-	public boolean isStagingControlPrimaryHeatDifferential3Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "StagingControlPrimaryHeatDifferential3Screen", timeOut);	}
+    public boolean isStagingControlPrimaryHeatDifferential3Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase,
+                "StagingControlPrimaryHeatDifferential3Screen", timeOut);
+    }
 
-	public boolean isHeatCyclePerHourStage3Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "HeatCyclePerHourStage3Screen", timeOut);
-	}
-	
-	public boolean isMinNonCompressorOnTimeScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "MinNonCompressorOnTimeScreen", timeOut);
-	}
+    public boolean isHeatCyclePerHourStage3Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "HeatCyclePerHourStage3Screen", timeOut);
+    }
 
-	public boolean setMinNonCompressorOnTime(TestCases testCase, String ISUValue) {
-		ISUValue=ISUValue.toUpperCase();
-		boolean flag = false;
-		String currentVal = getCurrentMinNonCompressorOnTime().toUpperCase();
-		Integer currentValue = currentVal.toUpperCase().replace("MINUTES", "").replace("MINUTE", "").replace("MIN", "").contains("OFF") ? 0
-				: Integer.valueOf(currentVal);
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			ISUValue = "OFF";
-		}
-		if (currentVal.contains(ISUValue)) {
-			flag = true;
-		} else {
-			Integer valueOf;
-			if (ISUValue.contains("OFF")) {
-				valueOf = 0;
-			} else {
-				ISUValue=ISUValue.toUpperCase().replace("MINUTES", "").replace("MINUTE", "").replace("MIN", "").trim();
-				valueOf = Integer.parseInt(ISUValue);
-			}
-			if (valueOf <= 15 && valueOf >= 0) {
-				while (!flag) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = ClickOnMinNonCompressorOnTimeIncrease();
-						currentVal = getCurrentMinNonCompressorOnTime();
-					} else if (valueOf < currentValue) {
-						flag = ClickOnMinNonCompressorOnTimeDecrease();
-						currentVal = getCurrentMinNonCompressorOnTime();
-					}
-					currentValue = currentVal.toUpperCase().replace("MINUTES", "").replace("MINUTE", "").replace("MIN", "").trim().contains("OFF") ? 0
-							: Integer.valueOf(currentVal);
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should be between off to 15Min, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-		return flag;
-	}
+    public boolean isMinNonCompressorOnTimeScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "MinNonCompressorOnTimeScreen", timeOut);
+    }
 
-	public boolean ClickOnMinNonCompressorOnTimeDecrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MinNonCompressorOnTimeDecrease");
-	}
+    public boolean setMinNonCompressorOnTime(TestCases testCase, String ISUValue) {
+        ISUValue = ISUValue.toUpperCase();
+        boolean flag = false;
+        String currentVal = getCurrentMinNonCompressorOnTime().toUpperCase();
+        Integer currentValue = currentVal.toUpperCase().replace("MINUTES", "").replace("MINUTE", "").replace("MIN", "")
+                .contains("OFF") ? 0
+                        : Integer.valueOf(currentVal);
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            ISUValue = "OFF";
+        }
+        if (currentVal.contains(ISUValue)) {
+            flag = true;
+        } else {
+            Integer valueOf;
+            if (ISUValue.contains("OFF")) {
+                valueOf = 0;
+            } else {
+                ISUValue = ISUValue.toUpperCase().replace("MINUTES", "").replace("MINUTE", "").replace("MIN", "")
+                        .trim();
+                valueOf = Integer.parseInt(ISUValue);
+            }
+            if (valueOf <= 15 && valueOf >= 0) {
+                while (!flag) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = ClickOnMinNonCompressorOnTimeIncrease();
+                        currentVal = getCurrentMinNonCompressorOnTime();
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnMinNonCompressorOnTimeDecrease();
+                        currentVal = getCurrentMinNonCompressorOnTime();
+                    }
+                    currentValue = currentVal.toUpperCase().replace("MINUTES", "").replace("MINUTE", "")
+                            .replace("MIN", "").trim().contains("OFF") ? 0
+                                    : Integer.valueOf(currentVal);
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should be between off to 15Min, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+        return flag;
+    }
 
-	public boolean ClickOnMinNonCompressorOnTimeIncrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MinNonCompressorOnTimeIncrease");
-	}
+    public boolean ClickOnMinNonCompressorOnTimeDecrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MinNonCompressorOnTimeDecrease");
+    }
 
-	public String getCurrentMinNonCompressorOnTime() {
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMinNonCompressorOnTime")
-					.getAttribute("content-desc");
-		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMinNonCompressorOnTime")
-					.getAttribute("label");
-		}
-	}
+    public boolean ClickOnMinNonCompressorOnTimeIncrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MinNonCompressorOnTimeIncrease");
+    }
 
-	public boolean selectRadiantFloorHeatSensing(TestCases testCase, String iSUValue) {
-		switch (iSUValue.toUpperCase()) {
-		case "AIR SENSOR ONLY": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "AirSensorOnly");
-		}
-		case "AIR AND FLOOR SENSORS": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "AirandFloorSensor");
-		}
-		default: {
-			return false;
-		}
-		}
-	}
+    public String getCurrentMinNonCompressorOnTime() {
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMinNonCompressorOnTime")
+                    .getDomAttribute("content-desc");
+        } else {
+            return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMinNonCompressorOnTime")
+                    .getDomAttribute("label");
+        }
+    }
 
-	public boolean isRadiantFloorHeatSensingScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "RadiantFloorHeatSensingScreen", timeOut);
-	}
+    public boolean selectRadiantFloorHeatSensing(TestCases testCase, String iSUValue) {
+        switch (iSUValue.toUpperCase()) {
+            case "AIR SENSOR ONLY": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "AirSensorOnly");
+            }
+            case "AIR AND FLOOR SENSORS": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "AirandFloorSensor");
+            }
+            default: {
+                return false;
+            }
+        }
+    }
 
-	public boolean setFloorSensorWiringAssignment(TestCases testCase, String iSUValue) {
-		switch (iSUValue.toUpperCase()) {
-		case "ISU_TEMP_SENSOR_WIRING_ASSIGNMENT_1": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "IsuTempSensorWiringAssg1");
-		}
-		case "THERMOSTAT S":
-		case "THERMOSTAT S1":{
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ThermostatS1");
-		}
-		default: {
-			return false;
-		}
-		}
-	}
+    public boolean isRadiantFloorHeatSensingScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "RadiantFloorHeatSensingScreen", timeOut);
+    }
 
-	public boolean isFloorSensorWiringAssignmentScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorSensorWiringAssignmentScreen", timeOut);
-	}
+    public boolean setFloorSensorWiringAssignment(TestCases testCase, String iSUValue) {
+        switch (iSUValue.toUpperCase()) {
+            case "ISU_TEMP_SENSOR_WIRING_ASSIGNMENT_1": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "IsuTempSensorWiringAssg1");
+            }
+            case "THERMOSTAT S":
+            case "THERMOSTAT S1": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ThermostatS1");
+            }
+            default: {
+                return false;
+            }
+        }
+    }
 
-	public boolean isMinFloorTempLimitScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "MinFloorTempLimitScreen", timeOut);
-	}
+    public boolean isFloorSensorWiringAssignmentScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorSensorWiringAssignmentScreen", timeOut);
+    }
 
-	public boolean isMaxFloorTempLimitScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "MaxFloorTempLimitScreen", timeOut);
-	}
+    public boolean isMinFloorTempLimitScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "MinFloorTempLimitScreen", timeOut);
+    }
 
-	public boolean setMinFloorTempLimit(TestCases testCase, String iSUValue) {
-		boolean flag = true;
-		Integer valueOf = Integer.valueOf(iSUValue.toUpperCase().replace("°", "").replace("DEG", ""));
-		Integer currentValue = Integer.valueOf(getMinFloorTempLimit());
-		if (Integer.valueOf(iSUValue) >= 40) {
-			while (!flag) {
-				if (valueOf == currentValue) {
-					flag = true;
-					break;
-				} else if (valueOf > currentValue) {
-					flag = ClickMinFloorTempLimitIncrease();
-					currentValue = Integer.valueOf(getMinFloorTempLimit());
-				} else if (valueOf < currentValue) {
-					flag = ClickOnMinFloorTempLimitDecrease();
-					currentValue = Integer.valueOf(getMinFloorTempLimit());
-				}
-			}
-		}
-		return flag;
-	}
+    public boolean isMaxFloorTempLimitScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "MaxFloorTempLimitScreen", timeOut);
+    }
 
-	private boolean ClickOnMinFloorTempLimitDecrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MinFloorTempLimitDecrease");
-	}
+    public boolean setMinFloorTempLimit(TestCases testCase, String iSUValue) {
+        boolean flag = true;
+        Integer valueOf = Integer.valueOf(iSUValue.toUpperCase().replace("°", "").replace("DEG", ""));
+        Integer currentValue = Integer.valueOf(getMinFloorTempLimit());
+        if (Integer.valueOf(iSUValue) >= 40) {
+            while (!flag) {
+                if (valueOf == currentValue) {
+                    flag = true;
+                    break;
+                } else if (valueOf > currentValue) {
+                    flag = ClickMinFloorTempLimitIncrease();
+                    currentValue = Integer.valueOf(getMinFloorTempLimit());
+                } else if (valueOf < currentValue) {
+                    flag = ClickOnMinFloorTempLimitDecrease();
+                    currentValue = Integer.valueOf(getMinFloorTempLimit());
+                }
+            }
+        }
+        return flag;
+    }
 
-	private boolean ClickMinFloorTempLimitIncrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MinFloorTempLimitIncrease");
-	}
+    private boolean ClickOnMinFloorTempLimitDecrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MinFloorTempLimitDecrease");
+    }
 
-	private String getMinFloorTempLimit() {
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMinFloorTempLimit")
-					.getAttribute("content-desc").replace("°", "");
-		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMinFloorTempLimit")
-					.getAttribute("label").replace("°", "");
-		}
-	}
+    private boolean ClickMinFloorTempLimitIncrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MinFloorTempLimitIncrease");
+    }
 
-	public boolean setMaxFloorTempLimit(TestCases testCase, String iSUValue) {
-		boolean flag = true;
-		Integer valueOf = Integer.valueOf(iSUValue.toUpperCase().replace("°", "").replace("DEG", ""));
-		Integer currentValue = Integer.valueOf(getMaxFloorTempLimit());
-		if (Integer.valueOf(iSUValue) <= 99) {
-			while (!(valueOf == currentValue)) {
-				if (valueOf == currentValue) {
-					flag = true;
-					break;
-				} else if (valueOf > currentValue) {
-					flag = ClickMaxFloorTempLimitIncrease();
-					currentValue = Integer.valueOf(getMinFloorTempLimit());
-				} else if (valueOf < currentValue) {
-					flag = ClickOnMaxFloorTempLimitDecrease();
-					currentValue = Integer.valueOf(getMinFloorTempLimit());
-				}
-			}
-		}
-		return flag;
-	}
+    private String getMinFloorTempLimit() {
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMinFloorTempLimit")
+                    .getDomAttribute("content-desc").replace("°", "");
+        } else {
+            return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMinFloorTempLimit")
+                    .getDomAttribute("label").replace("°", "");
+        }
+    }
 
-	private boolean ClickOnMaxFloorTempLimitDecrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxFloorTempLimitDecrease");
-	}
+    public boolean setMaxFloorTempLimit(TestCases testCase, String iSUValue) {
+        boolean flag = true;
+        Integer valueOf = Integer.valueOf(iSUValue.toUpperCase().replace("°", "").replace("DEG", ""));
+        Integer currentValue = Integer.valueOf(getMaxFloorTempLimit());
+        if (Integer.valueOf(iSUValue) <= 99) {
+            while (!(valueOf == currentValue)) {
+                if (valueOf == currentValue) {
+                    flag = true;
+                    break;
+                } else if (valueOf > currentValue) {
+                    flag = ClickMaxFloorTempLimitIncrease();
+                    currentValue = Integer.valueOf(getMinFloorTempLimit());
+                } else if (valueOf < currentValue) {
+                    flag = ClickOnMaxFloorTempLimitDecrease();
+                    currentValue = Integer.valueOf(getMinFloorTempLimit());
+                }
+            }
+        }
+        return flag;
+    }
 
-	private boolean ClickMaxFloorTempLimitIncrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxFloorTempLimitIncrease");
-	}
+    private boolean ClickOnMaxFloorTempLimitDecrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxFloorTempLimitDecrease");
+    }
 
-	private String getMaxFloorTempLimit() {
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMaxFloorTempLimit")
-					.getAttribute("content-desc").replace("°", "");
-		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMaxFloorTempLimit")
-					.getAttribute("label").replace("°", "");
-		}
-	}
+    private boolean ClickMaxFloorTempLimitIncrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxFloorTempLimitIncrease");
+    }
 
-	public boolean isFloorEconomyModeScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorEconomyModeScreen", timeOut);
-	}
+    private String getMaxFloorTempLimit() {
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMaxFloorTempLimit")
+                    .getDomAttribute("content-desc").replace("°", "");
+        } else {
+            return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentMaxFloorTempLimit")
+                    .getDomAttribute("label").replace("°", "");
+        }
+    }
 
-	public boolean clickOnDenaliTradeThermostat() {
+    public boolean isFloorEconomyModeScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FloorEconomyModeScreen", timeOut);
+    }
+
+    public boolean clickOnDenaliTradeThermostat() {
         NavigatingScreenToScreeninFA navigateTo = new NavigatingScreenToScreeninFA(testCase);
         String model_Name = MqttManager.getModelNumber();
-		if(model_Name.contains("X12") || model_Name.contains("X8V")) {
-			model_Name="S1200";
-		}else if(model_Name.contains("X11") || model_Name.contains("X8S")) {
-			model_Name="S1100";
-		}else if(model_Name.contains("X10") || model_Name.contains("X7S")) {
-			model_Name="S1000";
-		}else if(model_Name.contains("X9") || model_Name.contains("X7B")) {
-			model_Name="S900";
-		}
-        if (navigateTo.scrollToExpectedElement("XPATH","//*[contains(@content-desc,'ElitePRO') and contains(@content-desc,'"+model_Name+"')]")) {
-            return MobileUtils.clickOnElement(testCase, "XPATH", "//*[contains(@content-desc,'ElitePRO') and contains(@content-desc,'"+model_Name+"')]");
+        if (model_Name.contains("X12") || model_Name.contains("X8V")) {
+            model_Name = "S1200";
+        } else if (model_Name.contains("X11") || model_Name.contains("X8S")) {
+            model_Name = "S1100";
+        } else if (model_Name.contains("X10") || model_Name.contains("X7S")) {
+            model_Name = "S1000";
+        } else if (model_Name.contains("X9") || model_Name.contains("X7B")) {
+            model_Name = "S900";
+        }
+        if (navigateTo.scrollToExpectedElement("XPATH",
+                "//*[contains(@content-desc,'ElitePRO') and contains(@content-desc,'" + model_Name + "')]")) {
+            return MobileUtils.clickOnElement(testCase, "XPATH",
+                    "//*[contains(@content-desc,'ElitePRO') and contains(@content-desc,'" + model_Name + "')]");
         } else {
             Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
                     "Not able to scroll to Fuji Thermostat element.");
@@ -4492,1451 +4545,1456 @@ public class FirstAlertDIYScreen extends MobileScreens {
         }
     }
 
-	public boolean isControlModeScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "ControlModeScreen", timeOut);
-	}
-	
-	public boolean ISUEquipmentType(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "GAS STANDARD EFFICIENCY": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalGasStandardEfficiency");
-		}
-		case "GAS HIGH EFFICIENCY": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalGasHighEfficiency");
-		}
-		case "OIL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalOil");
-		}
-		case "ELECTRIC": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalElectric");
-		}
-		case "HOT WATER FAN COIL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalHotWaterFanCoil");
-		}
-		case "AIR TO AIR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpAirToAir");
-		}
-		case "GEOTHERMAL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpGeothermal");
-		}
-		case "HOT WATER": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "BoilerHotWater");
-		}
-		case "STEAM": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "BoilerSteam");
-		}
-		case "HOT WATER RADIANT HEAT":
-		case "HOT WATER - RADIANT HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantHeat");
-		}
-		case "HOT WATER RADIANT FLOOR HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantFloorHeat");
-		}
-		case "HOT WATER - FAN COIL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FCHotWaterFanCoil");
-		}
-		case "2 PIPE FAN COIL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "2PipeFanCoil");
-		}
-		case "4 PIPE FAN COIL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "4PipeFanCoil");
-		}
-		default: {
-			Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE,
-					"User Expected ISU Value not available For Fuel Source System, User Expected ISU Value is :"
-							+ ISUValue);
-			return false;
-		}
-		}
-	}
-
-	public boolean selectOccupancySensing(String iSUValue) {
-		switch (iSUValue.toUpperCase()) {
-		case "NO REMOTE SETBACK": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "NoRemoteSetbackOccupancySensing");
-		}
-		case "DRY CONTACT OR L TERMINAL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "DryContactOrLTerminal");
-		}
-		case "WIRELESS SENSOR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "WirelessSensor");
-		}
-		case "THERMOSTAT INTERNAL SENSOR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ThermostatInternalSensor");
-		}
-		case "Wireless and Internal sensors": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "WirelessInternalSensor");
-		}
-		default:
-			return false;
-		}
-	}
-
-	public boolean turnOffOnTempAlert(TestCases testCase, String isuType, String ISUValue) {
-//		boolean currentTempStatus = MobileUtils.isMobElementExists(objectDefinition, testCase, "MaxMinSetpointValue");
-		
-		String ObjectFileVariableName= isuType.toUpperCase().contains("HIGH")?"HighTemAlertCheckBox":"LowTemAlertCheckBox";
-		boolean currentTempStatus = MobileUtils.isMobElementExists(objectDefinition, testCase, ObjectFileVariableName);
-		System.out.println("ObjectFileVariableName:"+ObjectFileVariableName+",currentTempStatus:"+currentTempStatus);
-		boolean flag = false;
-		if (!currentTempStatus) {
-			System.out.println("Turn off checkbox of ISU Type: " + isuType + ": was disabled");
-			switch (ISUValue.toUpperCase()) {
-			case "DEFAULT":
-			case "OFF":
-			case "":
-				MobileUtils.clickOnElement(objectDefinition, testCase, ObjectFileVariableName);
-//				return !MobileUtils.isMobElementExists(objectDefinition, testCase, ObjectFileVariableName);
-				return !MobileUtils.isMobElementExists(objectDefinition, testCase, "MaxMinAlertValue");
-			default:
-				Integer valueOf = Integer.valueOf(ISUValue);
-				Integer currentValue = Integer.valueOf(getMaxMinAlertValue().replace(",", ""));
-				if (Integer.valueOf(ISUValue) <= 99 || Integer.valueOf(ISUValue) >= 40) {
-					while (!(valueOf == currentValue)) {
-						if (valueOf == currentValue) {
-							flag = true;
-							break;
-						} else if (valueOf > currentValue) {
-							flag = clickOnMaxMinAlertValueIncrease();
-							currentValue = Integer.valueOf(getMaxMinAlertValue());
-						} else if (valueOf < currentValue) {
-							flag = clickOnMaxMinAlertValueDecrease();
-							currentValue = Integer.valueOf(getMaxMinAlertValue());
-						}
-					}
-				} else {
-					Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-							"User Entered ISU Value not applicable. its should not be exceed 40 to 90, User entered value is : "
-									+ ISUValue);
-					flag = false;
-				}
-				return flag;
-			}
-		} else {
-			switch (ISUValue.toUpperCase()) {
-			case "DEFAULT":
-			case "OFF":
-			case "":
-				return true;
-			default:
-				MobileUtils.clickOnElement(objectDefinition, testCase, ObjectFileVariableName);
-				MobileUtils.isMobElementExists(objectDefinition, testCase, "MaxMinAlertValue");
-				Integer valueOf = Integer.valueOf(ISUValue);
-				Integer currentValue = Integer.valueOf(getMaxMinAlertValue().replace(",", ""));
-				if (Integer.parseInt(ISUValue) <= 90 || Integer.parseInt(ISUValue) >= 40) {
-					while (!(valueOf == currentValue)) {
-						if (valueOf == currentValue) {
-							flag = true;
-							break;
-						} else if (valueOf > currentValue) {
-							flag = clickOnMaxMinAlertValueIncrease();
-							currentValue = Integer.valueOf(getMaxMinAlertValue());
-						} else if (valueOf < currentValue) {
-							flag = clickOnMaxMinAlertValueDecrease();
-							currentValue = Integer.valueOf(getMaxMinAlertValue());
-						}
-					}
-				} else {
-					Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-							"User Entered ISU Value not applicable. its should not be exceed 40 to 90, User entered value is : "
-									+ ISUValue);
-					flag = false;
-				}
-				return flag;
-			}
-		}
-	}
-
-	public boolean clickDropDownAndSelectISUValue(TestCases testCase, String ISUValue) {
-		ISUValue=ISUValue.toUpperCase();
-		ISUValue=ISUValue.contains("DEG")? ISUValue.replace("DEG", "°"):ISUValue;
-		String platform = testCase.getMobileDriver().getPlatformName().toUpperCase();
-		String dropDownLocator;
-		if (ISUValue.isEmpty() || ISUValue.equalsIgnoreCase("DEFAULT"))
-			return true;
-		if (platform.contains("ANDROID")) {
-			dropDownLocator = "(//*[@class='android.widget.ImageView'])[last()]";
-		} else {
-			dropDownLocator = "//*[@type='XCUIElementTypeButton' and not(@label='Next') and not(@label='Exit') and not(@label='Back') and not(@label='More Info')][1]";
-		}
-		MobileUtils.clickOnElement(testCase, "XPATH", dropDownLocator);
-		String isuValueXpath = getDynamicLocatorAndroidIOS(testCase, ISUValue);
-		return MobileUtils.clickOnElement(testCase, "XPATH", isuValueXpath);
-	}
-
-	public String getDynamicLocatorAndroidIOS(TestCases testCase, String value) {
-		String platform = Objects.requireNonNull(testCase.getMobileDriver().getPlatformName()).toUpperCase();
-		String locatorXpath;
-		if (platform.contains("ANDROID")) {
-			locatorXpath = "//*[contains(translate(@content-desc, ''ABCDEFGHIJKLMNOPQRSTUVWXYZ'', ''abcdefghijklmnopqrstuvwxyz''), ''{0}'')]";
-		} else {
-			locatorXpath = "//*[contains(translate(@name, ''ABCDEFGHIJKLMNOPQRSTUVWXYZ'', ''abcdefghijklmnopqrstuvwxyz''), ''{0}'')]";
-		}
-		return MessageFormat.format(locatorXpath, value.toLowerCase());
-	}
-
-	public boolean isEquipmentTypeScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "EquipmentTypeScreen", timeOut);
-	}
-
-	public boolean isISUScreenPresent(String iSUType, int timeOut) {
-		String xpath = getDynamicLocatorAndroidIOS(testCase, iSUType);
-		return MobileUtils.isMobElementExists("XPATH", xpath, testCase, 1);
-	}
-	public boolean isISUDropDownButtonPresent() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "ISUDropDownButton");
-	}
-
-	public boolean selectRoomName() {
-		String roomName = testCase.getTestCaseInputs().getInputValue("LOCATION1_DEVICE1_NAME");
-		boolean flag = false;
-		if (isRoomSelectScreen()) {
-			NavigatingScreenToScreeninFA navigateTo = new NavigatingScreenToScreeninFA(testCase);
-			if (navigateTo.scrollToExpectedElementVertically("XPATH", "//*[contains(@content-desc,'" + roomName + "')]",
-					"UP")) {
-				flag = MobileUtils.clickOnElement(testCase, "XPATH", "//*[contains(@content-desc,'" + roomName + "')]");
-			} else {
-				if (MobileUtils.isMobElementExists(objectDefinition, testCase, "AddRoomBtn")) {
-					if (MobileUtils.clickOnElement(objectDefinition, testCase, "AddRoomBtn")) {
-						if (MobileUtils.isMobElementExists(objectDefinition, testCase, "RoomNameInput", 3)) {
-							Keyword.ReportStep_Pass(testCase, "DeviceNameInput is present.");
-							WebElement mobElement = MobileUtils.getMobElement(objectDefinition, testCase,
-									"RoomNameInput");
-							mobElement.click();
-							mobElement.sendKeys(roomName);
-							flag = true;
-						} else {
-							Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE,
-									"DeviceNameInput is not present");
-						}
-					}
-				} else {
-					Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE, "Add Room Btn is Not Present.");
-				}
-			}
-			SystemState.getStatus().setTstatName(roomName);
-			flag = flag && clickOnNextButton();
-		} else {
-			Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE, "Room Screen is Not Present.");
-		}
-		return flag;
-	}
-
-	public boolean isRoomSelectScreen() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "SelectRoomScreen");
-	}
-	
-	public String getMaxMinAlertValue() {
-		String getText = null;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "MaxMinAlertValue")
-					.getAttribute("content-desc");
-		} else {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "MaxMinAlertValue").getAttribute("label");
-
-		}
-		if (getText.contains("°")) {
-			getText = getText.replace("°", "");
-		}
-		return getText;
-	}
-	
-	public boolean clickOnMaxMinAlertValueDecrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxMinAlertValueDecrease");
-	}
-
-	public boolean clickOnMaxMinAlertValueIncrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxMinAlertValueIncrease");
-	}
-
-	public boolean isOutdoorHumidityOffsetScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "OutdoorHumidityOffsetScreen", 2);
-	}
-
-	public boolean isOutdoorTempOffsetScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "OutdoorTempOffsetScreen", 2);
-	}
-	
-	public boolean isLTerminalAlertScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "LTerminalAlertScreen", timeOut);
-	}
-
-	public boolean ISULTerminalAlert(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NONE": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HPFailNone");
-		}
-		case "HEAT PUMP FAILURE INDICATION": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpFailureIndication");
-		}
-
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isBackupHeatWiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatWiringScreen", timeOut);
-	}
-
-	public boolean ISUBackupHeatWiring(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "THERMOSTAT U": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatWiringThermostatU");
-		}
-		case "THERMOSTAT L": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatWiringThermostatL");
-		}
-		case "THERMOSTAT AUX": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatWiringThermostatAux");
-		}
-		default: {
-			return false;
-		}
-		}
-	}
-
-	public boolean isHeatPumpStage2WiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "HeatPumpStage2WiringScreen", timeOut);
-	}
-
-	public boolean ISUHeatPumpStage2Wiring(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "None": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpStage2WiringNone");
-		}
-		case "THERMOSTAT U": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpStage2WiringThermostatU");
-		}
-		case "THERMOSTAT L": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpStage2WiringThermostatL");
-		}
-
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean ISUHeatStagingControl(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NO": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatStagingControlNo");
-		}
-		case "YES": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatStagingControlYes");
-		}
-		default: {
-			return false;
-		}
-		}
-	}
-
-	public boolean selectBackupHeatTypeNewISUValue(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NONE": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HumTypeNone");
-		}
-		case "STANDARD EFFICIENCY GAS FORCED AIR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "StandardEffGasForcedAir");
-		}
-		case "HIGH EFFICIENCY GAS FORCED AIR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HighEffGasForcedAir");
-		}
-		case "OIL FORCED AIR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "OilForcedAir");
-		}
-		case "HOT WATER FAN COIL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterFanCoil");
-		}
-		case "HOT WATER RADIANT HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantHeat");
-		}
-		case "OTHER": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "Other");
-		}
-		case "ELECTRIC FORCED AIR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "BckupHtElectricForcedAir");
-		}
-		default:
-			return false;
-		}
-	}
-
-	public boolean isHeatStagingControlScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "HeatStagingControlScreen", timeOut);
-	}
-
-	public boolean isBackupHeatOperationScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatOperationScreen", timeOut);
-	}
-
-	public boolean ISUBackupHeatOperation(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NOT ALLOWED TO RUN WITH PRIMARY HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatNotAllowedWithPrimaryHeat");
-		}
-		case "ALLOWED TO RUN WITH PRIMARY HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatAllowedWithPrimaryHeat");
-		}
-		default: {
-			return false;
-		}
-		}
-	}
-
-	public boolean isEmergencyHeatOperationScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "EmergencyHeatOperationScreen", timeOut);
-	}
-
-	public boolean ISUEmergencyHeatOperation(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NOT ALLOWED TO RUN WITH PRIMARY HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "EmergencyHeatNotAllowedWithPrimaryHeat");
-		}
-		case "ALLOWED TO RUN WITH PRIMARY HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "EmergencyHeatAllowedWithPrimaryHeat");
-		}
-
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isBackupHeatStage2DifferentialScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatStage2DifferentialScreen",
-				timeOut);
-	}
-
-	public String getBackUpHeatStage2Differential() {
-		String getText = null;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackupHeatStage2DifferentialValue")
-					.getAttribute("content-desc");
-		} else {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackupHeatStage2DifferentialValue")
-					.getAttribute("label");
-
-		}
-		if (getText.contains("°")) {
-			getText = getText.replace("°", "");
-		}
-		return getText;
-	}
-
-	public boolean clickOnBackupHeatStage2DifferentialDecreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "AuxHeatDifferentialDecrease");
-	}
-
-	public boolean clickOnBackupHeatStage2DifferentialIncreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "AuxHeatDifferentialIncrease");
-	}
-
-	public boolean ISUBackupHeatStage2Differential(String ISUValue) {
-		boolean flag = false;
-		String isuValue = ISUValue;
-		if (isuValue.contains("DEG")) {
-			isuValue = isuValue.split("DEG")[0].trim();
-		}
-		if (ISUValue.toUpperCase().contains("DEFAULT") || ISUValue.toUpperCase().contains("COMFORT")) {
-			if(!MobileUtils.isMobElementExists(objectDefinition, testCase, "ComfortChecked",1)) {
-				flag= MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
-			}else {
-				flag= true;
-			}
-		} else {
-			Integer valueOf = Integer.valueOf(isuValue);
-			Integer currentValue = Integer.valueOf(getBackUpHeatStage2Differential());
-			if (Integer.valueOf(isuValue) <= 2 && Integer.valueOf(isuValue) >= 0) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf > currentValue) {
-						flag = clickOnBackupHeatStage2DifferentialIncreaseButton();
-						currentValue = Integer.valueOf(getBackUpHeatStage2Differential());
-					} else if (valueOf < currentValue) {
-						flag = clickOnBackupHeatStage2DifferentialDecreaseButton();
-						currentValue = Integer.valueOf(getBackUpHeatStage2Differential());
-					}
-				}
-				flag = true;
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should not be exceed 0,2 to 16, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-		return flag;
-	}
-
-	public boolean isBackupHeatCyclesPerHourStage2Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatCyclesPerHourStage2Screen",
-				timeOut);
-	}
-
-	public String getBackUpHeatCyclePerHourStage2Value() {
-		String getText = null;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackUpHeatCyclePerHourStage2Value")
-					.getAttribute("content-desc");
-		} else {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackUpHeatCyclePerHourStage2Value")
-					.getAttribute("label");
-
-		}
-		return getText;
-	}
-
-	public boolean ClickOnBackUpHeatCyclePerHourStage2Decrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "BackUpHeatCyclePerHourStage2Decrease");
-	}
-
-	public boolean ClickOnBackUpHeatCyclePerHourStage2Increase() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "BackUpHeatCyclePerHourStage2Increase");
-	}
-
-	public boolean setISUBackUpHeatCyclePerHourStage2(String ISUValue) {
-		boolean flag = false;
-		Integer currentValue = Integer.valueOf(getBackUpHeatCyclePerHourStage2Value());
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			ISUValue = "9";
-		}
-		Integer valueOf = Integer.valueOf(ISUValue);
-		if (valueOf == currentValue) {
-			flag = true;
-		} else {
-			if (Integer.valueOf(ISUValue) <= 12 || Integer.valueOf(ISUValue) >= 1) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf > currentValue) {
-						flag = ClickOnBackUpHeatCyclePerHourStage2Increase();
-						currentValue = Integer.valueOf(getBackUpHeatCyclePerHourStage2Value());
-					} else if (valueOf < currentValue) {
-						flag = ClickOnBackUpHeatCyclePerHourStage2Decrease();
-						currentValue = Integer.valueOf(getBackUpHeatCyclePerHourStage2Value());
-					}
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should not be exceed 12, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-		return flag;
-	}
-
-	public boolean isExternalFossilFuelKitScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "ExternalFossilFuelKitScreen", timeOut);
-	}
-
-	public boolean ISUExternalFossilFuelKit(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "THERMOSTAT CONTROLS BACKUP HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ThermostatControlsBackupHeat");
-		}
-		case "EXTERNAL FOSSIL FUEL KIT CONTROLS BACKUP HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ExternalFossilFuelKitControlsBackupHeat");
-		}
-
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isCoolStagingControlScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolStagingControlScreen", timeOut);
-	}
-
-	public boolean ISUCoolStagingControl(String ISUValue) {
-		return selectISUValue(testCase, ISUValue);
-
-	}
-
-	public boolean isStagingControlCompressorCoolStage2DifferentialScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorCoolStage2DifferentialScreen",
-				timeOut);
-	}
-
-	public boolean ClickOnCompressorCoolStage2DifferentialDecreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "CompressorCoolStage2DifferentialDecrease");
-	}
-
-	public boolean ClickOnCompressorCoolStage2DifferentialIncreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "CompressorCoolStage2DifferentialIncrease");
-	}
-
-	public String getCompressorCoolStage2Differential() {
-		String getText = null;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "CompressorCoolStage2DifferentialValue")
-					.getAttribute("content-desc");
-		} else {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "CompressorCoolStage2DifferentialValue")
-					.getAttribute("label");
-
-		}
-		if (getText.contains("°")) {
-			getText = getText.replace("°", "");
-		}
-		return getText;
-	}
-
-	public boolean ISUStagingControlCompressorCoolStage2Differential(String ISUValue) {
-
-		boolean flag = false;
-		String isuValue = ISUValue;
-		if (isuValue.contains("DEG")) {
-			isuValue = isuValue.split("DEG")[0].trim();
-		}
-		if (ISUValue.toUpperCase().contains("COMFORT")) {
-//			To enable this option need to have ID for the element
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
-				MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
-				flag = true;
-				System.out.println("Set to Default Settings : Comfort ");
-			} else {
-				System.out.println("Already set as Default Settings : Comfort ");
-				flag = true;
-			}
-		} else {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
-				MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
-			}
-			Integer valueOf = Integer.valueOf(isuValue);
-			Integer currentValue = Integer.valueOf(getCompressorCoolStage2Differential());
-			if (Integer.valueOf(isuValue) <= 1 && Integer.valueOf(isuValue) >= 0) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = ClickOnAuxHeatDifferentialIncreaseButton();
-						currentValue = Integer.valueOf(getCompressorCoolStage2Differential());
-					} else if (valueOf < currentValue) {
-						flag = ClickOnAuxHeatDifferentialDecreaseButton();
-						currentValue = Integer.valueOf(getCompressorCoolStage2Differential());
-					}
-				}
-				flag = true;
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. User entered value is : " + ISUValue);
-				flag = false;
-			}
-		}
-		return flag;
-	}
-
-	public boolean isStagingControlCompressorHeatDifferentialStage2Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Screen",
-				timeOut);
-	}
-
-	public boolean ClickOnCompressorHeatDifferentialStage2DecreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "CompressorHeatDifferentialStage2Decrease");
-	}
-
-	public boolean ClickOnCompressorHeatDifferentialStage2IncreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "CompressorHeatDifferentialStage2Increase");
-	}
-
-	public String getCompressorHeatDifferentialStage2() {
-		String getText = null;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")
-					.getAttribute("content-desc");
-		} else {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")
-					.getAttribute("label");
-
-		}
-		if (getText.contains("°")) {
-			getText = getText.replace("°", "");
-		}
-		return getText;
-	}
-
-	public boolean ISUStagingControlCompressorHeatDifferentialStage2(String ISUValue) {
-
-		boolean flag = false;
-		String isuValue = ISUValue;
-		String getText = null;
-
-		if (isuValue.contains("DEG")) {
-			isuValue = isuValue.split("DEG")[0].trim();
-		}
-		if (ISUValue.toUpperCase().contains("COMFORT")) {
-//			To enable this option need to have ID for the element
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
-				MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
-				flag = true;
-				System.out.println("Set to Default Settings : Comfort ");
-			} else {
-				System.out.println("Already set as Default Settings : Comfort ");
-				flag = true;
-			}
-		} else {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
-				MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
-			}
-			Integer valueOf = Integer.valueOf(isuValue);
-			Integer currentValue = Integer.valueOf(getCompressorHeatDifferentialStage2());
-			if (Integer.valueOf(isuValue) <= 1 && Integer.valueOf(isuValue) >= 0) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = ClickOnCompressorHeatDifferentialStage2IncreaseButton();
-						currentValue = Integer.valueOf(getCompressorHeatDifferentialStage2());
-					} else if (valueOf < currentValue) {
-						flag = ClickOnCompressorHeatDifferentialStage2DecreaseButton();
-						currentValue = Integer.valueOf(getCompressorHeatDifferentialStage2());
-					}
-				}
-				flag = true;
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should not be exceed 0,2 to 15, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-
-			return flag;
-		}
-		return flag;
-	}
-
-	public boolean isChangeoverSensorScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "ChangeoverSensorScreen", timeOut);
-	}
-
-	public boolean ISUChangeoverSensor(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "None": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensorNone");
-		}
-		case "DRY CONTACT SWITCH": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensorDryContactSwitch");
-		}
-		case "10K SENSOR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensor10KSensor");
-		}
-		case "20K SENSOR": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensor20KSensor");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isDryContactSwitchScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "DryContactSwitchScreen", timeOut);
-	}
-
-	public boolean ISUDryContactSwitch(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "OPEN IN COOL": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "DryContactSwitchOpenInCool");
-		}
-		case "OPEN IN HEAT": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "DryContactSwitchOpenInHeat");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isChangeoverSensorWiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "ChangeoverSensorWiringScreen", timeOut);
-	}
-
-	public boolean ISUChangeoverSensorWiring(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NONE": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensorWiringNone");
-		}
-		case "THERMOSTAT S": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensorWiringThermostatS");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isFanCoilStagesScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilStagesScreen", timeOut);
-	}
-
-	public boolean ISUFanCoilStages(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "1": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanCoilStage1");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isFanStagesScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanStagesScreen", timeOut);
-	}
-
-	public boolean clickOnFanSpeedIncreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedIncreaseButton");
-	}
-
-	public boolean clickOnFanSpeedDecreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedDecreaseButton");
-	}
-
-	public String getFanSpeedValue() {
-		String getText = null;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "FanSpeedValue")
-					.getAttribute("content-desc");
-		} else {
-			getText = MobileUtils.getMobElement(objectDefinition, testCase, "FanSpeedValue").getAttribute("label");
-
-		}
-		return getText;
-	}
-
-	public boolean setISUFanStages(String ISUValue) {
-		boolean flag = false;
-		Integer currentValue = Integer.valueOf(getFanSpeedValue());
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			ISUValue = "3";
-		}
-		Integer valueOf = Integer.valueOf(ISUValue);
-		if (valueOf == currentValue) {
-			flag = true;
-		} else {
-			if (Integer.valueOf(ISUValue) <= 3 || Integer.valueOf(ISUValue) >= 1) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = clickOnFanSpeedIncreaseButton();
-						currentValue = Integer.valueOf(getFanSpeedValue());
-					} else if (valueOf < currentValue) {
-						flag = clickOnFanSpeedDecreaseButton();
-						currentValue = Integer.valueOf(getFanSpeedValue());
-					}
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"UUser Entered ISU Value not applicable. its should not be exceed between 1 to 3, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-
-		return flag;
-	}
-
-	public boolean isFanMediumSpeedWiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanMediumSpeedWiringScreen", timeOut);
-	}
-
-	public boolean ISUMediumSpeedWiring(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "THERMOSTAT Y2": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanMediumSpeedWiringThermostatY2");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isFanHighSpeedWiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanHighSpeedWiringScreen", timeOut);
-	}
-
-	public boolean ISUHighSpeedWiring(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NONE": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringNone");
-		}
-		case "THERMOSTAT U": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatU");
-		}
-		case "THERMOSTAT L": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatL");
-		}
-		default: {
-			return false;
-		}
-		}
-	}
-
-	public boolean isAllowedFanModesScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "AllowedFanModesScreen", timeOut);
-	}
-
-	public boolean ISUAllowedFanModes(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "AUTO": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedAuto");
-		}
-		case "MULTIPLE SPEEDS": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedMultipleSpeeds");
-		}
-		case "AUTO AND MULTIPLE SPEED": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedAutoAndMultipleSpeed");
-		}
-		case "ON": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedOn");
-		}
-		case "AUTO AND ON": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedAutoAndOn");
-		}
-
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isStartFanonHighSpeedScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "StartFanonHighSpeedScreen", timeOut);
-	}
-
-	public boolean ISUStartFanonHighSpeed(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "DISABLED": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "StartFanonHighSpeedDisabled");
-		}
-		case "ENABLED": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "StartFanonHighSpeedEnabled");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isFanResetTimerScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanResetTimerScreen", timeOut);
-	}
-
-	public boolean ISUFanResetTimer(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "INACTIVE": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanResetTimerInactive");
-		}
-		case "RESET AFTER 2 HOURS": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanResetTimerAfter2Hours");
-		}
-		case "ALL RESET AFTER 4 HOURS": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanResetTimerAfter4Hours");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isPipeSensorThresholdforCoolingScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "PipeSensorThresholdforCoolingScreen",
-				timeOut);
-	}
-
-	public boolean isPipeSensorThresholdforHeatingScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "PipeSensorThresholdforHeatingScreen",
-				timeOut);
-	}
-
-	public String getPipeSensorThresholdValueForCoolingAndHeating() {
-		String getText = null;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			getText = MobileUtils
-					.getMobElement(objectDefinition, testCase, "PipeSensorThresholdValueForCoolingAndHeating")
-					.getAttribute("content-desc");
-		} else {
-			getText = MobileUtils
-					.getMobElement(objectDefinition, testCase, "PipeSensorThresholdValueForCoolingAndHeating")
-					.getAttribute("label");
-
-		}
-		if (getText.contains("°")) {
-			getText = getText.replace("°", "");
-		}
-		return getText;
-	}
-
-	public boolean ClickOnPipeSensorThresholdValueForCoolingAndHeatingDecrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase,
-				"PipeSensorThresholdValueForCoolingAndHeatingDecrease");
-	}
-
-	public boolean ClickOnPipeSensorThresholdValueForCoolingAndHeatingIncrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase,
-				"PipeSensorThresholdValueForCoolingAndHeatingIncrease");
-	}
-
-	public boolean ISUPipeSensorThresholdforCooling(String ISUValue) {
-		boolean flag = true;
-
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			flag = true;
-		} else {
-			Integer valueOf = Integer.valueOf(ISUValue);
-			Integer currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating().replace(",", ""));
-			if (Integer.valueOf(ISUValue) <= 72 || Integer.valueOf(ISUValue) >= 50) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = ClickOnPipeSensorThresholdValueForCoolingAndHeatingIncrease();
-						currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating());
-					} else if (valueOf < currentValue) {
-						flag = ClickOnPipeSensorThresholdValueForCoolingAndHeatingDecrease();
-						currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating());
-					}
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should not be exceed between 50 to 72, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-		return flag;
-	}
-
-	public boolean ISUPipeSensorThresholdforHeating(String ISUValue) {
-		boolean flag = true;
-
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			flag = true;
-		} else {
-			Integer valueOf = Integer.valueOf(ISUValue);
-			Integer currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating().replace(",", ""));
-			if (Integer.valueOf(ISUValue) <= 90 || Integer.valueOf(ISUValue) >= 75) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = ClickOnPipeSensorThresholdValueForCoolingAndHeatingIncrease();
-						currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating());
-					} else if (valueOf < currentValue) {
-						flag = ClickOnPipeSensorThresholdValueForCoolingAndHeatingDecrease();
-						currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating());
-					}
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should not be exceed between 75 to 90, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-		return flag;
-	}
-
-	public boolean isFanCoilHeatStageScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatStageScreen", timeOut);
-	}
-
-	public boolean isCoolStage3WiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolStage3WiringScreen", timeOut);
-	}
-
-	public boolean isCoolStage4WiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolStage4WiringScreen", timeOut);
-	}
-
-	public boolean ISUCoolStage3Wiring(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NONE": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringNone");
-		}
-		case "THERMOSTAT U": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatU");
-		}
-		case "THERMOSTAT L": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatL");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isFanCoilHeatStage3WiringScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatStage3WiringScreen", timeOut);
-	}
-
-	public boolean ISUFanCoilHeatStage3Wiring(String ISUValue) {
-		switch (ISUValue.toUpperCase()) {
-		case "NONE": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringNone");
-		}
-		case "THERMOSTAT U": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatU");
-		}
-		case "THERMOSTAT L": {
-			return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatL");
-		}
-		default: {
-			return false;
-		}
-		}
-
-	}
-
-	public boolean isStagingControlCompressorCoolStage3DifferentialScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorCoolStage3DifferentialScreen",
-				timeOut);
-	}
-
-	public boolean isStagingControlCompressorCoolStage4DifferentialScreen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorCoolStage4DifferentialScreen",
-				timeOut);
-	}
-
-	public boolean iSStagingControlFanCoilHeatDifferentialStage2(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatDifferentialStage2Screen",
-				timeOut);
-	}
-
-	public boolean iSStagingControlFanCoilHeatDifferentialStage3(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatDifferentialStage3Screen",
-				timeOut);
-	}
-
-	public boolean isCoolCyclePerHourStage3Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolCyclesStage3PerHourScreen", timeOut);
-	}
-
-	public boolean isCoolCyclePerHourStage4Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolCyclesStage4PerHourScreen", timeOut);
-	}
-
-	public boolean isFanCoilHeatCyclePerHourStage1Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatCyclesPerHourStage1Screen",
-				timeOut);
-	}
-
-	public boolean isFanCoilHeatCyclePerHourStage2Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatCyclesPerHourStage2Screen",
-				timeOut);
-	}
-
-	public boolean isFanCoilHeatCyclePerHourStage3Screen(int timeOut) {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatCyclesPerHourStage3Screen",
-				timeOut);
-	}
-
-	public boolean ISUFanCoilHeatCyclePerHour_Stage(String ISUValue) {
-		boolean flag = false;
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			flag = true;
-		} else if (getCurrentFanCoilHeatCyclesValue().contains(ISUValue)) {
-			flag = true;
-		} else {
-			Integer valueOf = Integer.valueOf(ISUValue);
-			Integer currentValue = Integer.valueOf(getCurrentFanCoilHeatCyclesValue());
-			if (valueOf <= 12 && valueOf >= 1) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = clickOnFanCoilHeatCyclesValueIncreaseButton();
-						currentValue = Integer.valueOf(getCurrentFanCoilHeatCyclesValue());
-					} else if (valueOf < currentValue) {
-						flag = clickOnFanCoilHeatCyclesValueDecreaseButton();
-						currentValue = Integer.valueOf(getCurrentFanCoilHeatCyclesValue());
-					}
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. User entered value is : " + ISUValue);
-				flag = false;
-			}
-		}
-		return flag;
-	}
-
-	public String getCurrentFanCoilHeatCyclesValue() {
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentFanCoilHeatCyclesValue")
-					.getAttribute("content-desc");
-		} else {
-			return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentFanCoilHeatCyclesValue")
-					.getAttribute("label");
-		}
-	}
-
-	public boolean clickOnFanCoilHeatCyclesValueIncreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "FanCoilHeatCyclesValueIncreaseButton");
-	}
-
-	public boolean clickOnFanCoilHeatCyclesValueDecreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "FanCoilHeatCyclesValueDecreaseButton");
-	}
-
-	public boolean setCyclePerHourForHeatStage(String ISUValue) {
-		boolean flag = false;
-		Integer currentValue = Integer.valueOf(getHeatCyclePerHourValue());
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			ISUValue = "4";
-		}
-		Integer valueOf = Integer.valueOf(ISUValue);
-		if (valueOf == currentValue) {
-			flag = true;
-		} else {
-			if (Integer.valueOf(ISUValue) <= 12 || Integer.valueOf(ISUValue) >= 1) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = ClickOnHeatCyclePerHourIncrease();
-						currentValue = Integer.valueOf(getHeatCyclePerHourValue());
-					} else if (valueOf < currentValue) {
-						flag = ClickOnHeatCyclePerHourDecrease();
-						currentValue = Integer.valueOf(getHeatCyclePerHourValue());
-					}
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should not be exceed 40 to 90, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-
-		return flag;
-	}
-
-	public boolean ISUCompressorCyclesPerHour_Stage1(String ISUValue) {
-		boolean flag = false;
-		Integer currentValue = Integer.valueOf(getCurrentCompressorCyclesValue());
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			ISUValue = "3";
-
-		}
-		Integer valueOf = Integer.valueOf(ISUValue);
-		if (valueOf == currentValue) {
-			flag = true;
-		} else {
-			if (Integer.valueOf(ISUValue) <= 12 && Integer.valueOf(ISUValue) >= 1) {
-				while (!(valueOf == currentValue)) {
-					if (valueOf == currentValue) {
-						flag = true;
-						break;
-					} else if (valueOf > currentValue) {
-						flag = ClickOnBackUpHeatCyclePerHourIncrease();
-						currentValue = Integer.valueOf(getCurrentCompressorCyclesValue());
-					} else if (valueOf < currentValue) {
-						flag = ClickOnBackUpHeatCyclePerHourDecrease();
-						currentValue = Integer.valueOf(getCurrentCompressorCyclesValue());
-					}
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should be between 1 to 6, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-		return flag;
-	}
-
-	public static boolean isDeviceConfiguration_Valid(TestCases testCase, String heatingSystem, String heatingStages,
-			String coolingStages) {
-		boolean flag = false;
-		FADeviceDetailsScreen dviceDetails = new FADeviceDetailsScreen(testCase);
-		String heating_System;
-		if (dviceDetails.isHeatingSystemPresent()) {
-			heating_System = dviceDetails.getHeatingSystem().toUpperCase().replace("HEATING_SYSTEM", "")
-					.replace("_", " ").trim();
-		} else {
-//			heating_System = "NONE";
-			heating_System = "OTHER";
-		}
-
-		String heating_Stages;
-		if (dviceDetails.isHeatingStagesPresent()) {
-			heating_Stages = dviceDetails.getHeatingStages();
-		} else {
-			heating_Stages = "0";
-		}
-
-		String cooling_Stages;
-		if (dviceDetails.isCoolingStagesPresent()) {
-			cooling_Stages = dviceDetails.getCoolingStages();
-		} else {
-			cooling_Stages = "0";
-		}
-
-		if (heatingSystem.toUpperCase().equals(heating_System.toUpperCase())) {
-			Keyword.ReportStep_Pass(testCase, "Current configured System is " + heating_System);
-			System.out.println("Current configured System is : " + heating_System);
-			flag = true;
-		} else {
-			Keyword.ReportStep_Fail(testCase, FailType.PASSWITH_FAILURE,
-					"Expected Heating system is " + heatingSystem + ", Actual heating system is " + heating_System);
-			System.out.println("Current configured System is : " + heating_System);
-			flag = false;
-		}
-		if (heatingStages.toUpperCase().equals(heating_Stages.toUpperCase())) {
-			Keyword.ReportStep_Pass(testCase, "Current configured heating stages is " + heatingStages);
-			System.out.println("Current configured heating stages is : " + heatingStages);
-			flag = true;
-		} else {
-			Keyword.ReportStep_Fail(testCase, FailType.PASSWITH_FAILURE,
-					"Expected Heating system is " + heatingStages + ", Actual heating system is " + heating_Stages);
-			System.out.println("Current configured heating stages is : " + heatingStages);
-			flag = false;
-		}
-		if (coolingStages.toUpperCase().equals(cooling_Stages.toUpperCase())) {
-			Keyword.ReportStep_Pass(testCase, "Current configured Cooling stages is " + cooling_Stages);
-			System.out.println("Current configured cooling stages is : " + cooling_Stages);
-			flag = true;
-		} else {
-			Keyword.ReportStep_Fail(testCase, FailType.PASSWITH_FAILURE,
-					"Expected Cooling system is " + coolingStages + ", Actual heating system is " + cooling_Stages);
-			System.out.println("Current configured cooling stages is : " + cooling_Stages);
-			flag = false;
-		}
-		return flag;
-	}
-
-	public String getHeatingSystem() {
-		String HeatingSystem = null;
-		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			if (scroolToExpectedElement("HeatingSystem")) {
-				HeatingSystem = MobileUtils.getAttribute(testCase, objectDefinition, "HeatingSystem", "resource-id")
-						.toUpperCase();
-			}
-		} else {
-			if (scroolToExpectedElement("HeatingSystem")) {
-				HeatingSystem = MobileUtils.getAttribute(testCase, objectDefinition, "HeatingSystem", "resource-id")
-						.toUpperCase();
-			}
-		}
-		return HeatingSystem;
-	}
-
-	public boolean scroolToExpectedElement(String locatorType) {
-		boolean flag = false;
-		Dimension dimens = testCase.getMobileDriver().manage().window().getSize();
-		int x = (int) (dimens.getWidth() * 0.5);
-		int endY = (int) (dimens.getHeight() * 0.2);
-		int startY = (int) (dimens.getHeight() * 0.75);
-		for (int i = 0; i <= 5; i++) {
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, locatorType, 5)) {
-				flag = true;
-				Keyword.ReportStep_Pass(testCase, "Successfully Scrolled to Expected Element");
-				break;
-			} else {
-				W3CTouchActions.swipe(testCase.getMobileDriver(), x, startY, x, endY, Duration.ofMillis(2000));
-			}
-		}
-		if (flag) {
-			flag = true;
-		} else {
-			flag = false;
-		}
-		return flag;
-	}
-
-	public boolean ClickOnMaxMinAlertValueDecrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxMinAlertValueDecrease");
-	}
-
-	public boolean ClickOnMaxMinAlertValueIncrease() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxMinAlertValueIncrease");
-	}
-
-	public boolean ClickOnHPBackUpHeatDifferentialValueDecreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "HPBackUpHeatDifferentialValueIncreaseButton");
-	}
-
-	public boolean ClickOnHPBackUpHeatDifferentialValueIncreaseButton() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "HPBackUpHeatDifferentialValueDecreaseButton");
-	}
-	
-	public boolean setISUBackupHeatDifferentialFanCoil(String ISUValue) {
-		boolean flag = false;
-		float epsilon = 0.00001f;
-		String isuValue = ISUValue;
-		Float currentValue = Float.valueOf(getAuxBackUpHeatDifferential());
-
-		if (isuValue.contains("DEG")) {
-			isuValue = isuValue.split("DEG")[0].trim();
-		}
-		if (ISUValue.toUpperCase().contains("DEFAULT")) {
-			isuValue = "2";
-		} else if (ISUValue.toUpperCase().contains("COMFORT")) {
-//			To enable this option need to have ID for the element
-		}
-		Float valueOf = Float.valueOf(isuValue.replace("°", "").replace("DEG", ""));
-		if (Math.abs(valueOf - currentValue)< epsilon) {
-			flag = true;
-		} else {
-			if (Float.valueOf(valueOf) <= 15 || Float.valueOf(valueOf) >= 2) {
-				while (!(valueOf == currentValue)) {
-					System.out.println("valueOf :"+valueOf+", currentValue:"+currentValue);
-					if (valueOf > currentValue) {
-						flag = ClickOnAuxHeatDifferentialIncreaseButton();
-						currentValue = Float.valueOf(getAuxBackUpHeatDifferential());
-					} else if (valueOf < currentValue) {
-						flag = ClickOnAuxHeatDifferentialDecreaseButton();
-						currentValue = Float.valueOf(getAuxBackUpHeatDifferential());
-					}
-				}
-			} else {
-				Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-						"User Entered ISU Value not applicable. its should not be exceed 0,2 to 15, User entered value is : "
-								+ ISUValue);
-				flag = false;
-			}
-		}
-
-		return flag;
-	}
-	
-	public boolean setISUBackUpHeatCyclePerHour(String ISUValue) {
+    public boolean isControlModeScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "ControlModeScreen", timeOut);
+    }
+
+    public boolean ISUEquipmentType(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "GAS STANDARD EFFICIENCY": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalGasStandardEfficiency");
+            }
+            case "GAS HIGH EFFICIENCY": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalGasHighEfficiency");
+            }
+            case "OIL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalOil");
+            }
+            case "ELECTRIC": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalElectric");
+            }
+            case "HOT WATER FAN COIL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ConventionalHotWaterFanCoil");
+            }
+            case "AIR TO AIR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpAirToAir");
+            }
+            case "GEOTHERMAL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpGeothermal");
+            }
+            case "HOT WATER": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "BoilerHotWater");
+            }
+            case "STEAM": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "BoilerSteam");
+            }
+            case "HOT WATER RADIANT HEAT":
+            case "HOT WATER - RADIANT HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantHeat");
+            }
+            case "HOT WATER RADIANT FLOOR HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantFloorHeat");
+            }
+            case "HOT WATER - FAN COIL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FCHotWaterFanCoil");
+            }
+            case "2 PIPE FAN COIL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "2PipeFanCoil");
+            }
+            case "4 PIPE FAN COIL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "4PipeFanCoil");
+            }
+            default: {
+                Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE,
+                        "User Expected ISU Value not available For Fuel Source System, User Expected ISU Value is :"
+                                + ISUValue);
+                return false;
+            }
+        }
+    }
+
+    public boolean selectOccupancySensing(String iSUValue) {
+        switch (iSUValue.toUpperCase()) {
+            case "NO REMOTE SETBACK": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "NoRemoteSetbackOccupancySensing");
+            }
+            case "DRY CONTACT OR L TERMINAL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "DryContactOrLTerminal");
+            }
+            case "WIRELESS SENSOR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "WirelessSensor");
+            }
+            case "THERMOSTAT INTERNAL SENSOR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ThermostatInternalSensor");
+            }
+            case "Wireless and Internal sensors": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "WirelessInternalSensor");
+            }
+            default:
+                return false;
+        }
+    }
+
+    public boolean turnOffOnTempAlert(TestCases testCase, String isuType, String ISUValue) {
+        // boolean currentTempStatus = MobileUtils.isMobElementExists(objectDefinition,
+        // testCase, "MaxMinSetpointValue");
+
+        String ObjectFileVariableName = isuType.toUpperCase().contains("HIGH") ? "HighTemAlertCheckBox"
+                : "LowTemAlertCheckBox";
+        boolean currentTempStatus = MobileUtils.isMobElementExists(objectDefinition, testCase, ObjectFileVariableName);
+        System.out.println(
+                "ObjectFileVariableName:" + ObjectFileVariableName + ",currentTempStatus:" + currentTempStatus);
+        boolean flag = false;
+        if (!currentTempStatus) {
+            System.out.println("Turn off checkbox of ISU Type: " + isuType + ": was disabled");
+            switch (ISUValue.toUpperCase()) {
+                case "DEFAULT":
+                case "OFF":
+                case "":
+                    MobileUtils.clickOnElement(objectDefinition, testCase, ObjectFileVariableName);
+                    // return !MobileUtils.isMobElementExists(objectDefinition, testCase,
+                    // ObjectFileVariableName);
+                    return !MobileUtils.isMobElementExists(objectDefinition, testCase, "MaxMinAlertValue");
+                default:
+                    Integer valueOf = Integer.valueOf(ISUValue);
+                    Integer currentValue = Integer.valueOf(getMaxMinAlertValue().replace(",", ""));
+                    if (Integer.valueOf(ISUValue) <= 99 || Integer.valueOf(ISUValue) >= 40) {
+                        while (!(valueOf == currentValue)) {
+                            if (valueOf == currentValue) {
+                                flag = true;
+                                break;
+                            } else if (valueOf > currentValue) {
+                                flag = clickOnMaxMinAlertValueIncrease();
+                                currentValue = Integer.valueOf(getMaxMinAlertValue());
+                            } else if (valueOf < currentValue) {
+                                flag = clickOnMaxMinAlertValueDecrease();
+                                currentValue = Integer.valueOf(getMaxMinAlertValue());
+                            }
+                        }
+                    } else {
+                        Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                                "User Entered ISU Value not applicable. its should not be exceed 40 to 90, User entered value is : "
+                                        + ISUValue);
+                        flag = false;
+                    }
+                    return flag;
+            }
+        } else {
+            switch (ISUValue.toUpperCase()) {
+                case "DEFAULT":
+                case "OFF":
+                case "":
+                    return true;
+                default:
+                    MobileUtils.clickOnElement(objectDefinition, testCase, ObjectFileVariableName);
+                    MobileUtils.isMobElementExists(objectDefinition, testCase, "MaxMinAlertValue");
+                    Integer valueOf = Integer.valueOf(ISUValue);
+                    Integer currentValue = Integer.valueOf(getMaxMinAlertValue().replace(",", ""));
+                    if (Integer.parseInt(ISUValue) <= 90 || Integer.parseInt(ISUValue) >= 40) {
+                        while (!(valueOf == currentValue)) {
+                            if (valueOf == currentValue) {
+                                flag = true;
+                                break;
+                            } else if (valueOf > currentValue) {
+                                flag = clickOnMaxMinAlertValueIncrease();
+                                currentValue = Integer.valueOf(getMaxMinAlertValue());
+                            } else if (valueOf < currentValue) {
+                                flag = clickOnMaxMinAlertValueDecrease();
+                                currentValue = Integer.valueOf(getMaxMinAlertValue());
+                            }
+                        }
+                    } else {
+                        Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                                "User Entered ISU Value not applicable. its should not be exceed 40 to 90, User entered value is : "
+                                        + ISUValue);
+                        flag = false;
+                    }
+                    return flag;
+            }
+        }
+    }
+
+    public boolean clickDropDownAndSelectISUValue(TestCases testCase, String ISUValue) {
+        ISUValue = ISUValue.toUpperCase();
+        ISUValue = ISUValue.contains("DEG") ? ISUValue.replace("DEG", "°") : ISUValue;
+        String platform = testCase.getMobileDriver().getPlatformName().toUpperCase();
+        String dropDownLocator;
+        if (ISUValue.isEmpty() || ISUValue.equalsIgnoreCase("DEFAULT"))
+            return true;
+        if (platform.contains("ANDROID")) {
+            dropDownLocator = "(//*[@class='android.widget.ImageView'])[last()]";
+        } else {
+            dropDownLocator = "//*[@type='XCUIElementTypeButton' and not(@label='Next') and not(@label='Exit') and not(@label='Back') and not(@label='More Info')][1]";
+        }
+        MobileUtils.clickOnElement(testCase, "XPATH", dropDownLocator);
+        String isuValueXpath = getDynamicLocatorAndroidIOS(testCase, ISUValue);
+        return MobileUtils.clickOnElement(testCase, "XPATH", isuValueXpath);
+    }
+
+    public String getDynamicLocatorAndroidIOS(TestCases testCase, String value) {
+        String platform = Objects.requireNonNull(testCase.getMobileDriver().getPlatformName()).toUpperCase();
+        String locatorXpath;
+        if (platform.contains("ANDROID")) {
+            locatorXpath = "//*[contains(translate(@content-desc, ''ABCDEFGHIJKLMNOPQRSTUVWXYZ'', ''abcdefghijklmnopqrstuvwxyz''), ''{0}'')]";
+        } else {
+            locatorXpath = "//*[contains(translate(@name, ''ABCDEFGHIJKLMNOPQRSTUVWXYZ'', ''abcdefghijklmnopqrstuvwxyz''), ''{0}'')]";
+        }
+        return MessageFormat.format(locatorXpath, value.toLowerCase());
+    }
+
+    public boolean isEquipmentTypeScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "EquipmentTypeScreen", timeOut);
+    }
+
+    public boolean isISUScreenPresent(String iSUType, int timeOut) {
+        String xpath = getDynamicLocatorAndroidIOS(testCase, iSUType);
+        return MobileUtils.isMobElementExists("XPATH", xpath, testCase, 1);
+    }
+
+    public boolean isISUDropDownButtonPresent() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "ISUDropDownButton");
+    }
+
+    public boolean selectRoomName() {
+        String roomName = testCase.getTestCaseInputs().getInputValue("LOCATION1_DEVICE1_NAME");
+        boolean flag = false;
+        if (isRoomSelectScreen()) {
+            NavigatingScreenToScreeninFA navigateTo = new NavigatingScreenToScreeninFA(testCase);
+            if (navigateTo.scrollToExpectedElementVertically("XPATH", "//*[contains(@content-desc,'" + roomName + "')]",
+                    "UP")) {
+                flag = MobileUtils.clickOnElement(testCase, "XPATH", "//*[contains(@content-desc,'" + roomName + "')]");
+            } else {
+                if (MobileUtils.isMobElementExists(objectDefinition, testCase, "AddRoomBtn")) {
+                    if (MobileUtils.clickOnElement(objectDefinition, testCase, "AddRoomBtn")) {
+                        if (MobileUtils.isMobElementExists(objectDefinition, testCase, "RoomNameInput", 3)) {
+                            Keyword.ReportStep_Pass(testCase, "DeviceNameInput is present.");
+                            WebElement mobElement = MobileUtils.getMobElement(objectDefinition, testCase,
+                                    "RoomNameInput");
+                            mobElement.click();
+                            mobElement.sendKeys(roomName);
+                            flag = true;
+                        } else {
+                            Keyword.ReportStep_Fail(testCase, FailType.COSMETIC_FAILURE,
+                                    "DeviceNameInput is not present");
+                        }
+                    }
+                } else {
+                    Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE, "Add Room Btn is Not Present.");
+                }
+            }
+            SystemState.getStatus().setTstatName(roomName);
+            flag = flag && clickOnNextButton();
+        } else {
+            Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE, "Room Screen is Not Present.");
+        }
+        return flag;
+    }
+
+    public boolean isRoomSelectScreen() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "SelectRoomScreen");
+    }
+
+    public String getMaxMinAlertValue() {
+        String getText = null;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "MaxMinAlertValue")
+                    .getDomAttribute("content-desc");
+        } else {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "MaxMinAlertValue").getDomAttribute("label");
+
+        }
+        if (getText.contains("°")) {
+            getText = getText.replace("°", "");
+        }
+        return getText;
+    }
+
+    public boolean clickOnMaxMinAlertValueDecrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxMinAlertValueDecrease");
+    }
+
+    public boolean clickOnMaxMinAlertValueIncrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxMinAlertValueIncrease");
+    }
+
+    public boolean isOutdoorHumidityOffsetScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "OutdoorHumidityOffsetScreen", 2);
+    }
+
+    public boolean isOutdoorTempOffsetScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "OutdoorTempOffsetScreen", 2);
+    }
+
+    public boolean isLTerminalAlertScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "LTerminalAlertScreen", timeOut);
+    }
+
+    public boolean ISULTerminalAlert(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NONE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HPFailNone");
+            }
+            case "HEAT PUMP FAILURE INDICATION": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpFailureIndication");
+            }
+
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isBackupHeatWiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatWiringScreen", timeOut);
+    }
+
+    public boolean ISUBackupHeatWiring(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "THERMOSTAT U": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatWiringThermostatU");
+            }
+            case "THERMOSTAT L": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatWiringThermostatL");
+            }
+            case "THERMOSTAT AUX": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatWiringThermostatAux");
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+
+    public boolean isHeatPumpStage2WiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "HeatPumpStage2WiringScreen", timeOut);
+    }
+
+    public boolean ISUHeatPumpStage2Wiring(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "None": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpStage2WiringNone");
+            }
+            case "THERMOSTAT U": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpStage2WiringThermostatU");
+            }
+            case "THERMOSTAT L": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatPumpStage2WiringThermostatL");
+            }
+
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean ISUHeatStagingControl(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NO": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatStagingControlNo");
+            }
+            case "YES": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HeatStagingControlYes");
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+
+    public boolean selectBackupHeatTypeNewISUValue(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NONE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HumTypeNone");
+            }
+            case "STANDARD EFFICIENCY GAS FORCED AIR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "StandardEffGasForcedAir");
+            }
+            case "HIGH EFFICIENCY GAS FORCED AIR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HighEffGasForcedAir");
+            }
+            case "OIL FORCED AIR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "OilForcedAir");
+            }
+            case "HOT WATER FAN COIL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterFanCoil");
+            }
+            case "HOT WATER RADIANT HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "HotWaterRadiantHeat");
+            }
+            case "OTHER": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "Other");
+            }
+            case "ELECTRIC FORCED AIR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "BckupHtElectricForcedAir");
+            }
+            default:
+                return false;
+        }
+    }
+
+    public boolean isHeatStagingControlScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "HeatStagingControlScreen", timeOut);
+    }
+
+    public boolean isBackupHeatOperationScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatOperationScreen", timeOut);
+    }
+
+    public boolean ISUBackupHeatOperation(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NOT ALLOWED TO RUN WITH PRIMARY HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatNotAllowedWithPrimaryHeat");
+            }
+            case "ALLOWED TO RUN WITH PRIMARY HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "BackupHeatAllowedWithPrimaryHeat");
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+
+    public boolean isEmergencyHeatOperationScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "EmergencyHeatOperationScreen", timeOut);
+    }
+
+    public boolean ISUEmergencyHeatOperation(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NOT ALLOWED TO RUN WITH PRIMARY HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "EmergencyHeatNotAllowedWithPrimaryHeat");
+            }
+            case "ALLOWED TO RUN WITH PRIMARY HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "EmergencyHeatAllowedWithPrimaryHeat");
+            }
+
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isBackupHeatStage2DifferentialScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatStage2DifferentialScreen",
+                timeOut);
+    }
+
+    public String getBackUpHeatStage2Differential() {
+        String getText = null;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackupHeatStage2DifferentialValue")
+                    .getDomAttribute("content-desc");
+        } else {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackupHeatStage2DifferentialValue")
+                    .getDomAttribute("label");
+
+        }
+        if (getText.contains("°")) {
+            getText = getText.replace("°", "");
+        }
+        return getText;
+    }
+
+    public boolean clickOnBackupHeatStage2DifferentialDecreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "AuxHeatDifferentialDecrease");
+    }
+
+    public boolean clickOnBackupHeatStage2DifferentialIncreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "AuxHeatDifferentialIncrease");
+    }
+
+    public boolean ISUBackupHeatStage2Differential(String ISUValue) {
+        boolean flag = false;
+        String isuValue = ISUValue;
+        if (isuValue.contains("DEG")) {
+            isuValue = isuValue.split("DEG")[0].trim();
+        }
+        if (ISUValue.toUpperCase().contains("DEFAULT") || ISUValue.toUpperCase().contains("COMFORT")) {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "ComfortChecked", 1)) {
+                flag = MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
+            } else {
+                flag = true;
+            }
+        } else {
+            Integer valueOf = Integer.valueOf(isuValue);
+            Integer currentValue = Integer.valueOf(getBackUpHeatStage2Differential());
+            if (Integer.valueOf(isuValue) <= 2 && Integer.valueOf(isuValue) >= 0) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf > currentValue) {
+                        flag = clickOnBackupHeatStage2DifferentialIncreaseButton();
+                        currentValue = Integer.valueOf(getBackUpHeatStage2Differential());
+                    } else if (valueOf < currentValue) {
+                        flag = clickOnBackupHeatStage2DifferentialDecreaseButton();
+                        currentValue = Integer.valueOf(getBackUpHeatStage2Differential());
+                    }
+                }
+                flag = true;
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should not be exceed 0,2 to 16, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
+    public boolean isBackupHeatCyclesPerHourStage2Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "BackupHeatCyclesPerHourStage2Screen",
+                timeOut);
+    }
+
+    public String getBackUpHeatCyclePerHourStage2Value() {
+        String getText = null;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackUpHeatCyclePerHourStage2Value")
+                    .getDomAttribute("content-desc");
+        } else {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "BackUpHeatCyclePerHourStage2Value")
+                    .getDomAttribute("label");
+
+        }
+        return getText;
+    }
+
+    public boolean ClickOnBackUpHeatCyclePerHourStage2Decrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "BackUpHeatCyclePerHourStage2Decrease");
+    }
+
+    public boolean ClickOnBackUpHeatCyclePerHourStage2Increase() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "BackUpHeatCyclePerHourStage2Increase");
+    }
+
+    public boolean setISUBackUpHeatCyclePerHourStage2(String ISUValue) {
+        boolean flag = false;
+        Integer currentValue = Integer.valueOf(getBackUpHeatCyclePerHourStage2Value());
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            ISUValue = "9";
+        }
+        Integer valueOf = Integer.valueOf(ISUValue);
+        if (valueOf == currentValue) {
+            flag = true;
+        } else {
+            if (Integer.valueOf(ISUValue) <= 12 || Integer.valueOf(ISUValue) >= 1) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf > currentValue) {
+                        flag = ClickOnBackUpHeatCyclePerHourStage2Increase();
+                        currentValue = Integer.valueOf(getBackUpHeatCyclePerHourStage2Value());
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnBackUpHeatCyclePerHourStage2Decrease();
+                        currentValue = Integer.valueOf(getBackUpHeatCyclePerHourStage2Value());
+                    }
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should not be exceed 12, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
+    public boolean isExternalFossilFuelKitScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "ExternalFossilFuelKitScreen", timeOut);
+    }
+
+    public boolean ISUExternalFossilFuelKit(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "THERMOSTAT CONTROLS BACKUP HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ThermostatControlsBackupHeat");
+            }
+            case "EXTERNAL FOSSIL FUEL KIT CONTROLS BACKUP HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase,
+                        "ExternalFossilFuelKitControlsBackupHeat");
+            }
+
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isCoolStagingControlScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolStagingControlScreen", timeOut);
+    }
+
+    public boolean ISUCoolStagingControl(String ISUValue) {
+        return selectISUValue(testCase, ISUValue);
+
+    }
+
+    public boolean isStagingControlCompressorCoolStage2DifferentialScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorCoolStage2DifferentialScreen",
+                timeOut);
+    }
+
+    public boolean ClickOnCompressorCoolStage2DifferentialDecreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "CompressorCoolStage2DifferentialDecrease");
+    }
+
+    public boolean ClickOnCompressorCoolStage2DifferentialIncreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "CompressorCoolStage2DifferentialIncrease");
+    }
+
+    public String getCompressorCoolStage2Differential() {
+        String getText = null;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "CompressorCoolStage2DifferentialValue")
+                    .getDomAttribute("content-desc");
+        } else {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "CompressorCoolStage2DifferentialValue")
+                    .getDomAttribute("label");
+
+        }
+        if (getText.contains("°")) {
+            getText = getText.replace("°", "");
+        }
+        return getText;
+    }
+
+    public boolean ISUStagingControlCompressorCoolStage2Differential(String ISUValue) {
+
+        boolean flag = false;
+        String isuValue = ISUValue;
+        if (isuValue.contains("DEG")) {
+            isuValue = isuValue.split("DEG")[0].trim();
+        }
+        if (ISUValue.toUpperCase().contains("COMFORT")) {
+            // To enable this option need to have ID for the element
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
+                MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
+                flag = true;
+                System.out.println("Set to Default Settings : Comfort ");
+            } else {
+                System.out.println("Already set as Default Settings : Comfort ");
+                flag = true;
+            }
+        } else {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
+                MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
+            }
+            Integer valueOf = Integer.valueOf(isuValue);
+            Integer currentValue = Integer.valueOf(getCompressorCoolStage2Differential());
+            if (Integer.valueOf(isuValue) <= 1 && Integer.valueOf(isuValue) >= 0) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = ClickOnAuxHeatDifferentialIncreaseButton();
+                        currentValue = Integer.valueOf(getCompressorCoolStage2Differential());
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnAuxHeatDifferentialDecreaseButton();
+                        currentValue = Integer.valueOf(getCompressorCoolStage2Differential());
+                    }
+                }
+                flag = true;
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. User entered value is : " + ISUValue);
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
+    public boolean isStagingControlCompressorHeatDifferentialStage2Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Screen",
+                timeOut);
+    }
+
+    public boolean ClickOnCompressorHeatDifferentialStage2DecreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "CompressorHeatDifferentialStage2Decrease");
+    }
+
+    public boolean ClickOnCompressorHeatDifferentialStage2IncreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "CompressorHeatDifferentialStage2Increase");
+    }
+
+    public String getCompressorHeatDifferentialStage2() {
+        String getText = null;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")
+                    .getDomAttribute("content-desc");
+        } else {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")
+                    .getDomAttribute("label");
+
+        }
+        if (getText.contains("°")) {
+            getText = getText.replace("°", "");
+        }
+        return getText;
+    }
+
+    public boolean ISUStagingControlCompressorHeatDifferentialStage2(String ISUValue) {
+
+        boolean flag = false;
+        String isuValue = ISUValue;
+        String getText = null;
+
+        if (isuValue.contains("DEG")) {
+            isuValue = isuValue.split("DEG")[0].trim();
+        }
+        if (ISUValue.toUpperCase().contains("COMFORT")) {
+            // To enable this option need to have ID for the element
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
+                MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
+                flag = true;
+                System.out.println("Set to Default Settings : Comfort ");
+            } else {
+                System.out.println("Already set as Default Settings : Comfort ");
+                flag = true;
+            }
+        } else {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
+                MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
+            }
+            Integer valueOf = Integer.valueOf(isuValue);
+            Integer currentValue = Integer.valueOf(getCompressorHeatDifferentialStage2());
+            if (Integer.valueOf(isuValue) <= 1 && Integer.valueOf(isuValue) >= 0) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = ClickOnCompressorHeatDifferentialStage2IncreaseButton();
+                        currentValue = Integer.valueOf(getCompressorHeatDifferentialStage2());
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnCompressorHeatDifferentialStage2DecreaseButton();
+                        currentValue = Integer.valueOf(getCompressorHeatDifferentialStage2());
+                    }
+                }
+                flag = true;
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should not be exceed 0,2 to 15, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+
+            return flag;
+        }
+        return flag;
+    }
+
+    public boolean isChangeoverSensorScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "ChangeoverSensorScreen", timeOut);
+    }
+
+    public boolean ISUChangeoverSensor(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "None": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensorNone");
+            }
+            case "DRY CONTACT SWITCH": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensorDryContactSwitch");
+            }
+            case "10K SENSOR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensor10KSensor");
+            }
+            case "20K SENSOR": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensor20KSensor");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isDryContactSwitchScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "DryContactSwitchScreen", timeOut);
+    }
+
+    public boolean ISUDryContactSwitch(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "OPEN IN COOL": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "DryContactSwitchOpenInCool");
+            }
+            case "OPEN IN HEAT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "DryContactSwitchOpenInHeat");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isChangeoverSensorWiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "ChangeoverSensorWiringScreen", timeOut);
+    }
+
+    public boolean ISUChangeoverSensorWiring(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NONE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensorWiringNone");
+            }
+            case "THERMOSTAT S": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "ChangeoverSensorWiringThermostatS");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isFanCoilStagesScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilStagesScreen", timeOut);
+    }
+
+    public boolean ISUFanCoilStages(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "1": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanCoilStage1");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isFanStagesScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanStagesScreen", timeOut);
+    }
+
+    public boolean clickOnFanSpeedIncreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedIncreaseButton");
+    }
+
+    public boolean clickOnFanSpeedDecreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedDecreaseButton");
+    }
+
+    public String getFanSpeedValue() {
+        String getText = null;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "FanSpeedValue")
+                    .getDomAttribute("content-desc");
+        } else {
+            getText = MobileUtils.getMobElement(objectDefinition, testCase, "FanSpeedValue").getDomAttribute("label");
+
+        }
+        return getText;
+    }
+
+    public boolean setISUFanStages(String ISUValue) {
+        boolean flag = false;
+        Integer currentValue = Integer.valueOf(getFanSpeedValue());
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            ISUValue = "3";
+        }
+        Integer valueOf = Integer.valueOf(ISUValue);
+        if (valueOf == currentValue) {
+            flag = true;
+        } else {
+            if (Integer.valueOf(ISUValue) <= 3 || Integer.valueOf(ISUValue) >= 1) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = clickOnFanSpeedIncreaseButton();
+                        currentValue = Integer.valueOf(getFanSpeedValue());
+                    } else if (valueOf < currentValue) {
+                        flag = clickOnFanSpeedDecreaseButton();
+                        currentValue = Integer.valueOf(getFanSpeedValue());
+                    }
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "UUser Entered ISU Value not applicable. its should not be exceed between 1 to 3, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+
+        return flag;
+    }
+
+    public boolean isFanMediumSpeedWiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanMediumSpeedWiringScreen", timeOut);
+    }
+
+    public boolean ISUMediumSpeedWiring(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "THERMOSTAT Y2": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanMediumSpeedWiringThermostatY2");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isFanHighSpeedWiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanHighSpeedWiringScreen", timeOut);
+    }
+
+    public boolean ISUHighSpeedWiring(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NONE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringNone");
+            }
+            case "THERMOSTAT U": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatU");
+            }
+            case "THERMOSTAT L": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatL");
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+
+    public boolean isAllowedFanModesScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "AllowedFanModesScreen", timeOut);
+    }
+
+    public boolean ISUAllowedFanModes(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "AUTO": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedAuto");
+            }
+            case "MULTIPLE SPEEDS": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedMultipleSpeeds");
+            }
+            case "AUTO AND MULTIPLE SPEED": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedAutoAndMultipleSpeed");
+            }
+            case "ON": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedOn");
+            }
+            case "AUTO AND ON": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanSpeedAutoAndOn");
+            }
+
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isStartFanonHighSpeedScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "StartFanonHighSpeedScreen", timeOut);
+    }
+
+    public boolean ISUStartFanonHighSpeed(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "DISABLED": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "StartFanonHighSpeedDisabled");
+            }
+            case "ENABLED": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "StartFanonHighSpeedEnabled");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isFanResetTimerScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanResetTimerScreen", timeOut);
+    }
+
+    public boolean ISUFanResetTimer(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "INACTIVE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanResetTimerInactive");
+            }
+            case "RESET AFTER 2 HOURS": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanResetTimerAfter2Hours");
+            }
+            case "ALL RESET AFTER 4 HOURS": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanResetTimerAfter4Hours");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isPipeSensorThresholdforCoolingScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "PipeSensorThresholdforCoolingScreen",
+                timeOut);
+    }
+
+    public boolean isPipeSensorThresholdforHeatingScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "PipeSensorThresholdforHeatingScreen",
+                timeOut);
+    }
+
+    public String getPipeSensorThresholdValueForCoolingAndHeating() {
+        String getText = null;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            getText = MobileUtils
+                    .getMobElement(objectDefinition, testCase, "PipeSensorThresholdValueForCoolingAndHeating")
+                    .getDomAttribute("content-desc");
+        } else {
+            getText = MobileUtils
+                    .getMobElement(objectDefinition, testCase, "PipeSensorThresholdValueForCoolingAndHeating")
+                    .getDomAttribute("label");
+
+        }
+        if (getText.contains("°")) {
+            getText = getText.replace("°", "");
+        }
+        return getText;
+    }
+
+    public boolean ClickOnPipeSensorThresholdValueForCoolingAndHeatingDecrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase,
+                "PipeSensorThresholdValueForCoolingAndHeatingDecrease");
+    }
+
+    public boolean ClickOnPipeSensorThresholdValueForCoolingAndHeatingIncrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase,
+                "PipeSensorThresholdValueForCoolingAndHeatingIncrease");
+    }
+
+    public boolean ISUPipeSensorThresholdforCooling(String ISUValue) {
+        boolean flag = true;
+
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            flag = true;
+        } else {
+            Integer valueOf = Integer.valueOf(ISUValue);
+            Integer currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating().replace(",", ""));
+            if (Integer.valueOf(ISUValue) <= 72 || Integer.valueOf(ISUValue) >= 50) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = ClickOnPipeSensorThresholdValueForCoolingAndHeatingIncrease();
+                        currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating());
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnPipeSensorThresholdValueForCoolingAndHeatingDecrease();
+                        currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating());
+                    }
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should not be exceed between 50 to 72, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
+    public boolean ISUPipeSensorThresholdforHeating(String ISUValue) {
+        boolean flag = true;
+
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            flag = true;
+        } else {
+            Integer valueOf = Integer.valueOf(ISUValue);
+            Integer currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating().replace(",", ""));
+            if (Integer.valueOf(ISUValue) <= 90 || Integer.valueOf(ISUValue) >= 75) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = ClickOnPipeSensorThresholdValueForCoolingAndHeatingIncrease();
+                        currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating());
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnPipeSensorThresholdValueForCoolingAndHeatingDecrease();
+                        currentValue = Integer.valueOf(getPipeSensorThresholdValueForCoolingAndHeating());
+                    }
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should not be exceed between 75 to 90, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
+    public boolean isFanCoilHeatStageScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatStageScreen", timeOut);
+    }
+
+    public boolean isCoolStage3WiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolStage3WiringScreen", timeOut);
+    }
+
+    public boolean isCoolStage4WiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolStage4WiringScreen", timeOut);
+    }
+
+    public boolean ISUCoolStage3Wiring(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NONE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringNone");
+            }
+            case "THERMOSTAT U": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatU");
+            }
+            case "THERMOSTAT L": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatL");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isFanCoilHeatStage3WiringScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatStage3WiringScreen", timeOut);
+    }
+
+    public boolean ISUFanCoilHeatStage3Wiring(String ISUValue) {
+        switch (ISUValue.toUpperCase()) {
+            case "NONE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringNone");
+            }
+            case "THERMOSTAT U": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatU");
+            }
+            case "THERMOSTAT L": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "FanHighSpeedWiringThermostatL");
+            }
+            default: {
+                return false;
+            }
+        }
+
+    }
+
+    public boolean isStagingControlCompressorCoolStage3DifferentialScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorCoolStage3DifferentialScreen",
+                timeOut);
+    }
+
+    public boolean isStagingControlCompressorCoolStage4DifferentialScreen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorCoolStage4DifferentialScreen",
+                timeOut);
+    }
+
+    public boolean iSStagingControlFanCoilHeatDifferentialStage2(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatDifferentialStage2Screen",
+                timeOut);
+    }
+
+    public boolean iSStagingControlFanCoilHeatDifferentialStage3(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatDifferentialStage3Screen",
+                timeOut);
+    }
+
+    public boolean isCoolCyclePerHourStage3Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolCyclesStage3PerHourScreen", timeOut);
+    }
+
+    public boolean isCoolCyclePerHourStage4Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "CoolCyclesStage4PerHourScreen", timeOut);
+    }
+
+    public boolean isFanCoilHeatCyclePerHourStage1Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatCyclesPerHourStage1Screen",
+                timeOut);
+    }
+
+    public boolean isFanCoilHeatCyclePerHourStage2Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatCyclesPerHourStage2Screen",
+                timeOut);
+    }
+
+    public boolean isFanCoilHeatCyclePerHourStage3Screen(int timeOut) {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "FanCoilHeatCyclesPerHourStage3Screen",
+                timeOut);
+    }
+
+    public boolean ISUFanCoilHeatCyclePerHour_Stage(String ISUValue) {
+        boolean flag = false;
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            flag = true;
+        } else if (getCurrentFanCoilHeatCyclesValue().contains(ISUValue)) {
+            flag = true;
+        } else {
+            Integer valueOf = Integer.valueOf(ISUValue);
+            Integer currentValue = Integer.valueOf(getCurrentFanCoilHeatCyclesValue());
+            if (valueOf <= 12 && valueOf >= 1) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = clickOnFanCoilHeatCyclesValueIncreaseButton();
+                        currentValue = Integer.valueOf(getCurrentFanCoilHeatCyclesValue());
+                    } else if (valueOf < currentValue) {
+                        flag = clickOnFanCoilHeatCyclesValueDecreaseButton();
+                        currentValue = Integer.valueOf(getCurrentFanCoilHeatCyclesValue());
+                    }
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. User entered value is : " + ISUValue);
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
+    public String getCurrentFanCoilHeatCyclesValue() {
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentFanCoilHeatCyclesValue")
+                    .getDomAttribute("content-desc");
+        } else {
+            return MobileUtils.getMobElement(objectDefinition, testCase, "CurrentFanCoilHeatCyclesValue")
+                    .getDomAttribute("label");
+        }
+    }
+
+    public boolean clickOnFanCoilHeatCyclesValueIncreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "FanCoilHeatCyclesValueIncreaseButton");
+    }
+
+    public boolean clickOnFanCoilHeatCyclesValueDecreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "FanCoilHeatCyclesValueDecreaseButton");
+    }
+
+    public boolean setCyclePerHourForHeatStage(String ISUValue) {
+        boolean flag = false;
+        Integer currentValue = Integer.valueOf(getHeatCyclePerHourValue());
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            ISUValue = "4";
+        }
+        Integer valueOf = Integer.valueOf(ISUValue);
+        if (valueOf == currentValue) {
+            flag = true;
+        } else {
+            if (Integer.valueOf(ISUValue) <= 12 || Integer.valueOf(ISUValue) >= 1) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = ClickOnHeatCyclePerHourIncrease();
+                        currentValue = Integer.valueOf(getHeatCyclePerHourValue());
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnHeatCyclePerHourDecrease();
+                        currentValue = Integer.valueOf(getHeatCyclePerHourValue());
+                    }
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should not be exceed 40 to 90, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+
+        return flag;
+    }
+
+    public boolean ISUCompressorCyclesPerHour_Stage1(String ISUValue) {
+        boolean flag = false;
+        Integer currentValue = Integer.valueOf(getCurrentCompressorCyclesValue());
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            ISUValue = "3";
+
+        }
+        Integer valueOf = Integer.valueOf(ISUValue);
+        if (valueOf == currentValue) {
+            flag = true;
+        } else {
+            if (Integer.valueOf(ISUValue) <= 12 && Integer.valueOf(ISUValue) >= 1) {
+                while (!(valueOf == currentValue)) {
+                    if (valueOf == currentValue) {
+                        flag = true;
+                        break;
+                    } else if (valueOf > currentValue) {
+                        flag = ClickOnBackUpHeatCyclePerHourIncrease();
+                        currentValue = Integer.valueOf(getCurrentCompressorCyclesValue());
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnBackUpHeatCyclePerHourDecrease();
+                        currentValue = Integer.valueOf(getCurrentCompressorCyclesValue());
+                    }
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should be between 1 to 6, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
+    public static boolean isDeviceConfiguration_Valid(TestCases testCase, String heatingSystem, String heatingStages,
+            String coolingStages) {
+        boolean flag = false;
+        FADeviceDetailsScreen dviceDetails = new FADeviceDetailsScreen(testCase);
+        String heating_System;
+        if (dviceDetails.isHeatingSystemPresent()) {
+            heating_System = dviceDetails.getHeatingSystem().toUpperCase().replace("HEATING_SYSTEM", "")
+                    .replace("_", " ").trim();
+        } else {
+            // heating_System = "NONE";
+            heating_System = "OTHER";
+        }
+
+        String heating_Stages;
+        if (dviceDetails.isHeatingStagesPresent()) {
+            heating_Stages = dviceDetails.getHeatingStages();
+        } else {
+            heating_Stages = "0";
+        }
+
+        String cooling_Stages;
+        if (dviceDetails.isCoolingStagesPresent()) {
+            cooling_Stages = dviceDetails.getCoolingStages();
+        } else {
+            cooling_Stages = "0";
+        }
+
+        if (heatingSystem.toUpperCase().equals(heating_System.toUpperCase())) {
+            Keyword.ReportStep_Pass(testCase, "Current configured System is " + heating_System);
+            System.out.println("Current configured System is : " + heating_System);
+            flag = true;
+        } else {
+            Keyword.ReportStep_Fail(testCase, FailType.PASSWITH_FAILURE,
+                    "Expected Heating system is " + heatingSystem + ", Actual heating system is " + heating_System);
+            System.out.println("Current configured System is : " + heating_System);
+            flag = false;
+        }
+        if (heatingStages.toUpperCase().equals(heating_Stages.toUpperCase())) {
+            Keyword.ReportStep_Pass(testCase, "Current configured heating stages is " + heatingStages);
+            System.out.println("Current configured heating stages is : " + heatingStages);
+            flag = true;
+        } else {
+            Keyword.ReportStep_Fail(testCase, FailType.PASSWITH_FAILURE,
+                    "Expected Heating system is " + heatingStages + ", Actual heating system is " + heating_Stages);
+            System.out.println("Current configured heating stages is : " + heatingStages);
+            flag = false;
+        }
+        if (coolingStages.toUpperCase().equals(cooling_Stages.toUpperCase())) {
+            Keyword.ReportStep_Pass(testCase, "Current configured Cooling stages is " + cooling_Stages);
+            System.out.println("Current configured cooling stages is : " + cooling_Stages);
+            flag = true;
+        } else {
+            Keyword.ReportStep_Fail(testCase, FailType.PASSWITH_FAILURE,
+                    "Expected Cooling system is " + coolingStages + ", Actual heating system is " + cooling_Stages);
+            System.out.println("Current configured cooling stages is : " + cooling_Stages);
+            flag = false;
+        }
+        return flag;
+    }
+
+    public String getHeatingSystem() {
+        String HeatingSystem = null;
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            if (scroolToExpectedElement("HeatingSystem")) {
+                HeatingSystem = MobileUtils.getDomAttribute(testCase, objectDefinition, "HeatingSystem", "resource-id")
+                        .toUpperCase();
+            }
+        } else {
+            if (scroolToExpectedElement("HeatingSystem")) {
+                HeatingSystem = MobileUtils.getDomAttribute(testCase, objectDefinition, "HeatingSystem", "resource-id")
+                        .toUpperCase();
+            }
+        }
+        return HeatingSystem;
+    }
+
+    public boolean scroolToExpectedElement(String locatorType) {
+        boolean flag = false;
+        Dimension dimens = testCase.getMobileDriver().manage().window().getSize();
+        int x = (int) (dimens.getWidth() * 0.5);
+        int endY = (int) (dimens.getHeight() * 0.2);
+        int startY = (int) (dimens.getHeight() * 0.75);
+        for (int i = 0; i <= 5; i++) {
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, locatorType, 5)) {
+                flag = true;
+                Keyword.ReportStep_Pass(testCase, "Successfully Scrolled to Expected Element");
+                break;
+            } else {
+                W3CTouchActions.swipe(testCase.getMobileDriver(), x, startY, x, endY, Duration.ofMillis(2000));
+            }
+        }
+        if (flag) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+        return flag;
+    }
+
+    public boolean ClickOnMaxMinAlertValueDecrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxMinAlertValueDecrease");
+    }
+
+    public boolean ClickOnMaxMinAlertValueIncrease() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "MaxMinAlertValueIncrease");
+    }
+
+    public boolean ClickOnHPBackUpHeatDifferentialValueDecreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "HPBackUpHeatDifferentialValueIncreaseButton");
+    }
+
+    public boolean ClickOnHPBackUpHeatDifferentialValueIncreaseButton() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "HPBackUpHeatDifferentialValueDecreaseButton");
+    }
+
+    public boolean setISUBackupHeatDifferentialFanCoil(String ISUValue) {
+        boolean flag = false;
+        float epsilon = 0.00001f;
+        String isuValue = ISUValue;
+        Float currentValue = Float.valueOf(getAuxBackUpHeatDifferential());
+
+        if (isuValue.contains("DEG")) {
+            isuValue = isuValue.split("DEG")[0].trim();
+        }
+        if (ISUValue.toUpperCase().contains("DEFAULT")) {
+            isuValue = "2";
+        } else if (ISUValue.toUpperCase().contains("COMFORT")) {
+            // To enable this option need to have ID for the element
+        }
+        Float valueOf = Float.valueOf(isuValue.replace("°", "").replace("DEG", ""));
+        if (Math.abs(valueOf - currentValue) < epsilon) {
+            flag = true;
+        } else {
+            if (Float.valueOf(valueOf) <= 15 || Float.valueOf(valueOf) >= 2) {
+                while (!(valueOf == currentValue)) {
+                    System.out.println("valueOf :" + valueOf + ", currentValue:" + currentValue);
+                    if (valueOf > currentValue) {
+                        flag = ClickOnAuxHeatDifferentialIncreaseButton();
+                        currentValue = Float.valueOf(getAuxBackUpHeatDifferential());
+                    } else if (valueOf < currentValue) {
+                        flag = ClickOnAuxHeatDifferentialDecreaseButton();
+                        currentValue = Float.valueOf(getAuxBackUpHeatDifferential());
+                    }
+                }
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                        "User Entered ISU Value not applicable. its should not be exceed 0,2 to 15, User entered value is : "
+                                + ISUValue);
+                flag = false;
+            }
+        }
+
+        return flag;
+    }
+
+    public boolean setISUBackUpHeatCyclePerHour(String ISUValue) {
         boolean flag = false;
         Integer currentValue = Integer.valueOf(getBackUpHeatCyclePerHourValue());
         if (ISUValue.toUpperCase().contains("DEFAULT")) {
-        	ISUValue = "9";
-//            flag = true;
+            ISUValue = "9";
+            // flag = true;
         }
         Integer valueOf = Integer.valueOf(ISUValue);
-		if (valueOf == currentValue) {
-			flag=true;
-		}
-        else {
-             if (Integer.valueOf(ISUValue) <= 12 || Integer.valueOf(ISUValue) >= 1) {
+        if (valueOf == currentValue) {
+            flag = true;
+        } else {
+            if (Integer.valueOf(ISUValue) <= 12 || Integer.valueOf(ISUValue) >= 1) {
                 while (!(valueOf == currentValue)) {
                     if (valueOf == currentValue) {
                         flag = true;
@@ -5958,19 +6016,19 @@ public class FirstAlertDIYScreen extends MobileScreens {
         }
         return flag;
     }
-	public boolean setISUEmergencyHeatCyclePerHour(String ISUValue) {
+
+    public boolean setISUEmergencyHeatCyclePerHour(String ISUValue) {
         boolean flag = false;
         Integer currentValue = Integer.valueOf(getEmergencyHeatCyclePerHourValue());
         if (ISUValue.toUpperCase().contains("DEFAULT")) {
-        	ISUValue = "5";
-//            flag = true;
+            ISUValue = "5";
+            // flag = true;
         }
         Integer valueOf = Integer.valueOf(ISUValue);
-		if (valueOf == currentValue) {
-			flag=true;
-		}
-        else {
-             if (Integer.valueOf(ISUValue) <= 12 || Integer.valueOf(ISUValue) >= 1) {
+        if (valueOf == currentValue) {
+            flag = true;
+        } else {
+            if (Integer.valueOf(ISUValue) <= 12 || Integer.valueOf(ISUValue) >= 1) {
                 while (!(valueOf == currentValue)) {
                     if (valueOf == currentValue) {
                         flag = true;
@@ -5992,72 +6050,71 @@ public class FirstAlertDIYScreen extends MobileScreens {
         }
         return flag;
     }
-	
-	public boolean setISUBackupHeatDifferentialHP(String ISUValue) {
 
-		boolean flag = false;
-		float epsilon = 0.00001f;
-		String isuValue = ISUValue;
+    public boolean setISUBackupHeatDifferentialHP(String ISUValue) {
 
-		if (isuValue.contains("DEG")) {
-			isuValue = isuValue.split("DEG")[0].trim();
-		}
+        boolean flag = false;
+        float epsilon = 0.00001f;
+        String isuValue = ISUValue;
 
-		if (ISUValue.toUpperCase().contains("COMFORT")) {
-//			To enable this option need to have ID for the element
-			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
-				MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
-				flag = true;
-				System.out.println("Set to Default Settings for HP : Comfort ");
-			} 
-			else {
-				if (MobileUtils.isMobElementExists(objectDefinition, testCase, "ComfortCheckBox")) {
+        if (isuValue.contains("DEG")) {
+            isuValue = isuValue.split("DEG")[0].trim();
+        }
 
-					System.out.println("Already set as Default Settings : Comfort ");
-					flag = true;
-				}
-			}
-		} else {
-			if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
-				MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
-		} 
-			Float currentValue = Float.valueOf(getHPBackUpHeatDifferential());
-			Float valueOf = Float.valueOf(isuValue.replace("°", "").replace("DEG", ""));
-			if (Math.abs(valueOf - currentValue) < epsilon) {
-				flag = true;
-			} else {
-				if (Float.valueOf(valueOf) <= 15 || Float.valueOf(valueOf) >= 2) {
-					while (!(valueOf == currentValue)) {
-						System.out.println("valueOf :" + valueOf + ", currentValue:" + currentValue);
-						if (valueOf > currentValue) {
-							flag = ClickOnHPBackUpHeatDifferentialValueIncreaseButton();
-							currentValue = Float.valueOf(getHPBackUpHeatDifferential());
-						} else if (valueOf < currentValue) {
-							flag = ClickOnHPBackUpHeatDifferentialValueDecreaseButton();
-							currentValue = Float.valueOf(getHPBackUpHeatDifferential());
-						}
-					}
-				} else {
-					Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
-							"User Entered ISU Value not applicable. its should not be exceed 0,2 to 15, User entered value is : "
-									+ ISUValue);
-					flag = false;
-				}
-			
-		}
+        if (ISUValue.toUpperCase().contains("COMFORT")) {
+            // To enable this option need to have ID for the element
+            if (MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
+                MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
+                flag = true;
+                System.out.println("Set to Default Settings for HP : Comfort ");
+            } else {
+                if (MobileUtils.isMobElementExists(objectDefinition, testCase, "ComfortCheckBox")) {
 
-		}
-		return flag;
-	}
-	
-	public String getHPBackUpHeatDifferential() {
+                    System.out.println("Already set as Default Settings : Comfort ");
+                    flag = true;
+                }
+            }
+        } else {
+            if (!MobileUtils.isMobElementExists(objectDefinition, testCase, "CompressorHeatDifferentialStage2Value")) {
+                MobileUtils.clickOnElement(objectDefinition, testCase, "ComfortCheckBox");
+            }
+            Float currentValue = Float.valueOf(getHPBackUpHeatDifferential());
+            Float valueOf = Float.valueOf(isuValue.replace("°", "").replace("DEG", ""));
+            if (Math.abs(valueOf - currentValue) < epsilon) {
+                flag = true;
+            } else {
+                if (Float.valueOf(valueOf) <= 15 || Float.valueOf(valueOf) >= 2) {
+                    while (!(valueOf == currentValue)) {
+                        System.out.println("valueOf :" + valueOf + ", currentValue:" + currentValue);
+                        if (valueOf > currentValue) {
+                            flag = ClickOnHPBackUpHeatDifferentialValueIncreaseButton();
+                            currentValue = Float.valueOf(getHPBackUpHeatDifferential());
+                        } else if (valueOf < currentValue) {
+                            flag = ClickOnHPBackUpHeatDifferentialValueDecreaseButton();
+                            currentValue = Float.valueOf(getHPBackUpHeatDifferential());
+                        }
+                    }
+                } else {
+                    Keyword.ReportStep_Fail(testCase, FailType.FALSE_POSITIVE,
+                            "User Entered ISU Value not applicable. its should not be exceed 0,2 to 15, User entered value is : "
+                                    + ISUValue);
+                    flag = false;
+                }
+
+            }
+
+        }
+        return flag;
+    }
+
+    public String getHPBackUpHeatDifferential() {
         String getText = null;
         if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "HPBackUpHeatDifferentialValue")
-                    .getAttribute("content-desc");
+                    .getDomAttribute("content-desc");
         } else {
             getText = MobileUtils.getMobElement(objectDefinition, testCase, "HPBackUpHeatDifferentialValue")
-                    .getAttribute("label");
+                    .getDomAttribute("label");
 
         }
         if (getText.contains("°")) {
@@ -6066,74 +6123,95 @@ public class FirstAlertDIYScreen extends MobileScreens {
         return getText;
     }
 
-	public boolean clickOnGleneaglesControlHub() {
-		 NavigatingScreenToScreeninFA navigateTo = new NavigatingScreenToScreeninFA(testCase);
-		if (navigateTo.scrollToExpectedElement("GleneaglesControlHubTab")) {
-            return MobileUtils.clickOnElement(objectDefinition, testCase, "GleneaglesControlHubTab");
-        } else {
+    public boolean clickOnGleneaglesControlHub() {
+        NavigatingScreenToScreeninFA navigateTo = new NavigatingScreenToScreeninFA(testCase);
+        try {
+            if (navigateTo.scrollToExpectedElement("GleneaglesControlHubTab")) {
+                TimeUnit.SECONDS.sleep(2);
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "GleneaglesControlHubTab");
+            } else {
+                Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
+                        "Not able to scroll to Gleneagles element.");
+                return false;
+            }
+        } catch (Exception e) {
             Keyword.ReportStep_Fail(testCase, FailType.FUNCTIONAL_FAILURE,
-                    "Not able to scroll to Gleneagles element.");
+                    "Not able to scroll to Gleneagles element due to exception: " + e.getMessage());
             return false;
         }
-	}
-
-	public boolean isPrepareHardwareScreen() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "PrepareHardwareScreen");
-	}
-
-	public boolean isInitiateParingScreen() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "InitiateParingScreen");
-	}
-
-	public boolean clickonSkipBtn() {
-		return MobileUtils.clickOnElement(objectDefinition, testCase, "SkipBtnTab");
-//		return MobileUtils.isMobElementExists("XPATH", "//*[@content-desc=\"Skip\"]", testCase);
-		
-	}
-
-	public boolean isUsingNxtScreenPresent() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "UsingNxtScreen");
-	}
-
-	public boolean isInstallNxtScreen() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "InstallNxtScreen");
-	}
-
-	public boolean BindNxtScreen() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "BindNxtScreen");
-	}
-
-	public boolean isSuccess() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "SuccessPopUp");
-	}
-
-	public boolean isDemandControlScreenPresent() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "DemandControlScreen");
-	}
-
-	public boolean selectDemandControlOpt(String valueToConfigure) {
-		switch (valueToConfigure.toUpperCase()) {
-        case "NONE": {
-        	return MobileUtils.clickOnElement(objectDefinition, testCase, "StageNone");
-        }
-        case "WIRED VIA NXT":
-        case "NXT":{
-        	return MobileUtils.clickOnElement(objectDefinition, testCase, "WiredViaNxtOpt");
-        }
-        case "WIRED VIA EIM":
-        case "EIM":{
-            return MobileUtils.clickOnElement(objectDefinition, testCase, "WiredViaEIMOpt");
-        }
-        default:
-            return false;
     }
-	}
 
-	public boolean isInstallControlModuleScreen() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "InstallControlModuleScreen",7);
-	}
+    public boolean isPrepareHardwareScreen() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "PrepareHardwareScreen");
+    }
 
-	public boolean BindControlModuleScreen() {
-		return MobileUtils.isMobElementExists(objectDefinition, testCase, "BindControlModule");
-	}
+    public boolean isInitiateParingScreen() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "InitiateParingScreen");
+    }
+
+    public boolean clickonSkipBtn() {
+        return MobileUtils.clickOnElement(objectDefinition, testCase, "SkipBtnTab");
+        // return MobileUtils.isMobElementExists("XPATH", "//*[@content-desc=\"Skip\"]",
+        // testCase);
+
+    }
+
+    public boolean isUsingNxtScreenPresent() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "UsingNxtScreen");
+    }
+
+    public boolean isInstallNxtScreen() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "InstallNxtScreen");
+    }
+
+    public boolean BindNxtScreen() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "BindNxtScreen");
+    }
+
+    public boolean isSuccess() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "SuccessPopUp");
+    }
+
+    public boolean isDemandControlScreenPresent() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "DemandControlScreen");
+    }
+
+    public boolean selectDemandControlOpt(String valueToConfigure) {
+        switch (valueToConfigure.toUpperCase()) {
+            case "NONE": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "StageNone");
+            }
+            case "WIRED VIA NXT":
+            case "NXT": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "WiredViaNxtOpt");
+            }
+            case "WIRED VIA EIM":
+            case "EIM": {
+                return MobileUtils.clickOnElement(objectDefinition, testCase, "WiredViaEIMOpt");
+            }
+            default:
+                return false;
+        }
+    }
+
+    public boolean isInstallControlModuleScreen() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "InstallControlModuleScreen", 7);
+    }
+
+    public boolean BindControlModuleScreen() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "BindControlModule");
+    }
+
+    public boolean isTextPresent(String reqText) {
+        if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
+            return MobileUtils.isMobElementExists("XPATH", "//*[contains(@content-desc,'" + reqText + "')]", testCase);
+        } else {
+            return MobileUtils.isMobElementExists("XPATH", "//*[contains(@name,'" + reqText + "')]", testCase);
+        }
+    }
+
+    public boolean isSetUpNxtSmartThermostatKitScreen() {
+        return MobileUtils.isMobElementExists(objectDefinition, testCase, "SetUpNxtSmartThermostatKitScreen");
+    }
+
 }

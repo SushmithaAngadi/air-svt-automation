@@ -10,7 +10,7 @@ import com.resideo.utils.resideo_app.LyricUtils;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;

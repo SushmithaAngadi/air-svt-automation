@@ -18,7 +18,7 @@ import com.resideo.commons.report.FailType;
 import com.resideo.system.utils.CommonUtils;
 
 import org.openqa.selenium.WebElement;
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 
 public class HomeKitScreen extends MobileScreens {
 
@@ -1206,7 +1206,7 @@ public class HomeKitScreen extends MobileScreens {
 //		String gettempCoordinates = MobileUtils
 //				.getMobElement(testCase, "XPATH",
 //						"(//*[@name='Target value']/preceding-sibling::XCUIElementTypeStaticText)[2]")
-//				.getAttribute("name").replace("°", "");
+//				.getDomAttribute("name").replace("°", "");
 //		System.out.println();
 		String gettempCoordinates = null;
 		if (MobileUtils.isMobElementExists("XPATH",
@@ -1215,11 +1215,11 @@ public class HomeKitScreen extends MobileScreens {
 			gettempCoordinates = MobileUtils
 					.getMobElement(testCase, "XPATH",
 							"(//*[@name='Target value']/preceding-sibling::XCUIElementTypeStaticText)[2]")
-					.getAttribute("name").replace("°", "");
+					.getDomAttribute("name").replace("°", "");
 		} else {
 			gettempCoordinates = MobileUtils.getMobElement(testCase, "XPATH",
 					"(//*[@name='AccessoryControl.thermostat.Thermostat']/XCUIElementTypeStaticText)[2]")
-					.getAttribute("name").replace("°", "");
+					.getDomAttribute("name").replace("°", "");
 		}
 		String pressSetPointCoordinates = getSetPointCoordinatesForParticularDevice(inputs, gettempCoordinates);
 		String[] presscoordinates = pressSetPointCoordinates.split("_");
@@ -1235,7 +1235,7 @@ public class HomeKitScreen extends MobileScreens {
 		String currentTemp = MobileUtils
 				.getMobElement(testCase, "XPATH",
 						"(//*[@name='Target value']/preceding-sibling::XCUIElementTypeStaticText)[2]")
-				.getAttribute("name").replace("°", "");
+				.getDomAttribute("name").replace("°", "");
 		if (setPoint.contains(currentTemp)) {
 			flag = true;
 			Keyword.ReportStep_Pass(testCase, "Setpoint changed to " + setPoint);
@@ -1264,11 +1264,11 @@ public class HomeKitScreen extends MobileScreens {
 						currentTemp = MobileUtils
 								.getMobElement(testCase, "XPATH",
 										"(//*[@name='Target value']/preceding-sibling::XCUIElementTypeStaticText)[2]")
-								.getAttribute("name");
+								.getDomAttribute("name");
 					} else {
 						currentTemp = MobileUtils.getMobElement(testCase, "XPATH",
 								"(//*[@name='AccessoryControl.thermostat.Thermostat']/XCUIElementTypeStaticText)[2]")
-								.getAttribute("name");
+								.getDomAttribute("name");
 					}
 					if (currentTemp.contains(setPoint)) {
 						Keyword.ReportStep_Pass(testCase, "Setpoint changed to " + setPoint);

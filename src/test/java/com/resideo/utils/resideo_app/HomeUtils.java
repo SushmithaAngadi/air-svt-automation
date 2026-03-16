@@ -85,7 +85,8 @@ public class HomeUtils {
 					MqttManager.setIsSerialMethod(false);
 					flag = true;
 				}
-				model_Name = MqttManager.getModelNumber();
+				// model_Name = null;
+				//MqttManager.getModelNumber();
 				if (model_Name == null || model_Name.isEmpty())
 					model_Name = "GLENEAGLES";
 			} else {

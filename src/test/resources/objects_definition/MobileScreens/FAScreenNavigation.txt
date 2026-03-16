@@ -28,7 +28,7 @@ WireE	ACCESSIBILITY ID	E					ACCESSIBILITY ID	E
 WireAL_A	ACCESSIBILITY ID	A-L/A					ACCESSIBILITY ID	A-L/A
 DenaliThermostat	XPATH	//*[contains(@content-desc,'Denali')or contains(@content-desc,'denali')or contains(@content-desc,'X8S Thermostat')]					XPATH	//*[contains(@label,'Denali')or contains(@label,'denali')or contains(@label,'X8S Thermostat')]
 DenaliTradeThermostat	XPATH	//*[contains(@content-desc,'Denali')or contains(@content-desc,'denali')or contains(@content-desc,'ElitePRO S1200 Thermostat')]					XPATH	//*[contains(@label,'Denali')or contains(@label,'denali')or contains(@label,'ElitePRO S1200 Thermostat')]
-GleneaglesControlHubTab	XPATH	//*[contains(@content-desc,'NXT Smart Thermostat Kit ')]					XPATH	//*[contains(@name,'NXT Smart Thermostat Kit ')]						
+GleneaglesControlHubTab	XPATH	//*[contains(@content-desc,'NXT Smart Thermostat Kit ')]					XPATH	//*[contains(@name,'NXT Smart Thermostat Kit')]						
 
 
 

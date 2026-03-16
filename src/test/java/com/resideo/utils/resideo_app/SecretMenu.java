@@ -55,7 +55,7 @@ public class SecretMenu extends MobileScreens {
 		boolean flag = true;
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			if (testCase.getMobileDriver().findElement(By.xpath("//*[@text = 'New DAS Enrollment']"))
-					.getAttribute("checked").equals("false")) {
+					.getDomAttribute("checked").equals("false")) {
 				testCase.getMobileDriver().findElement(By.xpath("//*[@text = 'New DAS Enrollment']")).click();
 			}
 		} else {

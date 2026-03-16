@@ -40,7 +40,7 @@ import com.resideo.utils.stat.cattgrpccommands.DeviceInfoMsg.DeviceInfoItem;
 import com.resideo.utils.stat.cattgrpccommands.PairingPinMsg.PairingPinMode;
 
 import org.openqa.selenium.WebElement;
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
@@ -1593,7 +1593,7 @@ public class DIYScreen extends MobileScreens {
 		else
 			getattribute = "label";
 
-		return MobileUtils.getAttribute(testCase, objectDefinition, "", getattribute);
+		return MobileUtils.getDomAttribute(testCase, objectDefinition, "", getattribute);
 
 	}
 
@@ -1707,7 +1707,7 @@ public class DIYScreen extends MobileScreens {
 	}
 
 	public String getPerCycleBarValue(String tagname) {
-		return MobileUtils.getAttribute(testCase, objectDefinition, "SeekBarCycleValue", tagname);
+		return MobileUtils.getDomAttribute(testCase, objectDefinition, "SeekBarCycleValue", tagname);
 	}
 
 	public boolean ISUIndoorSensor(String ISUValue) {
@@ -2258,7 +2258,7 @@ public class DIYScreen extends MobileScreens {
 								"//XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeStaticText");
 
 						for (WebElement webElement : mobElements) {
-							wifiList.add(webElement.getAttribute("name"));
+							wifiList.add(webElement.getDomAttribute("name"));
 						}
 
 						int y = mobElements.get(0).getLocation().y;
@@ -2516,7 +2516,7 @@ public class DIYScreen extends MobileScreens {
 					.getText();
 		} else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "SelectFirstDeviceNameInAvailableList")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
@@ -2819,7 +2819,7 @@ public class DIYScreen extends MobileScreens {
 							"//*[contains(@resource-id,'list_item_display_text')]");
 
 					for (WebElement webElement : wifinameButton) {
-						String wifiName = webElement.getAttribute("text");
+						String wifiName = webElement.getDomAttribute("text");
 						wifilist.add(wifiName);
 					}
 					Keyword.ReportStep_Pass(testCase, "List of Available wifi" + wifilist);
@@ -2833,7 +2833,7 @@ public class DIYScreen extends MobileScreens {
 							"//XCUIElementTypeCollectionView/XCUIElementTypeCell /XCUIElementTypeStaticText");
 
 					for (WebElement webElement : wifinameButton) {
-						String wifiName = webElement.getAttribute("name");
+						String wifiName = webElement.getDomAttribute("name");
 						wifilist.add(wifiName);
 					}
 					Keyword.ReportStep_Pass(testCase, "List of Available wifi" + wifilist);

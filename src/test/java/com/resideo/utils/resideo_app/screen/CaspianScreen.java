@@ -38,7 +38,7 @@ public class CaspianScreen extends MobileScreens {
 			} else {
 				status= MobileUtils.getMobElement(testCase, "XPATH", "//XCUIElementTypeButton[@value='"
 						+ SystemState.getStatus().getTstatName() + "']/following-sibling::XCUIElementTypeStaticText")
-						.getAttribute("name");
+						.getDomAttribute("name");
 			}
 		} catch (Exception e) {
 			System.out.println("Exception Raised due to " + e.getStackTrace());
@@ -78,18 +78,18 @@ public class CaspianScreen extends MobileScreens {
 						.getMobElement(testCase, "XPATH",
 								"//XCUIElementTypeButton[@value='" + SystemState.getStatus().getTstatName()
 										+ "']/following-sibling::XCUIElementTypeButton/XCUIElementTypeStaticText")
-						.getAttribute("name");
+						.getDomAttribute("name");
 			} else if (MobileUtils.isMobElementExists("XPATH",
 					"//*[@name='title']/preceding-sibling::XCUIElementTypeStaticText", testCase, 3)) {
 				return MobileUtils.getMobElement(testCase, "XPATH",
-						"//*[@name='title']/preceding-sibling::XCUIElementTypeStaticText").getAttribute("name");
+						"//*[@name='title']/preceding-sibling::XCUIElementTypeStaticText").getDomAttribute("name");
 			} else if (MobileUtils.isMobElementExists("XPATH",
 					"//*[@name='title']/following-sibling::XCUIElementTypeButton/XCUIElementTypeStaticText", testCase,
 					3)) {
 				return MobileUtils
 						.getMobElement(testCase, "XPATH",
 								"//*[@name='title']/following-sibling::XCUIElementTypeButton/XCUIElementTypeStaticText")
-						.getAttribute("name");
+						.getDomAttribute("name");
 			} else {
 				return null;
 			}
@@ -100,7 +100,7 @@ public class CaspianScreen extends MobileScreens {
 		return MobileUtils
 				.getMobElement(testCase, "XPATH",
 						"(//*[@name='" + SystemState.getStatus().macIDName() + "']/XCUIElementTypeStaticText)[1]")
-				.getAttribute("name");
+				.getDomAttribute("name");
 	}
 
 	// XCUIElementTypeButton[@value='VALVE

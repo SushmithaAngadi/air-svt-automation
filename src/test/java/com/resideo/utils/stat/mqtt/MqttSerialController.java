@@ -40,21 +40,30 @@ public class MqttSerialController {
 			}
 
 			for (SerialPort port : serialPorts) {
-				if (port.getPortDescription().toUpperCase().contains("FT4232H-56Q MINIMODULE B") || port.getPortDescription().toUpperCase().contains("USB-SERIAL CONTROLLER D")) {
+				String portDesc = port.getPortDescription().toUpperCase();
+				String portName = port.getSystemPortName().toUpperCase();
+				System.out.println("Found port: " + port.getSystemPortName() + " - " + port.getPortDescription());
+				if (isTargetSerialPort(portDesc, portName)) {
 				activePort = port;
 				System.out.print("Attempting to connect : " + port.getSystemPortName() + ",");
 				port.setComPortParameters(baudRate, dataBits, stopBits, parity);
 				port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING | SerialPort.TIMEOUT_WRITE_BLOCKING,
 						readTimeout, writeTimeout);
-				outputStream = port.getOutputStream();
-				inputStream = port.getInputStream();
 
-				if (!port.openPort()) {
+				// On macOS, kill any existing screen session holding this port
+				if (System.getProperty("os.name").toLowerCase().contains("mac")) {
+					killScreenSessionOnPort(port.getSystemPortName());
+				}
+
+				if (!port.openPort(0)) {
 					System.out.print("Failed to open the port: " + port.getSystemPortName() + "\n");
 					continue;
 				}else {
 					System.out.println("Connected To: " + port.getSystemPortName());
 				}
+				// Get streams after opening the port
+				outputStream = port.getOutputStream();
+				inputStream = port.getInputStream();
 				// sending username
 				return sendUsernameAndPassword();
 			}
@@ -252,7 +261,7 @@ public class MqttSerialController {
 					String response;
 					response = waitForSerialResponse(inputStream, 2000).toUpperCase();
  
-					if (response.contains("ROOT@")) {
+					if (response.contains("ROOT")) {
 						return true;
 					} else if (response.contains("PASSWORD")) {
 						if (sendCommandToPort("root")) {
@@ -338,6 +347,56 @@ public class MqttSerialController {
 							+ formattedDateTime.replaceAll(" ", "_"));
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Matches the target serial port on both Windows and macOS.
+	 * Checks port description first (works on both platforms), then falls back to port name.
+	 * On macOS, only matches cu.* ports (not tty.* dial-in ports).
+	 */
+	private static boolean isTargetSerialPort(String portDesc, String portName) {
+		// Skip tty.* (dial-in) ports on macOS — only use cu.* (call-out) ports
+		if (portName.startsWith("TTY.")) {
+			return false;
+		}
+
+		// Match by port description (works on both Windows and macOS)
+		if (portDesc.contains("FT4232H-56Q MINIMODULE B") || portDesc.contains("USB-SERIAL CONTROLLER D")) {
+			return true;
+		}
+
+		// Fallback: match by port name for USB-serial devices
+		if (portName.startsWith("CU.USBSERIAL")) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * On macOS, kills any screen session holding the given serial port
+	 * so that Java can open it. No-op on Windows.
+	 */
+	private static void killScreenSessionOnPort(String portName) {
+		try {
+			Process process = new ProcessBuilder("lsof", "/dev/" + portName)
+					.redirectErrorStream(true).start();
+			String output = new String(process.getInputStream().readAllBytes());
+			process.waitFor();
+
+			for (String line : output.split("\n")) {
+				if (line.toLowerCase().contains("screen")) {
+					String[] parts = line.trim().split("\\s+");
+					if (parts.length >= 2) {
+						String pid = parts[1];
+						System.out.println("Killing screen session (PID " + pid + ") holding port " + portName);
+						new ProcessBuilder("kill", pid).start().waitFor();
+						TimeUnit.SECONDS.sleep(1); // wait for port to be released
+					}
+				}
+			}
+		} catch (Exception e) {
+			System.out.println("Could not check/kill screen session: " + e.getMessage());
 		}
 	}
 }

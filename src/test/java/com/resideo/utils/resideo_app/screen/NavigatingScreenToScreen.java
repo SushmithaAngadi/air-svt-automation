@@ -652,11 +652,11 @@ public class NavigatingScreenToScreen extends MobileScreens {
 
 	public String getLocationNameFromDashboard() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.getAttribute(testCase, "XPATH",
+			return MobileUtils.getDomAttribute(testCase, "XPATH",
 					"//android.widget.ImageButton[@content-desc='Main Menu']/following-sibling::android.widget.LinearLayout//android.widget.TextView",
 					"text");
 		} else {
-			return MobileUtils.getAttribute(testCase, "XPATH",
+			return MobileUtils.getDomAttribute(testCase, "XPATH",
 					"//XCUIElementTypeButton[@name='menu']/preceding-sibling::XCUIElementTypeOther//XCUIElementTypeStaticText",
 					"name");
 		}

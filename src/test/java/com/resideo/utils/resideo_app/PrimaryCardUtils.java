@@ -1312,12 +1312,12 @@ public class PrimaryCardUtils {
 		String[] split = findUporDownTemp.split("_");
 		String currentPointNeedtoSet = split[1];
 		if (findUporDownTemp.contains("UP")) {
-			while (!MobileUtils.getMobElement(testCase, "ID", "current_temp_value").getAttribute("text")
+			while (!MobileUtils.getMobElement(testCase, "ID", "current_temp_value").getDomAttribute("text")
 					.equals(currentPointNeedtoSet)) {
 				flag = MobileUtils.clickOnElement(testCase, "ID", "stat_temp_stepper_up", false, false);
 			}
 		} else {
-			while (!MobileUtils.getMobElement(testCase, "ID", "current_temp_value").getAttribute("text")
+			while (!MobileUtils.getMobElement(testCase, "ID", "current_temp_value").getDomAttribute("text")
 					.equals(currentPointNeedtoSet)) {
 				flag = MobileUtils.clickOnElement(testCase, "ID", "stat_temp_stepper_down", false, false);
 			}

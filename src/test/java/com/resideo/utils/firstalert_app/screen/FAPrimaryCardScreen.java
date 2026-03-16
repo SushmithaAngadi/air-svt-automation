@@ -28,10 +28,10 @@ public class FAPrimaryCardScreen extends MobileScreens {
 		for (int i = 0; i < 2; i++) {
 			try {
 				if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-					mode = MobileUtils.getAttribute(testCase, objectDefinition, "SystemSwitchButton", "content-desc")
+					mode = MobileUtils.getDomAttribute(testCase, objectDefinition, "SystemSwitchButton", "content-desc")
 							.toUpperCase();
 				} else {
-					mode = MobileUtils.getAttribute(testCase, objectDefinition, "SystemSwitchButton", "name")
+					mode = MobileUtils.getDomAttribute(testCase, objectDefinition, "SystemSwitchButton", "name")
 							.toUpperCase();
 				}
 				if (mode != null)
@@ -146,9 +146,9 @@ public class FAPrimaryCardScreen extends MobileScreens {
 
 	public String getLocationNameFromDashboard() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.getAttribute(testCase, objectDefinition, "LocationName", "content-desc").toUpperCase();
+			return MobileUtils.getDomAttribute(testCase, objectDefinition, "LocationName", "content-desc").toUpperCase();
 		} else {
-			return MobileUtils.getAttribute(testCase, objectDefinition, "LocationName", "name").toUpperCase();
+			return MobileUtils.getDomAttribute(testCase, objectDefinition, "LocationName", "name").toUpperCase();
 		}
 	}
 
@@ -161,10 +161,10 @@ public class FAPrimaryCardScreen extends MobileScreens {
 			mode = "Cool";
 		}
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			setpoint = MobileUtils.getAttribute(testCase, "XPATH",
+			setpoint = MobileUtils.getDomAttribute(testCase, "XPATH",
 					"//*[contains(@content-desc,'" + mode + "') and contains(@content-desc,'To')]", "content-desc");
 		} else {
-			setpoint = MobileUtils.getAttribute(testCase, "XPATH",
+			setpoint = MobileUtils.getDomAttribute(testCase, "XPATH",
 					"//*[contains(@name,'" + mode + "') and contains(@name,'To')]", "name");
 		}
 		Pattern heatPattern = Pattern.compile("Heat(i(n?)|ing)? To\\s*(\\d{2})");
@@ -270,10 +270,10 @@ public class FAPrimaryCardScreen extends MobileScreens {
 		for (int i = 0; i < 2; i++) {
 			try {
 				if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-					fanMode = MobileUtils.getAttribute(testCase, objectDefinition, "FanModeBtn", "content-desc")
+					fanMode = MobileUtils.getDomAttribute(testCase, objectDefinition, "FanModeBtn", "content-desc")
 							.toUpperCase();
 				} else {
-					fanMode = MobileUtils.getAttribute(testCase, objectDefinition, "FanModeBtn", "name").toUpperCase();
+					fanMode = MobileUtils.getDomAttribute(testCase, objectDefinition, "FanModeBtn", "name").toUpperCase();
 				}
 				if (fanMode != null)
 					break;
@@ -313,10 +313,10 @@ public class FAPrimaryCardScreen extends MobileScreens {
 	public boolean isSaveBtnEnable() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "SaveBtn", 2))
-				return Boolean.valueOf(MobileUtils.getAttribute(testCase, objectDefinition, "SaveBtn", "enabled"));
+				return Boolean.valueOf(MobileUtils.getDomAttribute(testCase, objectDefinition, "SaveBtn", "enabled"));
 		} else {
 			if (MobileUtils.isMobElementExists(objectDefinition, testCase, "SaveBtn", 2))
-				return Boolean.valueOf(MobileUtils.getAttribute(testCase, objectDefinition, "SaveBtn", "enabled"));
+				return Boolean.valueOf(MobileUtils.getDomAttribute(testCase, objectDefinition, "SaveBtn", "enabled"));
 		}
 		return false;
 	}
@@ -339,10 +339,10 @@ public class FAPrimaryCardScreen extends MobileScreens {
 
 	public String getCurrentStatusofAdaptiveRecovery() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			return MobileUtils.getAttribute(testCase, objectDefinition, "AdaptiveRecoveryTglBtn", "checked")
+			return MobileUtils.getDomAttribute(testCase, objectDefinition, "AdaptiveRecoveryTglBtn", "checked")
 					.toUpperCase();
 		} else {
-			return MobileUtils.getAttribute(testCase, objectDefinition, "AdaptiveRecoveryTglBtn", "value")
+			return MobileUtils.getDomAttribute(testCase, objectDefinition, "AdaptiveRecoveryTglBtn", "value")
 					.toUpperCase();
 		}
 	}

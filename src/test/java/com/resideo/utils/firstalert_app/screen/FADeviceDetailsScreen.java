@@ -8,9 +8,8 @@ import com.resideo.commons.coreframework.Keyword;
 import com.resideo.commons.coreframework.TestCases;
 import com.resideo.commons.mobile.MobileScreens;
 import com.resideo.commons.mobile.MobileUtils;
-import com.resideo.commons.report.FailType;
 
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 
 public class FADeviceDetailsScreen extends MobileScreens {
 	private static final String screenName = "FADeviceDetailsScreen";
@@ -23,12 +22,12 @@ public class FADeviceDetailsScreen extends MobileScreens {
 		String HeatingSystem = null;
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			if (scroolToExpectedElement("HeatingSystem")) {
-				HeatingSystem = MobileUtils.getAttribute(testCase, objectDefinition, "HeatingSystem", "content-desc")
+				HeatingSystem = MobileUtils.getDomAttribute(testCase, objectDefinition, "HeatingSystem", "content-desc")
 						.toUpperCase();
 			}
 		} else {
 			if (scroolToExpectedElement("HeatingSystem")) {
-				HeatingSystem = MobileUtils.getAttribute(testCase, objectDefinition, "HeatingSystem", "name")
+				HeatingSystem = MobileUtils.getDomAttribute(testCase, objectDefinition, "HeatingSystem", "name")
 						.toUpperCase();
 			}
 		}
@@ -39,12 +38,12 @@ public class FADeviceDetailsScreen extends MobileScreens {
 		String HeatingStages = null;
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			if (scroolToExpectedElement("HeatingStages")) {
-				return MobileUtils.getAttribute(testCase, objectDefinition, "HeatingStages", "content-desc")
+				return MobileUtils.getDomAttribute(testCase, objectDefinition, "HeatingStages", "content-desc")
 						.toUpperCase();
 			}
 		} else {
 			if (scroolToExpectedElement("HeatingStages")) {
-				return MobileUtils.getAttribute(testCase, objectDefinition, "HeatingStages", "name").toUpperCase();
+				return MobileUtils.getDomAttribute(testCase, objectDefinition, "HeatingStages", "name").toUpperCase();
 			}
 		}
 		return HeatingStages;
@@ -57,12 +56,12 @@ public class FADeviceDetailsScreen extends MobileScreens {
 		String CoolingStages = null;
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			if (scroolToExpectedElement("CoolingStages")) {
-				return MobileUtils.getAttribute(testCase, objectDefinition, "CoolingStages", "content-desc")
+				return MobileUtils.getDomAttribute(testCase, objectDefinition, "CoolingStages", "content-desc")
 						.toUpperCase();
 			}
 		} else {
 			if (scroolToExpectedElement("CoolingStages")) {
-				return MobileUtils.getAttribute(testCase, objectDefinition, "CoolingStages", "name").toUpperCase();
+				return MobileUtils.getDomAttribute(testCase, objectDefinition, "CoolingStages", "name").toUpperCase();
 			}
 		}
 		return CoolingStages;

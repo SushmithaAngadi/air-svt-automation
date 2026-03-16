@@ -129,7 +129,7 @@ public class DashboardScreen extends MobileScreens {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "DeviceCurrentTempValue").getText();
 		else {
 			return MobileUtils.getMobElement(objectDefinition, testCase, "DeviceCurrentTempValue")
-					.getAttribute("value");
+					.getDomAttribute("value");
 
 		}
 
@@ -167,9 +167,9 @@ public class DashboardScreen extends MobileScreens {
 					displayedText = e.getText();
 				} else {
 					try {
-						if ((e.getAttribute("visible").equals("true")) && (e.getAttribute("value").trim() != null)
-								&& (!e.getAttribute("value").trim().isEmpty()))
-							displayedText = e.getAttribute("value");
+						if ((e.getDomAttribute("visible").equals("true")) && (e.getDomAttribute("value").trim() != null)
+								&& (!e.getDomAttribute("value").trim().isEmpty()))
+							displayedText = e.getDomAttribute("value");
 					} catch (Exception e1) {
 					}
 				}
@@ -223,7 +223,7 @@ public class DashboardScreen extends MobileScreens {
 					displayedText = dashboardIconText.get(i).getText();
 				} else {
 					try {
-						displayedText = dashboardIconText.get(i).getAttribute("value");
+						displayedText = dashboardIconText.get(i).getDomAttribute("value");
 					} catch (Exception e1) {
 					}
 				}
@@ -255,7 +255,7 @@ public class DashboardScreen extends MobileScreens {
 			if (testCase.getPlatform().toUpperCase().contains("IOS")) {
 				fieldObjects = MobileUtils.loadObjectFile(testCase, "PrimaryCard");
 				if (MobileUtils.isMobElementExists(fieldObjects, testCase, "LocationNameIOS", 5)) {
-					if (MobileUtils.getMobElement(fieldObjects, testCase, "LocationNameIOS").getAttribute("value")
+					if (MobileUtils.getMobElement(fieldObjects, testCase, "LocationNameIOS").getDomAttribute("value")
 							.contains(locationToBeSelected)) {
 						Keyword.ReportStep_Pass(testCase,
 								"Select Location From DashBoard : User is already in location : "
@@ -316,7 +316,7 @@ public class DashboardScreen extends MobileScreens {
 		if (element != null) {
 			if (testCase.getPlatform().toUpperCase().contains("IOS")) {
 				if (MobileUtils.isMobElementExists(objectDefinition, testCase, "LocationName", 5)) {
-					if (MobileUtils.getMobElement(objectDefinition, testCase, "LocationName").getAttribute("value")
+					if (MobileUtils.getMobElement(objectDefinition, testCase, "LocationName").getDomAttribute("value")
 							.contains(locationToBeSelected))
 						Keyword.ReportStep_Pass(testCase,
 								"Select Location From DashBoard : User is already in location : "
@@ -379,7 +379,7 @@ public class DashboardScreen extends MobileScreens {
 					displayedText = dashboardIconText.get(i).getText();
 				} else {
 					try {
-						displayedText = dashboardIconText.get(i).getAttribute("value");
+						displayedText = dashboardIconText.get(i).getDomAttribute("value");
 					} catch (Exception e1) {
 					}
 				}
@@ -627,7 +627,7 @@ public class DashboardScreen extends MobileScreens {
 		if(testCase.getPlatform().toUpperCase().contains("ANDROID")){
 			return MobileUtils.getMobElement(testCase, "XPATH", "//*[@text='"+deviceName+"']/parent::android.widget.LinearLayout/following-sibling::android.widget.RelativeLayout/android.widget.TextView").getText();
 		}else {
-			return MobileUtils.getAttribute(testCase, "XPATH", "//*[@value='"+deviceName+"']/following-sibling::XCUIElementTypeButton/XCUIElementTypeStaticText","label");
+			return MobileUtils.getDomAttribute(testCase, "XPATH", "//*[@value='"+deviceName+"']/following-sibling::XCUIElementTypeButton/XCUIElementTypeStaticText","label");
 		}
 	}
 	

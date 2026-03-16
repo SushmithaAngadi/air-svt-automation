@@ -42,12 +42,12 @@ public class ThermostatSettingsScreen extends MobileScreens {
 	public boolean isTempAlertenabled() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			if (MobileUtils
-					.getAttribute(testCase, "XPATH",
+					.getDomAttribute(testCase, "XPATH",
 							"//android.widget.Switch[@content-desc='Indoor Temperature Alert']", "TEXT")
 					.equalsIgnoreCase("on"))
 				return true;
 			else if (MobileUtils
-					.getAttribute(testCase, "XPATH",
+					.getDomAttribute(testCase, "XPATH",
 							"//android.widget.Switch[@content-desc='Indoor Temperature Alert']", "TEXT")
 					.equalsIgnoreCase("OFF"))
 				return false;
@@ -56,9 +56,9 @@ public class ThermostatSettingsScreen extends MobileScreens {
 		}
 
 		else {
-			if (MobileUtils.getAttribute(testCase, "NAME", "TemperatureChange_toggle", "value").equalsIgnoreCase("1"))
+			if (MobileUtils.getDomAttribute(testCase, "NAME", "TemperatureChange_toggle", "value").equalsIgnoreCase("1"))
 				return true;
-			else if (MobileUtils.getAttribute(testCase, "NAME", "TemperatureChange_toggle", "value")
+			else if (MobileUtils.getDomAttribute(testCase, "NAME", "TemperatureChange_toggle", "value")
 					.equalsIgnoreCase("0"))
 				return false;
 			else
@@ -68,19 +68,19 @@ public class ThermostatSettingsScreen extends MobileScreens {
 	}
 	
 	public String getAboveTempRangeValueC() {
-		return MobileUtils.getAttribute(testCase, "XPATH",
+		return MobileUtils.getDomAttribute(testCase, "XPATH",
 				"(//*[@text='Above']/parent::android.widget.LinearLayout)/descendant::android.widget.TextView[contains(@text,'C')]",
 				"TEXT");
 	}
 	
 	public String getBelowTempRangeValueC() {
-		return MobileUtils.getAttribute(testCase, "XPATH",
+		return MobileUtils.getDomAttribute(testCase, "XPATH",
 				"(//*[@text='Below']/parent::android.widget.LinearLayout)/descendant::android.widget.TextView[contains(@text,'C')]",
 				"TEXT");
 	}
 	
 	public String getAboveHumRangeValue() {
-		return MobileUtils.getAttribute(testCase, "XPATH",
+		return MobileUtils.getDomAttribute(testCase, "XPATH",
 				"(//*[@text='Above']/parent::android.widget.LinearLayout)/descendant::android.widget.TextView[contains(@text,'%')]",
 				"TEXT");
 	}
@@ -88,35 +88,35 @@ public class ThermostatSettingsScreen extends MobileScreens {
 	
 
 	public String getBelowHumRangeValue() {
-		return MobileUtils.getAttribute(testCase, "XPATH",
+		return MobileUtils.getDomAttribute(testCase, "XPATH",
 				"(//*[@text='Below']/parent::android.widget.LinearLayout)/descendant::android.widget.TextView[contains(@text,'%')]",
 				"TEXT");
 	}
 
 	public String getBelowTempRangeValueF() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-		return MobileUtils.getAttribute(testCase, "XPATH",
+		return MobileUtils.getDomAttribute(testCase, "XPATH",
 				"(//*[@text='Below']/parent::android.widget.LinearLayout)/descendant::android.widget.TextView[contains(@text,'F')]",
 				"TEXT");
 		}
 		else {
-			return MobileUtils.getAttribute(testCase, "XPATH","//*[@name='TemperatureChange']//XCUIElementTypePickerWheel[1]","value");
+			return MobileUtils.getDomAttribute(testCase, "XPATH","//*[@name='TemperatureChange']//XCUIElementTypePickerWheel[1]","value");
 		}
 	}
 	public boolean isHumAlertenabled() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-			if (MobileUtils.getAttribute(testCase, "XPATH",
+			if (MobileUtils.getDomAttribute(testCase, "XPATH",
 					"//android.widget.Switch[@content-desc='Indoor Humidity Alert']", "TEXT").equalsIgnoreCase("on"))
 				return true;
-			else if (MobileUtils.getAttribute(testCase, "XPATH",
+			else if (MobileUtils.getDomAttribute(testCase, "XPATH",
 					"//android.widget.Switch[@content-desc='Indoor Humidity Alert']", "TEXT").equalsIgnoreCase("OFF"))
 				return false;
 			else
 				return false;
 		} else {
-			if (MobileUtils.getAttribute(testCase, "NAME", "HumidityChange_toggle", "value").equalsIgnoreCase("1"))
+			if (MobileUtils.getDomAttribute(testCase, "NAME", "HumidityChange_toggle", "value").equalsIgnoreCase("1"))
 				return true;
-			else if (MobileUtils.getAttribute(testCase, "NAME", "HumidityChange_toggle", "value").equalsIgnoreCase("0"))
+			else if (MobileUtils.getDomAttribute(testCase, "NAME", "HumidityChange_toggle", "value").equalsIgnoreCase("0"))
 				return false;
 			else
 				return false;
@@ -125,11 +125,11 @@ public class ThermostatSettingsScreen extends MobileScreens {
 	}
 	public String getAboveTempRangeValueF() {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
-		return MobileUtils.getAttribute(testCase, "XPATH","(//*[@text='Above']/parent::android.widget.LinearLayout)/descendant::android.widget.TextView[contains(@text,'F')]",
+		return MobileUtils.getDomAttribute(testCase, "XPATH","(//*[@text='Above']/parent::android.widget.LinearLayout)/descendant::android.widget.TextView[contains(@text,'F')]",
 				"TEXT");
 		}
 		else {
-			return MobileUtils.getAttribute(testCase, "XPATH","//*[@name='TemperatureChange']//XCUIElementTypePickerWheel[2]","value");
+			return MobileUtils.getDomAttribute(testCase, "XPATH","//*[@name='TemperatureChange']//XCUIElementTypePickerWheel[2]","value");
 		}
 	}
 	
@@ -179,7 +179,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				}
 				else 
 				{
-					if(ele.getAttribute("value").equalsIgnoreCase("Manage Alerts"))
+					if(ele.getDomAttribute("value").equalsIgnoreCase("Manage Alerts"))
 						return true;
 					else 
 					{
@@ -228,7 +228,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				}
 			} else {
 				if (MobileUtils.getMobElement(objectDefinition, testCase, "ThermostatIndoorTempAlertSwitch")
-						.getAttribute("value").equalsIgnoreCase("1")) {
+						.getDomAttribute("value").equalsIgnoreCase("1")) {
 					return true;
 				} else {
 					return false;
@@ -277,11 +277,11 @@ public class ThermostatSettingsScreen extends MobileScreens {
 					&& MobileUtils
 							.getMobElement(testCase, "XPATH",
 									"//XCUIElementTypeStaticText[@value='" + indoorTempAlertOption + "']")
-							.getAttribute("value").equalsIgnoreCase(indoorTempAlertOption)
+							.getDomAttribute("value").equalsIgnoreCase(indoorTempAlertOption)
 					&& MobileUtils
 							.getMobElement(testCase, "XPATH",
 									"//XCUIElementTypeStaticText[@value='" + indoorTempAlertOption + "']")
-							.getAttribute("visible").equalsIgnoreCase("true")) {
+							.getDomAttribute("visible").equalsIgnoreCase("true")) {
 				return flag;
 			} else {
 				flag = false;
@@ -387,7 +387,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 			if (MobileUtils.isMobElementExists("XPATH", "//XCUIElementTypePicker[@name='TemperatureChange']", testCase)
 					&& MobileUtils
 							.getMobElement(testCase, "XPATH", "//XCUIElementTypePicker[@name='TemperatureChange']")
-							.getAttribute("value").contains(indoorTempAlertRangeOption)) {
+							.getDomAttribute("value").contains(indoorTempAlertRangeOption)) {
 				return flag;
 			} else {
 				flag = false;
@@ -417,14 +417,14 @@ public class ThermostatSettingsScreen extends MobileScreens {
 			// iOS
 			if (expectedTempAlertRangeOption.equals("Below")) {
 				WebElement ele = MobileUtils.getMobElement(objectDefinition, testCase, "TemperatureRangeOption");
-				if (ele.getAttribute("value").contains(expectedTempAlertRangeOption)) {
+				if (ele.getDomAttribute("value").contains(expectedTempAlertRangeOption)) {
 					return flag;
 				} else {
 					flag = false;
 				}
 			} else if (expectedTempAlertRangeOption.equals("Above")) {
 				WebElement ele = MobileUtils.getMobElement(objectDefinition, testCase, "TemperatureRangeOption");
-				if (ele.getAttribute("value").contains(expectedTempAlertRangeOption)) {
+				if (ele.getDomAttribute("value").contains(expectedTempAlertRangeOption)) {
 					return flag;
 				} else {
 					flag = false;
@@ -458,10 +458,10 @@ public class ThermostatSettingsScreen extends MobileScreens {
 			// iOS
 			if (expectedTempAlertRangeOption.equals("Below")) {
 				WebElement ele = MobileUtils.getMobElement(objectDefinition, testCase, "SelectBelowTempRangeValue");
-				getTempAlertRangeValue = ele.getAttribute("value");
+				getTempAlertRangeValue = ele.getDomAttribute("value");
 			} else if (expectedTempAlertRangeOption.equals("Above")) {
 				WebElement ele = MobileUtils.getMobElement(objectDefinition, testCase, "SelectAboveTempRangeValue");
-				getTempAlertRangeValue = ele.getAttribute("value");
+				getTempAlertRangeValue = ele.getDomAttribute("value");
 			}
 		}
 		return getTempAlertRangeValue;
@@ -570,7 +570,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				}
 			} else {
 				if (MobileUtils.getMobElement(objectDefinition, testCase, "ThermostatIndoorHumidityAlertSwitch")
-						.getAttribute("value").equalsIgnoreCase("1")) {
+						.getDomAttribute("value").equalsIgnoreCase("1")) {
 					return true;
 				} else {
 					return false;
@@ -593,7 +593,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				}
 			} else {
 				if (MobileUtils.getMobElement(objectDefinition, testCase, "ThermostatEmailAlertSwitch")
-						.getAttribute("value").equalsIgnoreCase("1")) {
+						.getDomAttribute("value").equalsIgnoreCase("1")) {
 					return true;
 				} else {
 					return false;
@@ -643,11 +643,11 @@ public class ThermostatSettingsScreen extends MobileScreens {
 					&& MobileUtils
 							.getMobElement(testCase, "XPATH",
 									"//XCUIElementTypeStaticText[@value='" + indoorHumidityAlertOption + "']")
-							.getAttribute("value").equalsIgnoreCase(indoorHumidityAlertOption)
+							.getDomAttribute("value").equalsIgnoreCase(indoorHumidityAlertOption)
 					&& MobileUtils
 							.getMobElement(testCase, "XPATH",
 									"//XCUIElementTypeStaticText[@value='" + indoorHumidityAlertOption + "']")
-							.getAttribute("visible").equalsIgnoreCase("true")) {
+							.getDomAttribute("visible").equalsIgnoreCase("true")) {
 				return flag;
 			} else {
 				flag = false;
@@ -671,7 +671,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 					if(testCase.getPlatform().toUpperCase().contains("ANDROID"))
 						return alertRange.get(0).getText();
 					else
-						return alertRange.get(0).getAttribute("value");
+						return alertRange.get(0).getDomAttribute("value");
 				}
 				else if (alert.equalsIgnoreCase("Indoor Humidity")) 
 				{
@@ -680,7 +680,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 						return alertRange.get(0).getText();
 					}
 					else
-						return alertRange.get(1).getAttribute("value");					
+						return alertRange.get(1).getDomAttribute("value");					
 				}
 				else 
 				{
@@ -780,7 +780,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 			if (MobileUtils.isMobElementExists("XPATH", "//XCUIElementTypePicker[@name='TemperatureChange']", testCase)
 					&& MobileUtils
 							.getMobElement(testCase, "XPATH", "//XCUIElementTypePicker[@name='TemperatureChange']")
-							.getAttribute("value").contains(indoorTempAlertRangeOption)) {
+							.getDomAttribute("value").contains(indoorTempAlertRangeOption)) {
 				return flag;
 			} else {
 				flag = false;
@@ -1033,7 +1033,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				}
 			} else {
 				if (MobileUtils.getMobElement(objectDefinition, testCase, "ThermostatSetFilterReminderSwitch")
-						.getAttribute("value").equalsIgnoreCase("1")) {
+						.getDomAttribute("value").equalsIgnoreCase("1")) {
 					return true;
 				} else {
 					return false;
@@ -1072,7 +1072,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				}
 			} else {
 				if (MobileUtils.getMobElement(objectDefinition, testCase, "ThermostatFineTuneSwitch")
-						.getAttribute("value").equalsIgnoreCase("1")) {
+						.getDomAttribute("value").equalsIgnoreCase("1")) {
 					return true;
 				} else {
 					return false;
@@ -1098,7 +1098,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				}
 			} else {
 				if (MobileUtils.getMobElement(objectDefinition, testCase, "ThermostatAdaptiveRecoverySwitch")
-						.getAttribute("value").equalsIgnoreCase("1")) {
+						.getDomAttribute("value").equalsIgnoreCase("1")) {
 					return true;
 				} else {
 					return false;
@@ -1124,7 +1124,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				}
 			} else {
 				if (MobileUtils.getMobElement(objectDefinition, testCase, "ThermostatOptimiseSwitch")
-						.getAttribute("value").equalsIgnoreCase("1")) {
+						.getDomAttribute("value").equalsIgnoreCase("1")) {
 					return true;
 				} else {
 					return false;
@@ -1180,7 +1180,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID"))
 			return MobileUtils.getMobElement(objectDefinition, testCase, "SettingsToolbarTitle").getText();
 		else
-			return MobileUtils.getMobElement(objectDefinition, testCase, "SettingsToolbarTitle").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "SettingsToolbarTitle").getDomAttribute("value");
 	}
 
 	public boolean isAIRVisible(int timeOut) {
@@ -1193,7 +1193,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 
 			return MobileUtils.getMobElement(objectDefinition, testCase, "AIR").getText();
 		else
-			return MobileUtils.getMobElement(objectDefinition, testCase, "AIR").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "AIR").getDomAttribute("value");
 	}
 
 
@@ -1205,7 +1205,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				return MobileUtils.getMobElement(objectDefinition, testCase, "AIRSts").getText();
 			else 
 			{
-				String sts = MobileUtils.getMobElement(objectDefinition, testCase, "AIRSts").getAttribute("value").toString().trim();
+				String sts = MobileUtils.getMobElement(objectDefinition, testCase, "AIRSts").getDomAttribute("value").toString().trim();
 				
 				if(sts != null) 
 				{
@@ -1306,7 +1306,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 
 			return MobileUtils.getMobElement(objectDefinition, testCase, "ACO").getText();
 		else
-			return MobileUtils.getMobElement(objectDefinition, testCase, "ACO").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "ACO").getDomAttribute("value");
 	}
 
 
@@ -1318,7 +1318,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				return MobileUtils.getMobElement(objectDefinition, testCase, "ACOSts").getText();
 			else 
 			{
-				String sts = MobileUtils.getMobElement(objectDefinition, testCase, "ACOSts").getAttribute("value").toString().trim();
+				String sts = MobileUtils.getMobElement(objectDefinition, testCase, "ACOSts").getDomAttribute("value").toString().trim();
 				
 				if(sts != null) 
 				{
@@ -1410,7 +1410,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 
 			return MobileUtils.getMobElement(objectDefinition, testCase, "EMHeat").getText();
 		else
-			return MobileUtils.getMobElement(objectDefinition, testCase, "EMHeat").getAttribute("value");
+			return MobileUtils.getMobElement(objectDefinition, testCase, "EMHeat").getDomAttribute("value");
 	}
 	
 	public String runningSystemMode() {
@@ -1441,7 +1441,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 				return MobileUtils.getMobElement(objectDefinition, testCase, "EMHeatSts").getText();
 			else 
 			{
-				String sts = MobileUtils.getMobElement(objectDefinition, testCase, "EMHeatSts").getAttribute("value").toString().trim();
+				String sts = MobileUtils.getMobElement(objectDefinition, testCase, "EMHeatSts").getDomAttribute("value").toString().trim();
 				
 				if(sts != null) 
 				{
@@ -1466,7 +1466,7 @@ public class ThermostatSettingsScreen extends MobileScreens {
 			if(testCase.getPlatform().toUpperCase().contains("ANDROID"))
 				return MobileUtils.getMobElement(objectDefinition, testCase, "EMHeatDescription").getText();
 			else
-				return MobileUtils.getMobElement(objectDefinition, testCase, "EMHeatDescription").getAttribute("value").trim();
+				return MobileUtils.getMobElement(objectDefinition, testCase, "EMHeatDescription").getDomAttribute("value").trim();
 		}
 		else
 			return null;

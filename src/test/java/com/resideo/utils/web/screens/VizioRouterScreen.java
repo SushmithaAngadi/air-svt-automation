@@ -91,7 +91,7 @@ public class VizioRouterScreen extends WebScreens {
 	public boolean enable_disable_ssid_XWR100(String is_ssid, String frequency) {
 		String isDisabled;
 		if (frequency.contains("2.4")) {
-			isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "SSID24_XWR100", "disabled");
+			isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "SSID24_XWR100", "disabled");
 			if (is_ssid.contains("Disable") && !(isDisabled == null) && isDisabled.equals("true")) {
 				return true;
 			} else if (is_ssid.contains("Enable") && isDisabled == null) {
@@ -100,7 +100,7 @@ public class VizioRouterScreen extends WebScreens {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "IS_SSID24_XWR100");
 			}
 		} else if (frequency.contains("5")) {
-			isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "SSID5_XWR100", "disabled");
+			isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "SSID5_XWR100", "disabled");
 			if (is_ssid.contains("Disable") && !(isDisabled == null) && isDisabled.equals("true")) {
 				return true;
 			} else if (is_ssid.contains("Enable") && isDisabled == null) {

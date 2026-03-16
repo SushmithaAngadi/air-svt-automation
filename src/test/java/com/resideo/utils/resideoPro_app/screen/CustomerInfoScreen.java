@@ -10,7 +10,7 @@ import com.resideo.commons.mobile.MobileScreens;
 import com.resideo.commons.mobile.MobileUtils;
 import com.resideo.commons.report.FailType;
 
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 
 public class CustomerInfoScreen extends MobileScreens {
 

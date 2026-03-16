@@ -85,13 +85,13 @@ public class TpLinkRouterScreen extends WebScreens {
 		WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "24GhzSSID");
 		if (isExpectedElementPresent("24GhzSSID", "wireless-setting-2g")) {
 			if (isSSIDEn) {
-				if (!SSID.getAttribute("class").contains("checked")) {
+				if (!SSID.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "24GhzSSID");
 				} else {
 					return true;
 				}
 			} else {
-				if (SSID.getAttribute("class").contains("checked")) {
+				if (SSID.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "24GhzSSID");
 				} else {
 					return true;
@@ -110,13 +110,13 @@ public class TpLinkRouterScreen extends WebScreens {
 		WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "5GhzSSID");
 		if (isExpectedElementPresent("5GhzSSID", "wireless-setting-5g1")) {
 			if (isSSIDEn) {
-				if (!SSID.getAttribute("class").contains("checked")) {
+				if (!SSID.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "5GhzSSID");
 				} else {
 					return true;
 				}
 			} else {
-				if (SSID.getAttribute("class").contains("checked")) {
+				if (SSID.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "5GhzSSID");
 				} else {
 					return true;
@@ -170,7 +170,7 @@ public class TpLinkRouterScreen extends WebScreens {
 	public boolean isSmartConnectionEnabled() {
 //		WebElement SmartConnection = WebUtils.getWebElement(testCase, fieldObjects, "SmartConnectionChBx");
 		if (isExpectedElementPresent("SmartConnectionChBx", "wirelessAdv-view")) {
-			if (WebUtils.getWebElement(testCase, fieldObjects, "SmartConnectionChBx").getAttribute("class")
+			if (WebUtils.getWebElement(testCase, fieldObjects, "SmartConnectionChBx").getDomAttribute("class")
 					.equals("checkbox-label  checked")) {
 				return true;
 			}
@@ -184,7 +184,7 @@ public class TpLinkRouterScreen extends WebScreens {
 
 	public boolean enable24GHZ() {
 		WebElement TwoGEnabled = WebUtils.getWebElement(testCase, fieldObjects, "24GhzChBx");
-		if (TwoGEnabled.getAttribute("class").toUpperCase().contains("checked".toUpperCase())) {
+		if (TwoGEnabled.getDomAttribute("class").toUpperCase().contains("checked".toUpperCase())) {
 			return true;
 		} else {
 			return WebUtils.clickOnWebElement(testCase, TwoGEnabled);
@@ -195,7 +195,7 @@ public class TpLinkRouterScreen extends WebScreens {
 		if (frequency.contains("2.4")) {
 			if (isExpectedElementPresent("24GhzChBx", "wireless-setting-5g1")) {
 				WebElement TwoGEnabled = WebUtils.getWebElement(testCase, fieldObjects, "24GhzChBx");
-				if (TwoGEnabled.getAttribute("class").toUpperCase().contains("checked".toUpperCase())) {
+				if (TwoGEnabled.getDomAttribute("class").toUpperCase().contains("checked".toUpperCase())) {
 					return true;
 				} else {
 					return WebUtils.clickOnWebElement(testCase, TwoGEnabled);
@@ -204,7 +204,7 @@ public class TpLinkRouterScreen extends WebScreens {
 		} else if (frequency.contains("5")) {
 			if (isExpectedElementPresent("5GhzChBx", "wireless-setting-5g1")) {
 				WebElement FiveGEnabled = WebUtils.getWebElement(testCase, fieldObjects, "5GhzChBx");
-				if (FiveGEnabled.getAttribute("class").contains("checked")) {
+				if (FiveGEnabled.getDomAttribute("class").contains("checked")) {
 					return true;
 				} else {
 					return WebUtils.clickOnWebElement(testCase, FiveGEnabled);
@@ -216,7 +216,7 @@ public class TpLinkRouterScreen extends WebScreens {
 
 	public boolean enable_disable5Ghz(boolean isEnable) {
 		WebElement FiveGEnabled = WebUtils.getWebElement(testCase, fieldObjects, "5GhzChBx");
-		boolean currentcheckBxStatus = FiveGEnabled.getAttribute("class").equals("checkbox-label  checked");
+		boolean currentcheckBxStatus = FiveGEnabled.getDomAttribute("class").equals("checkbox-label  checked");
 		if (isEnable) {
 			if (!currentcheckBxStatus) {
 				return WebUtils.clickOnWebElement(testCase, FiveGEnabled);
@@ -233,7 +233,7 @@ public class TpLinkRouterScreen extends WebScreens {
 
 	public boolean enable_disable24Ghz(boolean isEnable) {
 		WebElement TwoGEnabled = WebUtils.getWebElement(testCase, fieldObjects, "24GhzChBx");
-		boolean currentcheckBxStatus = TwoGEnabled.getAttribute("class").equals("checkbox-label  checked");
+		boolean currentcheckBxStatus = TwoGEnabled.getDomAttribute("class").equals("checkbox-label  checked");
 		if (isEnable) {
 			if (!currentcheckBxStatus) {
 				return WebUtils.clickOnWebElement(testCase, TwoGEnabled);
@@ -256,7 +256,7 @@ public class TpLinkRouterScreen extends WebScreens {
 
 		boolean currentcheckBxStatus = WebUtils.getWebElement(testCase, WebObjectLocators.By_XPATH,
 				"//*[text()='2.4GHz']/parent::div/parent::div/following-sibling::div/child::div/ul/li/div/label")
-				.getAttribute("class").equals("checkbox-label  checked");
+				.getDomAttribute("class").equals("checkbox-label  checked");
 		if (isEnabled && currentcheckBxStatus) {
 			return true;
 		} else {
@@ -268,7 +268,7 @@ public class TpLinkRouterScreen extends WebScreens {
 	public boolean enable5GHZ() {
 		if (isExpectedElementPresent("5GhzChBx", "wireless-setting-5g1")) {
 			WebElement FiveGEnabled = WebUtils.getWebElement(testCase, fieldObjects, "5GhzChBx");
-			if (FiveGEnabled.getAttribute("class").contains("checked")) {
+			if (FiveGEnabled.getDomAttribute("class").contains("checked")) {
 				return true;
 			} else {
 				return WebUtils.clickOnWebElement(testCase, FiveGEnabled);
@@ -301,7 +301,7 @@ public class TpLinkRouterScreen extends WebScreens {
 		if (isExpectedElementPresent("VersionDrpDwn24Ghz", "")) {
 
 			WebElement s = WebUtils.getWebElement(testCase, fieldObjects, "SecurityDrpDwn");
-			String security = s.getAttribute("value");
+			String security = s.getDomAttribute("value");
 
 			if (security.equals("WPA/WPA2-Personal") || security.equals("WPA2/WPA3-Personal")) {
 				if (WebUtils.clickOnWebElement(testCase, fieldObjects, "VersionDrpDwn24Ghz")) {
@@ -465,7 +465,7 @@ public class TpLinkRouterScreen extends WebScreens {
 		if (isExpectedElementPresent("VersionDrpDwn5Ghz", "")) {
 
 			WebElement s = WebUtils.getWebElement(testCase, fieldObjects, "SecurityDrpDwn5Ghz");
-			String security = s.getAttribute("value");
+			String security = s.getDomAttribute("value");
 
 			if (security.equals("WPA/WPA2-Personal") || security.equals("WPA2/WPA3-Personal")) {
 				if (WebUtils.clickOnWebElement(testCase, fieldObjects, "VersionDrpDwn5Ghz")) {
@@ -490,7 +490,7 @@ public class TpLinkRouterScreen extends WebScreens {
 		if (isExpectedElementPresent("EncryptionDrpDwn5Ghz", "")) {
 
 			WebElement s = WebUtils.getWebElement(testCase, fieldObjects, "SecurityDrpDwn5Ghz");
-			String security = s.getAttribute("value");
+			String security = s.getDomAttribute("value");
 			if (security.equals("WPA/WPA2-Personal")) {
 				if (WebUtils.clickOnWebElement(testCase, fieldObjects, "EncryptionDrpDwn5Ghz")) {
 					return WebUtils.clickOnWebElement(testCase, WebObjectLocators.By_XPATH,
@@ -657,13 +657,13 @@ public class TpLinkRouterScreen extends WebScreens {
 		if (isExpectedElementPresent("DHCP_checkbox",
 				"widget--cb2f18cd-5134-b2f7-ce2a-e4bb5b8b4f43-checkbox-749478344")) {
 			if (isDHCPEn) {
-				if (!DHCP.getAttribute("class").contains("checked")) {
+				if (!DHCP.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCP_checkbox");
 				} else {
 					return true;
 				}
 			} else {
-				if (DHCP.getAttribute("class").contains("checked")) {
+				if (DHCP.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCP_checkbox");
 				} else {
 					return true;
@@ -778,13 +778,13 @@ public class TpLinkRouterScreen extends WebScreens {
 		WebElement DHCP = WebUtils.getWebElement(testCase, fieldObjects, "DHCP_checkbox_AX1800");
 		if (isExpectedElementPresent("DHCP_checkbox_AX1800", "dhcp-server-setting-loader")) {
 			if (isDHCPEn) {
-				if (!DHCP.getAttribute("class").contains("checked")) {
+				if (!DHCP.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCP_checkbox_AX1800");
 				} else {
 					return true;
 				}
 			} else {
-				if (DHCP.getAttribute("class").contains("checked")) {
+				if (DHCP.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCP_checkbox_AX1800");
 				} else {
 					return true;
@@ -853,13 +853,13 @@ public class TpLinkRouterScreen extends WebScreens {
 		}
 		WebElement DHCP = WebUtils.getWebElement(testCase, fieldObjects, "SSID_checkbox_TLWR740N");
 		if (is_ssidEn) {
-			if (!DHCP.getAttribute("class").contains("checked")) {
+			if (!DHCP.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "SSID_checkbox_TLWR740N");
 			} else {
 				return true;
 			}
 		} else {
-			if (DHCP.getAttribute("class").contains("checked")) {
+			if (DHCP.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "SSID_checkbox_TLWR740N");
 			} else {
 				return true;

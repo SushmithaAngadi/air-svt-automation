@@ -66,7 +66,7 @@ import com.resideo.utils.resideo_app.screen.SchedulingScreen;
 
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.WebElement;
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -2730,7 +2730,7 @@ public class LyricUtils {
 				}
 				WebElement element = testCase.getMobileDriver()
 						.findElement(AppiumBy.iOSNsPredicateString(attribute + " == '" + value + "'"));
-				if (element.getAttribute(attribute).equals(value)) {
+				if (element.getDomAttribute(attribute).equals(value)) {
 					return true;
 				} else {
 					return false;
@@ -2789,7 +2789,7 @@ public class LyricUtils {
 				// WebElement element = testCase.getMobileDriver()
 				// .findElement(AppiumBy.iOSNsPredicateString(attribute + " CONTAINS '" + value
 				// + "'"));
-				if (element.getAttribute(attribute).contains(value)) {
+				if (element.getDomAttribute(attribute).contains(value)) {
 					return true;
 				} else {
 					return false;
@@ -2900,7 +2900,7 @@ public class LyricUtils {
 					if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 						displayedText = e.getText();
 					} else {
-						displayedText = e.getAttribute("value");
+						displayedText = e.getDomAttribute("value");
 					}
 					if (expectedDevice.equalsIgnoreCase("Switch")) {
 						deviceName = inputs.getInputValue("LOCATION1_SWITCH1_NAME");
@@ -3125,14 +3125,14 @@ public class LyricUtils {
 						toggleSwitch = locServ.get(4);
 						/*
 						 * for (WebElement locSer : locServ) {
-						 * System.out.println(locSer.getAttribute("value")); if
-						 * (locSer.getAttribute("value").equalsIgnoreCase("0") ||
-						 * locSer.getAttribute("value").equalsIgnoreCase("1")) { toggleSwitch = locSer;
+						 * System.out.println(locSer.getDomAttribute("value")); if
+						 * (locSer.getDomAttribute("value").equalsIgnoreCase("0") ||
+						 * locSer.getDomAttribute("value").equalsIgnoreCase("1")) { toggleSwitch = locSer;
 						 * break; } else { toggleSwitch = null; } }
 						 */
 						if (toggleSwitch != null) {
 							if (status.equalsIgnoreCase("off")) {
-								if (toggleSwitch.getAttribute("value").equalsIgnoreCase("1")) {
+								if (toggleSwitch.getDomAttribute("value").equalsIgnoreCase("1")) {
 									toggleSwitch.click();
 									if (MobileUtils.isMobElementExists("name", "Turn Off", testCase, 5)) {
 										if (!MobileUtils.clickOnElement(testCase, "name", "Turn Off")) {
@@ -3147,7 +3147,7 @@ public class LyricUtils {
 									Keyword.ReportStep_Pass(testCase, "Location Services is already turned off");
 								}
 							} else {
-								if (toggleSwitch.getAttribute("value").equalsIgnoreCase("0")) {
+								if (toggleSwitch.getDomAttribute("value").equalsIgnoreCase("0")) {
 									toggleSwitch.click();
 									Keyword.ReportStep_Pass(testCase, "Turned on Location Services");
 								} else {
@@ -3184,7 +3184,7 @@ public class LyricUtils {
 							if (j > 1) {
 								break;
 							}
-							alerts[i][j] = details.getAttribute("text");
+							alerts[i][j] = details.getDomAttribute("text");
 							j++;
 						}
 						i++;
@@ -3208,7 +3208,7 @@ public class LyricUtils {
 							if (j > 1) {
 								break;
 							}
-							alerts[i][j] = details.getAttribute("value");
+							alerts[i][j] = details.getDomAttribute("value");
 							j++;
 						}
 						i++;

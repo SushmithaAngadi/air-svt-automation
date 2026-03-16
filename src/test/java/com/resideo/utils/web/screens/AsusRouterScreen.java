@@ -129,13 +129,13 @@ public class AsusRouterScreen extends WebScreens {
 		WebElement b_g = WebUtils.getWebElement(testCase, fieldObjects, "B_G_Protection");
 		if (_RTAC68UisExpectedElementPresent("WirelessMode", "")) {
 			if (isEnable) {
-				if (!b_g.getAttribute("class").contains("checked")) {
+				if (!b_g.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "B_G_Protection");
 				} else {
 					return true;
 				}
 			} else {
-				if (b_g.getAttribute("class").contains("checked")) {
+				if (b_g.getDomAttribute("class").contains("checked")) {
 					return WebUtils.clickOnWebElement(testCase, fieldObjects, "B_G_Protection");
 				} else {
 					return true;

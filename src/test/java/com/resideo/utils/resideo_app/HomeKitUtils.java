@@ -304,7 +304,7 @@ public class HomeKitUtils {
 							String sensor_header = MobileUtils
 									.getMobElement(testCase, "XPATH",
 											"//XCUIElementTypeTextView[contains(@name,'Air Sensor')]")
-									.getAttribute("label");
+									.getDomAttribute("label");
 						if (MobileUtils.isMobElementExists("XPATH", "//XCUIElementTypeButton[@name='Continue']",
 								testCase, 1)) {
 							if (MobileUtils.clickOnElement(testCase, "XPATH",

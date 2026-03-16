@@ -331,13 +331,13 @@ public class CiscoRouterScreen extends WebScreens {
 		}
 		WebElement DHCP = WebUtils.getWebElement(testCase, fieldObjects, "DHCPcheckbox");
 		if (isDHCPEn) {
-			if (!DHCP.getAttribute("class").contains("checked")) {
+			if (!DHCP.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCPcheckbox");
 			} else {
 				return true;
 			}
 		} else {
-			if (DHCP.getAttribute("class").contains("checked")) {
+			if (DHCP.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCPcheckbox");
 			} else {
 				return true;
@@ -385,10 +385,10 @@ public class CiscoRouterScreen extends WebScreens {
 			isDHCPEn = true;
 		}
 		WebElement DHCPEnable = WebUtils.getWebElement(testCase, fieldObjects, "DHCPEnable_WRT120N");
-		String DHCPEnableDisable = DHCPEnable.getAttribute("checked");
+		String DHCPEnableDisable = DHCPEnable.getDomAttribute("checked");
 		if (DHCPEnableDisable == null) {
 			WebElement DHCPDisable = WebUtils.getWebElement(testCase, fieldObjects, "DHCPDisable_WRT120N");
-			DHCPEnableDisable = DHCPDisable.getAttribute("checked");
+			DHCPEnableDisable = DHCPDisable.getDomAttribute("checked");
 			DHCPEnableDisable = DHCPEnableDisable + " :Disable";
 		}
 		if (isDHCPEn) {
@@ -475,10 +475,10 @@ public class CiscoRouterScreen extends WebScreens {
 			isDHCPEn = true;
 		}
 		WebElement SSIDEnable = WebUtils.getWebElement(testCase, fieldObjects, "SSIDEnable_WRT120N");
-		String DHCPEnableDisable = SSIDEnable.getAttribute("checked");
+		String DHCPEnableDisable = SSIDEnable.getDomAttribute("checked");
 		if (DHCPEnableDisable == null) {
 			WebElement DHCPDisable = WebUtils.getWebElement(testCase, fieldObjects, "SSIDDisable_WRT120N");
-			DHCPEnableDisable = DHCPDisable.getAttribute("checked");
+			DHCPEnableDisable = DHCPDisable.getDomAttribute("checked");
 			DHCPEnableDisable = DHCPEnableDisable + " :Disable";
 		}
 		if (isDHCPEn) {
@@ -590,7 +590,7 @@ public class CiscoRouterScreen extends WebScreens {
 		js.executeScript(
 				"document.evaluate(\"//*[@name='group_key_second']\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.setAttribute('"
 						+ attribute + "', '" + keyRenew + "')");
-		if (Element.getAttribute(attribute).contains(keyRenew)) {
+		if (Element.getDomAttribute(attribute).contains(keyRenew)) {
 			return true;
 		}
 		return false;

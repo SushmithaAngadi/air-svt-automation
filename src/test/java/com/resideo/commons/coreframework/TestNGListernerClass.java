@@ -7,7 +7,6 @@ import com.resideo.commons.report.SoftAssertion;
 import com.resideo.commons.report.XRayUtils;
 import com.resideo.commons.report.rebot.RebotReportUtils;
 import com.resideo.commons.report.rebot.ReportUploadUtility;
-import com.resideo.gmail.app.feedback.SendAppFeedBack;
 import com.resideo.utils.stat.mqtt.MqttSerialController;
 
 import org.testng.*;

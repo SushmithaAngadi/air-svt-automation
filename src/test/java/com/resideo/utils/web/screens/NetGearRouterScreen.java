@@ -247,13 +247,13 @@ public class NetGearRouterScreen extends WebScreens {
 		}
 		WebElement DHCP = WebUtils.getWebElement(testCase, fieldObjects, "DHCPcheckbox");
 		if (isDHCPEn) {
-			if (!DHCP.getAttribute("class").contains("checked")) {
+			if (!DHCP.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCP_checkbox");
 			} else {
 				return true;
 			}
 		} else {
-			if (DHCP.getAttribute("class").contains("checked")) {
+			if (DHCP.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "DHCP_checkbox");
 			} else {
 				return true;
@@ -365,7 +365,7 @@ public class NetGearRouterScreen extends WebScreens {
 		}
 		WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "SSID2GEnableDisable_R6250");
 		try {
-			String value = SSID.getAttribute("checked");
+			String value = SSID.getDomAttribute("checked");
 			if (value != null) {
 				SSDEnable_Disable = true;
 			}
@@ -378,7 +378,7 @@ public class NetGearRouterScreen extends WebScreens {
 				return true;
 			}
 		} else {
-			if (SSID.getAttribute("class").contains("checked")) {
+			if (SSID.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "SSID2GEnableDisable_R6250");
 			} else {
 				return true;
@@ -407,9 +407,9 @@ public class NetGearRouterScreen extends WebScreens {
 			isSSID = true;
 		}
 		WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "SSID5GEnableDisable_R6250");
-//		String a = SSID.getAttribute("checked");
+//		String a = SSID.getDomAttribute("checked");
 		try {
-			String value = SSID.getAttribute("checked");
+			String value = SSID.getDomAttribute("checked");
 			if (value != null) {
 				SSDEnable_Disable = true;
 			}
@@ -422,7 +422,7 @@ public class NetGearRouterScreen extends WebScreens {
 				return true;
 			}
 		} else {
-			if (SSID.getAttribute("class").contains("checked")) {
+			if (SSID.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "SSID5GEnableDisable_R6250");
 			} else {
 				return true;
@@ -723,7 +723,7 @@ public class NetGearRouterScreen extends WebScreens {
 		}
 		WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "SSID2GEnableDisable_WNDR3800CH");
 		try {
-			String value = SSID.getAttribute("checked");
+			String value = SSID.getDomAttribute("checked");
 			if (value != null) {
 				SSDEnable_Disable = true;
 			}
@@ -736,7 +736,7 @@ public class NetGearRouterScreen extends WebScreens {
 				return true;
 			}
 		} else {
-			if (SSID.getAttribute("class").contains("checked")) {
+			if (SSID.getDomAttribute("class").contains("checked")) {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "SSID2GEnableDisable_WNDR3800CH");
 			} else {
 				return true;
@@ -1077,7 +1077,7 @@ public class NetGearRouterScreen extends WebScreens {
 		List<WebElement> findElements = webDriver.findElements(By.id("formframe"));
 		WebDriver frame = webDriver.switchTo().frame(findElements.get(0));
 		findElement = frame.findElement(By.xpath("//*[@name='dhcp_server']"));
-		isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "DHCPStartIpAdd_R6250", "disabled");
+		isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "DHCPStartIpAdd_R6250", "disabled");
 		if (is_dhcp.contains("Disable") && !(isDisabled == null) && isDisabled.equals("true")) {
 			return true;
 		} else if (is_dhcp.contains("Enable") && isDisabled == null) {
@@ -1127,7 +1127,7 @@ public class NetGearRouterScreen extends WebScreens {
 	}
 	
 	public boolean setIsDns_WNDR4300v2(String is_dns) {
-		String isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "DNS_Password_WNDR4300v2", "disabled");
+		String isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "DNS_Password_WNDR4300v2", "disabled");
 		if (is_dns.contains("NO") && !(isDisabled == null) && isDisabled.equals("true")) {
 			return true;
 		} else if (is_dns.contains("YES") && isDisabled == null) {
@@ -1221,7 +1221,7 @@ public class NetGearRouterScreen extends WebScreens {
 	}
 
 	public boolean enableDisableis_dhcp_RBR20(String is_dhcp) {
-		String isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "StartIP_RBR20", "disabled");
+		String isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "StartIP_RBR20", "disabled");
 		if (is_dhcp.contains("Disable") && !(isDisabled == null) && isDisabled.equals("true")) {
 			return true;
 		} else if (is_dhcp.contains("Enable") && isDisabled == null) {
@@ -1306,7 +1306,7 @@ public class NetGearRouterScreen extends WebScreens {
 	}
 
 	public boolean setIsDns_RBR20(String is_dns) {
-		String isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "DNS_Password_RBR20", "disabled");
+		String isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "DNS_Password_RBR20", "disabled");
 		if (is_dns.contains("Disable") && !(isDisabled == null) && isDisabled.equals("true")) {
 			return true;
 		} else if (is_dns.contains("Enable") && isDisabled == null) {

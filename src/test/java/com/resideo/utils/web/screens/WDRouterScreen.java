@@ -289,7 +289,7 @@ public class WDRouterScreen extends WebScreens {
 	}
 
 	public boolean enable_disable_DHCP_MyNetN900(String is_dhcp) {
-		String isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "StartIp_MyNetN900", "disabled");
+		String isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "StartIp_MyNetN900", "disabled");
 		if (is_dhcp.contains("NO") && !(isDisabled == null) && isDisabled.equals("true")) {
 			return true;
 		} else if (is_dhcp.contains("YES") && isDisabled == null) {
@@ -302,7 +302,7 @@ public class WDRouterScreen extends WebScreens {
 	public boolean enable_Frequency_MyNetN900(String is_ssid, String frequency) {
 		String isDisabled;
 		if (frequency.contains("2.4")) {
-			isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "SSID_NAME2G_MyNetN900", "disabled");
+			isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "SSID_NAME2G_MyNetN900", "disabled");
 			if (is_ssid.contains("Disable") && !(isDisabled == null) && isDisabled.equals("true")) {
 				return true;
 			} else if (is_ssid.contains("Enable") && isDisabled == null) {
@@ -311,7 +311,7 @@ public class WDRouterScreen extends WebScreens {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "Freq_24_MyNetN900");
 			}
 		} else if (frequency.contains("5")) {
-			isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "SSID_NAME5G_MyNetN900", "disabled");
+			isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "SSID_NAME5G_MyNetN900", "disabled");
 			if (is_ssid.contains("Disable") && !(isDisabled == null) && isDisabled.equals("true")) {
 				return true;
 			} else if (is_ssid.contains("Enable") && isDisabled == null) {
@@ -326,7 +326,7 @@ public class WDRouterScreen extends WebScreens {
 	public boolean changeSSIDBroadcast_MyNetN900(String is_ssid, String frequency) {
 		String isDisabled;
 		if (frequency.contains("2.4")) {
-			isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "SSID_Broad24Ghz", "style");
+			isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "SSID_Broad24Ghz", "style");
 			if (is_ssid.contains("NO") && isDisabled.toUpperCase().contains("OFF")) {
 				return true;
 			} else if (is_ssid.contains("YES") && !isDisabled.toUpperCase().contains("OFF")) {
@@ -335,7 +335,7 @@ public class WDRouterScreen extends WebScreens {
 				return WebUtils.clickOnWebElement(testCase, fieldObjects, "SSID_Broad24Ghz");
 			}
 		} else if (frequency.contains("5")) {
-			isDisabled = WebUtils.getAttribute(testCase, fieldObjects, "SSID_Broad5Ghz", "style");
+			isDisabled = WebUtils.getDomAttribute(testCase, fieldObjects, "SSID_Broad5Ghz", "style");
 			if (is_ssid.contains("NO") && isDisabled.toUpperCase().contains("OFF")) {
 				return true;
 			} else if (is_ssid.contains("YES") && !isDisabled.toUpperCase().contains("OFF")) {

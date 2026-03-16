@@ -33,7 +33,7 @@ import com.resideo.utils.stat.cattgrpccommands.JasperDisplayTextMsg.DisplayArea;
 import com.resideo.utils.stat.cattgrpccommands.JasperDisplayTextMsg.DisplayMethod;
 import com.resideo.utils.stat.cattgrpccommands.PairingPinMsg.PairingPinMode;
 
-import com.resideo.utils.W3CTouchActions;
+import com.resideo.commons.mobile.W3CTouchActions;
 
 public class DIYUtils {
 //WiFiNegativeScenario.feature   Jasper_Senior_DIY.feature

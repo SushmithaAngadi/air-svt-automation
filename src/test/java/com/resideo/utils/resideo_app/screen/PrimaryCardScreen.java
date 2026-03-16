@@ -378,7 +378,7 @@ public class PrimaryCardScreen extends MobileScreens {
 	}
 
 	public String getCurrentSetpoint() {
-		return MobileUtils.getMobElement(testCase, "ID", "current_temp_value").getAttribute("text");
+		return MobileUtils.getMobElement(testCase, "ID", "current_temp_value").getDomAttribute("text");
 	}
 
 	public boolean clickOnModeButton() {
@@ -402,7 +402,7 @@ public class PrimaryCardScreen extends MobileScreens {
 	}
 
 	public String getCurrentModeFromPrimaryCard() {
-		return MobileUtils.getMobElement(testCase, "XPATH", "//*[@text='MODE']").getAttribute("content-desc");
+		return MobileUtils.getMobElement(testCase, "XPATH", "//*[@text='MODE']").getDomAttribute("content-desc");
 	}
 
 	public boolean handleNotNowPopupInFluentWait() {
@@ -479,7 +479,7 @@ public class PrimaryCardScreen extends MobileScreens {
 			} else {
 				status = MobileUtils.getMobElement(testCase, "XPATH", "//XCUIElementTypeButton[@value='"
 						+ SystemState.getStatus().getTstatName() + "']/following-sibling::XCUIElementTypeStaticText")
-						.getAttribute("value");
+						.getDomAttribute("value");
 			}
 		} catch (Exception e) {
 			System.out.println("Exception Raised due to " + e.getStackTrace());
@@ -511,7 +511,7 @@ public class PrimaryCardScreen extends MobileScreens {
 				status = MobileUtils.getMobElement(testCase, "XPATH", "//XCUIElementTypeButton[@value='"
 						+ SystemState.getStatus().getTstatName()
 						+ "']/following-sibling::XCUIElementTypeOther/XCUIElementTypeButton/following-sibling::XCUIElementTypeStaticText")
-						.getAttribute("name");
+						.getDomAttribute("name");
 			}
 		} catch (Exception e) {
 			System.out.println("Exception Raised due to " + e.getStackTrace());
@@ -535,14 +535,14 @@ public class PrimaryCardScreen extends MobileScreens {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(testCase, "XPATH", "//*[@text='" + deviceName
 					+ "']/parent::android.widget.LinearLayout//following-sibling::android.widget.RelativeLayout/android.widget.TextView")
-					.getAttribute("text");
+					.getDomAttribute("text");
 		} else {
 
 			return MobileUtils
 					.getMobElement(testCase, "XPATH",
 							"//*[@value='" + deviceName
 									+ "']/following-sibling::XCUIElementTypeButton/XCUIElementTypeStaticText")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
@@ -554,13 +554,13 @@ public class PrimaryCardScreen extends MobileScreens {
 			return MobileUtils
 					.getMobElement(testCase, "XPATH",
 							"//*[@text='" + deviceName + "']/following-sibling::android.widget.TextView")
-					.getAttribute("text");
+					.getDomAttribute("text");
 		} else {
 
 			return MobileUtils
 					.getMobElement(testCase, "XPATH",
 							"//*[@value='" + deviceName + "']/following-sibling::XCUIElementTypeStaticText")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
@@ -617,7 +617,7 @@ public class PrimaryCardScreen extends MobileScreens {
 						"//*[@text='" + deviceName + "']/following-sibling::android.widget.TextView", testCase, 2)) {
 					getCurrentReport = MobileUtils.getMobElement(testCase, "XPATH",
 							"//*[@text='" + deviceName + "']/following-sibling::android.widget.TextView", false, false)
-							.getAttribute("text");
+							.getDomAttribute("text");
 				} else {
 					getCurrentReport = null;
 				}
@@ -626,7 +626,7 @@ public class PrimaryCardScreen extends MobileScreens {
 						"//*[@value='" + deviceName + "']/following-sibling::XCUIElementTypeStaticText", testCase, 2)) {
 					getCurrentReport = MobileUtils.getMobElement(testCase, "XPATH",
 							"//*[@value='" + deviceName + "']/following-sibling::XCUIElementTypeStaticText", false,
-							false).getAttribute("value");
+							false).getDomAttribute("value");
 				} else {
 					getCurrentReport = null;
 				}
@@ -759,9 +759,9 @@ public class PrimaryCardScreen extends MobileScreens {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(testCase, "XPATH",
 					"//*[@text='Firmware Version']/parent::android.widget.LinearLayout/following-sibling::android.widget.TextView")
-					.getAttribute("text");
+					.getDomAttribute("text");
 		} else {
-			return MobileUtils.getMobElement(testCase, "NAME", "Firmware_Version_subTitle").getAttribute("value");
+			return MobileUtils.getMobElement(testCase, "NAME", "Firmware_Version_subTitle").getDomAttribute("value");
 		}
 	}
 
@@ -769,9 +769,9 @@ public class PrimaryCardScreen extends MobileScreens {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(testCase, "XPATH",
 					"//*[@text='MAC ID']/parent::android.widget.LinearLayout/following-sibling::android.widget.TextView")
-					.getAttribute("text");
+					.getDomAttribute("text");
 		} else {
-			return MobileUtils.getMobElement(testCase, "NAME", "MAC_ID_subTitle").getAttribute("value");
+			return MobileUtils.getMobElement(testCase, "NAME", "MAC_ID_subTitle").getDomAttribute("value");
 		}
 	}
 
@@ -779,12 +779,12 @@ public class PrimaryCardScreen extends MobileScreens {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(testCase, "XPATH",
 					"//*[@text='Heating System']/parent::android.widget.LinearLayout/following-sibling::android.widget.TextView")
-					.getAttribute("text");
+					.getDomAttribute("text");
 		} else {
 			return MobileUtils
 					.getMobElement(testCase, "XPATH",
 							"//*[@value='Heating System']/following-sibling::XCUIElementTypeStaticText")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
@@ -792,12 +792,12 @@ public class PrimaryCardScreen extends MobileScreens {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(testCase, "XPATH",
 					"//*[@text='Heating Stages']/parent::android.widget.LinearLayout/following-sibling::android.widget.TextView")
-					.getAttribute("text");
+					.getDomAttribute("text");
 		} else {
 			return MobileUtils
 					.getMobElement(testCase, "XPATH",
 							"//*[@value='Heating Stages']/following-sibling::XCUIElementTypeStaticText")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 
@@ -805,12 +805,12 @@ public class PrimaryCardScreen extends MobileScreens {
 		if (testCase.getPlatform().toUpperCase().contains("ANDROID")) {
 			return MobileUtils.getMobElement(testCase, "XPATH",
 					"//*[@text='Cooling Stages']/parent::android.widget.LinearLayout/following-sibling::android.widget.TextView")
-					.getAttribute("text");
+					.getDomAttribute("text");
 		} else {
 			return MobileUtils
 					.getMobElement(testCase, "XPATH",
 							"//*[@value='Cooling Stages']/following-sibling::XCUIElementTypeStaticText")
-					.getAttribute("value");
+					.getDomAttribute("value");
 		}
 	}
 

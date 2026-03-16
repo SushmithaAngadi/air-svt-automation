@@ -511,7 +511,7 @@ public class DLinkRouterScreen extends WebScreens {
 		String isDisable = "";
 		if (isExpectedElementPresent("Status2GHzToggleBTN")) {
 			WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "SSIDName2G_DIR1750");
-			isDisable = SSID.getAttribute("disabled");
+			isDisable = SSID.getDomAttribute("disabled");
 			if (isDisable != null && isDisable.toUpperCase().contains("TRUE")) {
 				isEnable = false;
 			}
@@ -564,7 +564,7 @@ public class DLinkRouterScreen extends WebScreens {
 		String isDisable = "";
 		if (isExpectedElementPresent("Status5GHzToggleBTN_DIR1750")) {
 			WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "SSIDName5G_DIR1750");
-			isDisable = SSID.getAttribute("disabled");
+			isDisable = SSID.getDomAttribute("disabled");
 			if (isDisable != null && isDisable.toUpperCase().contains("TRUE")) {
 				isEnable = false;
 			}
@@ -622,7 +622,7 @@ public class DLinkRouterScreen extends WebScreens {
 		String isDisable = "";
 		if (isExpectedElementPresent("StatusDHCPToggleBTN_DIR1750")) {
 			WebElement DHCP = WebUtils.getWebElement(testCase, fieldObjects, "StatusDHCPToggleBTN_DIR1750");
-			isDisable = DHCP.getAttribute("class");
+			isDisable = DHCP.getDomAttribute("class");
 			if (isDisable != null && isDisable.toUpperCase().contains("ON")) {
 				isEnable = true;
 			}
@@ -797,7 +797,7 @@ public class DLinkRouterScreen extends WebScreens {
 		String isDisable = "";
 		if (isExpectedElementPresent("Status2GHzToggleBTN_890L")) {
 			WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "SSIDName2G_DIR1750");
-			isDisable = SSID.getAttribute("disabled");
+			isDisable = SSID.getDomAttribute("disabled");
 			if (isDisable != null && isDisable.toUpperCase().contains("TRUE")) {
 				isEnable = false;
 			}
@@ -824,7 +824,7 @@ public class DLinkRouterScreen extends WebScreens {
 		String isDisable = "";
 		if (isExpectedElementPresent("Status5GHzToggleBTN_890L")) {
 			WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "SSIDName5G_DIR1750");
-			isDisable = SSID.getAttribute("disabled");
+			isDisable = SSID.getDomAttribute("disabled");
 			if (isDisable != null && isDisable.toUpperCase().contains("TRUE")) {
 				isEnable = false;
 			}
@@ -851,7 +851,7 @@ public class DLinkRouterScreen extends WebScreens {
 		String isDisable = "";
 		if (isExpectedElementPresent("Status5SGHzToggleBTN_890L")) {
 			WebElement SSID = WebUtils.getWebElement(testCase, fieldObjects, "SSIDName5SG_890L");
-			isDisable = SSID.getAttribute("disabled");
+			isDisable = SSID.getDomAttribute("disabled");
 			if (isDisable != null && isDisable.toUpperCase().contains("TRUE")) {
 				isEnable = false;
 			}

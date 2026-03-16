@@ -80,6 +80,10 @@ public class FirstAlert_DIYUtils {
 
             }
 
+            if(flag){
+                diy.clickOnNextButton();
+            }
+
         } catch (Exception e) {
             flag = false;
             Keyword.ReportStep_Fail_WithOut_ScreenShot(testCase, FailType.FUNCTIONAL_FAILURE,
@@ -226,15 +230,15 @@ public class FirstAlert_DIYUtils {
                     "Keyword step : Exception raised : " + e.getMessage());
         }
 
-        return true;
+        return flag;
     }
 
     public static boolean performInitialInstallationStepsForGleneaglesDIY(TestCases testCase, String installationFlow) {
         boolean flag = true;
         FirstAlertDIYScreen FaDiyScreen = new FirstAlertDIYScreen(testCase);
         if (installationFlow.equalsIgnoreCase("BLE")) {
-            if (FaDiyScreen.isPrepareHardwareScreen() && FaDiyScreen.clickOnYesButton()) {
-                HomeUtils.printLogforSteps(testCase, flag, "Is Prepare Hadware screen visible ?.,> > ");
+            if ((FaDiyScreen.isTextPresent("SmartHub")&& ((FaDiyScreen.isNextButton(1) && FaDiyScreen.clickOnNextButton())|| FaDiyScreen.clickOnYesButton()))|| (FaDiyScreen.isPrepareHardwareScreen() && FaDiyScreen.clickOnYesButton())|| (FaDiyScreen.isSetUpNxtSmartThermostatKitScreen() && FaDiyScreen.clickOnNextButton())) {
+                HomeUtils.printLogforSteps(testCase, flag, "Is Prepare Hadware/Set Up NXT Thermostat Kit screen visible ?.,> > ");
                 if (FaDiyScreen.isInitiateParingScreen() && FaDiyScreen.clickOnYesButton()) {
                     HomeUtils.printLogforSteps(testCase, flag, "Is Initiate Pairing screen visible ?.,> > ");
                     if (FaDiyScreen.isBluetoothScanScreen()) {
@@ -343,7 +347,6 @@ public class FirstAlert_DIYUtils {
             Keyword.ReportStep_Pass(testCase, "Device Selected from list");
             if(deviceNeedToInstall.contains("GLENEAGLES")) {
             	if( MqttManager.enableDisableBroadCasting("TRUE",testCase,true)) {
-            		
             		FluentWait<TestCases> wait = new FluentWait<>(testCase).withTimeout(Duration.ofSeconds(40))
     						.pollingEvery(Duration.ofSeconds(2)).ignoring(Exception.class);
     				boolean result = wait.until(new Function<TestCases, Boolean>() {
@@ -1905,7 +1908,7 @@ public class FirstAlert_DIYUtils {
                         "Error message is not displayed for " + attemptType + " attempt.");
                 isSuccessful = false;
             }
-            String actualErrorMessage = errorMessageElement.getAttribute("content-desc").toUpperCase();
+            String actualErrorMessage = errorMessageElement.getDomAttribute("content-desc").toUpperCase();
             if (actualErrorMessage.contains(expectedMessage.toUpperCase())) {
                 Keyword.ReportStep_Pass(testCase,
                         "Verified error message for " + attemptType + " attempt: " + expectedMessage);
