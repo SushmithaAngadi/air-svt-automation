@@ -24,6 +24,7 @@ End-to-end **System Verification Test (SVT)** automation framework for Resideo s
 | gRPC | 1.75.0 |
 | MQTT (Eclipse Paho) | 1.2.5 |
 | REST Assured | 5.5.0 |
+| svt-core-framework | 1.0.1 |
 
 ## Project Structure
 
@@ -107,3 +108,12 @@ This project depends on [svt-core-framework](https://github.com/SushmithaAngadi/
 - BDD test execution engine
 - Reporting utilities
 - Device cloud provider integrations
+
+## Selenium 4 / Appium 2 Migration Notes
+
+| Change | Details |
+|--------|--------|
+| `getAttribute()` → `getDomAttribute()` | All Selenium element calls updated across 30 files |
+| `TouchAction` → W3C Actions API | Uses `W3CTouchActions` from svt-core-framework |
+| `appium:` prefixed capabilities | `ExtendedLocalDesiredCapability` uses `appium:` prefix on all Appium caps |
+| macOS serial port support | `MqttSerialController` handles macOS port detection and screen session cleanup |
